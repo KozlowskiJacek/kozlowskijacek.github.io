@@ -4,12 +4,12 @@ import homePhoto from '../assets/img/Image 1.png'
 
 const Home = () => {
   return (
-    <section id='#' className='bg-bg_color_1 flex justify-center items-center min-h-screen w-screen pt-[100px] px-[9%] pv-[20px]'>
+    <section className='bg-bg_color_1 flex justify-center items-center min-h-screen w-screen pt-[100px] px-[9%] pv-[20px]'>
       <div className='w-full text-white'>
-        <h3 className='text-4xl font-semibold mb-6'>Hello, its me!</h3>
+        <h3 className='text-3xl font-semibold mb-3'>Hello, its me!</h3>
         <h1 className='text-6xl font-semibold'>Jacek Kozłowski</h1>
-        <h3 className='mt-4 text-4xl font-semibold mb-6'>I'm <span className='text-main_accent'>Full-Stack</span></h3>
-        <p className='leading-6 text-justify'>
+        <h3 className='mt-4 text-3xl font-semibold mb-5'>I'm <span className='text-main_accent'>Full-Stack</span></h3>
+        <p className='leading-6 text-justify '>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti
           fuga fugit assumenda, quos accusantium excepturi quibusdam
           reprehenderit magnam voluptatum facilis asperiores sapiente dicta non
@@ -24,7 +24,7 @@ const Home = () => {
         </div>
         <a href="#contact" className='bg-main_accent inline-block my-7 py-2 px-12 rounded-full text-bg_color_2 font-extrabold hover:drop-shadow-custom-glow hover:scale-110 transition-all duration-500 ease-in-out cursor-pointer text-xl shadow-custom-around shadow-main_accent'>Get in touch</a>
       </div>
-      <div className=''>
+      <div className='w-[75vw] m-20'>
         <img className='max-w-[100%] max-h-[100%] animate-floatImage' src={homePhoto} alt="" />
       </div>
     </section>

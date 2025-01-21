@@ -45,7 +45,7 @@ export default {
       },
       animation: {
         tada: 'tada 1s ease-in-out',
-        floatImage: 'floatImage 4s ease-in-out infinite',
+        floatImage: 'floatImage 5s ease-in-out infinite',
       },
     },
   },
