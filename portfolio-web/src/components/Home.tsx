@@ -4,7 +4,7 @@ import homePhoto from '../assets/img/Image 1.png'
 
 const Home = () => {
   return (
-    <section className='bg-bg_color_1 flex justify-center items-center min-h-screen w-screen pt-[100px] px-[9%] pv-[20px]'>
+    <section className='bg-bg_color_1 flex justify-center items-center min-h-screen w-full pt-[100px] px-[9%] pv-[20px]' id='home'>
       <div className='w-full text-white'>
         <h3 className='text-3xl font-semibold mb-3'>Hello, its me!</h3>
         <h1 className='text-6xl font-semibold'>Jacek Kozłowski</h1>
