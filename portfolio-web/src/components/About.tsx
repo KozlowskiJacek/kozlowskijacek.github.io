@@ -2,7 +2,7 @@ import React from 'react'
 import aboutPhoto from '../assets/img/Ja i papuga.png'
 const About = () => {
   return (
-    <section className='bg-bg_color_2 flex justify-center items-center min-h-screen w-full pt-[100px] px-[9%] pv-[20px]' id='aubout'>
+    <section className='bg-bg_color_2 flex justify-center items-center min-h-screen w-full pt-[100px] px-[9%] pv-[20px]' id='about'>
       <div className='w-[75vw] m-20'>
        <img src={aboutPhoto} alt="" className='max-w-[100%] max-h-[100%] animate-floatImage'/>
       </div>
