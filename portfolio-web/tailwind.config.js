@@ -1,3 +1,5 @@
+import { transform } from 'typescript';
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
@@ -42,10 +44,15 @@ export default {
             transform: "translateY(0)",
           }    
         },
+        scroll: {
+          "0%": {transform: "translateX(0)"},
+          "100%": {transform: "translateX(calc(-250px * 4))"}
+        },
       },
       animation: {
         tada: 'tada 1s ease-in-out',
         floatImage: 'floatImage 5s ease-in-out infinite',
+        scroll: "scroll 10s linear infinite"
       },
     },
   },
