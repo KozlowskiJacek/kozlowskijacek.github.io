@@ -15,9 +15,10 @@ const TheyTrustedMe = () => {
           maiores iure, quibusdam vitae, sed laborum vero culpa, sit dolor
           praesentium vel animi quae consequatur?
           </p>
+      </div>
       
       <ImageSlider/>
-
+    //todo Naprawić Slider możliwe że można jakoś lepiej zrobić cały komponent
     </section>
   )
 }
