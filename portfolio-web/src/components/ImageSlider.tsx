@@ -1,32 +1,69 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import 'swiper/css'
+import testImage from '../assets/img/test.jpg'
+import { FaStar } from "react-icons/fa";
+import { Autoplay } from 'swiper/modules';
 
-const images = [
-  "../assets/img/test.jpg",
-  "../assets/img/test.jpg",
-  "../assets/img/test.jpg",
-  "../assets/img/test.jpg",
-  "../assets/img/test.jpg",
-  "../assets/img/test.jpg",
-  "../assets/img/test.jpg",
-  "../assets/img/test.jpg",
-]
+const ImageSlider = () => {
 
+  const [active, setActive] = useState(null)
 
-export default const ImageSlider = () => {
+  const langs = [
+    {name: "Firma 1", logo: testImage, color: "hue-rotate-[240deg]" },
+    {name: "Firma 2", logo: testImage, color: "hue-rotate-[20deg]" },
+    {name: "Firma 3", logo: testImage, color: "hue-rotate-[340deg]" },
+    {name: "Firma 4", logo: testImage, color: "hue-rotate-[58deg]" },
+    {name: "Firma 5", logo: testImage, color: "hue-rotate-[225deg]" },
+    {name: "Firma 6", logo: testImage, color: "hue-rotate-[168deg]" },
+    {name: "Firma 7", logo: testImage, color: "hue-rotate-[0deg]" },
+  ]
+
   return (
-    <div className="relative h-[10rem] w-full mx-auto overflow-hidden rounded-full top-[5rem] 
-        before:absolute before:left-0 before:top-0 before:h-full before:w-[15%] before:z-2 
-        before:content-[''] before:bg-gradient-to-r before:from-[#323946] before:to-transparent 
-        after:absolute after:right-0 after:top-0 after:h-full after:w-[15%] after:z-2 after:content-[''] 
-        after:bg-gradient-to-r after:from-[#323946] after:to-transparent after:rotate-180">
-      <div className='group flex w-[calc(250px*8)] animate-scroll hover:[animation-play-state:paused]'>
-        {images.map((src, i) =>(
-          <div key={i} className='h-[200px] w-[250px] flex items-center p-[15px] [perspective:100px]'>
-            <img className="transition duration-400 group-hover:[transform:translateZ(20px)]" src={src} alt={`Image ${i + 1}`} />
-          </div>
-        ))}
-      </div>
+    <div className='max-w-5xl'>
+      <Swiper
+        spaceBetween={50}
+        slidesPerView={3}
+        onSlideChange={(cur) => setActive(cur.realIndex)}
+        loop={true}
+        centeredSlides={true}
+        speed={800}
+        autoplay={{
+          delay: 3000,
+        }}
+        modules={[Autoplay]}
+      >
+
+        {
+          langs.map((lang, i) => (
+            <SwiperSlide key={i}>
+              <div className='h-96 flex'>
+              <div className={`card ${active === i && "card-active"} bg-gradient-to-t from-white/20 to-[#ff0000]/60 ${lang.color} `}>
+                  <div className='other-logos'>
+                    <img src={lang.logo} alt="" />
+                  </div>
+                  <h2 className='text-3xl mt-2 font-semibold'>{lang.name}</h2>
+                  <p className='para'>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati dolorem veniam adipisci veritatis! Nisi nihil, quasi ipsa facilis blanditiis non molestias odit maiores aut dicta. Quidem possimus aut ratione repellat?
+                  </p>
+                  <div className='relative flex justify-center p-4'>
+                    <div className='stars flex item-center space-x-1  h-12 rounded-full'>
+                      <p className='text-xl pb-1'>5/5</p>
+                      <FaStar className='text-accent_color_yellow w-5 h-5'/>
+                      <FaStar className='text-accent_color_yellow w-5 h-5'/>
+                      <FaStar className='text-accent_color_yellow w-5 h-5'/>
+                      <FaStar className='text-accent_color_yellow w-5 h-5'/>
+                      <FaStar className='text-accent_color_yellow w-5 h-5'/>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+          ))
+        }
+      </Swiper>
     </div>
   )
 }
 
+export default ImageSlider
