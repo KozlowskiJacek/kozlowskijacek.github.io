@@ -7,6 +7,7 @@ export default {
     colors: {
       black: '#000000',
       white: '#ffffff',
+      red: "#FF0000",
       bg_color_1: '#1f242d',
       bg_color_2: '#323946',
       main_accent: '#74FAC8',
@@ -14,6 +15,12 @@ export default {
       gray_400: '#9ca3af',
       gray_600: '#4b5563',
       gray_800: '#1f2937',
+      accent_color_green: "#8ac186",
+      accent_color_yellow: "#ffd47f",
+      accent_color_pink: "#ffabc7",
+      accent_color_purple: "#7868d8",
+      accent_color_blue: "#154ec5",
+      accent_color_orange: "#ff4d00",
     },
     extend: {
       fontFamily: {
