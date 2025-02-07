@@ -10,13 +10,13 @@ const ImageSlider = () => {
   const [active, setActive] = useState(null)
 
   const langs = [
-    {name: "Firma 1", logo: testImage, color: "hue-rotate-[240deg]" },
-    {name: "Firma 2", logo: testImage, color: "hue-rotate-[20deg]" },
-    {name: "Firma 3", logo: testImage, color: "hue-rotate-[340deg]" },
-    {name: "Firma 4", logo: testImage, color: "hue-rotate-[58deg]" },
-    {name: "Firma 5", logo: testImage, color: "hue-rotate-[225deg]" },
-    {name: "Firma 6", logo: testImage, color: "hue-rotate-[168deg]" },
-    {name: "Firma 7", logo: testImage, color: "hue-rotate-[0deg]" },
+    { name: "Firma 1", logo: testImage, color: "#FF5733" },
+    { name: "Firma 2", logo: testImage, color: "#33FF57" },
+    { name: "Firma 3", logo: testImage, color: "#5733FF" },
+    { name: "Firma 4", logo: testImage, color: "#FFC300" }, 
+    { name: "Firma 5", logo: testImage, color: "#FF33A8" },
+    { name: "Firma 6", logo: testImage, color: "#33D1FF" }, 
+    { name: "Firma 7", logo: testImage, color: "#A833FF" },
   ]
 
   return (
@@ -38,7 +38,11 @@ const ImageSlider = () => {
           langs.map((lang, i) => (
             <SwiperSlide key={i}>
               <div className='h-96 flex'>
-              <div className={`card ${active === i && "card-active"} bg-gradient-to-t from-white/20 to-[#ff0000]/60 ${lang.color} `}>
+              <div className={`card ${active === i ? "card-active" : ""} border-[${lang.color}]`} 
+                  style={{ background: `linear-gradient(to top, rgba(255,255,255,0.2), ${lang.color}90)`,
+                  borderColor: lang.color
+                }}
+              >
                   <div className='other-logos'>
                     <img src={lang.logo} alt="" />
                   </div>
