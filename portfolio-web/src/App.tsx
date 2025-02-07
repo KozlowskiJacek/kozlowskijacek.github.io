@@ -1,11 +1,12 @@
 import { useState } from 'react'
 import './App.css'
-import Header from './pages/Header'
+import Header from './components/Header'
 import Home from './pages/Home'
 import About from './pages/About'
 import Services from './pages/Services'
 import Projects from './pages/Projects'
 import TheyTrustedMe from './pages/TheyTrustedMe'
+import Contact from './pages/Contact'
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
       <Services/>
       <Projects/>
       <TheyTrustedMe/>
+      <Contact/>
     </div>
   )
 }
