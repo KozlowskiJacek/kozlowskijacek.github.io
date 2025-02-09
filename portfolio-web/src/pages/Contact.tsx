@@ -13,8 +13,56 @@ const Contact = () => {
 
   const[errors, setErrors] = useState<string[]>([])
 
-  const [successMessage, setSuccessMessage] = setState("")
-  //! Skończyłem tutaj !
+  const [successMessage, setSuccessMessage] = useState("")
+  
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({...formData, [e.target.name]: e.target.value})
+  }
+
+  const handleSubmit = async (event: React.FormEvent) => {
+    event.preventDefault()
+  
+    const missingFields = Object.entries(formData)
+      .filter(([_, value]) => value.trim() === "")
+      .map(([key]) => key)
+
+    if (missingFields.length > 0) {
+      setErrors(missingFields)
+      setSuccessMessage("To pole nie powinno być puste ") //todo Wymyslić i przetłumaczyć komunikat o tym że pole nie może być puste 
+      return
+    }  
+
+    setErrors([])
+
+    confetti({
+      particleCount: 100,
+      spread: 70,
+      origin: { x: 0.5, y: 0.3 },
+    })
+    
+    try {
+      const response = await fetch("/api/sent-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          to: "example@gmail.com", //todo Wpisać email docelowy
+          subject: `Nowa wiadomość od ${formData.fullName}: ${formData.subject}`,
+          text: `Imię i nazwisko: ${formData.fullName}\nE-mail: ${formData.email}\nTelefon: ${formData.phone}\n\nWiadomość:\n${formData.message}`,
+        })
+      })
+      
+      if(response.ok) {
+        setSuccessMessage("Wiadomość została wysłąna! ✅") //todo na ang
+      }
+    }catch (error) {
+      console.error("Błąd wysyłki e-mail", error) //todo na ang
+      setSuccessMessage("wystąpił błąd. Spróbuj ponownie.") //todo na ang
+    }
+  }
+
+  //todo dokończyć kod 
 
   const handleConfetti = (event: React.MouseEvent<HTMLInputElement>) => {
     event.preventDefault()
