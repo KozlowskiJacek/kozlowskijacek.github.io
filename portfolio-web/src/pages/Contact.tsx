@@ -63,6 +63,7 @@ const Contact = () => {
   }
 
   //todo dokończyć kod 
+  //todo ZOBACZYĆ CZY NIE LEPIEJ UŻYĆ EMAIL.JS
 
   const handleConfetti = (event: React.MouseEvent<HTMLInputElement>) => {
     event.preventDefault()
@@ -82,7 +83,7 @@ const Contact = () => {
   return (
     <section className="text-white bg-bg_color_2 flex flex-col justify-center items-center min-h-screen w-full pt-[100px] px-[9%] pv-[20px]" id="contact">
       <h2 className='mb-5 text-5xl font-semibold'>Let's <span className='text-main_accent'>Collaborate</span> 🤝</h2>
-      <p className='text-sm text-gray_400 mb-[3rem]'>Write me an message and I will response within 1 business day</p>
+      <p className='text-base text-gray_400 mb-[3rem]'>Write me an message and I will response within 1️⃣ business day</p>
     
       <form action="#" className='max-w-[70rem] text-center mx-auto my-4 mb-[3rem] '>
         <div className='flex justify-center space-x-4'>
@@ -90,7 +91,7 @@ const Contact = () => {
           <input type="text"  placeholder='E-mail' className='input'/>
         </div>
         <div className='flex justify-center flex-wrap space-x-4'>
-          <input type="number" placeholder='Phone' className='input'/>
+          <input type="number" placeholder='Phone (optional)' className='input'/>
           <input type="text" placeholder='Subject' className='input'/>
         </div>
         <textarea 
