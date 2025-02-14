@@ -75,4 +75,5 @@ const FormContact = () => {
 
 export default FormContact
 
-//todo wstawić jeśli się da to automatyczny +48 przed numerem tel żeby było wiadomo skąd jest klient i poładnić strone wymienić zdjęcia w niedziele je zrobić dodać podstrony któe sa konieczne 
+//todo Wstawić jeśli się da to automatyczny +48 przed numerem tel żeby było wiadomo skąd jest klient i poładnić strone wymienić zdjęcia w niedziele je zrobić dodać podstrony któe sa konieczne 
+//todo zastanowić się czy dac numer tan kierujacy 
