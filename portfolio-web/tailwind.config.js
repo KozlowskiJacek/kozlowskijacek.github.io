@@ -2,7 +2,7 @@ import { transform } from 'typescript';
 
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  content: ["./src/**/*.{js,jsx,ts,tsx}", "./node_modules/intl-tel-input/**/*.js"],
   theme: {
     colors: {
       black: '#000000',

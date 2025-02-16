@@ -1,6 +1,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "intl-tel-input/build/css/intlTelInput.css";
+
+/* .iti__dropdown-content {
+  @apply bg-bg_color_1   shadow-lg rounded-lg !important
+}
+
+.iti__country {
+  @apply px-4 py-2 cursor-pointer hover:bg-bg_color_2 transition-all !important
+}
+
+.iti__country.iti__highlight {
+  @apply text-white !important
+} 
+
+.iti__search-input {
+  @apply bg-bg_color_1 text-white px-4 py-2
+}
+
+.iti__selected-country-primary {
+ @apply h-0
+}
+
+.iti__selected-country {
+  @apply h-2
+} */
 
 .card {
   @apply w-72 cursor-pointer border-b-4 rounded-xl h-44 text-center px-3 py-7 self-end duration-500 delay-100
@@ -38,6 +63,11 @@
   @apply bg-main_accent inline-block my-7 py-2 px-12 rounded-full text-bg_color_2 font-extrabold hover:drop-shadow-custom-glow hover:scale-110 transition-all duration-500 ease-in-out cursor-pointer text-xl shadow-custom-around shadow-main_accent
 }
 
+
+
+
+
+
 /* Usuwa strzałki dla Chrome, Safari, Edge, Opera */
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
@@ -48,4 +78,30 @@ input[type="number"]::-webkit-outer-spin-button {
 /* Usuwa strzałki dla Firefox */
 input[type="number"] {
   -moz-appearance: textfield;
+}
+
+input:-webkit-autofill,
+textarea:-webkit-autofill {
+  background-color: #1f242d !important; /* Tło */
+  color: white !important; /* Kolor tekstu */
+  box-shadow: 0 0 0px 1000px #1f242d inset !important; /* Usuwa cień */
+}
+
+/* Próba z regułami "focus" */
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill:focus {
+  background-color: #1f242d !important; /* Tło */
+  color: white !important; /* Kolor tekstu */
+}
+
+/* Placeholder */
+input:-webkit-autofill::placeholder,
+textarea:-webkit-autofill::placeholder {
+  color: white !important;
+}
+
+/* Niektóre przeglądarki mogą stosować własne shadow DOM, więc można spróbować dodać takie reguły */
+input:-webkit-autofill::after,
+textarea:-webkit-autofill::after {
+  color: white !important;
 }
