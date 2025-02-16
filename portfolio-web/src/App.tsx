@@ -7,6 +7,7 @@ import Services from './pages/Services'
 import Projects from './pages/Projects'
 import TheyTrustedMe from './pages/TheyTrustedMe'
 import Contact from './pages/Contact'
+import Footer from './components/Footer'
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
       <Projects/>
       <TheyTrustedMe/>
       <Contact/>
+      <Footer/>
     </div>
   )
 }
