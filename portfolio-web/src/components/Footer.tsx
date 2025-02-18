@@ -15,3 +15,5 @@ const Footer = () => {
 }
 
 export default Footer
+
+//todo Zobacyzćz czy wszytko jest dodać może jakieś info co potrafię jakie technologie i wgl (i ich sie nayuczyć jeszcze lepiej)
