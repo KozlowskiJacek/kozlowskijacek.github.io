@@ -1,8 +1,12 @@
 import React from 'react'
 import 'boxicons/css/boxicons.min.css';
 import homePhoto from '../assets/img/Image 1.png'
+import useSmoothScroll from '../hooks/useSmoothScroll';
 
 const Home = () => {
+
+  const scrollTo = useSmoothScroll()
+
   return (
     <section className='bg-bg_color_1 flex justify-center items-center min-h-screen w-full pt-[100px] px-[9%] pv-[20px]' id='home'>
       <div className='w-full text-white'>
@@ -22,7 +26,7 @@ const Home = () => {
           <a href="#"><i className="bx bxl-linkedin text-main_accent inline-flex justify-center items-center text-3xl bg-opacity-0 border-main_accent rounded-full p-2 border-[3px] hover:animate-tada hover:bg-main_accent hover:text-bg_color_2 transition-all hover:drop-shadow-custom-glow"></i></a>
           <a href="#"><i className="bx bx-coffee-togo text-main_accent inline-flex justify-center items-center text-3xl bg-opacity-0 border-main_accent rounded-full p-2 border-[3px] hover:animate-tada hover:bg-main_accent hover:text-bg_color_2 transition-all hover:drop-shadow-custom-glow"></i></a>
         </div>
-        <a href="#contact" className='bg-main_accent inline-block my-7 py-2 px-12 rounded-full text-bg_color_2 font-extrabold hover:drop-shadow-custom-glow hover:scale-110 transition-all duration-500 ease-in-out cursor-pointer text-xl shadow-custom-around shadow-main_accent'>Get in touch</a>
+        <a onClick={() => scrollTo("contact")} className='bg-main_accent inline-block my-7 py-2 px-12 rounded-full text-bg_color_2 font-extrabold hover:drop-shadow-custom-glow hover:scale-110 transition-all duration-500 ease-in-out cursor-pointer text-xl shadow-custom-around shadow-main_accent'>Get in touch</a>
       </div>
       <div className='w-[75vw] m-20'>
         <img className='max-w-[100%] max-h-[100%] animate-floatImage' src={homePhoto} alt="" />
