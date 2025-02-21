@@ -12,7 +12,7 @@ const Home = () => {
       <div className='w-full text-white'>
         <h3 className='text-3xl font-semibold mb-3'>Hello, its me!</h3>
         <h1 className='text-6xl font-semibold'>Jacek Kozłowski</h1>
-        <h3 className='mt-4 text-3xl font-semibold mb-5'>I'm <span className='text-main_accent'>Full-Stack</span></h3>
+        <h3 className='mt-4 text-3xl font-semibold mb-5'>I'm <span className='text-main_accent'>Full-Stack</span></h3> //todo Chciałbym tutaj zrobić liste pojawiających się w sapnie innych stringów 
         <p className='leading-6 text-justify '>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti
           fuga fugit assumenda, quos accusantium excepturi quibusdam
