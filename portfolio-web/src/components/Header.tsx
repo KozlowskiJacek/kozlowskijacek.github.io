@@ -3,9 +3,9 @@ import useSmoothScroll from '../hooks/useSmoothScroll'
 
 const Header = () => {
 
-  // const handleScroll = (id: string) => {
-  //   document.getElementById(id)?.scrollIntoView({ behavior: "smooth" })
-  // }
+  const [activeLink, setActiveLink] = useState<string>("home")
+
+  const links = ["home", "about", "services", "projects", "feedback", "contact"]
 
   const scrollTo = useSmoothScroll()
 
@@ -35,12 +35,18 @@ const Header = () => {
         
         
         <div className="flex space-x-11 text-white text-lg ">
-            <a onClick={() => scrollTo("home")} className="cursor-pointer hover:scale-125 hover:text-main_accent transition-all focus:scale-125 focus:text-main_accent hover:drop-shadow-custom-glow">Home</a>
-            <a onClick={() => scrollTo("about")} className="cursor-pointer hover:scale-125 hover:text-main_accent transition-all focus:scale-125 focus:text-main_accent hover:drop-shadow-custom-glow">About</a>
-            <a onClick={() => scrollTo("services")} className="cursor-pointer hover:scale-125 hover:text-main_accent transition-all focus:scale-125 focus:text-main_accent hover:drop-shadow-custom-glow">Services</a>
-            <a onClick={() => scrollTo("projects")} className="cursor-pointer hover:scale-125 hover:text-main_accent transition-all focus:scale-125 focus:text-main_accent hover:drop-shadow-custom-glow">Projects</a>
-            <a onClick={() => scrollTo("feedback")} className="cursor-pointer hover:scale-125 hover:text-main_accent transition-all focus:scale-125 focus:text-main_accent hover:drop-shadow-custom-glow">Feedback</a>
-            <a onClick={() => scrollTo("contact")} className="cursor-pointer hover:scale-125 hover:text-main_accent transition-all focus:scale-125 focus:text-main_accent hover:drop-shadow-custom-glow">Contact</a>
+          {links.map((link)=> (
+          <a
+            key={link}
+            onClick={() => {
+              setActiveLink(link)
+              scrollTo(link)
+            }}
+            className={`cursor-pointer hover:scale-125 hover:text-main_accent transition-all focus:scale-125 focus:text-main_accent hover:drop-shadow-custom-glow ${activeLink === link ? "scale-125 text-main_accent" : ""}`}
+          >
+            {link.charAt(0).toUpperCase() + link.slice(1)}
+          </a>
+          ))}
         </div>
       </div>
     </header>

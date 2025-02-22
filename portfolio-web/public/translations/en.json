@@ -1,0 +1,20 @@
+{
+  "navbar": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "projects": "Projects",
+    "feedback": "Feedback",
+    "contact": "Contact"
+  },
+
+  "home": {
+    "hello": "Hello, its me!",
+    "Im": "I'm",
+    "text": "Jestem full-stack developerem i content creatorem. Tworzę aplikacje webowe w React, TypeScript, JavaScript, Python, Django, a także pracuję z bazami danych – zarówno SQL (PostgreSQL, MySQL), jak i NoSQL (MongoDB). Do tego ogarniam narzędzia jak DBeaver, żeby wszystko było dobrze poukładane.
+
+Poza kodowaniem zajmuję się tworzeniem treści – od profesjonalnych filmów reklamowych, przez luźniejszy content jak vlogi czy gaming, aż po rolki promocyjne dla firm i marek.
+
+Uwielbiam budować coś z niczego – rzeczy, które pomagają ludziom rozwijać ich biznesy albo po prostu wywołują uśmiech. Jeśli masz pomysł na coś fajnego, chętnie pomogę w jego realizacji!"
+  }
+}
