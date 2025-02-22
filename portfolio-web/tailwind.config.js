@@ -55,11 +55,16 @@ export default {
           "0%": {transform: "translateX(0)"},
           "100%": {transform: "translateX(calc(-250px * 4))"}
         },
+        blink: {
+          '0%, 50%': {opacity: 1},
+          '51%, 100%': {opacity: 0},
+        },
       },
       animation: {
         tada: 'tada 1s ease-in-out',
         floatImage: 'floatImage 5s ease-in-out infinite',
-        scroll: "scroll 10s linear infinite"
+        scroll: "scroll 10s linear infinite",
+        blink: 'blink 1s infinite',
       },
     },
   },

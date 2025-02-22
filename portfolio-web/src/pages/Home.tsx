@@ -1,24 +1,57 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import 'boxicons/css/boxicons.min.css';
 import homePhoto from '../assets/img/Image 1.png'
 import useSmoothScroll from '../hooks/useSmoothScroll';
+import { useTranslation  } from 'i18next';
 
 const Home = () => {
+
+  const { t } = useTranslation()
+
+  const roles = ["Full Stack Developer", "YouTuber", "Video Editor", "Content Creator", "Marketing Specialist"]
+
+  const [text, setText] = useState("")
+  const [index, setIndex] = useState(0)
+  const [isDeleting, setIsDeleting] = useState(false)
+  const [charIndex, setCharindex] = useState(0)
+  const [pause, setPause] = useState(false)
+
+  const typingSpeed = 150
+  const deletingSpeed = 50
+  const pauseDuration = 2000
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      if (!isDeleting && charIndex < roles[index].length) {
+        setText((prev) => prev + roles[index][charIndex])
+        setCharindex((prev) => prev + 1)
+      } else if (!isDeleting && charIndex === roles[index].length) {
+          setPause(true)
+          setTimeout(() => {
+            setIsDeleting(true)
+            setPause(false)
+        }, pauseDuration)
+      } else if (isDeleting && charIndex > 0) {
+          setText((prev) => prev.slice(0, -1))
+          setCharindex((prev) => prev -1)
+      } else if (isDeleting && charIndex === 0) {
+          setIsDeleting(false)
+          setIndex((prev) => (prev + 1) % roles.length)
+        }
+    }, isDeleting ? deletingSpeed : typingSpeed)
+
+    return() => clearTimeout(timeout)
+  }, [charIndex, isDeleting, pause])
 
   const scrollTo = useSmoothScroll()
 
   return (
     <section className='bg-bg_color_1 flex justify-center items-center min-h-screen w-full pt-[100px] px-[9%] pv-[20px]' id='home'>
       <div className='w-full text-white'>
-        <h3 className='text-3xl font-semibold mb-3'>Hello, its me!</h3>
+        <h3 className='text-3xl font-semibold mb-3'>{t("home.hello")}Hello, its me!</h3>
         <h1 className='text-6xl font-semibold'>Jacek Kozłowski</h1>
-        <h3 className='mt-4 text-3xl font-semibold mb-5'>I'm <span className='text-main_accent'>Full-Stack</span></h3> //todo Chciałbym tutaj zrobić liste pojawiających się w sapnie innych stringów 
-        <p className='leading-6 text-justify '>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti
-          fuga fugit assumenda, quos accusantium excepturi quibusdam
-          reprehenderit magnam voluptatum facilis asperiores sapiente dicta non
-          itaque dolorum ad neque id eligendi.
-        </p>
+        <h3 className='mt-4 text-3xl font-semibold mb-5'>I'm <span className='text-main_accent'>{text}</span><span className='animate-blink'>|</span></h3>
+        <p className='leading-6 text-justify '>{t("home.text")}</p>
         <div className='flex space-x-4 mt-5'>
           <a href="#"><i className='bx bxl-instagram-alt text-main_accent inline-flex justify-center items-center text-3xl bg-opacity-0 border-main_accent rounded-full p-2 border-[3px] hover:animate-tada hover:bg-main_accent hover:text-bg_color_2 transition-all hover:drop-shadow-custom-glow'></i></a>
           <a href="#"><i className="bx bxl-youtube text-main_accent inline-flex justify-center items-center text-3xl bg-opacity-0 border-main_accent rounded-full p-2 border-[3px] hover:animate-tada hover:bg-main_accent hover:text-bg_color_2 transition-all hover:drop-shadow-custom-glow"></i></a>

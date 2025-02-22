@@ -10,7 +10,7 @@ const ImageSlider = () => {
   const [active, setActive] = useState(null)
 
   const langs = [
-    { name: "Firma 1", logo: testImage, color: "#FF5733" },
+    { name: "Firma 1", logo: testImage, text:'"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati dolorem veniam adipisci veritatis! Nisi nihil, quasi ipsa facilis blanditiis non molestias odit maiores aut dicta. Quidem possimus aut ratione repellat."', color: "#FF5733" },
     { name: "Firma 2", logo: testImage, color: "#33FF57" },
     { name: "Firma 3", logo: testImage, color: "#5733FF" },
     { name: "Firma 4", logo: testImage, color: "#FFC300" }, 
@@ -48,7 +48,7 @@ const ImageSlider = () => {
                   </div>
                   <h2 className='text-3xl mt-2 font-semibold'>{lang.name}</h2>
                   <p className='para'>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati dolorem veniam adipisci veritatis! Nisi nihil, quasi ipsa facilis blanditiis non molestias odit maiores aut dicta. Quidem possimus aut ratione repellat?
+                   {lang.text}
                   </p>
                   <div className='relative flex justify-center p-4'>
                     <div className='stars flex item-center space-x-1  h-12 rounded-full'>
