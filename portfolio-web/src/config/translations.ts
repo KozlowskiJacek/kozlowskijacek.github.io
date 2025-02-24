@@ -9,11 +9,16 @@ i18n
   .use(initReactI18next)
   .init({
     fallbackLng: "pl",
-    debug: false,
+    debug: true,
     interpolation: { escapeValue: false },
     backend: {
-      loadPath: "/translations/{{lgn}}.json"
+      loadPath: "/translations/{{lng}}.json"
+    },
+    detection: {
+      order: ["localStorage", "navigator"],
+      caches: ["localStorage"],
     }
   })
+
 
   export default i18n
