@@ -51,7 +51,7 @@ const Home = () => {
         <h3 className='text-3xl font-semibold mb-3'>{t("home.hello")}</h3>
         <h1 className='text-6xl font-semibold'>Jacek Kozłowski</h1>
         <h3 className='mt-4 text-3xl font-semibold mb-5'>{t("home.im")} <span className='text-main_accent'>{text}</span><span className='animate-blink'>|</span></h3>
-        <p className='leading-6 text-justify '>
+        <p className='leading-6 '>
           {/* {t("home.text")} */}
           <Trans i18nKey="home.text" components={{ br: <br /> }}/>
         </p>
