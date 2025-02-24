@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import 'boxicons/css/boxicons.min.css';
 import homePhoto from '../assets/img/Image 1.png'
 import useSmoothScroll from '../hooks/useSmoothScroll';
-import { useTranslation  } from 'i18next';
+import { Trans, useTranslation } from 'react-i18next';
 
 const Home = () => {
 
@@ -48,10 +48,13 @@ const Home = () => {
   return (
     <section className='bg-bg_color_1 flex justify-center items-center min-h-screen w-full pt-[100px] px-[9%] pv-[20px]' id='home'>
       <div className='w-full text-white'>
-        <h3 className='text-3xl font-semibold mb-3'>{t("home.hello")}Hello, its me!</h3>
+        <h3 className='text-3xl font-semibold mb-3'>{t("home.hello")}</h3>
         <h1 className='text-6xl font-semibold'>Jacek Kozłowski</h1>
-        <h3 className='mt-4 text-3xl font-semibold mb-5'>I'm <span className='text-main_accent'>{text}</span><span className='animate-blink'>|</span></h3>
-        <p className='leading-6 text-justify '>{t("home.text")}</p>
+        <h3 className='mt-4 text-3xl font-semibold mb-5'>{t("home.im")} <span className='text-main_accent'>{text}</span><span className='animate-blink'>|</span></h3>
+        <p className='leading-6 text-justify '>
+          {/* {t("home.text")} */}
+          <Trans i18nKey="home.text" components={{ br: <br /> }}/>
+        </p>
         <div className='flex space-x-4 mt-5'>
           <a href="#"><i className='bx bxl-instagram-alt text-main_accent inline-flex justify-center items-center text-3xl bg-opacity-0 border-main_accent rounded-full p-2 border-[3px] hover:animate-tada hover:bg-main_accent hover:text-bg_color_2 transition-all hover:drop-shadow-custom-glow'></i></a>
           <a href="#"><i className="bx bxl-youtube text-main_accent inline-flex justify-center items-center text-3xl bg-opacity-0 border-main_accent rounded-full p-2 border-[3px] hover:animate-tada hover:bg-main_accent hover:text-bg_color_2 transition-all hover:drop-shadow-custom-glow"></i></a>
