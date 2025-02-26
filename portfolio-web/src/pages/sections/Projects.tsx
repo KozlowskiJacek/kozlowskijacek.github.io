@@ -1,5 +1,5 @@
 import React from "react";
-import workInProgress from "../assets/img/test.jpg";
+import workInProgress from "../../assets/img/test.jpg";
 
 const Projects = () => {
   return (
