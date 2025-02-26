@@ -1,5 +1,5 @@
 import React, from 'react'
-import aboutPhoto from '../assets/img/Ja i papuga.png'
+import aboutPhoto from '../../assets/img/Ja i papuga.png'
 import { useTranslation } from 'react-i18next'
 
 
