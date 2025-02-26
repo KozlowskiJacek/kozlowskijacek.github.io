@@ -3,7 +3,8 @@ import React from 'react'
 const Services = () => {
   return (
     <section className='text-white bg-bg_color_1 flex flex-col justify-center items-center min-h-screen w-full pt-[100px] px-[9%] pv-[20px]' id='services'>
-      <h2 className='text-5xl font-semibold mb-36'>My <span className='text-main_accent'>Services</span></h2>
+      <h2 className='text-5xl font-semibold mb-5'>My <span className='text-main_accent'>Services</span></h2>
+      <p className='mb-36'>Tworzę, Automatyzuję, Angażuję</p>
 
       <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
         <div className='bg-bg_color_2 w-[350px] md:w-[400px] h-[300px] mx-auto p-6 pb-8 rounded-2xl text-center border-2 border-bg_color_1 transition duration-500 ease hover:border-main_accent hover:scale-105'>

@@ -1,6 +1,7 @@
 import React, from 'react'
 import aboutPhoto from '../../assets/img/Ja i papuga.png'
 import { useTranslation } from 'react-i18next'
+import { Link } from 'react-router-dom'
 
 
 const About = () => {
@@ -14,18 +15,10 @@ const About = () => {
       </div>
       <div className='text-white w-full'>
         <h2 className='text-left text-5xl font-semibold mb-2'>{t("about.about")}<span className='text-main_accent'> {t("about.me")}</span></h2>
-        <h3 className='text-3xl font-bold mb-4'>Front developer</h3>
-        <p className='text-justify leading-6 my-5 mb-5'>{t("about.text")} <a href='#' className='cursor-pointer text-main_accent hover:drop-shadow-custom-glow transition-all'>{t("about.see_more")}</a>
+        <h3 className='text-3xl font-bold mb-4'>{t("about.title")}</h3>
+        <p className='leading-7 my-5 mb-5'>{t("about.text")} 
+          <Link to="/about" className='cursor-pointer text-main_accent hover:drop-shadow-custom-glow transition-all'> {t("about.see_more")}</Link>
         </p>
-        <div className='flex justify-center gap-10'>
-          <a href="#">
-            <img src="https://toppng.com/uploads/preview/sample-logo-11551056375txoo49urn6.png" alt="" className='w-20 h-auto cursor-pointer rounded hover:scale-110 transition-all duration-500 ease-in-out hover:drop-shadow-custom-glow'/>
-          </a>
-
-          <a href="#">
-            <img src="https://toppng.com/uploads/preview/sample-logo-11551056375txoo49urn6.png" alt="" className='w-20 h-auto cursor-pointer rounded hover:scale-110 transition-all duration-500 ease-in-out hover:drop-shadow-custom-glow'/>
-          </a>
-        </div>
       </div>
 
     </section>
