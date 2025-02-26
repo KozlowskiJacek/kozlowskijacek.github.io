@@ -13,5 +13,13 @@
     "im": "I'm",
     "text": "I am a full-stack developer and content creator. I build web applications, websites, and automate processes. Beyond coding, I create various types of content – from professional advertising films and casual vlogs to gaming videos and promotional reels for businesses and brands. I love building something from nothing. Completing tasks that help grow a business while bringing joy is my main goal. I enjoy collaborating on innovative projects – if you have an idea, let’s make it happen together!",
     "btn_get_in_touch": "Get in touch"
+  },
+
+  "about": {
+    "about": "About",
+    "me": "Me",
+    "title": "I love creating something out of nothing.",
+    "text": "🚀 My journey into programming and content creation wasn't typical – I started in an automotive technical school but quickly realized that I didn’t want to spend my life in a workshop fixing other people’s cars. I'm still passionate about the automotive world, but only when it comes to my own projects, without client pressure. Instead, I discovered that I'm passionate about creating – both in code and media. I love building applications, automating processes, and crafting engaging content. I initially studied computer science full-time, but I soon realized that I prefer learning practical skills that I can immediately apply – so I switched to part-time studies and began intensively developing my skills as a programmer and content creator.",
+    "see_more": "See more..."
   }
 }

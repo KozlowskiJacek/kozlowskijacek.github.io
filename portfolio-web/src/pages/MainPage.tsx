@@ -24,6 +24,7 @@ const MainPage = () => {
       section.scrollIntoView({ behavior: "smooth" })
     }
   }, [location])
+  
   return (
     <div className="font-playfair">
       <Header />
