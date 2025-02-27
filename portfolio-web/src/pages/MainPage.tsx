@@ -27,7 +27,6 @@ const MainPage = () => {
   
   return (
     <div className="font-playfair">
-      <Header />
       <Home />
       <About />
       <Services />
