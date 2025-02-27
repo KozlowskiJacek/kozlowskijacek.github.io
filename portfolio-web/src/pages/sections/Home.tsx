@@ -85,7 +85,7 @@ const Home = () => {
         </div>
         <a
           onClick={() => scrollTo("contact")}
-          className="bg-main_accent inline-block my-7 py-2 px-12 rounded-full text-bg_color_2 font-extrabold hover:drop-shadow-custom-glow hover:scale-110 transition-all duration-500 ease-in-out cursor-pointer text-xl shadow-custom-around shadow-main_accent"
+          className="btn"
         >
           {t("home.btn_get_in_touch")}
         </a>
