@@ -21,11 +21,26 @@ const Header = () => {
   }
 
   useEffect(() => {
+
+    const sections = links.map(link => document.getElementById(link))
+
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
+      let currentSection = "home"
+
+      sections.forEach(section => {
+        if(section) {
+          const rect = section.getBoundingClientRect()
+          if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+            currentSection = section.id
+          }
+        }
+      })
+
+      setActiveLink(currentSection)
     }
 
     window.addEventListener("scroll", handleScroll)
+    handleScroll()
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
