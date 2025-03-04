@@ -16,6 +16,8 @@ const AboutSubSite = () => {
     window.scrollTo(0, 0)
   })
 
+  //todo Spraweidzć czy wszystko działa i zmeinić grafiki na nowe
+
   const handleNavigation = () => {
     // setActiveLink("contact")
     navigate(`/`)
