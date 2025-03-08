@@ -16,7 +16,7 @@ const AboutSubSite = () => {
     window.scrollTo(0, 0)
   })
 
-  //todo Spraweidzć czy wszystko działa i zmeinić grafiki na nowe postarać się o zrobioenie grafik pixelart 
+  //todo Spraweidzć czy wszystko działa i zmeinić grafiki na nowe postarać się o zrobioenie grafik pixelart sprawdzić czy lepiej dać animacje czy porpostu pixel art 
 
   const handleNavigation = () => {
     // setActiveLink("contact")
