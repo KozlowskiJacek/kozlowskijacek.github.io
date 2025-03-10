@@ -35,5 +35,19 @@
     "text5": "🎲 Uwielbiam gry – zarówno komputerowe, jak i planszowe. Mam w planach stworzenie własnej gry oraz planszówki, głównie dla fanu, ale kto wie – może ktoś się wkręci i wyjdzie z tego coś ciekawego. 🏋️‍♂️ Sport to dla mnie idealna odskocznia od pracy. Najczęściej wybieram siłownię i Muay Thai – pozwala mi to zresetować się i skupić na sobie. Poza tym praca siedząca nie jest zbyt zdrowa. 😆 🎸 Umiem grać na gitarze klasycznej, ale raczej ze mnie słaby grajek – znam kilka piosenek pod ognisko i to tyle. 😅 🐱 Kocham zwierzęta – co zimę organizuję zbiórkę koców, jedzenia i zabawek dla schroniska w moim mieście. Sam mam kota Leona. 📹 W 2025 chciałbym zacząć nagrywać filmy na YouTube, więc jeśli odważę się to zrobić, będzie tutaj gdzieś przycisk YT do mojego kanału. 🤝 Jeśli dotrwałeś do końca, to albo masz za dużo czasu, albo naprawdę Cię zainteresowałem, albo po prostu jesteś spoko ziomalem lub ziomalką.",
     "questions": "📩 Masz pytania? Napisz!",
     "bye": "Do usłyszenia! 🚀"
+  },
+
+  "services": {
+    "my": "Moje",
+    "services": "Usługi",
+    "title": "Kod. Kreacja. Automatyzacja.",
+    "web_app": "Nowoczesne strony i aplikacje webowe – funkcjonalność, która sprzedaje.",
+    "web_app_text": "Projektuję i tworzę strony oraz aplikacje webowe dopasowane do Twoich potrzeb. Wsłuchuję się w Twoje oczekiwania, ale zawsze pamiętam, że to ✨użytkownicy✨ są najważniejsi!",
+    "video_editor" : "Reklamy, vlogi, gaming, rolki – tworzę filmy, które angażują, a do tego zaopiekuję się Twoimi social media!",
+    "video_editor_text" : "Tworzę materiały od A do Z – piszę scenariusze, kreuję sceny, nagrywam ujęcia, dopracowuję kolory i dodaję ✨magię montażu✨, aby stworzyć reklamę skrojoną specjalnie dla Twoich klientów! 🎬🚀",
+    "automate" : "Mniej klikania, więcej efektów – automatyzacja, która oszczędza Twój czas i pieniądze.",
+    "automate_text" : "Jeśli jakiś proces zajmuje Twojemu pracownikowi zbyt wiele czasu, który mógłby przeznaczyć na bardziej produktywne zadania niż np. klikanie w tabelki, stworzę automatyzację, która zaoszczędzi Ci czas i pieniądze! 💡💸",
+    "btn_learn_more": "Dowiedz się więcej!"
   }
+
 }
