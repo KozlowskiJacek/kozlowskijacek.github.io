@@ -38,9 +38,10 @@ const Services = () => {
         </div>
       </div>
 
-      //todo Ustawić równo kafelki w wyświetlaniu na telefonie ponieważ jeżeli dam do wszystkich -mx-4 żeby było równo to inne też na to reagują a teoretycznienie powinni
 
     </section>
+      //todo Ustawić równo kafelki w wyświetlaniu na telefonie ponieważ jeżeli dam do wszystkich -mx-4 żeby było równo to inne też na to reagują a teoretycznienie powinni
+      //todo Zmodyfikować tekst tak aby anglielski oraz polsi miał tyle samo linijek by kafelki się nie rozjechały.
   )
 }
 

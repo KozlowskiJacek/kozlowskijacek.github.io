@@ -35,5 +35,19 @@
     "text5": "🎲 I love games – both video games and board games. I plan to create my own game and board game, mainly for fun, but who knows – maybe someone will get hooked, and something interesting will come out of it. 🏋️‍♂️ Sports are the perfect escape from work for me. I usually go for the gym and Muay Thai – it helps me reset and focus on myself. Besides, sitting all day isn’t very healthy. 😆 🎸 I can play classical guitar, but I’m not great at it – I know a few campfire songs, and that’s about it. 😅 🐱 I love animals – every winter, I organize a donation drive for blankets, food, and toys for my local animal shelter. I also have a cat named Leon. 📹 In 2025, I want to start making YouTube videos, so if I get the courage to do it, there will be a YT button here linking to my channel. 🤝 If you made it to the end, you either have too much time, I really got you interested, or you’re just a cool person.",
     "questions": "📩 Have questions? Write to me!",
     "bye": "Talk soon! 🚀"
-  }
+  },
+
+  "services": {
+    "my": "My",
+    "services": "Services",
+    "title": "Code. Creation. Automation.",
+    "web_app": "Modern websites and web apps – functionality that sells.",
+    "web_app_text": "I design and create websites and web applications tailored to your needs. I listen to your expectations, but always remember that ✨users✨ are the most important!",
+    "video_editor" : "Ads, vlogs, gaming, reels – I create videos that engage, and I’ll take care of your social media too!",
+    "video_editor_text" : "I create content from A to Z – I write scripts, create scenes, shoot footage, adjust colors, and add ✨editing magic✨ to craft a commercial tailored specifically for your customers! 🎬🚀",
+    "automate" : "Less clicking, more results – automation that saves your time and money.",
+    "automate_text" : "If a process takes too much time for your employee, time they could spend on more productive tasks like working with data instead of clicking through tables, I’ll create automation that will save you time and money! 💡💸",
+    "btn_learn_more": "Learn more!"
+}
+
 }
