@@ -7,11 +7,13 @@ const Header = () => {
   const { t, i18n } = useTranslation()
   const navigate = useNavigate()
   const location = useLocation()
+  const scrollTo = useSmoothScroll()
 
   const currentLang = i18n.language
   const [activeLink, setActiveLink] = useState<string>("home")
-  const [isScrolled, setIsScrolled] = useState<boolean>(false)
-  const scrollTo = useSmoothScroll()
+  const [isOpen, setIsOpen] = useState(false)
+
+  const toggleNavbar = () => setIsOpen(!isOpen)
   
   const links = ["home", "about", "services", "projects", "feedback", "contact"]
 
@@ -21,9 +23,7 @@ const Header = () => {
   }
 
   useEffect(() => {
-
     const sections = links.map(link => document.getElementById(link))
-
     const handleScroll = () => {
       let currentSection = "home"
 
@@ -53,25 +53,31 @@ const Header = () => {
     } else {
       scrollTo(link)
     }
+    setIsOpen(false) // Zamknięcie menu po kliknięciu w link
   }
 
   return (
-    <header className={`z-50 bg-bg_color_1 text-white top-0 left-0 w-full p-5 px-2 flex fixed ${isScrolled ? 'border-b-[0.1rem] border-b-[rgba(0,0,0,0.2)]' : ''}`}>
+    <header className="z-50 bg-bg_color_1 text-white fixed top-0 left-0 w-full p-5 shadow-md">
       <div className="container mx-auto flex justify-between items-center">
-        <a onClick={() => handleNavigation("home")} className='text-2xl text-white font-bold cursor-pointer'>Jacek Kozłowski</a>
 
-        <div className="flex space-x-11 text-white text-lg">
+        <a onClick={() => handleNavigation("home")} className='text-2xl text-white font-bold cursor-pointer'>
+          Jacek Kozłowski
+        </a>
+
+        <div className="hidden md:flex items-center justify-end flex-1 space-x-8 text-lg">
           {links.map((link) => (
             <a
               key={link}
               onClick={() => handleNavigation(link)}
-              className={`cursor-pointer hover:scale-125 hover:text-main_accent transition-all ${activeLink === link ? "scale-125 text-main_accent" : ""}`}
+              className={`cursor-pointer hover:scale-110 hover:text-main_accent transition-all ${
+                activeLink === link ? "scale-110 text-main_accent" : ""
+              }`}
             >
               {t(`navbar.${link}`)}
             </a>
           ))}
 
-          <button onClick={toggleLanguage} className=''>
+          <button onClick={toggleLanguage}>
             {currentLang === "pl" ? (
               <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/United-kingdom_flag_icon_round.svg/2048px-United-kingdom_flag_icon_round.svg.png" alt="English" className='w-6 h-6'/>
             ) : (
@@ -79,7 +85,39 @@ const Header = () => {
             )}
           </button>
         </div>
+
+        {/* Mobile Menu */}
+        <div className="flex items-center space-x-4 md:hidden">
+          <button onClick={toggleLanguage}>
+              {currentLang === "pl" ? (
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/United-kingdom_flag_icon_round.svg/2048px-United-kingdom_flag_icon_round.svg.png" alt="English" className='w-6 h-6'/>
+              ) : (
+                <img src="https://cdn-icons-png.flaticon.com/512/5372/5372963.png" alt="Polish" className='w-6 h-6'/>
+              )}
+            </button>
+         
+          <button onClick={toggleNavbar} className="text-2xl md:hidden">
+            {isOpen ? <i className="fa-solid fa-xmark"></i> : <i className="fa-solid fa-bars"></i>}
+          </button>
+        </div>
       </div>
+
+      {/* Rozwijane menu mobilne */}
+      {isOpen && (
+        <div className="absolute left-0 right-0 bg-bg_color_1 text-white flex flex-col items-center space-y-4 py-4 shadow-lg">
+          {links.map((link) => (
+            <a
+              key={link}
+              onClick={() => handleNavigation(link)}
+              className={`cursor-pointer hover:scale-110 hover:text-main_accent transition-all ${
+                activeLink === link ? "scale-110 text-main_accent" : ""
+              }`}
+            >
+              {t(`navbar.${link}`)}
+            </a>
+          ))}
+        </div>
+      )}
     </header>
   )
 }

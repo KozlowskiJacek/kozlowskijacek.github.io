@@ -29,7 +29,7 @@ const Services = () => {
         </div>
 
         <div className='bg-bg_color_2 w-[350px] h-[500px] md:w-[480px] md:h-[400px] mx-auto mb-10 p-6 pb-8 rounded-2xl text-center border-2 border-bg_color_1 transition duration-500 ease hover:border-main_accent hover:scale-105'>
-          <i className='fa-solid fa-paintbrush fa-beat-fade text-main_accent text-6xl'></i>
+          <i className='fa-solid fa-robot fa-beat-fade text-main_accent text-6xl'></i>
           <h3 className='text-2xl font-bold mt-4'>{t("services.automate")}</h3>
           <p className='mt-4 text-base'>
           {t("services.automate_text")}
