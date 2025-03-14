@@ -3,6 +3,7 @@ import "boxicons/css/boxicons.min.css";
 import homePhoto from "../../assets/img/Image 1.png";
 import useSmoothScroll from "../../hooks/useSmoothScroll";
 import { useTranslation } from "react-i18next";
+import { motion } from 'framer-motion'
 
 const Home = () => {
   const { t } = useTranslation();
@@ -58,7 +59,12 @@ const Home = () => {
       className="bg-bg_color_1 flex md:flex-row flex-col justify-center items-center min-h-screen w-full pt-[100px] px-[9%] pv-[20px]"
       id="home"
     >
-      <div className="w-full text-white">
+      <motion.div className="w-full text-white"
+       initial ={{ opacity: 0, x: -80}}
+       whileInView={{opacity:1, x: 0}}
+       transition={{ duration: 0.8, ease: "easeOut"}}
+       viewport={{ once: true, amount: 0.2}}
+      >
         <h3 className="md:text-3xl text-2xl font-semibold mb-3">{t("home.hello")}</h3>
         <h1 className="md:text-6xl text-4xl font-semibold">Jacek Kozłowski</h1>
         <h3 className="mt-4 md:text-3xl text-2xl font-semibold mb-5">
@@ -89,14 +95,19 @@ const Home = () => {
         >
           {t("home.btn_get_in_touch")}
         </a>
-      </div>
-      <div className="w-[75vw] md:m-20">
+      </motion.div>
+      <motion.div className="w-[75vw] "
+        initial ={{ opacity: 0, y: 80}}
+        whileInView={{opacity:1, y: 0}}
+        transition={{ duration: 0.8, ease: "easeOut"}}
+        viewport={{ once: true, amount: 0.2}}
+      >
         <img
           className="max-w-[100%] max-h-[100%] animate-floatImage"
           src={homePhoto}
           alt=""
         />
-      </div>
+      </motion.div>
     </section>
   );
 };
