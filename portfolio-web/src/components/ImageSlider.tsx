@@ -28,9 +28,7 @@ const ImageSlider = () => {
         loop={true}
         centeredSlides={true}
         speed={800}
-        autoplay={{
-          delay: 3000,
-        }}
+        autoplay={{ delay: 3000 }}
         modules={[Autoplay]}
       >
 

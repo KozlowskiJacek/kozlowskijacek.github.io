@@ -65,22 +65,22 @@ const Home = () => {
           {t("home.im")} <span className="text-main_accent">{text}</span>
           <span className="animate-blink">|</span>
         </h3>
-        <p className="leading-2 md:text-base text-sm">{t("home.text")}</p>
-        <div className="flex space-x-4 mt-5 md:text-3xl">
+        <p className="md:leading-7 md:text-base text-sm">{t("home.text")}</p>
+        <div className="flex space-x-4 mt-5 md:text-3xl text-2xl">
           <a href="#">
-            <i className="bx bxl-instagram-alt text-main_accent inline-flex justify-center items-center  bg-opacity-0 border-main_accent rounded-full p-2 md:border-[3px] border-[2px] hover:animate-tada hover:bg-main_accent hover:text-bg_color_2 transition-all hover:drop-shadow-custom-glow"></i>
+            <i className="bx bxl-instagram-alt text-main_accent inline-flex justify-center items-center  bg-opacity-0 border-main_accent rounded-full p-2 border-[3px] hover:animate-tada hover:bg-main_accent hover:text-bg_color_2 transition-all hover:drop-shadow-custom-glow"></i>
           </a>
           <a href="#">
-            <i className="bx bxl-youtube text-main_accent inline-flex justify-center items-center bg-opacity-0 border-main_accent rounded-full p-2 md:border-[3px] border-[2px] hover:animate-tada hover:bg-main_accent hover:text-bg_color_2 transition-all hover:drop-shadow-custom-glow"></i>
+            <i className="bx bxl-youtube text-main_accent inline-flex justify-center items-center bg-opacity-0 border-main_accent rounded-full p-2 border-[3px] hover:animate-tada hover:bg-main_accent hover:text-bg_color_2 transition-all hover:drop-shadow-custom-glow"></i>
           </a>
           <a href="#">
-            <i className="bx bxl-discord-alt text-main_accent inline-flex justify-center items-center bg-opacity-0 border-main_accent rounded-full p-2 md:border-[3px] border-[2px] hover:animate-tada hover:bg-main_accent hover:text-bg_color_2 transition-all hover:drop-shadow-custom-glow"></i>
+            <i className="bx bxl-discord-alt text-main_accent inline-flex justify-center items-center bg-opacity-0 border-main_accent rounded-full p-2 border-[3px] hover:animate-tada hover:bg-main_accent hover:text-bg_color_2 transition-all hover:drop-shadow-custom-glow"></i>
           </a>
           <a href="#">
-            <i className="bx bxl-linkedin text-main_accent inline-flex justify-center items-center bg-opacity-0 border-main_accent rounded-full p-2 md:border-[3px] border-[2px] hover:animate-tada hover:bg-main_accent hover:text-bg_color_2 transition-all hover:drop-shadow-custom-glow"></i>
+            <i className="bx bxl-linkedin text-main_accent inline-flex justify-center items-center bg-opacity-0 border-main_accent rounded-full p-2 border-[3px] hover:animate-tada hover:bg-main_accent hover:text-bg_color_2 transition-all hover:drop-shadow-custom-glow"></i>
           </a>
           <a href="#">
-            <i className="bx bx-coffee-togo text-main_accent inline-flex justify-center items-center bg-opacity-0 border-main_accent rounded-full p-2 md:border-[3px] border-[2px] hover:animate-tada hover:bg-main_accent hover:text-bg_color_2 transition-all hover:drop-shadow-custom-glow"></i>
+            <i className="bx bx-coffee-togo text-main_accent inline-flex justify-center items-center bg-opacity-0 border-main_accent rounded-full p-2 border-[3px] hover:animate-tada hover:bg-main_accent hover:text-bg_color_2 transition-all hover:drop-shadow-custom-glow"></i>
           </a>
         </div>
         <a
@@ -90,7 +90,7 @@ const Home = () => {
           {t("home.btn_get_in_touch")}
         </a>
       </div>
-      <div className="w-[75vw] m-20">
+      <div className="w-[75vw] md:m-20">
         <img
           className="max-w-[100%] max-h-[100%] animate-floatImage"
           src={homePhoto}
