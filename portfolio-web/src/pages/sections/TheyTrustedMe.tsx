@@ -5,15 +5,15 @@ import ImageSlider from "../../components/ImageSlider";
 const TheyTrustedMe = () => {
   return (
     <section
-      className="text-white bg-bg_color_1 flex flex-col justify-center items-center min-h-screen w-full pt-[50px] px-[9%] pv-[20px]"
+      className="text-white bg-bg_color_1 flex flex-col justify-center items-center min-h-screen w-full pt-[50px] px-4"
       id="feedback"
     >
       <div className="">
-        <h2 className="leading-10 text-5xl font-semibold mb-12 text-center">
+        <h2 className="leading-10 md:text-5xl text-3xl font-semibold mb-12 text-center">
           They Trusted <span className="text-main_accent">Me</span>
         </h2>
       </div>
-
+      
       <ImageSlider />
     </section>
   );

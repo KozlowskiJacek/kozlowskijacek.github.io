@@ -11,7 +11,7 @@ const Projects = () => {
         My <span className="text-main_accent">Project</span>
       </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 items-center gap-10">
+      <div className="grid grid-cols-1 md:grid-cols-3 items-center gap-10 mb-10">
         <div className="relative rounded-2xl shadow-[0_0_1rem_bg_color_1] overflow-hidden flex group">
           <img
             className="w-full transition duration-500 ease-in-out transform group-hover:scale-110"

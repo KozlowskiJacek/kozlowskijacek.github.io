@@ -61,7 +61,7 @@ const FormContact = () => {
 
   return (
     <form ref={form} onSubmit={sendEmail} className="max-w-[70rem] text-center mx-auto my-4 mb-[3rem]">
-      <div className="flex justify-center space-x-4">
+      <div className="flex md:flex-row flex-col justify-center md:gap-5">
         <input type="text" name="user_name" placeholder="Full name" required className="input" />
         <input type="email" name="user_email" placeholder="Email" required className="input" />
       </div>
@@ -70,7 +70,7 @@ const FormContact = () => {
       </div>
       <textarea
         cols={30}
-        rows={10}
+        rows={7}
         name="message"
         placeholder="Your message..."
         required
