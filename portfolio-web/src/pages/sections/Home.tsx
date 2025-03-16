@@ -54,24 +54,55 @@ const Home = () => {
 
   const scrollTo = useSmoothScroll();
 
+  const fadeInVariants = (direction: "top" | "bottom" | "left" | "right") => {
+    return {
+      hidden: {
+        opacity: 0,
+        y: direction === "top" ? -80 : direction === "bottom" ? 80 : 0,
+        x: direction === "left" ? -80 : direction === "right" ? 80 : 0,
+      },
+      visible: {
+        opacity: 1,
+        y: 0,
+        x: 0,
+        transition: {
+          duration: 2,
+          opacity: { duration: 2, delay: 0.6},
+          delay: 0.2,
+          ease: [0.9, 0, 0.2, 1]
+        }
+      }
+    } 
+  }
+
   return (
     <section
       className="bg-bg_color_1 flex md:flex-row flex-col justify-center items-center min-h-screen w-full pt-[100px] px-[9%] pv-[20px]"
       id="home"
     >
       <motion.div className="w-full text-white"
-       initial ={{ opacity: 0, x: -80}}
-       whileInView={{opacity:1, x: 0}}
-       transition={{ duration: 0.8, ease: "easeOut"}}
-       viewport={{ once: true, amount: 0.2}}
+       variants = {fadeInVariants("top")}
+       initial = "hidden"
+       whileInView = "visible"
+       viewport = {{ once: false}}
       >
         <h3 className="md:text-3xl text-2xl font-semibold mb-3">{t("home.hello")}</h3>
-        <h1 className="md:text-6xl text-4xl font-semibold">Jacek Kozłowski</h1>
+        <motion.h1 className="md:text-6xl text-4xl font-semibold"
+          variants = {fadeInVariants("left")}
+          initial = "hidden"
+          whileInView = "visible"
+          viewport = {{ once: false}}
+        >Jacek Kozłowski</motion.h1>
         <h3 className="mt-4 md:text-3xl text-2xl font-semibold mb-5">
           {t("home.im")} <span className="text-main_accent">{text}</span>
           <span className="animate-blink">|</span>
         </h3>
-        <p className="md:leading-7 md:text-base text-sm">{t("home.text")}</p>
+        <motion.p className="md:leading-7 md:text-base text-sm"
+        variants = {fadeInVariants("right")}
+        initial = "hidden"
+        whileInView = "visible"
+        viewport = {{ once: false}}
+        >{t("home.text")}</motion.p>
         <div className="flex space-x-4 mt-5 md:text-3xl text-2xl">
           <a href="#">
             <i className="bx bxl-instagram-alt text-main_accent inline-flex justify-center items-center  bg-opacity-0 border-main_accent rounded-full p-2 border-[3px] hover:animate-tada hover:bg-main_accent hover:text-bg_color_2 transition-all hover:drop-shadow-custom-glow"></i>
@@ -97,10 +128,10 @@ const Home = () => {
         </a>
       </motion.div>
       <motion.div className="w-[75vw] "
-        initial ={{ opacity: 0, y: 80}}
-        whileInView={{opacity:1, y: 0}}
-        transition={{ duration: 0.8, ease: "easeOut"}}
-        viewport={{ once: true, amount: 0.2}}
+              variants = {fadeInVariants("bottom")}
+              initial = "hidden"
+              whileInView = "visible"
+              viewport = {{ once: false}}
       >
         <img
           className="max-w-[100%] max-h-[100%] animate-floatImage"

@@ -48,6 +48,27 @@
     "automate" : "Mniej klikania, więcej efektów – automatyzacja, która oszczędza Twój czas i pieniądze.",
     "automate_text" : "Jeśli jakiś proces zajmuje Twojemu pracownikowi zbyt wiele czasu, który mógłby przeznaczyć na bardziej produktywne zadania niż np. klikanie w tabelki, stworzę automatyzację, która zaoszczędzi Ci czas i pieniądze! 💡💸",
     "btn_learn_more": "Dowiedz się więcej!"
+  },
+
+  "projects": {
+    "my": "Moje",
+    "projects": "Projekty"
+  },
+
+  "feedback": {
+    "they_trust": "Zaufali",
+    "me": "Mi"
+  },
+
+  "contact": {
+    "lets": "Współpracujmy",
+    "collaborate": "Razem",
+    "write": "Napisz do mnie wiadomość, a ja odpowiem w przeciągu 1️⃣ dnia roboczego",
+    "full_name": "Imię i nazwisko",
+    "email": "Email",
+    "subject": "Temat",
+    "message": "Twoja wiadomość...",
+    "btn_send": "Wyślij"
   }
 
 }
