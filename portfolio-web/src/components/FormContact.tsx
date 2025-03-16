@@ -83,4 +83,6 @@ const FormContact = () => {
   );
 };
 
+//todo Wykminić jak zrobić to żeby styl został po wybraniu proponowanych elementów np e-mail
+
 export default FormContact;
