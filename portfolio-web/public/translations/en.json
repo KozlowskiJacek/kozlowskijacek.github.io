@@ -48,6 +48,27 @@
     "automate" : "Less clicking, more results – automation that saves your time and money.",
     "automate_text" : "If a process takes too much time for your employee, time they could spend on more productive tasks like working with data instead of clicking through tables, I’ll create automation that will save you time and money! 💡💸",
     "btn_learn_more": "Learn more!"
-}
+  },
+
+  "projects": {
+   "my": "My",
+   "projects": "Projects"
+  },
+
+  "feedback": {
+    "they_trust": "They Trust",
+    "me": "Me"
+  },
+  
+  "contact": {
+    "lets": "Let's",
+    "collaborate": "Collaborate",
+    "write": "Write me an message and I will response within 1️⃣ business day",
+    "full_name": "Full name",
+    "email": "Email",
+    "subject": "Subject",
+    "message": "Your message...",
+    "btn_send": "Send"
+  }
 
 }
