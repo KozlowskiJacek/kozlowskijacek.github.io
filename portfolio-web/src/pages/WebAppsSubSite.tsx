@@ -2,6 +2,7 @@ import React from 'react'
 import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
 import pixelJaca from "../assets/img/Pixel Jaca - strona.png"
+import jacaLaptop from "../assets/img/Jaca Laptop.png"
 
 const WebAppsSubSite = () => {
 
@@ -29,8 +30,8 @@ const WebAppsSubSite = () => {
           viewport={{ once: false, amount: 0.5 }}
         >
           <img
-            className="max-w-[100%] max-h-[100%] animate-floatImage ml-20"
-            src={pixelJaca}
+            className="max-w-[100%] max-h-[100%] animate-floatImage"
+            src={jacaLaptop}
             alt=""
           />
         </motion.div>
