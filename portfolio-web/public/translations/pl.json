@@ -41,13 +41,22 @@
     "my": "Moje",
     "services": "Usługi",
     "title": "Kod. Kreacja. Automatyzacja.",
-    "web_app": "Nowoczesne strony i aplikacje webowe – funkcjonalność, która sprzedaje.",
+    "web_app": "Nowoczesne strony i aplikacje webowe   Funkcjonalność, która sprzedaje.",
     "web_app_text": "Projektuję i tworzę strony oraz aplikacje webowe dopasowane do Twoich potrzeb. Wsłuchuję się w Twoje oczekiwania, ale zawsze pamiętam, że to ✨użytkownicy✨ są najważniejsi!",
     "video_editor" : "Reklamy, vlogi, gaming, rolki – tworzę filmy, które angażują, a do tego zaopiekuję się Twoimi social media!",
     "video_editor_text" : "Tworzę materiały od A do Z – piszę scenariusze, kreuję sceny, nagrywam ujęcia, dopracowuję kolory i dodaję ✨magię montażu✨, aby stworzyć reklamę skrojoną specjalnie dla Twoich klientów! 🎬🚀",
     "automate" : "Mniej klikania, więcej efektów – automatyzacja, która oszczędza Twój czas i pieniądze.",
     "automate_text" : "Jeśli jakiś proces zajmuje Twojemu pracownikowi zbyt wiele czasu, który mógłby przeznaczyć na bardziej produktywne zadania niż np. klikanie w tabelki, stworzę automatyzację, która zaoszczędzi Ci czas i pieniądze! 💡💸",
     "btn_learn_more": "Dowiedz się więcej!"
+  },
+
+  "web_app": {
+    "title1": "Nowoczesne strony i aplikacje webowe",
+    "title2": "Funkcjonalność, która sprzedaje",
+    "title_text": "Projektuję i tworzę strony oraz aplikacje webowe dopasowane do Twoich potrzeb. Wsłuchuję się w Twoje oczekiwania, ale zawsze pamiętam, że to użytkownicy są najważniejsi. Sprawdź, jak wygląda współpraca ze mną i jak przebiega proces realizacji Twojego projektu.",
+    "talk": "Rozmowa i",
+    "analysis": "analiza potrzeb",
+    "text3": "Pierwszy krok to luźne spotkanie, na którym omawiamy Twoje oczekiwania. Chcę dowiedzieć się, czym zajmuje się Twoja firma lub marka osobista, jakie wartości reprezentuje, jakie kolory i styl najlepiej ją oddają oraz jaki jest cel strony lub aplikacji. To moment, w którym wspólnie ustalamy wstępny szkic projektu – co ma się znaleźć na stronie, jak ma działać aplikacja i jak powinna komunikować się z użytkownikami. Ustalamy również, kto będzie odpowiedzialny za treści na stronę – czy to ja mam je stworzyć, czy są już gotowe, a może będziemy współpracować z inną osobą. To samo dotyczy grafik i zdjęć – omówimy, czy masz już materiały, czy potrzebujesz ich przygotowania."
   },
 
   "projects": {

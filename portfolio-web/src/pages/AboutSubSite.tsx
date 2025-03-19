@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import homePhoto from "../assets/img/Image 1.png"
-import pixelJaca from "../assets/img/Pixel-Jaca.png"
+import pixelJaca from "../assets/img/Pixel Jaca - strona.png"
 import { useLocation, useNavigate } from 'react-router-dom'
 import useSmoothScroll from '../hooks/useSmoothScroll'
 import { motion } from "framer-motion"
@@ -30,8 +30,7 @@ const AboutSubSite = () => {
   return (
     <div>
     
-      <section
-        className="bg-bg_color_1 flex justify-center items-center min-h-screen w-full pt-[100px] px-[9%] pv-[20px]">
+      <section className="bg-bg_color_1 flex justify-center items-center min-h-screen w-full pt-[100px] px-[9%] pv-[20px]">
         <motion.div className="w-full text-white"
           initial={{ opacity: 0, x: -80 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -50,7 +49,7 @@ const AboutSubSite = () => {
           viewport={{ once: false, amount: 0.5 }}
         >
           <img
-            className="max-w-[100%] max-h-[100%] animate-floatImage"
+            className="max-w-[100%] max-h-[100%] animate-floatImage m-20"
             src={pixelJaca}
             alt=""
           />
