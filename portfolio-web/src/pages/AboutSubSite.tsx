@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import homePhoto from "../assets/img/Image 1.png"
 import pixelJaca from "../assets/img/Pixel Jaca - strona.png"
+import pixelJaca_animacja from "../assets/img/Pixel_Jaca_strona_animacja.gif"
 import { useLocation, useNavigate } from 'react-router-dom'
 import useSmoothScroll from '../hooks/useSmoothScroll'
 import { motion } from "framer-motion"
@@ -50,7 +51,7 @@ const AboutSubSite = () => {
         >
           <img
             className="max-w-[100%] max-h-[100%] animate-floatImage m-20"
-            src={pixelJaca}
+            src={pixelJaca_animacja}
             alt=""
           />
         </motion.div>
