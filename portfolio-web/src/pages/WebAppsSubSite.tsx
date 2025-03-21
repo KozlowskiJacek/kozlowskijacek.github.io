@@ -167,6 +167,7 @@ const WebAppsSubSite = () => {
       </section>
 
     </>
+    //todo Zaktualizoać zdjęcia 
   )
 }
 
