@@ -16,6 +16,11 @@
   },
 
   "about": {
+    "title_hello": "Witam",
+    "title_why": "Dlaczego",
+    "title_how": "Jak",
+    "title_what": "Czym",
+    "title_after": "Po Godzinach",
     "about": "O",
     "me": "Mnie",
     "title": "Uwielbiam tworzyć coś z niczego",
@@ -51,6 +56,12 @@
   },
 
   "web_app": {
+    "nav_modern": "Nowoczesne Strony",
+    "nav_discussion": "Rozmowa",
+    "nav_visual": "Projekt wizualny",
+    "nav_development": "Kodowanie ",
+    "nav_presentation": "Prezentacja",
+    "nav_support": "Wsparcie ",
     "title1": "Nowoczesne strony i aplikacje webowe",
     "title2": "Funkcjonalność, która sprzedaje",
     "title_text": "Projektuję i tworzę strony oraz aplikacje webowe dopasowane do Twoich potrzeb. Wsłuchuję się w Twoje oczekiwania, ale zawsze pamiętam, że to użytkownicy są najważniejsi. Sprawdź, jak wygląda współpraca ze mną i jak przebiega proces realizacji Twojego projektu.",

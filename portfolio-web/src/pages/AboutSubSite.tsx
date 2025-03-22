@@ -6,6 +6,7 @@ import pixelJaca_animacja from "../assets/img/Pixel_Jaca_strona_animacja.gif"
 import { useLocation, useNavigate } from 'react-router-dom'
 import useSmoothScroll from '../hooks/useSmoothScroll'
 import { motion } from "framer-motion"
+import HeaderAbout from '../components/HeaderAbout'
 
 const AboutSubSite = () => {
 
@@ -30,8 +31,9 @@ const AboutSubSite = () => {
 
   return (
     <div>
+      <HeaderAbout />
     
-      <section className="bg-bg_color_1 flex justify-center items-center min-h-screen w-full pt-[100px] px-[9%] pv-[20px]">
+      <section className="bg-bg_color_1 flex justify-center items-center min-h-screen w-full pt-[100px] px-[9%] pv-[20px]" id='hello'>
         <motion.div className="w-full text-white"
           initial={{ opacity: 0, x: -80 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -58,7 +60,7 @@ const AboutSubSite = () => {
         
       </section>
 
-      <section className='bg-bg_color_2 flex justify-center items-center min-h-screen w-full pt-[100px] px-[9%] pv-[20px]'>
+      <section className='bg-bg_color_2 flex justify-center items-center min-h-screen w-full pt-[100px] px-[9%] pv-[20px]' id='title_why'>
       <motion.div className='w-[75vw] m-20'
         initial={{ opacity: 0, y: 80 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -79,8 +81,7 @@ const AboutSubSite = () => {
 
       </section>
 
-      <section
-        className="bg-bg_color_1 flex justify-center items-center min-h-screen w-full pt-[100px] px-[9%] pv-[20px]">
+      <section className="bg-bg_color_1 flex justify-center items-center min-h-screen w-full pt-[100px] px-[9%] pv-[20px]" id='title_how'>
         <motion.div className="w-full text-white"
           initial={{ opacity: 0, x: -80 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -106,7 +107,7 @@ const AboutSubSite = () => {
         
       </section>
 
-      <section className='bg-bg_color_2 flex justify-center items-center min-h-screen w-full pt-[100px] px-[9%] pv-[20px]'>
+      <section className='bg-bg_color_2 flex justify-center items-center min-h-screen w-full pt-[100px] px-[9%] pv-[20px]' id='title_what'>
       <motion.div className='w-[75vw] m-20'
         initial={{ opacity: 0, y: 80 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -127,8 +128,7 @@ const AboutSubSite = () => {
 
       </section>
 
-      <section
-        className="bg-bg_color_1 flex justify-center items-center min-h-screen w-full pt-[100px] px-[9%] pv-[20px]">
+      <section className="bg-bg_color_1 flex justify-center items-center min-h-screen w-full pt-[100px] px-[9%] pv-[20px]" id='title_after'>
         <motion.div className="w-full text-white"
           initial={{ opacity: 0, x: -80 }}
           whileInView={{ opacity: 1, x: 0 }}

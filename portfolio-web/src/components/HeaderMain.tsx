@@ -1,12 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import useSmoothScroll from '../hooks/useSmoothScroll'
 import { useTranslation } from "react-i18next"
-import { useLocation, useNavigate } from 'react-router-dom'
 
 const Header = () => {
   const { t, i18n } = useTranslation()
-  const navigate = useNavigate()
-  const location = useLocation()
   const scrollTo = useSmoothScroll()
 
   const currentLang = i18n.language
@@ -46,15 +43,10 @@ const Header = () => {
 
   const handleNavigation = (link: string) => {
     setActiveLink(link)
-
-    if (location.pathname !== "/") {
-      navigate(`/#${link}`)
-      setTimeout(() => scrollTo(link), 100) 
-    } else {
-      scrollTo(link)
-    }
+    scrollTo(link)
     setIsOpen(false) // Zamknięcie menu po kliknięciu w link
-  }
+    }
+  
 
   return (
     <header className="z-50 bg-bg_color_1 text-white fixed top-0 left-0 w-full p-5 shadow-md">
