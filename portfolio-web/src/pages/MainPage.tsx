@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import Header from "../components/Header";
+import Header from "../components/HeaderMain";
 import Footer from "../components/Footer";
 import Home from "./sections/Home";
 import About from "./sections/About";
@@ -9,24 +9,23 @@ import Projects from "./sections/Projects";
 import TheyTrustedMe from "./sections/TheyTrustedMe";
 import Contact from "./sections/Contact";
 
-
 const MainPage = () => {
-
-  const location = useLocation()
+  const location = useLocation();
 
   useEffect(() => {
-    if (location.pathname === "/") return
+    if (location.pathname === "/") return;
 
-    const sectionId = location.pathname.substring(1)
-    const section = document.getElementById(sectionId)
-    
+    const sectionId = location.pathname.substring(1);
+    const section = document.getElementById(sectionId);
+
     if (section) {
-      section.scrollIntoView({ behavior: "smooth" })
+      section.scrollIntoView({ behavior: "smooth" });
     }
-  }, [location])
-  
+  }, [location]);
+
   return (
     <div className="font-playfair">
+      <Header />
       <Home />
       <About />
       <Services />
@@ -35,7 +34,7 @@ const MainPage = () => {
       <Contact />
       <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default MainPage
+export default MainPage;
