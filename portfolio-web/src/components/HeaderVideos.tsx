@@ -15,7 +15,7 @@ const Header = () => {
   const toggleNavbar = () => setIsOpen(!isOpen)
   
   const links = []
-  //todo Trzeba stworzyć linki do tego navbara oraz ustawić teksty i stworzyć podstrone pod to 
+  //todo Trzeba stworzyć linki do tego navbara oraz ustawić teksty i stworzyć podstrone pod to i teksty 
   const toggleLanguage = () => {
     const newLang = currentLang === "pl" ? "en" : "pl"
     i18n.changeLanguage(newLang)
