@@ -3,6 +3,7 @@ import "./App.css";
 import MainPage from "./pages/MainPage";
 import AboutSubSite from "./pages/AboutSubSite";
 import WebAppsSubSite from "./pages/WebAppsSubSite";
+import VideoMarketingSubSite from "./pages/VideoMarketingSubSite";
 import AutoScroll from "./components/AutoScroll";
 
 const App = () => {
@@ -12,7 +13,8 @@ const App = () => {
       <Routes>
         <Route path="/*" element={<MainPage />} />
         <Route path="/about" element={<AboutSubSite />} />
-        <Route path="/web_apps" element={<WebAppsSubSite />} />
+        <Route path="/web-apps" element={<WebAppsSubSite />} />
+        <Route path="/social-video" element={<VideoMarketingSubSite />} />
       </Routes>
     </Router>
   );

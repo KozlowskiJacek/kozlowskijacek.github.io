@@ -57,7 +57,7 @@ const Services = () => {
           <p className='mt-12 text-base'>
           {t("services.web_app_text")}
           </p>
-          <Link to="/web_apps" className='bg-main_accent inline-block mt-4 py-2 px-8 rounded-full text-bg_color_2 font-extrabold hover:drop-shadow-custom-glow hover:scale-110 transition-all duration-500 ease-in-out cursor-pointer text-lg shadow-custom-around shadow-main_accent'>{t("services.btn_learn_more")}</Link>
+          <Link to="/web-apps" className='bg-main_accent inline-block mt-4 py-2 px-8 rounded-full text-bg_color_2 font-extrabold hover:drop-shadow-custom-glow hover:scale-110 transition-all duration-500 ease-in-out cursor-pointer text-lg shadow-custom-around shadow-main_accent'>{t("services.btn_learn_more")}</Link>
         </div>
 
         <div className='bg-bg_color_2 w-[350px] h-[500px] md:w-[480px] md:h-[400px] mx-auto md:mx-auto mb-5 p-6 pb-8 rounded-2xl text-center border-2 border-bg_color_1 transition duration-500 ease hover:border-main_accent hover:scale-105'>
@@ -66,7 +66,7 @@ const Services = () => {
           <p className='mt-4 text-base'>
           {t("services.video_editor_text")}
           </p>
-          <a href="#" className='bg-main_accent inline-block mt-4 py-2 px-8 rounded-full text-bg_color_2 font-extrabold hover:drop-shadow-custom-glow hover:scale-110 transition-all duration-500 ease-in-out cursor-pointer text-lg shadow-custom-around shadow-main_accent'>{t("services.btn_learn_more")}</a>
+          <Link to="/social-video" className='bg-main_accent inline-block mt-4 py-2 px-8 rounded-full text-bg_color_2 font-extrabold hover:drop-shadow-custom-glow hover:scale-110 transition-all duration-500 ease-in-out cursor-pointer text-lg shadow-custom-around shadow-main_accent'>{t("services.btn_learn_more")}</Link>
         </div>
 
         <div className='bg-bg_color_2 w-[350px] h-[500px] md:w-[480px] md:h-[400px] mx-auto mb-10 p-6 pb-8 rounded-2xl text-center border-2 border-bg_color_1 transition duration-500 ease hover:border-main_accent hover:scale-105'>
