@@ -36,8 +36,8 @@ const WebAppsSubSite = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: false, amount: 0.5 }}
         >
-          <h3 className="text-3xl font-semibold mb-3">{t("web_app.title1")}</h3>
-          <h3 className="text-5xl font-semibold mb-3 text-main_accent">{t("web_app.title2")}</h3>
+          <h3 className="text-3xl font-semibold mb-3">{t("video.title1")}</h3>
+          <h3 className="text-5xl font-semibold mb-3 text-main_accent">{t("video.title2")}</h3>
         
           <p className="leading-7 mt-5">{t("web_app.title_text")}</p>
         </motion.div>
