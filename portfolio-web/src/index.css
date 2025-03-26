@@ -56,7 +56,7 @@
 }
 
 .input {
-  @apply md:w-80 w-full p-5 text-base text-white bg-bg_color_1 rounded-xl my-4 mx-0
+  @apply md:w-80 w-full p-5 text-base text-white bg-bg_color_2 rounded-xl my-4 mx-0
 }
 
 .btn {
