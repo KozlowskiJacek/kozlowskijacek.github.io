@@ -9,13 +9,13 @@ const Header = () => {
   const scrollTo = useSmoothScroll()
 
   const currentLang = i18n.language
-  const [activeLink, setActiveLink] = useState<string>("title_hello")
+  const [activeLink, setActiveLink] = useState<string>("nav_profesional")
   const [isOpen, setIsOpen] = useState(false)
 
   const toggleNavbar = () => setIsOpen(!isOpen)
   
-  const links = []
-  //todo Trzeba stworzyć linki do tego navbara oraz ustawić teksty i stworzyć podstrone pod to i teksty 
+  const links = ["nav_profesional", "nav_ads", "nav_vlogs", "nav_gaming", "nav_reels", "nav_how"]
+   
   const toggleLanguage = () => {
     const newLang = currentLang === "pl" ? "en" : "pl"
     i18n.changeLanguage(newLang)
@@ -24,7 +24,7 @@ const Header = () => {
   useEffect(() => {
     const sections = links.map(link => document.getElementById(link))
     const handleScroll = () => {
-      let currentSection = "title_hello"
+      let currentSection = "nav_profesional"
 
       sections.forEach(section => {
         if(section) {
@@ -65,7 +65,7 @@ const Header = () => {
                 activeLink === link ? "scale-110 text-main_accent" : ""
               }`}
             >
-              {t(`about.${link}`)}
+              {t(`video.${link}`)}
             </a>
           ))}
 
