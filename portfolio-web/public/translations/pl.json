@@ -2,8 +2,9 @@
   "navbar": {
     "home": "Główna",
     "about": "O mnie",
-    "services": "Usługi",
+    "skills": "Umiejętności",
     "projects": "Projekty",
+    "services": "Usługi",
     "feedback": "Recenzje",
     "contact": "Kontakt"
   },
@@ -11,7 +12,7 @@
   "home": {
     "hello": "Cześć, to ja!",
     "im": "Jestem",
-    "text": "Na co dzień jestem full-stack developerem i content creatorem. Tworzę aplikacje webowe, strony internetowe oraz automatyzuje procesy. Poza kodowaniem zajmuję się tworzeniem treści – od profesjonalnych filmów reklamowych, przez luźniejszy content jak vlogi czy gaming, aż po rolki promocyjne dla firm i marek. Uwielbiam budować coś z niczego. Realizacja zadań, które pomogą w rozwijaniu biznesu i przy okazji niosą radość to dla mnie główny cel. Lubię współtworzyć innowacyjne projekty – jeśli masz pomysł, działajmy razem!",
+    "text": "Na co dzień jestem junior full-stack developerem i content creatorem. Tworzę aplikacje webowe, strony internetowe oraz automatyzuje procesy. Poza kodowaniem zajmuję się tworzeniem treści – od profesjonalnych filmów reklamowych, przez luźniejszy content jak vlogi czy gaming, aż po rolki promocyjne dla firm i marek. Uwielbiam budować coś z niczego. Realizacja zadań, które pomogą w rozwijaniu biznesu i przy okazji niosą radość to dla mnie główny cel. Lubię współtworzyć innowacyjne projekty – jeśli masz pomysł, działajmy razem!",
     "btn_get_in_touch": "Skontaktuj się za mną"
   },
 
@@ -101,16 +102,31 @@
     "text_2_speed": "✅ Regularność i szybkość mają kluczowe znaczenie – W świecie vlogów liczy się stała publikacja. Jeśli dostarczysz mi materiały na ostatnią chwilę, zrobię wszystko, by jak najszybciej dostarczyć gotowy film – oczywiście bez utraty jakości. W ekstremalnych sytuacjach dam Ci znać, jeśli lepiej będzie opóźnić publikację o jeden dzień, zamiast wrzucać coś na siłę.",
     "text_2_collaboration": "✅ Pełna optymalizacja współpracy – Jeśli chcesz jeszcze bardziej usprawnić proces, mogę zająć się publikacją filmów na Twoim kanale. Najpierw wrzucę je jako niepubliczne do Twojej akceptacji, a potem opublikuję dla Twoich widzów. Prowadzę takie kanały od 2 lat w trzech językach, więc doskonale wiem, jak to działa.",
     "text_2_ideal": "Sprawdza się świetnie dla twórców internetowych, marek osobistych i firm chcących pokazać kulisy swojej pracy.",
-    "gameing": "Gameing",
+    "gameing": "🎮 Gameing",
     "content": "Content",
     "text_3": "Tworzysz treści gamingowe i chcesz przyciągnąć większą publiczność? Zajmę się montażem Twojego materiału, tak by widzowie wracali po więcej.",
     "text_3_dynamic": "✅ Dynamiczny montaż highlightów – Szybkie cięcia, najlepsze momenty i płynna narracja, która utrzyma uwagę widzów od początku do końca.",
     "text_3_effect": "✅ Efekty, animacje i sound design – Dodaję dźwięki, memiczne efekty i kreatywne przejścia, które wzmacniają emocje i humor Twoich materiałów.",
     "text_3_adaption": "✅ Dopasowanie do gry i społeczności – Każda gra ma swój klimat, a każda społeczność swoje inside joke’i. Tworzę montaż zgodny z Twoim stylem i tym, co bawi Twoich widzów.",
     "text_3_platforms": "✅ Treści na każdą platformę – Pełne gameplaye, highlighty, a może shorty, które przyciągną nowych widzów? Dostosowuję formaty do YouTube, TikToka, Instagrama i innych platform, by Twoje treści trafiały jak najszerzej.",
-    "text_3_ideal": "🎮 Twoja strategia, Twój vibe – Nawiązania popkulturowe, cięty humor, dynamiczny rytm? Zmontuję materiały w taki sposób, by idealnie pasowały do Ciebie i Twojej społeczności. Możemy stworzyć pełne let's playe, wyciągnąć najlepsze momenty ze streama albo przerobić klipy na shorty, które viralowo przyciągną nowych widzów.",
+    "text_3_ideal": "Twoja strategia, Twój vibe – Nawiązania popkulturowe, cięty humor, dynamiczny rytm? Zmontuję materiały w taki sposób, by idealnie pasowały do Ciebie i Twojej społeczności. Możemy stworzyć pełne let's playe, wyciągnąć najlepsze momenty ze streama albo przerobić klipy na shorty, które viralowo przyciągną nowych widzów.",
+    "reels": "📱 Reelsy i ",
+    "tiktok": "TikToki",
+    "text_4": "Krótkie formaty rządzą internetem! Jeśli chcesz zdobywać viralowe zasięgi na Instagramie i TikToku, tworzę materiały, które zatrzymują uwagę i angażują użytkowników.",
+    "text_4_dynamic": "✅ Dynamiczny montaż zgodny z trendami – Tworzę materiały, które przyciągają uwagę od pierwszej sekundy, ale nie są jedynie chwilowym viralem – stawiam na jakość, która przetrwa próbę czasu.",
+    "text_4_creative": "✅ Kreatywne przejścia i efekty – Dodaję unikalne efekty wizualne i dźwiękowe, które nie tylko wpisują się w trendy, ale też podkreślają Twój styl i wyróżniają Cię na tle innych twórców.",
+    "text_4_sound": "✅ Muzyka i sound design na najwyższym poziomie – Wykorzystuję odpowiednio dobraną muzykę, efekty dźwiękowe i rytm montażu, by film miał jeszcze większy impact i wciągał widza do samego końca.",
+    "text_4_cringe": "✅ Optymalizacja pod algorytmy i długowieczność treści – Trendy zmieniają się szybko, ale dobre filmy zostają. Dbam o to, by Twoje materiały nie tylko dobrze się klikały, ale też były estetyczne, dopracowane i nie powodowały cringe’u po kilku miesiącach.",
+    "text_4_ideal": "Nie robię pustych virali. Nawet krótkie formy, jak rolki i shorty, mogą być wartościowe. Skupiam się na tym, by każdy materiał miał jakość, która będzie Cię promować nie tylko teraz, ale i w przyszłości.",
+    "how": "🚀 Jak to wygląda w",
+    "practice": "Praktyce",
+    "text_5_create": "🔹 Tworzę od A do Z – od scenariusza, przez nagrania, po finalny montaż.",
+    "text_5_style": "🔹 Dostosowuję styl do Twojej branży i grupy docelowej.",
+    "text_5_support": "🔹 Pomagam w budowaniu strategii contentowej dla Twojego profilu.",
+    "text_5_ideal": "Chcesz wyróżnić się w sieci? Niezależnie od tego, czy budujesz markę osobistą, rozwijasz firmę, czy po prostu nagrywasz dla funu – pomogę Ci stworzyć materiały, które przyciągną uwagę! 🎥✨ Skontaktuj się ze mną, a razem stworzymy coś wyjątkowego. 🚀",
+    "questions": "📩 Masz pytania? Napisz!"
   },
-  //todo Dokończyć Reelsy i TikToki oraz zakońćzenie i guzik do kontaktu 
+
 
   "projects": {
     "my": "Moje",

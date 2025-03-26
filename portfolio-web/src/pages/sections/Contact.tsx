@@ -30,7 +30,7 @@ const Contact = () => {
 
   return (
     <section
-      className="text-white bg-bg_color_2 flex flex-col justify-center items-center min-h-screen w-full pt-[100px] px-[9%] pv-[20px]"
+      className="text-white bg-bg_color_1 flex flex-col justify-center items-center min-h-screen w-full pt-[100px] px-[9%] pv-[20px]"
       id="contact"
     >
       <motion.div

@@ -8,6 +8,7 @@ import Services from "./sections/Services";
 import Projects from "./sections/Projects";
 import TheyTrustedMe from "./sections/TheyTrustedMe";
 import Contact from "./sections/Contact";
+import MySkills from "./sections/MySkills";
 
 const MainPage = () => {
   const location = useLocation();
@@ -28,8 +29,9 @@ const MainPage = () => {
       <Header />
       <Home />
       <About />
-      <Services />
+      <MySkills />
       <Projects />
+      <Services />
       <TheyTrustedMe />
       <Contact />
       <Footer />
