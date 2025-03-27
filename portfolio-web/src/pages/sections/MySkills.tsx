@@ -66,12 +66,12 @@ const Projects = () => {
 
         <div className='bg-bg_color_2 w-[350px] h-[500px] md:w-[350px] md:h-[180px] mx-auto md:mx-auto mb-5 p-6 pb-8 rounded-2xl text-center border-2 border-bg_color_1 transition duration-500 ease hover:border-main_accent hover:scale-105 cursor-pointer'>
           <i className='fa-solid fa-database text-main_accent text-6xl'></i>
-          <h3 className='text-2xl font-bold mt-4'>Bazy danych</h3>
+          <h3 className='text-2xl font-bold mt-4'>{t("skills.database")}</h3>
         </div>
 
         <div className='bg-bg_color_2 w-[350px] h-[500px] md:w-[350px] md:h-[180px] mx-auto md:mx-auto mb-5 p-6 pb-8 rounded-2xl text-center border-2 border-bg_color_1 transition duration-500 ease hover:border-main_accent hover:scale-105 cursor-pointer'>
           <i className='fa-solid fa-puzzle-piece text-main_accent text-6xl'></i>
-          <h3 className='text-2xl font-bold mt-4'>Kreatywność</h3>
+          <h3 className='text-2xl font-bold mt-4'>{t("skills.creative")}</h3>
         </div>
 
         <div className='bg-bg_color_2 w-[350px] h-[500px] md:w-[350px] md:h-[180px] mx-auto md:mx-auto mb-5 p-6 pb-8 rounded-2xl text-center border-2 border-bg_color_1 transition duration-500 ease hover:border-main_accent hover:scale-105 cursor-pointer'>

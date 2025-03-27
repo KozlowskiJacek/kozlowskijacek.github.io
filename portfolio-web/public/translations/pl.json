@@ -43,6 +43,13 @@
     "bye": "Do usłyszenia! 🚀"
   },
 
+  "skills": {
+    "my": "Moje",
+    "skills": "Umiejętności",
+    "database": "Bazy danych",
+    "creative": "Kreatywność"
+  },
+
   "services": {
     "my": "Moje",
     "services": "Usługi",
