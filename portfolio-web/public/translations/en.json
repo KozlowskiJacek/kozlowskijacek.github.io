@@ -43,6 +43,13 @@
     "bye": "Talk soon! 🚀"
   },
 
+  "skills": {
+    "my": "My",
+    "skills": "Skills",
+    "database": "Database",
+    "creative": "Creativity"
+  },
+
   "web_app": {
     "nav_modern": "Modern Website",
     "nav_discussion": "Discussion",
