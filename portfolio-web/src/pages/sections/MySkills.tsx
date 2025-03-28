@@ -30,6 +30,7 @@ const Projects = () => {
     } 
   }
  
+  //todo Stworzyć poupa po kliknięciu w kafelek żeby rozwinąć opis co dokładnie umiem
   return (
     <section
       className="text-white bg-bg_color_1 flex flex-col justify-center items-center min-h-screen w-full pt-[100px] px-[9%] pv-[20px]"
