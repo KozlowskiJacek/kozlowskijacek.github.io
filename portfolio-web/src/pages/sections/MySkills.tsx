@@ -66,9 +66,9 @@ const Projects = () => {
               <h1 className="text-2xl">React / JS / TS</h1>
               <hr className="border-t-solid border-1 border-white"/>
               <p>
-                Skończyłem kursy Reacta, w których nauczyłem się m.in. React Routera, React Query, Tailwind CSS i TypeScript. Wszystkie projekty – zarówno te mniejsze, jak i większe – realizowałem samodzielnie, co wyrobiło we mnie nawyk szukania informacji w dokumentacji i na forach, a także dostosowywania rozwiązań do własnych potrzeb. Lubię trafiać na nowe rozwiązania, bo dzięki nim ciągle się uczę i staram się trzymać standardów programowania.
+                {t("skills.react.text")}
               </p>
-              <a href="/Certyfikaty/Frontend ang.pdf" target="_blank">Frontend - Certyfikat</a>
+              <a href="/Certyfikaty/Frontend ang.pdf" target="_blank">{t("skills.react.certificate")}</a>
               <hr className="border-t-solid border-1 border-white"/>
               <p className="text-xl">🛠 Aurelia HR</p>
               <p>
