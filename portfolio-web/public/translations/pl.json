@@ -47,7 +47,11 @@
     "my": "Moje",
     "skills": "Umiejętności",
     "database": "Bazy danych",
-    "creative": "Kreatywność"
+    "creative": "Kreatywność",
+    "react": {
+      "text": "Skończyłem kursy Reacta, w których nauczyłem się m.in. React Routera, React Query, Tailwind CSS i TypeScript. Wszystkie projekty – zarówno te mniejsze, jak i większe – realizowałem samodzielnie, co wyrobiło we mnie nawyk szukania informacji w dokumentacji i na forach, a także dostosowywania rozwiązań do własnych potrzeb. Lubię trafiać na nowe rozwiązania, bo dzięki nim ciągle się uczę i staram się trzymać standardów programowania.",
+      "certificate": "Frontend - Certyfikat"
+    }
   },
 
   "services": {
