@@ -12,6 +12,7 @@ const Projects = () => {
   const [openTailwind, setOpenTailwind] = React.useState(false)
   const [openDatabase, setOpenDatabase] = React.useState(false)
   const [openCreatve, setOpenCreative] = React.useState(false)
+  const [openGit, setOpenGit] = React.useState(false)
 
   const {t} = useTranslation()
   
@@ -35,8 +36,7 @@ const Projects = () => {
       }
     } 
   }
- 
-  //todo Stworzyć poupa po kliknięciu w kafelek żeby rozwinąć opis co dokładnie umiem
+
   return (
     <section
       className="text-white bg-bg_color_1 flex flex-col justify-center items-center min-h-screen w-full pt-[100px] px-[9%] pv-[20px]"
@@ -123,6 +123,7 @@ const Projects = () => {
               <p>
                  Tailwind poznałem na kursie z Web Front-end Developer i bardzo polubiłem to narzędzie do stylizacji. Dzięki niemu mogę szybko i efektywnie tworzyć responsywne strony internetowe, które są zgodne z najnowszymi standardami. Używam Tailwind CSS w większości swoich projektów, co pozwala mi na łatwe dostosowywanie stylów do potrzeb użytkowników.
               </p>
+              <a href="/Certyfikaty/Full Stack Python ang.pdf" target="_blank">Full Stack Python - Certyfikat</a>
               <hr className="border-t-solid border-1 border-white"/>
               <p className="text-xl">🛠 Tailwind – mój główny stylowy wybór</p>
               <p>
@@ -149,6 +150,7 @@ const Projects = () => {
               <p>
                 Dzięki studiom i kursowi Full Stack Developer odkryłem potencjał baz danych i zrozumiałem, jak ważną rolę odgrywają w aplikacjach. Używam ich w praktyce i znam zarówno SQL, jak i NoSQL. Wiem, kiedy używać jednego lub drugiego rozwiązania, a także jak je optymalizować. Dzięki temu mogę tworzyć wydajne aplikacje, które działają szybko i sprawnie.
               </p>
+              <a href="/Certyfikaty/Full Stack Python ang.pdf" target="_blank">Full Stack Python - Certyfikat</a>
               <hr className="border-t-solid border-1 border-white"/>
               <p className="text-xl">🛠 AureliaHR</p>
               <p>
@@ -175,6 +177,7 @@ const Projects = () => {
               <p>
               Łączę pracę kreatywną z analitycznym myśleniem – montaż filmów i programowanie. Dzięki temu mam unikalne podejście do tworzenia stron i aplikacji, gdzie estetyka i funkcjonalność idą w parze. Ta symbioza pozwala mi lepiej projektować zarówno od strony wizualnej, jak i technicznej.
               </p>
+              <a href="https://www.youtube.com/watch?v=oTUANW-PJ0E&ab_channel=Otinus" target="_blank">Jedna z moich prac</a>
               <hr className="border-t-solid border-1 border-white"/>
               <p className="text-xl">🛠 Praca kreatywna</p>
               <p>
@@ -190,10 +193,32 @@ const Projects = () => {
           </Modal>
         </div>
 
-        <button className='bg-bg_color_2 w-[350px] h-[500px] md:w-[350px] md:h-[180px] mx-auto md:mx-auto mb-5 p-6 pb-8 rounded-2xl text-center border-2 border-bg_color_1 transition duration-500 ease hover:border-main_accent hover:scale-105 cursor-pointer'>
-          <i className='fa-brands fa-github text-main_accent text-6xl'></i>
-          <h3 className='text-2xl font-bold mt-4'>DevOps</h3>
-        </button>
+        <div>
+          <button className='bg-bg_color_2 w-[350px] h-[500px] md:w-[350px] md:h-[180px] mx-auto md:mx-auto mb-5 p-6 pb-8 rounded-2xl text-center border-2 border-bg_color_1 transition duration-500 ease hover:border-main_accent hover:scale-105 cursor-pointer' onClick={() => setOpenGit(true)}>
+            <i className='fa-brands fa-github text-main_accent text-6xl'></i>
+            <h3 className='text-2xl font-bold mt-4'>Git</h3>
+          </button>
+          <Modal open={openGit} onClose={() => setOpenGit(false)}>
+            <div className="flex flex-col gap-4">
+              <h1 className="text-2xl">Git</h1>
+              <p>
+              Na co dzień korzystam z Git, co pozwala mi sprawnie zarządzać kodem zarówno w projektach indywidualnych, jak i zespołowych (projekty na studia). Tworzę i zarządzam branchami, co ułatwia równoległą pracę nad różnymi funkcjonalnościami. Dbam o czytelność repozytorium, stosując dobre praktyki w commitach i pull requestach.
+              </p>
+              <a href="https://github.com/JacekKoz?tab=overview&from=2025-02-01&to=2025-02-10" target="_blank">Mój GitHub</a>
+              <hr className="border-t-solid border-1 border-white"/>
+              <p className="text-xl">🛠 Git – kontrola wersji i praca zespołowa</p>
+              <p>
+                📌 Mam doświadczenie w rozwiązywaniu konfliktów w kodzie oraz pracy z code review, co pomaga w utrzymaniu wysokiej jakości projektów. Korzystam z GitHub/GitLab, a także podstawowych funkcji CI/CD, które automatyzują proces wdrażania i testowania aplikacji. Dzięki temu mogę skutecznie kontrolować wersje kodu i usprawniać współpracę w zespołach.
+              </p>
+              <hr className="border-t-solid border-1 border-white"/>
+              <div className="flex flex-row justify-center">
+                <button className="btn" onClick={() => setOpenGit(false)}>
+                  Close
+                </button>
+              </div>
+            </div>
+          </Modal>
+        </div>
 
         
       </motion.div>
