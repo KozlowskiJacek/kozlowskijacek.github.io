@@ -63,8 +63,10 @@
     "tailwind": {
       "text": "Tailwind poznałem na kursie z Web Front-end Developer i bardzo polubiłem to narzędzie do stylizacji. Dzięki niemu mogę szybko i efektywnie tworzyć responsywne strony internetowe, które są zgodne z najnowszymi standardami. Używam Tailwind CSS w większości swoich projektów, co pozwala mi na łatwe dostosowywanie stylów do potrzeb użytkowników.",
       "certificate": "Full Stack Python - Certyfikat",
-      "certificate": "Full Stack Python - Certyfikat",
+      "main": "🛠 Tailwind – mój główny stylowy wybór",
+      "text_2": "📌 Tailwinda używam we wszystkich moich projektach i dobrze znam zarówno jego zalety, jak i wady. Dzięki temu wiem, jak korzystać z niego w sposób, który rzeczywiście ułatwia pracę, zamiast ją komplikować."
     },
+    
     "close_btn":"Zamknij"
   },
 

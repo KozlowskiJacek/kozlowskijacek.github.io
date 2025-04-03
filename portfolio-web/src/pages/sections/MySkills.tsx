@@ -77,7 +77,7 @@ const Projects = () => {
               <hr className="border-t-solid border-1 border-white"/>
               <div className="flex flex-row justify-center">
                 <button className="btn" onClick={() => setOpenReact(false)}>
-                  {t("skills.close")}
+                  {t("skills.close_btn")}
                 </button>
               </div>
             </div>
@@ -105,7 +105,7 @@ const Projects = () => {
               <hr className="border-t-solid border-1 border-white"/>
               <div className="flex flex-row justify-center">
                 <button className="btn" onClick={() => setOpenPython(false)}>
-                  {t("skills.close")}
+                  {t("skills.close_btn")}
                 </button>
               </div>
             </div>
@@ -125,14 +125,14 @@ const Projects = () => {
               </p>
               <a href="/Certyfikaty/Full Stack Python ang.pdf" target="_blank">Full Stack Python - Certyfikat</a>
               <hr className="border-t-solid border-1 border-white"/>
-              <p className="text-xl">🛠 Tailwind – mój główny stylowy wybór</p>
+              <p className="text-xl">{t("skills.tailwind.main")}</p>
               <p>
-                📌 Tailwinda używam we wszystkich moich projektach i dobrze znam zarówno jego zalety, jak i wady. Dzięki temu wiem, jak korzystać z niego w sposób, który rzeczywiście ułatwia pracę, zamiast ją komplikować.
+                {t("skills.tailwind.text_2")}
               </p>
               <hr className="border-t-solid border-1 border-white"/>
               <div className="flex flex-row justify-center">
                 <button className="btn" onClick={() => setOpenTailwind(false)}>
-                  Close
+                  {t("skills.close_btn")}
                 </button>
               </div>
             </div>
