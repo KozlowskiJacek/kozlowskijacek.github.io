@@ -72,12 +72,12 @@ const Projects = () => {
               <hr className="border-t-solid border-1 border-white"/>
               <p className="text-xl">🛠 Aurelia HR</p>
               <p>
-                📌 Aplikacja ma pomóc firmom w zarządzaniu zespołami i eliminowaniu chaosu komunikacyjnego. Każdy pracownik komunikuje się wyłącznie w ramach swojego zespołu, a kontakty między zespołami odbywają się jedynie na poziomie kierowników. Dzięki temu menedżerowie mogą sprawnie przydzielać zadania i mieć pełny wgląd w postępy swoich zespołów.
+                {t("skills.react.app")}
               </p>
               <hr className="border-t-solid border-1 border-white"/>
               <div className="flex flex-row justify-center">
                 <button className="btn" onClick={() => setOpenReact(false)}>
-                  Close
+                  {t("skills.close")}
                 </button>
               </div>
             </div>
@@ -93,19 +93,19 @@ const Projects = () => {
             <div className="flex flex-col gap-4">
               <h1 className="text-2xl">Python</h1>
               <p>
-                Zaczynałem jako samouk, a gdy opanowałem podstawy, postanowiłem zapisać się na kursy Backend Python Developer oraz Full Stack Python Developer. Dzięki nim nie tylko rozwinąłem swoje umiejętności w Pythonie, ale również zyskałem głębsze zrozumienie takich narzędzi jak Git, bazy danych, Figma, a nawet Unix. Poznałem frameworki takie jak Flask i Django.
+                {t("skills.python.text")}
               </p>
               <a href="/Certyfikaty/Full Stack Python ang.pdf" target="_blank">Full Stack Python - Certyfikat</a>
               <a href="/Certyfikaty/Python backend ang.pdf" target="_blank">Python Back-end Developer - Certyfikat</a>
               <hr className="border-t-solid border-1 border-white"/>
-              <p className="text-xl">🛠 Skrypty które faktycznie zostały użyte</p>
+              <p className="text-xl">{t("skills.python.script")}</p>
               <p>
-                📌 Samodzielnie napisałem dwa skrypty, które zostały wdrożone w firmie, w której pracuję. Pierwszy to skrypt do web scrapingu, używający biblioteki BeautifulSoup. Dzięki niemu mogłem analizować strony internetowe, na których wystawiała się konkurencja. Drugi skrypt wykorzystywał Pandas i służył do modyfikacji pliku CSV zawierającego informacje GPS o samochodach służbowych. Dzięki temu rozwiązaniu skróciłem czas pracy z 4-5 dni do zaledwie dwóch kliknięć. 
+                 {t("skills.python.solo")}
               </p>
               <hr className="border-t-solid border-1 border-white"/>
               <div className="flex flex-row justify-center">
                 <button className="btn" onClick={() => setOpenPython(false)}>
-                  Close
+                  {t("skills.close")}
                 </button>
               </div>
             </div>
@@ -121,7 +121,7 @@ const Projects = () => {
             <div className="flex flex-col gap-4">
               <h1 className="text-2xl">Tailwind CSS</h1>
               <p>
-                 Tailwind poznałem na kursie z Web Front-end Developer i bardzo polubiłem to narzędzie do stylizacji. Dzięki niemu mogę szybko i efektywnie tworzyć responsywne strony internetowe, które są zgodne z najnowszymi standardami. Używam Tailwind CSS w większości swoich projektów, co pozwala mi na łatwe dostosowywanie stylów do potrzeb użytkowników.
+                 {t("skills.tailwind.text")}
               </p>
               <a href="/Certyfikaty/Full Stack Python ang.pdf" target="_blank">Full Stack Python - Certyfikat</a>
               <hr className="border-t-solid border-1 border-white"/>
