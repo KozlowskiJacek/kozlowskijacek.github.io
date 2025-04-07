@@ -43,12 +43,50 @@
     "bye": "Talk soon! 🚀"
   },
 
-  "skills": {
-    "my": "My",
-    "skills": "Skills",
-    "database": "Database",
-    "creative": "Creativity"
+"skills": {
+  "my": "My",
+  "skills": "Skills",
+  "database": "Databases",
+  "creative": "Creativity",
+  "react": {
+    "text": "I completed React courses where I learned React Router, React Query, Tailwind CSS, and TypeScript. I carried out all projects – both small and large – independently, which taught me to look for information in documentation and forums and to adapt solutions to my own needs. I enjoy discovering new solutions because they constantly help me learn and strive to follow programming standards.",
+    "certificate": "Frontend - Certificate",
+    "app": "📌 The app is designed to help companies manage teams and eliminate communication chaos. Each employee communicates only within their team, and inter-team contacts occur solely at the manager level. This allows managers to efficiently assign tasks and have full insight into their teams’ progress."
   },
+  "python": {
+    "text": "I started out self-taught, and after mastering the basics, I enrolled in Backend Python Developer and Full Stack Python Developer courses. Thanks to them, I not only improved my Python skills but also gained a deeper understanding of tools like Git, databases, Figma, and even Unix. I learned frameworks like Flask and Django.",
+    "certificate_1": "Full Stack Python - Certificate",
+    "certificate_2": "Python Back-end Developer - Certificate",
+    "script": "🛠 Scripts that were actually used",
+    "solo": "📌 I independently wrote two scripts that were implemented in the company I work for. The first is a web scraping script using the BeautifulSoup library. It allowed me to analyze websites where competitors were listing their offers. The second script used Pandas and was for modifying a CSV file containing GPS information about company vehicles. This solution reduced the work time from 4–5 days to just two clicks."
+  },
+  "tailwind": {
+    "text": "I discovered Tailwind in a Web Front-end Developer course and quickly became a fan of this styling tool. It allows me to efficiently build responsive websites that meet modern standards. I use Tailwind CSS in most of my projects, which lets me easily adapt styles to user needs.",
+    "certificate": "Full Stack Python - Certificate",
+    "main": "🛠 Tailwind – my go-to styling choice",
+    "text_2": "📌 I use Tailwind in all my projects and am familiar with both its strengths and weaknesses. This allows me to use it in a way that truly simplifies work rather than complicating it."
+  },
+  "database_pop": {
+    "text": "Thanks to university and the Full Stack Developer course, I discovered the potential of databases and understood how vital they are in applications. I use them in practice and know both SQL and NoSQL. I understand when to use each and how to optimize them. This enables me to build efficient, fast, and smooth-running applications.",
+    "certificate": "Full Stack Python - Certificate",
+    "mongodb": "📌 My application uses MongoDB to store user data and task information for each team."
+  },
+  "creativity": {
+    "text": "I combine creative work with analytical thinking – video editing and programming. This gives me a unique approach to building websites and apps, where aesthetics and functionality go hand in hand. This synergy allows me to design both visually and technically.",
+    "certificate": "One of my works",
+    "main": "🛠 Creativity – the key to success",
+    "text_2": "📌 As an editor, I’ve learned about timing, matching music to video, writing scripts, and using AI to streamline processes. I’ve also explored screenwriting, shot planning, lighting, framing, color grading, and composition."
+  },
+  "git": {
+    "text": "I use Git daily, which helps me manage code efficiently in both individual and team projects (university projects). I create and manage branches, which supports parallel work on different features. I keep repositories clear by following best practices for commits and pull requests.",
+    "git": "My Github",
+    "main": "🛠 Git – version control and teamwork",
+    "text_2": "📌 I have experience resolving merge conflicts and working with code reviews, which helps maintain high project quality. I use GitHub/GitLab as well as basic CI/CD features that automate deployment and testing. This allows me to effectively manage code versions and enhance team collaboration."
+  },
+  "close_btn": "Close"
+},
+
+
 
   "web_app": {
     "nav_modern": "Modern Website",

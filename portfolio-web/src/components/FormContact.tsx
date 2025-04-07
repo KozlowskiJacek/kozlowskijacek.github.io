@@ -68,7 +68,7 @@ const FormContact = () => {
         <input type="email" name="user_email" placeholder={t("contact.email")} required className="input" />
       </div>
       <div className="flex justify-center flex-wrap space-x-4">
-        <input type="text" name="user_subject" placeholder={t("contact.subject")} required className="w-[100%] p-5 text-base text-white bg-bg_color_2 rounded-xl my-4 mx-0" />
+        <input type="text" name="user_subject" placeholder={t("contact.subject")} required className="w-[100%] p-5 text-base text-white bg-bg_color_1 rounded-xl my-4 mx-0" />
       </div>
       <textarea
         cols={30}
@@ -76,7 +76,7 @@ const FormContact = () => {
         name="message"
         placeholder={t("contact.message")}
         required
-        className="w-full p-5 text-base text-white bg-bg_color_2 rounded-xl my-4 mx-0"
+        className="w-full p-5 text-base text-white bg-bg_color_1 rounded-xl my-4 mx-0"
       />
       <input type="submit" value={t("contact.btn_send")} ref={buttonRef} className="btn" />
     </form>

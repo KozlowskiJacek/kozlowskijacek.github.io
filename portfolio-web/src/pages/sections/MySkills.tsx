@@ -48,7 +48,7 @@ const Projects = () => {
        whileInView = "visible"
        viewport = {{ once: false}}
       >
-        {t("Moje")}<span className="text-main_accent"> {t("Umiejętności")}</span>
+        {t("skills.my")}<span className="text-main_accent"> {t("skills.skills")}</span>
       </motion.h2>
       <motion.div className="grid grid-cols-1 md:grid-cols-3 items-center gap-10 mb-10"
        variants = {fadeInVariants("bottom")}
@@ -68,7 +68,7 @@ const Projects = () => {
               <p>
                 {t("skills.react.text")}
               </p>
-              <a href="/Certyfikaty/Frontend ang.pdf" target="_blank">{t("skills.react.certificate")}</a>
+              <a className="text-main_accent underline underline-offset-4" href="/Certyfikaty/Frontend ang.pdf" target="_blank">{t("skills.react.certificate")}</a>
               <hr className="border-t-solid border-1 border-white"/>
               <p className="text-xl">🛠 Aurelia HR</p>
               <p>
@@ -95,8 +95,8 @@ const Projects = () => {
               <p>
                 {t("skills.python.text")}
               </p>
-              <a href="/Certyfikaty/Full Stack Python ang.pdf" target="_blank">Full Stack Python - Certyfikat</a>
-              <a href="/Certyfikaty/Python backend ang.pdf" target="_blank">Python Back-end Developer - Certyfikat</a>
+              <a className="text-main_accent underline underline-offset-4" href="/Certyfikaty/Full Stack Python ang.pdf" target="_blank">{t("skills.python.certificate_1")}</a>
+              <a className="text-main_accent underline underline-offset-4" href="/Certyfikaty/Python backend ang.pdf" target="_blank">{t("skills.python.certificate_2")}</a>
               <hr className="border-t-solid border-1 border-white"/>
               <p className="text-xl">{t("skills.python.script")}</p>
               <p>
@@ -123,7 +123,7 @@ const Projects = () => {
               <p>
                  {t("skills.tailwind.text")}
               </p>
-              <a href="/Certyfikaty/Full Stack Python ang.pdf" target="_blank">Full Stack Python - Certyfikat</a>
+              <a className="text-main_accent underline underline-offset-4" href="/Certyfikaty/Full Stack Python ang.pdf" target="_blank">{t("skills.tailwind.certificate")}</a>
               <hr className="border-t-solid border-1 border-white"/>
               <p className="text-xl">{t("skills.tailwind.main")}</p>
               <p>
@@ -148,18 +148,18 @@ const Projects = () => {
             <div className="flex flex-col gap-4">
               <h1 className="text-2xl">{t("skills.database")}</h1>
               <p>
-                Dzięki studiom i kursowi Full Stack Developer odkryłem potencjał baz danych i zrozumiałem, jak ważną rolę odgrywają w aplikacjach. Używam ich w praktyce i znam zarówno SQL, jak i NoSQL. Wiem, kiedy używać jednego lub drugiego rozwiązania, a także jak je optymalizować. Dzięki temu mogę tworzyć wydajne aplikacje, które działają szybko i sprawnie.
+                {t("skills.database_pop.text")}
               </p>
-              <a href="/Certyfikaty/Full Stack Python ang.pdf" target="_blank">Full Stack Python - Certyfikat</a>
+              <a className="text-main_accent underline underline-offset-4" href="/Certyfikaty/Full Stack Python ang.pdf" target="_blank">{t("skills.database_pop.certificate")}</a>
               <hr className="border-t-solid border-1 border-white"/>
               <p className="text-xl">🛠 AureliaHR</p>
               <p>
-                📌 Moja aplikacja używa MongoDB do przechowywania danych o użytkownikach oraz dane dotyczące zadań dla poszczególnego zespołu. 
+                {t("skills.database_pop.mongodb")}
               </p>
               <hr className="border-t-solid border-1 border-white"/>
               <div className="flex flex-row justify-center">
                 <button className="btn" onClick={() => setOpenDatabase(false)}>
-                  Close
+                  {t("skills.close_btn")}
                 </button>
               </div>
             </div>
@@ -175,18 +175,18 @@ const Projects = () => {
             <div className="flex flex-col gap-4">
               <h1 className="text-2xl">{t("skills.creative")}</h1>
               <p>
-              Łączę pracę kreatywną z analitycznym myśleniem – montaż filmów i programowanie. Dzięki temu mam unikalne podejście do tworzenia stron i aplikacji, gdzie estetyka i funkcjonalność idą w parze. Ta symbioza pozwala mi lepiej projektować zarówno od strony wizualnej, jak i technicznej.
+                {t("skills.creativity.text")}
               </p>
-              <a href="https://www.youtube.com/watch?v=oTUANW-PJ0E&ab_channel=Otinus" target="_blank">Jedna z moich prac</a>
+              <a className="text-main_accent underline underline-offset-4" href="https://www.youtube.com/watch?v=oTUANW-PJ0E&ab_channel=Otinus" target="_blank">{t("skills.creativity.certificate")}</a>
               <hr className="border-t-solid border-1 border-white"/>
-              <p className="text-xl">🛠 Praca kreatywna</p>
+              <p className="text-xl">{t("skills.creativity.main")}</p>
               <p>
-                📌 Jako montażysta nauczyłem się, czym jest timing, jak dobierać muzykę do filmu, pisać teksty i wykorzystywać AI do usprawniania różnych procesów. Poznałem także zasady pisania scenariuszy, planowania ujęć, ustawiania światła, kadrowania, color gradingu i kompozycji.
+                {t("skills.creativity.text_2")}
               </p>
               <hr className="border-t-solid border-1 border-white"/>
               <div className="flex flex-row justify-center">
                 <button className="btn" onClick={() => setOpenCreative(false)}>
-                  Close
+                  {t("skills.close_btn")}
                 </button>
               </div>
             </div>
@@ -202,18 +202,18 @@ const Projects = () => {
             <div className="flex flex-col gap-4">
               <h1 className="text-2xl">Git</h1>
               <p>
-              Na co dzień korzystam z Git, co pozwala mi sprawnie zarządzać kodem zarówno w projektach indywidualnych, jak i zespołowych (projekty na studia). Tworzę i zarządzam branchami, co ułatwia równoległą pracę nad różnymi funkcjonalnościami. Dbam o czytelność repozytorium, stosując dobre praktyki w commitach i pull requestach.
+                {t("skills.git.text")}
               </p>
-              <a href="https://github.com/JacekKoz?tab=overview&from=2025-02-01&to=2025-02-10" target="_blank">Mój GitHub</a>
+              <a className="text-main_accent underline underline-offset-4" href="https://github.com/JacekKoz?tab=overview&from=2025-02-01&to=2025-02-10" target="_blank">{t("skills.git.git")}</a>
               <hr className="border-t-solid border-1 border-white"/>
-              <p className="text-xl">🛠 Git – kontrola wersji i praca zespołowa</p>
+              <p className="text-xl">{t("skills.git.main")}</p>
               <p>
-                📌 Mam doświadczenie w rozwiązywaniu konfliktów w kodzie oraz pracy z code review, co pomaga w utrzymaniu wysokiej jakości projektów. Korzystam z GitHub/GitLab, a także podstawowych funkcji CI/CD, które automatyzują proces wdrażania i testowania aplikacji. Dzięki temu mogę skutecznie kontrolować wersje kodu i usprawniać współpracę w zespołach.
+                {t("skills.git.text_2")}
               </p>
               <hr className="border-t-solid border-1 border-white"/>
               <div className="flex flex-row justify-center">
                 <button className="btn" onClick={() => setOpenGit(false)}>
-                  Close
+                  {t("skills.close_btn")}
                 </button>
               </div>
             </div>

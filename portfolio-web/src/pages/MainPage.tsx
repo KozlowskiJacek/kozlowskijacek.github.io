@@ -31,7 +31,7 @@ const MainPage = () => {
       <About />
       <MySkills />
       <Projects />
-      <Services />
+      {/* <Services /> */}
       <TheyTrustedMe />
       <Contact />
       <Footer />
