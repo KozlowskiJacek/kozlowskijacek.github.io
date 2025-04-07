@@ -66,6 +66,23 @@
       "main": "🛠 Tailwind – mój główny stylowy wybór",
       "text_2": "📌 Tailwinda używam we wszystkich moich projektach i dobrze znam zarówno jego zalety, jak i wady. Dzięki temu wiem, jak korzystać z niego w sposób, który rzeczywiście ułatwia pracę, zamiast ją komplikować."
     },
+    "database_pop": {
+      "text": "Dzięki studiom i kursowi Full Stack Developer odkryłem potencjał baz danych i zrozumiałem, jak ważną rolę odgrywają w aplikacjach. Używam ich w praktyce i znam zarówno SQL, jak i NoSQL. Wiem, kiedy używać jednego lub drugiego rozwiązania, a także jak je optymalizować. Dzięki temu mogę tworzyć wydajne aplikacje, które działają szybko i sprawnie.",
+      "certificate": "Full Stack Python - Certyfikat",
+      "mongodb": "📌 Moja aplikacja używa MongoDB do przechowywania danych o użytkownikach oraz dane dotyczące zadań dla poszczególnego zespołu."
+    },
+    "creativity": {
+      "text": " Łączę pracę kreatywną z analitycznym myśleniem – montaż filmów i programowanie. Dzięki temu mam unikalne podejście do tworzenia stron i aplikacji, gdzie estetyka i funkcjonalność idą w parze. Ta symbioza pozwala mi lepiej projektować zarówno od strony wizualnej, jak i technicznej.",
+      "certificate": "Jedna z moich prac",
+      "main": "🛠 Kreatywność – klucz do sukcesu",
+      "text_2": "📌 Jako montażysta nauczyłem się, czym jest timing, jak dobierać muzykę do filmu, pisać teksty i wykorzystywać AI do usprawniania różnych procesów. Poznałem także zasady pisania scenariuszy, planowania ujęć, ustawiania światła, kadrowania, color gradingu i kompozycji."
+    },
+    "git": {
+      "text": "Na co dzień korzystam z Git, co pozwala mi sprawnie zarządzać kodem zarówno w projektach indywidualnych, jak i zespołowych (projekty na studia). Tworzę i zarządzam branchami, co ułatwia równoległą pracę nad różnymi funkcjonalnościami. Dbam o czytelność repozytorium, stosując dobre praktyki w commitach i pull requestach.",
+      "git": "Mój Github",
+      "main": "🛠 Git – kontrola wersji i praca zespołowa",
+      "text_2": "📌 Mam doświadczenie w rozwiązywaniu konfliktów w kodzie oraz pracy z code review, co pomaga w utrzymaniu wysokiej jakości projektów. Korzystam z GitHub/GitLab, a także podstawowych funkcji CI/CD, które automatyzują proces wdrażania i testowania aplikacji. Dzięki temu mogę skutecznie kontrolować wersje kodu i usprawniać współpracę w zespołach."
+    },
     
     "close_btn":"Zamknij"
   },

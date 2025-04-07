@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import testImage from '../assets/img/test.jpg'
-import deleteMe from '../assets/img/Delete Me.jfif'
 import { FaStar } from "react-icons/fa";
 import { Autoplay } from 'swiper/modules';
 
@@ -12,7 +11,7 @@ const ImageSlider = () => {
 
   const langs = [
     { name: "Firma 1", logo: testImage, text:"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati dolorem veniam adipisci veritatis! Nisi nihil, quasi ipsa facilis blanditiis non molestias odit maiores aut dicta. Quidem possimus aut ratione repellat.", color: "#FF5733" },
-    { name: "Dawid Ferchow", logo: deleteMe, text: "Rudy ale spoko", color: "#33FF57" },
+    { name: "Firma 2", logo: testImage, text: "", color: "#33FF57" },
     { name: "Firma 3", logo: testImage, color: "#5733FF" },
     { name: "Firma 4", logo: testImage, color: "#FFC300" }, 
     { name: "Firma 5", logo: testImage, color: "#FF33A8" },

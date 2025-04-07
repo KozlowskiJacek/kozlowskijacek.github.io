@@ -12,7 +12,7 @@ const Header = () => {
 
   const toggleNavbar = () => setIsOpen(!isOpen)
   
-  const links = ["home", "about", "skills", "projects", "services", "feedback", "contact"]
+  const links = ["home", "about", "skills", "projects", "feedback", "contact"]
 
   const toggleLanguage = () => {
     const newLang = currentLang === "pl" ? "en" : "pl"
