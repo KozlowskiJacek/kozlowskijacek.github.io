@@ -1,5 +1,5 @@
 import React from 'react'
-import aboutPhoto from '../../assets/img/Ja i papuga.png'
+import aboutPhoto from '../../assets/img/Image 4.png'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
