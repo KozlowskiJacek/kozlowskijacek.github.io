@@ -113,7 +113,7 @@ const Home = () => {
           <a href="#">
             <i className="bx bxl-discord-alt text-main_accent inline-flex justify-center items-center bg-opacity-0 border-main_accent rounded-full p-2 border-[3px] hover:animate-tada hover:bg-main_accent hover:text-bg_color_2 transition-all hover:drop-shadow-custom-glow"></i>
           </a>
-          <a href="#">
+          <a href="https://www.linkedin.com/in/jacek-kozłowski-a43b21265/" target="_blank">
             <i className="bx bxl-linkedin text-main_accent inline-flex justify-center items-center bg-opacity-0 border-main_accent rounded-full p-2 border-[3px] hover:animate-tada hover:bg-main_accent hover:text-bg_color_2 transition-all hover:drop-shadow-custom-glow"></i>
           </a>
           <a href="#">
