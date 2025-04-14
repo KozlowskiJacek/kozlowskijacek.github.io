@@ -22,7 +22,7 @@ const AboutSubSite = () => {
 
   //todo Spraweidzć czy wszystko działa i zmeinić grafiki na nowe postarać się o zrobioenie grafik pixelart sprawdzić czy lepiej dać animacje czy porpostu pixel art 
   //todo Pomyśleć czy zrobić mój avatar jako pixel art czy jakies przedmioty
-  //todo zrobić grafiki 
+  //todo zrobić grafiki wszystkie na tą stronę może animację
 
   const handleNavigation = () => {
     // setActiveLink("contact")
