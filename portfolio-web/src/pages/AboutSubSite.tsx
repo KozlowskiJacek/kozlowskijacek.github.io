@@ -19,8 +19,9 @@ const AboutSubSite = () => {
   useEffect(() => {
     window.scrollTo(0, 0)
   })
-  
+
   //todo zrobić grafiki wszystkie na tą stronę może animację
+  //todo Zrobić porządek w img bo jest duzo grafik których nie używam 
 
   const handleNavigation = () => {
     // setActiveLink("contact")
