@@ -25,7 +25,7 @@ const MainPage = () => {
   }, [location]);
 
   return (
-    <div className="font-playfair">
+    <div className="font-playfair select-none">
       <Header />
       <Home />
       <About />
