@@ -20,10 +20,7 @@ const AboutSubSite = () => {
   useEffect(() => {
     window.scrollTo(0, 0)
   })
-
-  //todo zrobić grafiki wszystkie na tą stronę może animację
   
-
   const handleNavigation = () => {
     // setActiveLink("contact")
     navigate(`/`)
