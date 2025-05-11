@@ -3,6 +3,9 @@ import { useTranslation } from 'react-i18next'
 import homePhoto from "../assets/img/Image 1.png"
 import pixelJaca from "../assets/img/Pixel Jaca - strona.png"
 import pixelJaca_animacja from "../assets/img/Pixel_Jaca_strona_animacja.gif"
+import cat from "../assets/img/Cat 1.png"
+import fullStack from "../assets/img/Pixel full stack.png"
+import development from "../assets/img/Development.png"
 import contentCreator from "../assets/img/Content creator img.png"
 import { useLocation, useNavigate } from 'react-router-dom'
 import useSmoothScroll from '../hooks/useSmoothScroll'
@@ -65,7 +68,7 @@ const AboutSubSite = () => {
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: false, amount: 0.5 }}
       >
-      <img src={homePhoto} alt="" className='max-w-[100%] max-h-[100%] animate-floatImage'/>
+      <img src={fullStack} alt="" className='max-w-[100%] max-h-[100%] animate-floatImage'/>
       </motion.div>
       <motion.div className='text-white w-full'
         initial={{ opacity: 0, x: 80 }}
@@ -112,7 +115,7 @@ const AboutSubSite = () => {
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: false, amount: 0.5 }}
       >
-      <img src={homePhoto} alt="" className='max-w-[100%] max-h-[100%] animate-floatImage'/>
+      <img src={development} alt="" className='max-w-[100%] max-h-[100%] animate-floatImage'/>
       </motion.div>
       <motion.div className='text-white w-full'
         initial={{ opacity: 0, x: 80 }}
@@ -147,7 +150,7 @@ const AboutSubSite = () => {
         >
           <img
             className="max-w-[100%] max-h-[100%] animate-floatImage"
-            src={homePhoto}
+            src={cat}
             alt=""
           />
         </motion.div>
