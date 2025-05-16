@@ -34,7 +34,7 @@ const AboutSubSite = () => {
     <div className='select-none'>
       <HeaderAbout />
     
-      <section className="bg-bg_color_1 flex justify-center items-center min-h-screen w-full pt-[100px] px-[9%] pv-[20px]" id='hello'>
+      <section className="bg-bg_color_1 flex justify-center items-center min-h-screen w-full pt-[100px] px-[9%] pv-[20px]" id='title_hello'>
         <motion.div className="w-full text-white"
           initial={{ opacity: 0, x: -80 }}
           whileInView={{ opacity: 1, x: 0 }}
