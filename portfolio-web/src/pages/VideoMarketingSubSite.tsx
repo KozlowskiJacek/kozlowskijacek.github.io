@@ -28,7 +28,7 @@ const WebAppsSubSite = () => {
       <HeaderVideos />
 
       <section
-        className="bg-bg_color_1 flex justify-center items-center min-h-screen w-full pt-[100px] px-[9%] pv-[20px]"
+        className="bg-bg_color_1 flex justify-center items-center min-h-screen w-full pt-[100px] px-[9%] py-[20px]"
         id="nav_profesional"
       >
         <motion.div
@@ -61,7 +61,7 @@ const WebAppsSubSite = () => {
       </section>
 
       <section
-        className="bg-bg_color_2 flex justify-center items-center min-h-screen w-full pt-[100px] px-[9%] pv-[20px]"
+        className="bg-bg_color_2 flex justify-center items-center min-h-screen w-full pt-[100px] px-[9%] py-[20px]"
         id="nav_ads"
       >
         <motion.div
@@ -98,7 +98,7 @@ const WebAppsSubSite = () => {
       </section>
 
       <section
-        className="bg-bg_color_1 flex justify-center items-center min-h-screen w-full pt-[100px] px-[9%] pv-[20px]"
+        className="bg-bg_color_1 flex justify-center items-center min-h-screen w-full pt-[100px] px-[9%] py-[20px]"
         id="nav_vlogs"
       >
         <motion.div
@@ -136,7 +136,7 @@ const WebAppsSubSite = () => {
       </section>
 
       <section
-        className="bg-bg_color_2 flex justify-center items-center min-h-screen w-full pt-[100px] px-[9%] pv-[20px]"
+        className="bg-bg_color_2 flex justify-center items-center min-h-screen w-full pt-[100px] px-[9%] py-[20px]"
         id="nav_gaming"
       >
         <motion.div
@@ -173,7 +173,7 @@ const WebAppsSubSite = () => {
       </section>
 
       <section
-        className="bg-bg_color_1 flex justify-center items-center min-h-screen w-full pt-[100px] px-[9%] pv-[20px]"
+        className="bg-bg_color_1 flex justify-center items-center min-h-screen w-full pt-[100px] px-[9%] py-[20px]"
         id="nav_reels"
       >
         <motion.div
@@ -211,7 +211,7 @@ const WebAppsSubSite = () => {
       </section>
 
       <section
-        className="bg-bg_color_2 flex justify-center items-center min-h-screen w-full pt-[100px] px-[9%] pv-[20px]"
+        className="bg-bg_color_2 flex justify-center items-center min-h-screen w-full pt-[100px] px-[9%] py-[20px]"
         id="nav_how"
       >
         <motion.div
