@@ -10,13 +10,13 @@ const ImageSlider = () => {
   const [active, setActive] = useState(null)
 
   const langs = [
-    { name: "Firma 1", logo: testImage, text:"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati dolorem veniam adipisci veritatis! Nisi nihil, quasi ipsa facilis blanditiis non molestias odit maiores aut dicta. Quidem possimus aut ratione repellat.", color: "#FF5733" },
-    { name: "Firma 2", logo: testImage, text: "", color: "#33FF57" },
-    { name: "Firma 3", logo: testImage, color: "#5733FF" },
-    { name: "Firma 4", logo: testImage, color: "#FFC300" }, 
-    { name: "Firma 5", logo: testImage, color: "#FF33A8" },
-    { name: "Firma 6", logo: testImage, color: "#33D1FF" }, 
-    { name: "Firma 7", logo: testImage, color: "#A833FF" },
+    { name: "Firma 1", logo: testImage, text:"Pełen profesjonalizm, ale na luzie – dokładnie tak, jak lubię. Strona działa, wygląda super, a całość przebiegła bez stresu. Polecam każdemu!", color: "#FF5733" },
+    { name: "Firma 2", logo: testImage, text:"", color: "#33FF57" },
+    { name: "Firma 3", logo: testImage, text:"", color: "#5733FF" },
+    { name: "Firma 4", logo: testImage, text:"Mega współpraca! Pomysł, wykonanie i podejście na 100%. Dzięki za ogarnięcie wszystkiego – nie musiałem się niczym martwić.", color: "#FFC300" }, 
+    { name: "Firma 5", logo: testImage, text:"", color: "#FF33A8" },
+    { name: "Firma 6", logo: testImage, text:"", color: "#33D1FF" }, 
+    { name: "Firma 7", logo: testImage, text:"", color: "#A833FF" },
   ]
 
   return (
