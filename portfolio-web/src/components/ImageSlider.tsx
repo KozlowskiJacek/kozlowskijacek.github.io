@@ -4,16 +4,21 @@ import 'swiper/css'
 import testImage from '../assets/img/test.jpg'
 import { FaStar } from "react-icons/fa";
 import { Autoplay } from 'swiper/modules';
+import { useTranslation } from "react-i18next";
+import serwisGasiorek from '../assets/img/Serwis Gąsiorek Logo_20250519_093746_0000.png'
+import grupaDeGie from '../assets/img/Grupa DeGie Logo_20250519_093717_0000.png'
 
 const ImageSlider = () => {
+
+  const { t } = useTranslation()
 
   const [active, setActive] = useState(null)
 
   const langs = [
-    { name: "Firma 1", logo: testImage, text:"Pełen profesjonalizm, ale na luzie – dokładnie tak, jak lubię. Strona działa, wygląda super, a całość przebiegła bez stresu. Polecam każdemu!", color: "#FF5733" },
+    { name: "Serwis Gąsiorek", logo: serwisGasiorek, text: t("feedback.text1"), color: "#FF5733" },
     { name: "Firma 2", logo: testImage, text:"", color: "#33FF57" },
     { name: "Firma 3", logo: testImage, text:"", color: "#5733FF" },
-    { name: "Firma 4", logo: testImage, text:"Mega współpraca! Pomysł, wykonanie i podejście na 100%. Dzięki za ogarnięcie wszystkiego – nie musiałem się niczym martwić.", color: "#FFC300" }, 
+    { name: "Grupa DeGie", logo: grupaDeGie, text: t("feedback.text4"), color: "#FFC300" }, 
     { name: "Firma 5", logo: testImage, text:"", color: "#FF33A8" },
     { name: "Firma 6", logo: testImage, text:"", color: "#33D1FF" }, 
     { name: "Firma 7", logo: testImage, text:"", color: "#A833FF" },
