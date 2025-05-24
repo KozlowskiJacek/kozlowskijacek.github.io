@@ -16,19 +16,19 @@ const ImageSlider = () => {
 
   const langs = [
     { name: "Serwis Gąsiorek", logo: serwisGasiorek, text: t("feedback.text1"), color: "#FF5733" },
-    { name: "Firma 2", logo: testImage, text:"", color: "#33FF57" },
-    { name: "Firma 3", logo: testImage, text:"", color: "#5733FF" },
+    // { name: "Firma 2", logo: testImage, text:"", color: "#33FF57" },
+    // { name: "Firma 3", logo: testImage, text:"", color: "#5733FF" },
     { name: "Grupa DeGie", logo: grupaDeGie, text: t("feedback.text4"), color: "#FFC300" }, 
-    { name: "Firma 5", logo: testImage, text:"", color: "#FF33A8" },
-    { name: "Firma 6", logo: testImage, text:"", color: "#33D1FF" }, 
-    { name: "Firma 7", logo: testImage, text:"", color: "#A833FF" },
+    // { name: "Firma 5", logo: testImage, text:"", color: "#FF33A8" },
+    // { name: "Firma 6", logo: testImage, text:"", color: "#33D1FF" }, 
+    // { name: "Firma 7", logo: testImage, text:"", color: "#A833FF" },
   ]
 
   return (
-    <div className='max-w-5xl'>
+    <div className='max-w-5xl mx-auto'>
       <Swiper
         spaceBetween={50}
-        slidesPerView={3}
+        slidesPerView={1}
         onSlideChange={(cur) => setActive(cur.realIndex)}
         loop={true}
         centeredSlides={true}
@@ -40,7 +40,7 @@ const ImageSlider = () => {
         {
           langs.map((lang, i) => (
             <SwiperSlide key={i}>
-              <div className='h-96 flex'>
+              <div className='h-96 flex justify-center'>
               <div className={`card ${active === i ? "card-active" : ""} border-[${lang.color}]`} 
                   style={{ background: `linear-gradient(to top, rgba(255,255,255,0.2), ${lang.color}90)`,
                   borderColor: lang.color
