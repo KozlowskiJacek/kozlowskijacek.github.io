@@ -132,7 +132,7 @@ const AboutSubSite = () => {
       </section>
 
       <section
-        className="bg-bg_color_2 flex md-flex-row flex-col-reverse justify-center items-center min-h-screen w-full pt-[100px] px-[9%] py-[20px]"
+        className="bg-bg_color_2 flex md:flex-row flex-col-reverse justify-center items-center min-h-screen w-full pt-[100px] px-[9%] py-[20px]"
         id="title_what"
       >
         <motion.div
