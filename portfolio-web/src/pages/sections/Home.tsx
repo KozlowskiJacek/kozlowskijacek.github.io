@@ -92,7 +92,9 @@ const Home = () => {
           initial = "hidden"
           whileInView = "visible"
           viewport = {{ once: false}}
-        >Jacek Kozłowski</motion.h1>
+        >
+          Jacek Kozłowski
+        </motion.h1>
         <h3 className="mt-4 md:text-3xl text-2xl font-semibold mb-5">
           {t("home.im")} <span className="text-main_accent">{text}</span>
           <span className="animate-blink">|</span>
@@ -102,7 +104,9 @@ const Home = () => {
         initial = "hidden"
         whileInView = "visible"
         viewport = {{ once: false}}
-        >{t("home.text")}</motion.p>
+        >
+          {t("home.text")}
+        </motion.p>
         <div className="flex space-x-4 mt-5 md:text-3xl text-2xl">
           <a href="https://www.instagram.com/life_of_jaca/" target="_blank">
             <i className="bx bxl-instagram-alt text-main_accent inline-flex justify-center items-center  bg-opacity-0 border-main_accent rounded-full p-2 border-[3px] hover:animate-tada hover:bg-main_accent hover:text-bg_color_2 transition-all hover:drop-shadow-custom-glow"></i>

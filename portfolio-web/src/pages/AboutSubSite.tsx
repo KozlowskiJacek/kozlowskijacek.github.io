@@ -34,7 +34,7 @@ const AboutSubSite = () => {
       <HeaderAbout />
 
       <section
-        className="bg-bg_color_1 flex justify-center items-center min-h-screen w-full pt-[100px] px-[9%] py-[20px]"
+        className="bg-bg_color_1 flex md:flex-row flex-col justify-center items-center min-h-screen w-full pt-[100px] px-[9%] py-[20px]"
         id="title_hello"
       >
         <motion.div
@@ -44,10 +44,10 @@ const AboutSubSite = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: false, amount: 0.5 }}
         >
-          <h3 className="text-3xl font-semibold mb-3">{t("home.hello")}</h3>
-          <h1 className="text-6xl font-semibold text-main_accent">Jacek</h1>
+          <h3 className="md:text-3xl text-2xl font-semibold mb-3">{t("home.hello")}</h3>
+          <h1 className="md:text-6xl text-4xl font-semibold text-main_accent">Jacek</h1>
 
-          <p className="leading-7 mt-5">{t("about.text")}</p>
+          <p className="md:leading-7 md:text-base text-sm mt-5">{t("about.text")}</p>
         </motion.div>
         <motion.div
           className="w-[75vw] m-20"
@@ -57,7 +57,7 @@ const AboutSubSite = () => {
           viewport={{ once: false, amount: 0.5 }}
         >
           <img
-            className="max-w-[100%] max-h-[100%] animate-floatImage m-20"
+            className="md:max-w-[100%] md:max-h-[100%] max-w-[80%] max-h-[80%] ml-16 animate-floatImage"
             src={pixelJaca_animacja}
             alt=""
           />
@@ -65,7 +65,7 @@ const AboutSubSite = () => {
       </section>
 
       <section
-        className="bg-bg_color_2 flex justify-center items-center min-h-screen w-full pt-[100px] px-[9%] py-[20px]"
+        className="bg-bg_color_2 flex md:flex-row flex-col-reverse justify-center items-center min-h-screen w-full pt-[100px] px-[9%] py-[20px]"
         id="title_why"
       >
         <motion.div
@@ -78,7 +78,7 @@ const AboutSubSite = () => {
           <img
             src={fullStack}
             alt=""
-            className="max-w-[100%] max-h-[100%] animate-floatImage"
+            className="md:max-w-[100%] md:max-h-[100%] animate-floatImage"
           />
         </motion.div>
         <motion.div
@@ -88,16 +88,16 @@ const AboutSubSite = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: false, amount: 0.5 }}
         >
-          <h3 className="text-4xl font-bold mb-4">
+          <h3 className="md:text-4xl text-2xl font-bold mb-4">
             {t("about.why")}{" "}
             <span className="text-main_accent">{t("about.full_stack")}</span>
           </h3>
-          <p className="leading-7 my-5 mb-5">{t("about.text2")}</p>
+          <p className="md:leading-7 md:text-base text-sm my-5 mb-5">{t("about.text2")}</p>
         </motion.div>
       </section>
 
       <section
-        className="bg-bg_color_1 flex justify-center items-center min-h-screen w-full pt-[100px] px-[9%] py-[20px]"
+        className="bg-bg_color_1 flex md:flex-row flex-col justify-center items-center min-h-screen w-full pt-[100px] px-[9%] py-[20px]"
         id="title_how"
       >
         <motion.div
@@ -107,14 +107,14 @@ const AboutSubSite = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: false, amount: 0.5 }}
         >
-          <h3 className="text-4xl font-semibold mb-3">
+          <h3 className="md:text-4xl text-2xl font-semibold mb-3">
             {t("about.how")}{" "}
             <span className="text-main_accent">
               {t("about.content_creator")}
             </span>
           </h3>
 
-          <p className="leading-7 mt-5">{t("about.text3")}</p>
+          <p className="md:leading-7 md:text-base text-sm mt-5">{t("about.text3")}</p>
         </motion.div>
         <motion.div
           className="w-[75vw] m-20"
@@ -132,7 +132,7 @@ const AboutSubSite = () => {
       </section>
 
       <section
-        className="bg-bg_color_2 flex justify-center items-center min-h-screen w-full pt-[100px] px-[9%] py-[20px]"
+        className="bg-bg_color_2 flex md-flex-row flex-col-reverse justify-center items-center min-h-screen w-full pt-[100px] px-[9%] py-[20px]"
         id="title_what"
       >
         <motion.div
@@ -155,16 +155,16 @@ const AboutSubSite = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: false, amount: 0.5 }}
         >
-          <h3 className="text-4xl font-bold mb-4">
+          <h3 className="md:text-4xl text-2xl font-bold mb-4">
             {t("about.what_im")}{" "}
             <span className="text-main_accent">{t("about.guided_by")}</span>
           </h3>
-          <p className="leading-7 my-5 mb-5">{t("about.text4")}</p>
+          <p className="md:leading-7  md:text-base text-sm my-5 mb-5">{t("about.text4")}</p>
         </motion.div>
       </section>
 
       <section
-        className="bg-bg_color_1 flex justify-center items-center min-h-screen w-full pt-[100px] px-[9%] py-[20px]"
+        className="bg-bg_color_1 flex md:flex-row flex-col justify-center items-center min-h-screen w-full pt-[100px] px-[9%] py-[20px]"
         id="title_after"
       >
         <motion.div
@@ -174,12 +174,12 @@ const AboutSubSite = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: false, amount: 0.5 }}
         >
-          <h3 className="text-4xl font-semibold mb-3">
+          <h3 className="md:text-4xl text-2xl font-semibold mb-3">
             {t("about.after")}{" "}
             <span className="text-main_accent">{t("about.hour")}</span>
           </h3>
 
-          <p className="leading-7 mt-5 ">{t("about.text5")}</p>
+          <p className="md:leading-7 md:text-base text-sm mt-5 ">{t("about.text5")}</p>
           <a
             onClick={() => handleNavigation()}
             className="text-2xl font-semibold btn"
