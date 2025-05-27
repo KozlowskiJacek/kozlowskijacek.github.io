@@ -1,4 +1,3 @@
-import React from 'react'
 import useSmoothScroll from '../hooks/useSmoothScroll'
 
 const Footer = () => {
