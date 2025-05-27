@@ -12,7 +12,7 @@ i18n
     debug: true,
     interpolation: { escapeValue: false },
     backend: {
-      loadPath: "/portfolio-web-react/locales/{{lng}}/{{ns}}.json"
+      loadPath: "/portfolio-web-react/translations/{{lng}}.json"
     },
     detection: {
       order: ["localStorage", "navigator"],
