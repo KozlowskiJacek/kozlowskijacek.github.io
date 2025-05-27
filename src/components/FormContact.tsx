@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import confetti from 'canvas-confetti';
-import intlTelInput from 'intl-tel-input';
 import "intl-tel-input/build/css/intlTelInput.css";
 import "../index.css";
 import { useTranslation } from 'react-i18next';

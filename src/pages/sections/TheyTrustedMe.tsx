@@ -1,5 +1,4 @@
-import React from "react";
-import workInProgress from "../assets/img/test.jpg";
+
 import ImageSlider from "../../components/ImageSlider";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion"

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "boxicons/css/boxicons.min.css";
-import homePhoto from "../../assets/img/Image 1.png";
 import homePhoto1 from "../../assets/img/JacaGarniak.png";
 import useSmoothScroll from "../../hooks/useSmoothScroll";
 import { useTranslation } from "react-i18next";
