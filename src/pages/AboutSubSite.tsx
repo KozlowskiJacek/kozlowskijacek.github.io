@@ -57,7 +57,7 @@ const AboutSubSite = () => {
           viewport={{ once: false, amount: 0.5 }}
         >
           <img
-            className="md:max-w-[100%] md:max-h-[100%] max-w-[80%] max-h-[80%] ml-16 animate-floatImage"
+            className="md:max-w-[100%] md:max-h-[100%] max-w-[80%] max-h-[80%] ml-10 animate-floatImage"
             src={pixelJaca_animacja}
             alt=""
           />
@@ -182,11 +182,11 @@ const AboutSubSite = () => {
           <p className="md:leading-7 md:text-base text-sm mt-5 ">{t("about.text5")}</p>
           <a
             onClick={() => handleNavigation()}
-            className="text-2xl font-semibold btn"
+            className="md:text-2xl text-base font-semibold btn"
           >
             {t("about.questions")}
           </a>
-          <h2 className="text-xl">{t("about.bye")}</h2>
+          <h2 className=":md:text-xl text-lg">{t("about.bye")}</h2>
         </motion.div>
         <motion.div
           className="w-[75vw] m-20"
