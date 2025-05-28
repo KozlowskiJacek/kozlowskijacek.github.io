@@ -77,7 +77,7 @@ const Home = () => {
 
   return (
     <section
-      className="bg-bg_color_1 flex md:flex-row flex-col justify-center items-center min-h-screen w-full pt-[100px] px-[9%] py-[20px]"
+      className="bg-bg_color_1 flex md:flex-row flex-col  justify-center items-center min-h-screen w-full pt-[100px] px-[9%] py-[20px]"
       id="home"
     >
       <motion.div className="w-full text-white"
@@ -138,7 +138,7 @@ const Home = () => {
               viewport = {{ once: false}}
       >
         <img
-          className="max-w-[100%] max-h-[100%] animate-floatImage"
+          className="max-w-[100%] max-h-[100%] mt-6 animate-floatImage"
           src={homePhoto1}
           alt=""
         />
