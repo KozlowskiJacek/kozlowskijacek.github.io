@@ -33,7 +33,7 @@ const ImageSlider = () => {
         loop={true}
         centeredSlides={true}
         speed={800}
-        autoplay={{ delay: 3000 }}
+        autoplay={{ delay: 5000 }}
         modules={[Autoplay]}
       >
 
@@ -41,7 +41,7 @@ const ImageSlider = () => {
           langs.map((lang, i) => (
             <SwiperSlide key={i}>
               <div className='h-96 flex justify-center'>
-              <div className={`card ${active === i ? "card-active" : ""} border-[${lang.color}]`} 
+              <div className={`h-[1000px] card ${active === i ? "card-active" : ""} border-[${lang.color}]`} 
                   style={{ background: `linear-gradient(to top, rgba(255,255,255,0.2), ${lang.color}90)`,
                   borderColor: lang.color
                 }}
