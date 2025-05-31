@@ -126,7 +126,7 @@ const Home = () => {
         </div>
         <a
           onClick={() => scrollTo("contact")}
-          className="btn"
+          className="md:text-xl text-base btn"
         >
           {t("home.btn_get_in_touch")}
         </a>
