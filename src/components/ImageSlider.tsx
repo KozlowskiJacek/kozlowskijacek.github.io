@@ -17,7 +17,7 @@ const ImageSlider = () => {
   const langs = [
     { name: "Serwis Gąsiorek", logo: serwisGasiorek, text: t("feedback.text1"), color: "#FF5733" },
     { name: "Dawid Ferchow", logo: testImage, text: t("feedback.text2"), color: "#33FF57" },
-    // { name: "Firma 3", logo: testImage, text:"", color: "#5733FF" },
+    { name: "Agata Sułkowska", logo: testImage, text:t("feedback.text3"), color: "#5733FF" },
     { name: "Grupa DeGie", logo: grupaDeGie, text: t("feedback.text4"), color: "#FFC300" }, 
     // { name: "Firma 5", logo: testImage, text:"", color: "#FF33A8" },
     // { name: "Firma 6", logo: testImage, text:"", color: "#33D1FF" }, 
