@@ -1,7 +1,6 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
-import testImage from '../assets/img/test.jpg'
 import { FaStar } from "react-icons/fa";
 import { Autoplay } from 'swiper/modules';
 import { useTranslation } from "react-i18next";

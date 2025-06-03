@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
 import useSmoothScroll from '../hooks/useSmoothScroll'
 import { useTranslation } from "react-i18next"
-import { useLocation, useNavigate } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 
 const Header = () => {

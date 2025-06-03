@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import FormContact from "../../components/FormContact";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";

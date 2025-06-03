@@ -4,7 +4,7 @@ import Header from "../components/HeaderMain";
 import Footer from "../components/Footer";
 import Home from "./sections/Home";
 import About from "./sections/About";
-import Services from "./sections/Services";
+// import Services from "./sections/Services";
 import Projects from "./sections/Projects";
 import TheyTrustedMe from "./sections/TheyTrustedMe";
 import Contact from "./sections/Contact";
