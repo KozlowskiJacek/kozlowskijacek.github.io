@@ -81,27 +81,13 @@ input[type="number"] {
 }
 
 input:-webkit-autofill,
-textarea:-webkit-autofill {
-  background-color: #1f242d !important; /* Tło */
-  color: white !important; /* Kolor tekstu */
-  box-shadow: 0 0 0px 1000px #1f242d inset !important; /* Usuwa cień */
-}
-
-/* Próba z regułami "focus" */
+input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
 textarea:-webkit-autofill:focus {
-  background-color: #1f242d !important; /* Tło */
-  color: white !important; /* Kolor tekstu */
+  -webkit-text-fill-color: white !important;
+  transition: background-color 5000s ease-in-out 0s;
+  box-shadow: 0 0 0px 1000px #1f242d inset !important;
 }
 
-/* Placeholder */
-input:-webkit-autofill::placeholder,
-textarea:-webkit-autofill::placeholder {
-  color: white !important;
-}
-
-/* Niektóre przeglądarki mogą stosować własne shadow DOM, więc można spróbować dodać takie reguły */
-input:-webkit-autofill::after,
-textarea:-webkit-autofill::after {
-  color: white !important;
-}

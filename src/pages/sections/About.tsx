@@ -1,4 +1,3 @@
-import React from 'react'
 import aboutPhoto from '../../assets/img/Jaca Laptop.png'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'

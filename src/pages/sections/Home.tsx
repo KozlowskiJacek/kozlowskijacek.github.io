@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "boxicons/css/boxicons.min.css";
 import homePhoto1 from "../../assets/img/JacaGarniak.png";
 import useSmoothScroll from "../../hooks/useSmoothScroll";

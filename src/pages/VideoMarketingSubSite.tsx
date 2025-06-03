@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import pixelJaca from "../assets/img/Pixel Jaca - strona.png";
 import jacaLaptop from "../assets/img/Jaca Laptop.png";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import useSmoothScroll from "../hooks/useSmoothScroll";
 import HeaderVideos from "../components/HeaderVideos";
 
