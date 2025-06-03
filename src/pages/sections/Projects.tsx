@@ -1,4 +1,3 @@
-import React from "react";
 import workInProgress from "../../assets/img/test.jpg";
 import pythonCode from "../../assets/img/python code.jpg";
 import pythonCode1 from "../../assets/img/python code 1.jpg";
