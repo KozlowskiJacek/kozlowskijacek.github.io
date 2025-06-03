@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import Modal from "../../components/Modal";
@@ -81,7 +81,7 @@ const Projects = () => {
               <p>{t("skills.react.app")}</p>
               <hr className="border-t-solid border-1 border-white" />
               <div className="flex flex-row justify-center">
-                <button className="btn" onClick={() => setOpenReact(false)}>
+                <button className="md:text-xl text-base btn" onClick={() => setOpenReact(false)}>
                   {t("skills.close_btn")}
                 </button>
               </div>
@@ -120,7 +120,7 @@ const Projects = () => {
               <p>{t("skills.python.solo")}</p>
               <hr className="border-t-solid border-1 border-white" />
               <div className="flex flex-row justify-center">
-                <button className="btn" onClick={() => setOpenPython(false)}>
+                <button className="md:text-xl text-base btn" onClick={() => setOpenPython(false)}>
                   {t("skills.close_btn")}
                 </button>
               </div>
@@ -152,7 +152,7 @@ const Projects = () => {
               <p>{t("skills.tailwind.text_2")}</p>
               <hr className="border-t-solid border-1 border-white" />
               <div className="flex flex-row justify-center">
-                <button className="btn" onClick={() => setOpenTailwind(false)}>
+                <button className="md:text-xl text-base btn" onClick={() => setOpenTailwind(false)}>
                   {t("skills.close_btn")}
                 </button>
               </div>
@@ -184,7 +184,7 @@ const Projects = () => {
               <p>{t("skills.database_pop.mongodb")}</p>
               <hr className="border-t-solid border-1 border-white" />
               <div className="flex flex-row justify-center">
-                <button className="btn" onClick={() => setOpenDatabase(false)}>
+                <button className="md:text-xl text-base btn" onClick={() => setOpenDatabase(false)}>
                   {t("skills.close_btn")}
                 </button>
               </div>
@@ -216,7 +216,7 @@ const Projects = () => {
               <p>{t("skills.creativity.text_2")}</p>
               <hr className="border-t-solid border-1 border-white" />
               <div className="flex flex-row justify-center">
-                <button className="btn" onClick={() => setOpenCreative(false)}>
+                <button className="md:text-xl text-base btn" onClick={() => setOpenCreative(false)}>
                   {t("skills.close_btn")}
                 </button>
               </div>
@@ -248,7 +248,7 @@ const Projects = () => {
               <p>{t("skills.git.text_2")}</p>
               <hr className="border-t-solid border-1 border-white" />
               <div className="flex flex-row justify-center">
-                <button className="btn" onClick={() => setOpenGit(false)}>
+                <button className="md:text-xl text-base btn" onClick={() => setOpenGit(false)}>
                   {t("skills.close_btn")}
                 </button>
               </div>

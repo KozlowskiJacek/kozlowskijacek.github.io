@@ -9,7 +9,7 @@ import HeaderWebApp from "../components/HeaderWebApps";
 
 const WebAppsSubSite = () => {
   const { t } = useTranslation();
-  const location = useLocation();
+  // const location = useLocation();
   const navigate = useNavigate();
   const scrollTo = useSmoothScroll();
 
