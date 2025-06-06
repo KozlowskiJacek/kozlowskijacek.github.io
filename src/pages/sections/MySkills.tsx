@@ -58,7 +58,7 @@ const Projects = () => {
       >
         <div>
           <button
-            className="bg-bg_color_2 w-[300px] h-[200px] md:w-[200px] md:h-[180px] mx-auto md:mx-auto mb-5 p-6 pb-8 rounded-2xl text-center border-2 border-bg_color_1 transition duration-500 ease hover:border-main_accent hover:scale-105 cursor-pointer"
+            className="bg-bg_color_2 w-[300px] h-[200px] md:w-[350px] md:h-[180px] mx-auto md:mx-auto mb-5 p-6 pb-8 rounded-2xl text-center border-2 border-bg_color_1 transition duration-500 ease hover:border-main_accent hover:scale-105 cursor-pointer"
             onClick={() => setOpenReact(true)}
           >
             <i className="fa-brands fa-react text-main_accent text-6xl"></i>
