@@ -58,7 +58,7 @@ const Projects = () => {
       >
         <div>
           <button
-            className="bg-bg_color_2 w-[350px] h-[500px] md:w-[350px] md:h-[180px] mx-auto md:mx-auto mb-5 p-6 pb-8 rounded-2xl text-center border-2 border-bg_color_1 transition duration-500 ease hover:border-main_accent hover:scale-105 cursor-pointer"
+            className="bg-bg_color_2 w-[300px] h-[200px] md:w-[200px] md:h-[180px] mx-auto md:mx-auto mb-5 p-6 pb-8 rounded-2xl text-center border-2 border-bg_color_1 transition duration-500 ease hover:border-main_accent hover:scale-105 cursor-pointer"
             onClick={() => setOpenReact(true)}
           >
             <i className="fa-brands fa-react text-main_accent text-6xl"></i>
@@ -91,7 +91,7 @@ const Projects = () => {
 
         <div>
           <button
-            className="bg-bg_color_2 w-[350px] h-[500px] md:w-[350px] md:h-[180px] mx-auto md:mx-auto mb-5 p-6 pb-8 rounded-2xl text-center border-2 border-bg_color_1 transition duration-500 ease hover:border-main_accent hover:scale-105 cursor-pointer"
+            className="bg-bg_color_2 w-[300px] h-[200px] md:w-[350px] md:h-[180px] mx-auto md:mx-auto mb-5 p-6 pb-8 rounded-2xl text-center border-2 border-bg_color_1 transition duration-500 ease hover:border-main_accent hover:scale-105 cursor-pointer"
             onClick={() => setOpenPython(true)}
           >
             <i className="fa-brands fa-python text-main_accent text-6xl"></i>
@@ -130,7 +130,7 @@ const Projects = () => {
 
         <div>
           <button
-            className="bg-bg_color_2 w-[350px] h-[500px] md:w-[350px] md:h-[180px] mx-auto md:mx-auto mb-5 p-6 pb-8 rounded-2xl text-center border-2 border-bg_color_1 transition duration-500 ease hover:border-main_accent hover:scale-105 cursor-pointer"
+            className="bg-bg_color_2 w-[300px] h-[200px] md:w-[350px] md:h-[180px] mx-auto md:mx-auto mb-5 p-6 pb-8 rounded-2xl text-center border-2 border-bg_color_1 transition duration-500 ease hover:border-main_accent hover:scale-105 cursor-pointer"
             onClick={() => setOpenTailwind(true)}
           >
             <i className="fa-brands fa-css3-alt text-main_accent text-6xl"></i>
@@ -162,7 +162,7 @@ const Projects = () => {
 
         <div>
           <button
-            className="bg-bg_color_2 w-[350px] h-[500px] md:w-[350px] md:h-[180px] mx-auto md:mx-auto mb-5 p-6 pb-8 rounded-2xl text-center border-2 border-bg_color_1 transition duration-500 ease hover:border-main_accent hover:scale-105 cursor-pointer"
+            className="bg-bg_color_2 w-[300px] h-[200px] md:w-[350px] md:h-[180px] mx-auto md:mx-auto mb-5 p-6 pb-8 rounded-2xl text-center border-2 border-bg_color_1 transition duration-500 ease hover:border-main_accent hover:scale-105 cursor-pointer"
             onClick={() => setOpenDatabase(true)}
           >
             <i className="fa-solid fa-database text-main_accent text-6xl"></i>
@@ -194,7 +194,7 @@ const Projects = () => {
 
         <div>
           <button
-            className="bg-bg_color_2 w-[350px] h-[500px] md:w-[350px] md:h-[180px] mx-auto md:mx-auto mb-5 p-6 pb-8 rounded-2xl text-center border-2 border-bg_color_1 transition duration-500 ease hover:border-main_accent hover:scale-105 cursor-pointer"
+            className="bg-bg_color_2 w-[300px] h-[200px] md:w-[350px] md:h-[180px] mx-auto md:mx-auto mb-5 p-6 pb-8 rounded-2xl text-center border-2 border-bg_color_1 transition duration-500 ease hover:border-main_accent hover:scale-105 cursor-pointer"
             onClick={() => setOpenCreative(true)}
           >
             <i className="fa-solid fa-puzzle-piece text-main_accent text-6xl"></i>
@@ -226,7 +226,7 @@ const Projects = () => {
 
         <div>
           <button
-            className="bg-bg_color_2 w-[350px] h-[500px] md:w-[350px] md:h-[180px] mx-auto md:mx-auto mb-5 p-6 pb-8 rounded-2xl text-center border-2 border-bg_color_1 transition duration-500 ease hover:border-main_accent hover:scale-105 cursor-pointer"
+            className="bg-bg_color_2 w-[300px] h-[200px] md:w-[350px] md:h-[180px] mx-auto md:mx-auto mb-5 p-6 pb-8 rounded-2xl text-center border-2 border-bg_color_1 transition duration-500 ease hover:border-main_accent hover:scale-105 cursor-pointer"
             onClick={() => setOpenGit(true)}
           >
             <i className="fa-brands fa-github text-main_accent text-6xl"></i>
