@@ -95,7 +95,7 @@ const Home = () => {
         >
           Jacek Kozłowski
         </motion.h1>
-        <h3 className="mt-4 md:text-3xl text-2xl font-semibold mb-5">
+        <h3 className="mt-4 md:text-3xl text-xl font-semibold mb-5">
           {t("home.im")} <span className="text-main_accent">{text}</span>
           <span className="animate-blink">|</span>
         </h3>

@@ -66,11 +66,11 @@ const Projects = () => {
           </button>
           <Modal open={openReact} onClose={() => setOpenReact(false)}>
             <div className="flex flex-col gap-4">
-              <h1 className="text-2xl">React / JS / TS</h1>
+              <h1 className="text-2xl ">React / JS / TS</h1>
               <hr className="border-t-solid border-1 border-white" />
-              <p>{t("skills.react.text")}</p>
+              <p className="mtext-base">{t("skills.react.text")}</p>
               <a
-                className="text-main_accent underline underline-offset-4"
+                className="text-main_accent text-base underline underline-offset-4"
                 href="/Certyfikaty/Frontend ang.pdf"
                 target="_blank"
               >
@@ -78,7 +78,7 @@ const Projects = () => {
               </a>
               <hr className="border-t-solid border-1 border-white" />
               <p className="text-xl">🛠 Aurelia HR</p>
-              <p>{t("skills.react.app")}</p>
+              <p className="text-base">{t("skills.react.app")}</p>
               <hr className="border-t-solid border-1 border-white" />
               <div className="flex flex-row justify-center">
                 <button className="md:text-xl text-base btn" onClick={() => setOpenReact(false)}>
@@ -100,6 +100,7 @@ const Projects = () => {
           <Modal open={openPython} onClose={() => setOpenPython(false)}>
             <div className="flex flex-col gap-4">
               <h1 className="text-2xl">Python</h1>
+              <hr className="border-t-solid border-1 border-white" />
               <p>{t("skills.python.text")}</p>
               <a
                 className="text-main_accent underline underline-offset-4"
@@ -139,6 +140,7 @@ const Projects = () => {
           <Modal open={openTailwind} onClose={() => setOpenTailwind(false)}>
             <div className="flex flex-col gap-4">
               <h1 className="text-2xl">Tailwind CSS</h1>
+              <hr className="border-t-solid border-1 border-white" />
               <p>{t("skills.tailwind.text")}</p>
               <a
                 className="text-main_accent underline underline-offset-4"
@@ -171,6 +173,7 @@ const Projects = () => {
           <Modal open={openDatabase} onClose={() => setOpenDatabase(false)}>
             <div className="flex flex-col gap-4">
               <h1 className="text-2xl">{t("skills.database")}</h1>
+              <hr className="border-t-solid border-1 border-white" />
               <p>{t("skills.database_pop.text")}</p>
               <a
                 className="text-main_accent underline underline-offset-4"
@@ -203,6 +206,7 @@ const Projects = () => {
           <Modal open={openCreatve} onClose={() => setOpenCreative(false)}>
             <div className="flex flex-col gap-4">
               <h1 className="text-2xl">{t("skills.creative")}</h1>
+              <hr className="border-t-solid border-1 border-white" />
               <p>{t("skills.creativity.text")}</p>
               <a
                 className="text-main_accent underline underline-offset-4"
@@ -235,6 +239,7 @@ const Projects = () => {
           <Modal open={openGit} onClose={() => setOpenGit(false)}>
             <div className="flex flex-col gap-4">
               <h1 className="text-2xl">Git</h1>
+              <hr className="border-t-solid border-1 border-white" />
               <p>{t("skills.git.text")}</p>
               <a
                 className="text-main_accent underline underline-offset-4"
