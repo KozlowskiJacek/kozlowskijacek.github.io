@@ -1,7 +1,7 @@
+@import "intl-tel-input/build/css/intlTelInput.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import "intl-tel-input/build/css/intlTelInput.css";
 
 /* .iti__dropdown-content {
   @apply bg-bg_color_1   shadow-lg rounded-lg !important
