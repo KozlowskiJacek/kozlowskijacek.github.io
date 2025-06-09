@@ -8,6 +8,7 @@ import serwisGasiorek from '../assets/img/Serwis Gąsiorek Logo_20250519_093746_
 import grupaDeGie from '../assets/img/Grupa DeGie Logo_20250519_093717_0000.png'
 import agataImage from "../assets/img/Agata.png"
 import dawidImage from "../assets/img/Dawid.jfif"
+import julkaImage from '../assets/img/Julka.png'
 
 const ImageSlider = () => {
 
@@ -23,7 +24,7 @@ const ImageSlider = () => {
     { name: "Dawid Ferchow", logo: dawidImage, text: t("feedback.text2"), color: "#33FF57" },
     { name: "Agata Sułkowska", logo: agataImage, text:t("feedback.text3"), color: "#5733FF" },
     { name: "Grupa DeGie", logo: grupaDeGie, text: t("feedback.text4"), color: "#FFC300" }, 
-    // { name: "Firma 5", logo: testImage, text:"", color: "#FF33A8" },
+    { name: "Julia Pituła", logo: julkaImage, text: t("feedback.text5"), color: "#FF33A8" },
     // { name: "Firma 6", logo: testImage, text:"", color: "#33D1FF" }, 
     // { name: "Firma 7", logo: testImage, text:"", color: "#A833FF" },
   ]

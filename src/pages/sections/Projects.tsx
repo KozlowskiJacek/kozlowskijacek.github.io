@@ -57,13 +57,13 @@ const Projects = () => {
             src={pythonCode}
             alt=""
           />
-          <div className="absolute bottom-0 left-0 w-full h-full bg-gradient-to-b from-[rgba(0,0,0,0.1)] to-main_accent flex flex-col justify-center items-center text-center px-16 translate-y-full transition-transform duration-500 ease-in-out group-hover:translate-y-0">
-            <h4 className="text-3xl font-bold">GPSMaker</h4>
-            <p className="mx-0 mb-2 mt-3 text-bold">{t("projects.gpsmaker")}</p>
+          <div className="absolute bottom-0 left-0 w-full h-full bg-gradient-to-b from-[rgba(0,0,0,0.1)] to-bg_color_1 flex flex-col justify-center items-center text-center px-16 translate-y-full transition-transform duration-500 ease-in-out group-hover:translate-y-0">
+            <h4 className="md:text-3xl text-xl font-bold">GPSMaker</h4>
+            <p className="mx-0 mb-2 mt-3 md:text-base text-sm">{t("projects.gpsmaker")}</p>
             <a
               href="https://github.com/JacekKoz/Projects-Python/tree/main/Python/GPSMaker"
               target="_blank"
-              className="inline-flex justify-center items-center w-10 h-10 bg-white rounded-full"
+              className="inline-flex justify-center items-center md:w-10 md:h-10 w-8 h-8 bg-white rounded-full"
             >
               <i className="bx bx-link text-gray_600 text-lg"></i>
             </a>
@@ -76,15 +76,15 @@ const Projects = () => {
             src={pythonCode1}
             alt=""
           />
-          <div className="absolute bottom-0 left-0 w-full h-full bg-gradient-to-b from-[rgba(0,0,0,0.1)] to-main_accent flex flex-col justify-center items-center text-center px-16 translate-y-full transition-transform duration-500 ease-in-out group-hover:translate-y-0">
-            <h4 className="text-3xl font-bold">Web scraping</h4>
-            <p className="mx-0 mb-2 mt-3 text-bold">
+          <div className="absolute bottom-0 left-0 w-full h-full bg-gradient-to-b from-[rgba(0,0,0,0.1)] to-bg_color_1 flex flex-col justify-center items-center text-center px-16 translate-y-full transition-transform duration-500 ease-in-out group-hover:translate-y-0">
+            <h4 className="md:text-3xl text-xl font-bold">Web scraping</h4>
+            <p className="mx-0 mb-2 mt-3 md:text-base text-sm">
               {t("projects.webscraping")}
             </p>
             <a
               href="https://github.com/JacekKoz/Projects-Python/tree/main/Python/Web%20scraping"
               target="_blank"
-              className="inline-flex justify-center items-center w-10 h-10 bg-white rounded-full"
+              className="inline-flex justify-center items-center md:w-10 md:h-10 w-8 h-8 bg-white rounded-full"
             >
               <i className="bx bx-link text-gray_600 text-lg"></i>
             </a>
@@ -97,12 +97,12 @@ const Projects = () => {
             src={aureliaHR}
             alt=""
           />
-          <div className="absolute bottom-0 left-0 w-full h-full bg-gradient-to-b from-[rgba(0,0,0,0.1)] to-main_accent flex flex-col justify-center items-center text-center px-16 translate-y-full transition-transform duration-500 ease-in-out group-hover:translate-y-0">
-            <h4 className="text-3xl font-bold">AureliaHR</h4>
-            <p className="mx-0 mb-2 mt-3">{t("projects.aureliahr")}</p>
+          <div className="absolute bottom-0 left-0 w-full h-full bg-gradient-to-b from-[rgba(0,0,0,0.1)] to-bg_color_1 flex flex-col justify-center items-center text-center px-16 translate-y-full transition-transform duration-500 ease-in-out group-hover:translate-y-0">
+            <h4 className="md:text-3xl text-xl font-bold">AureliaHR</h4>
+            <p className="mx-0 mb-2 mt-3 md:text-base text-sm">{t("projects.aureliahr")}</p>
             <a
               href="https://github.com/JacekKoz/AureliaHR"
-              className="inline-flex justify-center items-center w-10 h-10 bg-white rounded-full"
+              className="inline-flex justify-center items-center md:w-10 md:h-10 w-8 h-8 bg-white rounded-full"
             >
               <i className="bx bx-link text-gray_600 text-lg"></i>
             </a>
@@ -115,12 +115,12 @@ const Projects = () => {
             src={workInProgress}
             alt=""
           />
-          <div className="absolute bottom-0 left-0 w-full h-full bg-gradient-to-b from-[rgba(0,0,0,0.1)] to-main_accent flex flex-col justify-center items-center text-center px-16 translate-y-full transition-transform duration-500 ease-in-out group-hover:translate-y-0">
-            <h4 className="text-3xl font-bold">Cooking</h4>
-            <p className="mx-0 mb-2 mt-3 text-bold">{t("projects.cooking")}</p>
+          <div className="absolute bottom-0 left-0 w-full h-full bg-gradient-to-b from-[rgba(0,0,0,0.1)] to-bg_color_1 flex flex-col justify-center items-center text-center px-16 translate-y-full transition-transform duration-500 ease-in-out group-hover:translate-y-0">
+            <h4 className="md:text-3xl text-xl font-bold">Cooking</h4>
+            <p className="mx-0 mb-2 mt-3 p-1 md:text-base text-sm">{t("projects.cooking")}</p>
             <a
               href="#"
-              className="inline-flex justify-center items-center w-10 h-10 bg-white rounded-full"
+              className="inline-flex justify-center items-center md:w-10 md:h-10 w-8 h-8 bg-white rounded-full"
             >
               <i className="bx bx-link text-gray_600 text-lg"></i>
             </a>
@@ -133,12 +133,12 @@ const Projects = () => {
             src={workInProgress}
             alt=""
           />
-          <div className="absolute bottom-0 left-0 w-full h-full bg-gradient-to-b from-[rgba(0,0,0,0.1)] to-main_accent flex flex-col justify-center items-center text-center px-16 translate-y-full transition-transform duration-500 ease-in-out group-hover:translate-y-0">
-            <h4 className="text-3xl font-bold">Cooking</h4>
-            <p className="mx-0 mb-2 mt-3 text-bold">{t("projects.cooking")}</p>
+          <div className="absolute bottom-0 left-0 w-full h-full bg-gradient-to-b from-[rgba(0,0,0,0.1)] to-bg_color_1 flex flex-col justify-center items-center text-center px-16 translate-y-full transition-transform duration-500 ease-in-out group-hover:translate-y-0">
+            <h4 className="md:text-3xl text-xl font-bold">Cooking</h4>
+            <p className="mx-0 mb-2 mt-3 p-1 md:text-base text-sm">{t("projects.cooking")}</p>
             <a
               href="#"
-              className="inline-flex justify-center items-center w-10 h-10 bg-white rounded-full"
+              className="inline-flex justify-center items-center md:w-10 md:h-10 w-8 h-8 bg-white rounded-full"
             >
               <i className="bx bx-link text-gray_600 text-lg"></i>
             </a>
@@ -151,12 +151,12 @@ const Projects = () => {
             src={workInProgress}
             alt=""
           />
-          <div className="absolute bottom-0 left-0 w-full h-full bg-gradient-to-b from-[rgba(0,0,0,0.1)] to-main_accent flex flex-col justify-center items-center text-center px-16 translate-y-full transition-transform duration-500 ease-in-out group-hover:translate-y-0">
-            <h4 className="text-3xl font-bold">Cooking</h4>
-            <p className="mx-0 mb-2 mt-3 text-bold">{t("projects.cooking")}</p>
+          <div className="absolute bottom-0 left-0 w-full h-full bg-gradient-to-b from-[rgba(0,0,0,0.1)] to-bg_color_1 flex flex-col justify-center items-center text-center px-16 translate-y-full transition-transform duration-500 ease-in-out group-hover:translate-y-0">
+            <h4 className="md:text-3xl text-xl font-bold">Cooking</h4>
+            <p className="mx-0 mb-2 mt-3 p-1 md:text-base text-sm">{t("projects.cooking")}</p>
             <a
               href="#"
-              className="inline-flex justify-center items-center w-10 h-10 bg-white rounded-full"
+              className="inline-flex justify-center items-center md:w-10 md:h-10 w-8 h-8 bg-white rounded-full"
             >
               <i className="bx bx-link text-gray_600 text-lg"></i>
             </a>
