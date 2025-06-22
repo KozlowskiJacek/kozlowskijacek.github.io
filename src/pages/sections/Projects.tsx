@@ -61,7 +61,7 @@ const Projects = () => {
             <h4 className="md:text-3xl text-xl font-bold">GPSMaker</h4>
             <p className="mx-0 mb-2 mt-3 md:text-base text-sm">{t("projects.gpsmaker")}</p>
             <a
-              href="https://github.com/JacekKoz/Projects-Python/tree/main/Python/GPSMaker"
+              href="https://github.com/KozlowskiJacek/Projects-Python/tree/main/Python/GPSMaker"
               target="_blank"
               className="inline-flex justify-center items-center md:w-10 md:h-10 w-8 h-8 bg-white rounded-full"
             >
@@ -82,7 +82,7 @@ const Projects = () => {
               {t("projects.webscraping")}
             </p>
             <a
-              href="https://github.com/JacekKoz/Projects-Python/tree/main/Python/Web%20scraping"
+              href="https://github.com/KozlowskiJacek/Projects-Python/tree/main/Python/Web%20scraping"
               target="_blank"
               className="inline-flex justify-center items-center md:w-10 md:h-10 w-8 h-8 bg-white rounded-full"
             >
@@ -101,7 +101,8 @@ const Projects = () => {
             <h4 className="md:text-3xl text-xl font-bold">AureliaHR</h4>
             <p className="mx-0 mb-2 mt-3 md:text-base text-sm">{t("projects.aureliahr")}</p>
             <a
-              href="https://github.com/JacekKoz/AureliaHR"
+              href="https://github.com/KozlowskiJacek/AureliaHR"
+              target="_blank"
               className="inline-flex justify-center items-center md:w-10 md:h-10 w-8 h-8 bg-white rounded-full"
             >
               <i className="bx bx-link text-gray_600 text-lg"></i>
