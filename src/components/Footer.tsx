@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer className='bg-bg_color_1 text-white flex justify-between items-center flex-wrap p-5 px-[9%]'>
       <div>
-      <p className=''>Copyrights Jacek Kozłowski</p>
+      <p className=''>Copyrights © 2025 Jacek Kozłowski</p>
       </div>
 
       <div>
