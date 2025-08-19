@@ -4,6 +4,7 @@ import confetti from 'canvas-confetti';
 import "intl-tel-input/build/css/intlTelInput.css";
 import "../index.css";
 import { useTranslation } from 'react-i18next';
+import { serviceId, templateId, publicKey } from '../env';
 
 const FormContact = () => {
   const form = useRef();
@@ -34,8 +35,8 @@ const FormContact = () => {
     e.preventDefault();
 
     emailjs
-      .sendForm('service_yzmlj1d', 'template_d572b6s', form.current, {
-        publicKey: 'Tf79i0jx0HykysBf-',
+      .sendForm(serviceId, templateId, form.current, {
+        publicKey: publicKey,
       })
       .then(
         () => {
@@ -81,7 +82,5 @@ const FormContact = () => {
     </form>
   );
 };
-
-//todo Wykminić jak zrobić to żeby styl został po wybraniu proponowanych elementów np e-mail
 
 export default FormContact;

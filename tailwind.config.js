@@ -7,7 +7,7 @@ export default {
     colors: {
       black: '#000000',
       white: '#ffffff',
-      red: "#FF0000",
+      button: "#C91F38",
       bg_color_1: '#1f242d',
       bg_color_2: '#323946',
       main_accent: '#74FAC8',
