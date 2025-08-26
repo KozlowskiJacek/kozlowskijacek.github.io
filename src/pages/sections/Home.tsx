@@ -106,6 +106,9 @@ const Home = () => {
         viewport = {{ once: false}}
         >
           {t("home.text")}
+          <br />
+          <br /> 
+          {t("home.text2")}
         </motion.p>
         <div className="flex space-x-4 mt-5 md:text-3xl text-2xl">
           <a href="https://www.instagram.com/life_of_jaca/" target="_blank">
