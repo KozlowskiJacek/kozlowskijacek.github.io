@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import PixelAvatarWEB from "../assets/img/PixelAvatarWEB.png";
-import Photo_about from "../assets/img/Jaca Laptop.png";
+import Photo_about from "../assets/img/Photo_about.png";
 import { useNavigate } from "react-router-dom";
 import useSmoothScroll from "../hooks/useSmoothScroll";
 import HeaderVideos from "../components/HeaderVideos";

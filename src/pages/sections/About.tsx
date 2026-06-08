@@ -1,4 +1,4 @@
-import aboutPhoto from '../../assets/img/Jaca Laptop.png'
+import aboutPhoto from '../../assets/img/Photo_about.png'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
