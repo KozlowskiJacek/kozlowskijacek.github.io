@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import "boxicons/css/boxicons.min.css";
-import homePhoto1 from "../../assets/img/JacaGarniak.png";
+import homePhoto1 from "../../assets/img/MainPhoto.png";
 import useSmoothScroll from "../../hooks/useSmoothScroll";
 import { useTranslation } from "react-i18next";
-import { motion } from 'framer-motion'
+import { motion } from "framer-motion";
 
 const Home = () => {
   const { t } = useTranslation();
@@ -46,7 +46,7 @@ const Home = () => {
           setIndex((prev) => (prev + 1) % roles.length);
         }
       },
-      isDeleting ? deletingSpeed : typingSpeed
+      isDeleting ? deletingSpeed : typingSpeed,
     );
 
     return () => clearTimeout(timeout);
@@ -67,31 +67,35 @@ const Home = () => {
         x: 0,
         transition: {
           duration: 2,
-          opacity: { duration: 2, delay: 0.6},
+          opacity: { duration: 2, delay: 0.6 },
           delay: 0.2,
-          ease: [0.9, 0, 0.2, 1]
-        }
-      }
-    } 
-  }
+          ease: [0.9, 0, 0.2, 1],
+        },
+      },
+    };
+  };
 
   return (
     <section
       className="bg-bg_color_1 flex md:flex-row flex-col  justify-center items-center min-h-screen w-full pt-[100px] px-[9%] py-[20px]"
       id="home"
     >
-      <motion.div className="w-full text-white"
-       variants = {fadeInVariants("top")}
-       initial = "hidden"
-       whileInView = "visible"
-       viewport = {{ once: false}}
+      <motion.div
+        className="w-full text-white"
+        variants={fadeInVariants("top")}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false }}
       >
-        <h3 className="md:text-3xl text-2xl font-semibold mb-3">{t("home.hello")}</h3>
-        <motion.h1 className="md:text-6xl text-4xl font-semibold"
-          variants = {fadeInVariants("left")}
-          initial = "hidden"
-          whileInView = "visible"
-          viewport = {{ once: false}}
+        <h3 className="md:text-3xl text-2xl font-semibold mb-3">
+          {t("home.hello")}
+        </h3>
+        <motion.h1
+          className="md:text-6xl text-4xl font-semibold"
+          variants={fadeInVariants("left")}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false }}
         >
           Jacek Kozłowski
         </motion.h1>
@@ -99,15 +103,16 @@ const Home = () => {
           {t("home.im")} <span className="text-main_accent">{text}</span>
           <span className="animate-blink">|</span>
         </h3>
-        <motion.p className="md:leading-7 md:text-base text-sm"
-        variants = {fadeInVariants("right")}
-        initial = "hidden"
-        whileInView = "visible"
-        viewport = {{ once: false}}
+        <motion.p
+          className="md:leading-7 md:text-base text-sm"
+          variants={fadeInVariants("right")}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false }}
         >
           {t("home.text")}
           <br />
-          <br /> 
+          <br />
           {t("home.text2")}
         </motion.p>
         <div className="flex space-x-4 mt-5 md:text-3xl text-2xl">
@@ -120,7 +125,10 @@ const Home = () => {
           <a href="#">
             <i className="bx bxl-discord-alt text-main_accent inline-flex justify-center items-center bg-opacity-0 border-main_accent rounded-full p-2 border-[3px] hover:animate-tada hover:bg-main_accent hover:text-bg_color_2 transition-all hover:drop-shadow-custom-glow"></i>
           </a>
-          <a href="https://www.linkedin.com/in/jacek-kozłowski-a43b21265/" target="_blank">
+          <a
+            href="https://www.linkedin.com/in/jacek-kozłowski-a43b21265/"
+            target="_blank"
+          >
             <i className="bx bxl-linkedin text-main_accent inline-flex justify-center items-center bg-opacity-0 border-main_accent rounded-full p-2 border-[3px] hover:animate-tada hover:bg-main_accent hover:text-bg_color_2 transition-all hover:drop-shadow-custom-glow"></i>
           </a>
           <a href="#">
@@ -134,11 +142,12 @@ const Home = () => {
           {t("home.btn_get_in_touch")}
         </a>
       </motion.div>
-      <motion.div className="w-[75vw] "
-              variants = {fadeInVariants("bottom")}
-              initial = "hidden"
-              whileInView = "visible"
-              viewport = {{ once: false}}
+      <motion.div
+        className="w-[75vw] "
+        variants={fadeInVariants("bottom")}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false }}
       >
         <img
           className="max-w-[100%] max-h-[100%] mt-6 animate-floatImage"
