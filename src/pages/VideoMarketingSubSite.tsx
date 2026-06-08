@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
-import pixelJaca from "../assets/img/Pixel Jaca - strona.png";
-import jacaLaptop from "../assets/img/Jaca Laptop.png";
+import PixelAvatarWEB from "../assets/img/PixelAvatarWEB.png";
+import Photo_about from "../assets/img/Jaca Laptop.png";
 import { useNavigate } from "react-router-dom";
 import useSmoothScroll from "../hooks/useSmoothScroll";
 import HeaderVideos from "../components/HeaderVideos";
@@ -54,7 +54,7 @@ const WebAppsSubSite = () => {
         >
           <img
             className="max-w-[100%] max-h-[100%] animate-floatImage"
-            src={jacaLaptop}
+            src={Photo_about}
             alt=""
           />
         </motion.div>
@@ -72,7 +72,7 @@ const WebAppsSubSite = () => {
           viewport={{ once: false, amount: 0.5 }}
         >
           <img
-            src={pixelJaca}
+            src={PixelAvatarWEB}
             alt=""
             className="max-w-[100%] max-h-[100%] animate-floatImage"
           />
@@ -129,7 +129,7 @@ const WebAppsSubSite = () => {
         >
           <img
             className="max-w-[100%] max-h-[100%] animate-floatImage"
-            src={jacaLaptop}
+            src={Photo_about}
             alt=""
           />
         </motion.div>
@@ -147,7 +147,7 @@ const WebAppsSubSite = () => {
           viewport={{ once: false, amount: 0.5 }}
         >
           <img
-            src={pixelJaca}
+            src={PixelAvatarWEB}
             alt=""
             className="max-w-[100%] max-h-[100%] animate-floatImage"
           />
@@ -204,7 +204,7 @@ const WebAppsSubSite = () => {
         >
           <img
             className="max-w-[100%] max-h-[100%] animate-floatImage"
-            src={jacaLaptop}
+            src={Photo_about}
             alt=""
           />
         </motion.div>
@@ -222,7 +222,7 @@ const WebAppsSubSite = () => {
           viewport={{ once: false, amount: 0.5 }}
         >
           <img
-            src={pixelJaca}
+            src={PixelAvatarWEB}
             alt=""
             className="max-w-[100%] max-h-[100%] animate-floatImage"
           />

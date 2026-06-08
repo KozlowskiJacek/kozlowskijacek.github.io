@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import pixelJaca_animacja from "../assets/img/Pixel_Jaca_strona_animacja.gif";
+import PixelAvatarWEB_animacja from "../assets/img/Pixel_Avatar.gif";
 import cat from "../assets/img/Cat 1.png";
 import fullStack from "../assets/img/Pixel full stack.png";
 import development from "../assets/img/Development.png";
@@ -41,10 +41,16 @@ const AboutSubSite = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: false, amount: 0.5 }}
         >
-          <h3 className="md:text-3xl text-2xl font-semibold mb-3">{t("home.hello")}</h3>
-          <h1 className="md:text-6xl text-4xl font-semibold text-main_accent">Jacek</h1>
+          <h3 className="md:text-3xl text-2xl font-semibold mb-3">
+            {t("home.hello")}
+          </h3>
+          <h1 className="md:text-6xl text-4xl font-semibold text-main_accent">
+            Jacek
+          </h1>
 
-          <p className="md:leading-7 md:text-base text-sm mt-5">{t("about.text")}</p>
+          <p className="md:leading-7 md:text-base text-sm mt-5">
+            {t("about.text")}
+          </p>
         </motion.div>
         <motion.div
           className="w-[75vw] m-20"
@@ -55,7 +61,7 @@ const AboutSubSite = () => {
         >
           <img
             className="md:max-w-[100%] md:max-h-[100%] max-w-[80%] max-h-[80%] ml-10 animate-floatImage"
-            src={pixelJaca_animacja}
+            src={PixelAvatarWEB_animacja}
             alt=""
           />
         </motion.div>
@@ -89,7 +95,9 @@ const AboutSubSite = () => {
             {t("about.why")}{" "}
             <span className="text-main_accent">{t("about.full_stack")}</span>
           </h3>
-          <p className="md:leading-7 md:text-base text-sm my-5 mb-5">{t("about.text2")}</p>
+          <p className="md:leading-7 md:text-base text-sm my-5 mb-5">
+            {t("about.text2")}
+          </p>
         </motion.div>
       </section>
 
@@ -111,7 +119,9 @@ const AboutSubSite = () => {
             </span>
           </h3>
 
-          <p className="md:leading-7 md:text-base text-sm mt-5">{t("about.text3")}</p>
+          <p className="md:leading-7 md:text-base text-sm mt-5">
+            {t("about.text3")}
+          </p>
         </motion.div>
         <motion.div
           className="w-[75vw] m-20"
@@ -156,7 +166,9 @@ const AboutSubSite = () => {
             {t("about.what_im")}{" "}
             <span className="text-main_accent">{t("about.guided_by")}</span>
           </h3>
-          <p className="md:leading-7  md:text-base text-sm my-5 mb-5">{t("about.text4")}</p>
+          <p className="md:leading-7  md:text-base text-sm my-5 mb-5">
+            {t("about.text4")}
+          </p>
         </motion.div>
       </section>
 
@@ -176,7 +188,9 @@ const AboutSubSite = () => {
             <span className="text-main_accent">{t("about.hour")}</span>
           </h3>
 
-          <p className="md:leading-7 md:text-base text-sm mt-5 ">{t("about.text5")}</p>
+          <p className="md:leading-7 md:text-base text-sm mt-5 ">
+            {t("about.text5")}
+          </p>
           <a
             onClick={() => handleNavigation()}
             className="md:text-2xl text-base font-semibold btn"
