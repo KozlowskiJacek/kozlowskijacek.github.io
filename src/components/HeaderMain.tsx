@@ -71,7 +71,7 @@ const Header = () => {
 
           <button onClick={toggleLanguage}>
             {currentLang === "pl" ? (
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/United-kingdom_flag_icon_round.svg/2048px-United-kingdom_flag_icon_round.svg.png" alt="English" className='w-6 h-6'/>
+              <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/UK_Circle_Flag.svg" alt="English" className='w-6 h-6'/>
             ) : (
               <img src="https://cdn-icons-png.flaticon.com/512/5372/5372963.png" alt="Polish" className='w-6 h-6' />
             )}
@@ -82,7 +82,7 @@ const Header = () => {
         <div className="flex items-center space-x-4 md:hidden">
           <button onClick={toggleLanguage}>
               {currentLang === "pl" ? (
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/United-kingdom_flag_icon_round.svg/2048px-United-kingdom_flag_icon_round.svg.png" alt="English" className='w-6 h-6'/>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/UK_Circle_Flag.svg" alt="English" className='w-6 h-6'/>
               ) : (
                 <img src="https://cdn-icons-png.flaticon.com/512/5372/5372963.png" alt="Polish" className='w-6 h-6'/>
               )}

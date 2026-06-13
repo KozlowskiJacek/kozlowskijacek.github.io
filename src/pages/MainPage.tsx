@@ -25,7 +25,9 @@ const MainPage = () => {
   }, [location]);
 
   return (
-    <div className="font-playfair select-none">
+    <div className="font-playfair select-none"
+    id="portfolio"
+    >
       <Header />
       <Home />
       <About />
