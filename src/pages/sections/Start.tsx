@@ -26,15 +26,7 @@ const Start = () => {
           <a
             href="/portfolio"
             className="
-              group
-              bg-bg_color_2
-              border border-gray_600
-              rounded-3xl
-              p-8
-              transition-all
-              duration-300
-              hover:border-main_accent
-              hover:-translate-y-2
+              group bg-bg_color_2 mx-auto md:mx-auto mb-5 p-6 pb-8 rounded-2xl text-center border-2 border-bg_color_1 transition duration-500 ease hover:border-main_accent hover:scale-105 cursor-pointer
             "
           >
             <div className="text-main_accent text-4xl mb-4">💼</div>
@@ -56,15 +48,7 @@ const Start = () => {
           <a
             href="/services"
             className="
-              group
-              bg-bg_color_2
-              border border-gray_600
-              rounded-3xl
-              p-8
-              transition-all
-              duration-300
-              hover:border-button
-              hover:-translate-y-2
+              group bg-bg_color_2 mx-auto md:mx-auto mb-5 p-6 pb-8 rounded-2xl text-center border-2 border-bg_color_1 transition duration-500 ease hover:border-main_accent hover:scale-105 cursor-pointer
             "
           >
             <div className="text-button text-4xl mb-4">🚀</div>
