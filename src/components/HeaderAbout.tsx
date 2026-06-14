@@ -52,7 +52,7 @@ const Header = () => {
     <header className="z-50 bg-bg_color_1 text-white fixed top-0 left-0 w-full p-5 shadow-md">
       <div className="container mx-auto flex justify-between items-center">
 
-        <Link to="/"className='text-2xl text-white font-bold cursor-pointer'>Jacek Kozłowski</Link>
+        <Link to="/portfolio"className='text-2xl text-white font-bold cursor-pointer'>Jacek Kozłowski</Link>
 
 
         <div className="hidden md:flex items-center justify-end flex-1 space-x-8 text-lg">
