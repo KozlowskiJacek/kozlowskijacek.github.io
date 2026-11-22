@@ -22,6 +22,15 @@
       "subtitle": "Łączę programowanie z kreacją. Projektuję i koduję strony oraz aplikacje webowe, a do tego nagrywam i montuję wideo — jedna osoba od pomysłu po publikację.",
       "cta_offer": "Zobacz ofertę",
       "cta_recruiter": "Jestem rekruterem"
+    },
+    "trust": {
+      "label": "Klienci i liczby",
+      "title": "Zaufali mi",
+      "stats": {
+        "projects": "zrealizowanych projektów",
+        "videos": "zmontowanych filmów",
+        "years": "lata doświadczenia"
+      }
     }
   },
   "about": {

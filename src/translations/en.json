@@ -22,6 +22,15 @@
       "subtitle": "I combine code with creative work. I design and build websites and web apps, and I shoot and edit video — one person from idea to launch.",
       "cta_offer": "See services",
       "cta_recruiter": "I'm a recruiter"
+    },
+    "trust": {
+      "label": "Clients and numbers",
+      "title": "Trusted by",
+      "stats": {
+        "projects": "projects delivered",
+        "videos": "videos edited",
+        "years": "years of experience"
+      }
     }
   },
   "about": {
