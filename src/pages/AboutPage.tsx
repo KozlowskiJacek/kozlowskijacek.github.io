@@ -19,30 +19,30 @@ const AboutPage = () => {
   return (
     <div>
 
-      <Section id="title_hello" bg="primary" className="md:flex-row flex-col">
+      <Section id="title_hello" padding="hero" bg="primary" className="md:flex-row flex-col">
         <motion.div
-          className="w-full text-white"
+          className="w-full md:max-w-[36rem]"
           variants={slideIn("left")}
           {...revealHalf}
         >
-          <h3 className="md:text-3xl text-2xl font-semibold mb-3">
+          <h3 className="mb-3 text-h3 text-fg-secondary">
             {t("home.hello")}
           </h3>
-          <h1 className="md:text-6xl text-4xl font-semibold text-main_accent">
+          <h1 className="text-display text-accent">
             Jacek
           </h1>
 
-          <p className="md:leading-7 md:text-base text-sm mt-5">
+          <p className="mt-5 text-body text-fg-secondary md:text-body-lg">
             {t("about.text")}
           </p>
         </motion.div>
         <motion.div
-          className="w-[75vw] m-20"
+          className="w-full max-w-sm shrink-0 md:max-w-md"
           variants={slideIn("bottom")}
           {...revealHalf}
         >
           <img
-            className="md:max-w-[100%] md:max-h-[100%] max-w-[80%] max-h-[80%] ml-10"
+            className="h-auto w-full"
             src={PixelAvatarWEB_animacja}
             alt=""
           />
@@ -51,28 +51,28 @@ const AboutPage = () => {
 
       <Section id="title_why" bg="secondary" className="md:flex-row flex-col-reverse">
         <motion.div
-          className="w-[75vw] m-20"
+          className="w-full max-w-sm shrink-0 md:max-w-md"
           variants={slideIn("bottom")}
           {...revealHalf}
         >
           <img
             src={fullStack}
             alt=""
-            className="md:max-w-[100%] md:max-h-[100%]"
+            className="h-auto w-full"
           />
         </motion.div>
         <motion.div
-          className="text-white w-full"
+          className="w-full md:max-w-[36rem]"
           variants={slideIn("right")}
           {...revealHalf}
         >
           <SectionHeading
             as="h3"
-            className="md:text-4xl text-2xl font-bold mb-4"
+            className="mb-4"
             title={t("about.why")}
             accent={t("about.full_stack")}
           />
-          <p className="md:leading-7 md:text-base text-sm my-5 mb-5">
+          <p className="mt-5 text-body text-fg-secondary md:text-body-lg">
             {t("about.text2")}
           </p>
         </motion.div>
@@ -80,28 +80,28 @@ const AboutPage = () => {
 
       <Section id="title_how" bg="primary" className="md:flex-row flex-col">
         <motion.div
-          className="w-full text-white"
+          className="w-full md:max-w-[36rem]"
           variants={slideIn("left")}
           {...revealHalf}
         >
           <SectionHeading
             as="h3"
-            className="md:text-4xl text-2xl font-semibold mb-3"
+            className="mb-4"
             title={t("about.how")}
             accent={t("about.content_creator")}
           />
 
-          <p className="md:leading-7 md:text-base text-sm mt-5">
+          <p className="mt-5 text-body text-fg-secondary md:text-body-lg">
             {t("about.text3")}
           </p>
         </motion.div>
         <motion.div
-          className="w-[75vw] m-20"
+          className="w-full max-w-sm shrink-0 md:max-w-md"
           variants={slideIn("bottom")}
           {...revealHalf}
         >
           <img
-            className="max-w-[100%] max-h-[100%]"
+            className="h-auto w-full"
             src={contentCreator}
             alt=""
           />
@@ -110,28 +110,28 @@ const AboutPage = () => {
 
       <Section id="title_what" bg="secondary" className="md:flex-row flex-col-reverse">
         <motion.div
-          className="w-[75vw] m-20"
+          className="w-full max-w-sm shrink-0 md:max-w-md"
           variants={slideIn("bottom")}
           {...revealHalf}
         >
           <img
             src={development}
             alt=""
-            className="max-w-[100%] max-h-[100%]"
+            className="h-auto w-full"
           />
         </motion.div>
         <motion.div
-          className="text-white w-full"
+          className="w-full md:max-w-[36rem]"
           variants={slideIn("right")}
           {...revealHalf}
         >
           <SectionHeading
             as="h3"
-            className="md:text-4xl text-2xl font-bold mb-4"
+            className="mb-4"
             title={t("about.what_im")}
             accent={t("about.guided_by")}
           />
-          <p className="md:leading-7  md:text-base text-sm my-5 mb-5">
+          <p className="mt-5 text-body text-fg-secondary md:text-body-lg">
             {t("about.text4")}
           </p>
         </motion.div>
@@ -139,32 +139,32 @@ const AboutPage = () => {
 
       <Section id="title_after" bg="primary" className="md:flex-row flex-col">
         <motion.div
-          className="w-full text-white"
+          className="w-full md:max-w-[36rem]"
           variants={slideIn("left")}
           {...revealHalf}
         >
           <SectionHeading
             as="h3"
-            className="md:text-4xl text-2xl font-semibold mb-3"
+            className="mb-4"
             title={t("about.after")}
             accent={t("about.hour")}
           />
 
-          <p className="md:leading-7 md:text-base text-sm mt-5 ">
+          <p className="mt-5 text-body text-fg-secondary md:text-body-lg">
             {t("about.text5")}
           </p>
-          <Button onClick={() => navigateToSection("contact")} className="md:text-2xl text-base font-semibold">
+          <Button onClick={() => navigateToSection("contact")} size="lg" className="mt-8">
             {t("about.questions")}
           </Button>
-          <h2 className=":md:text-xl text-lg">{t("about.bye")}</h2>
+          <h2 className="mt-8 text-h3 text-fg-secondary">{t("about.bye")}</h2>
         </motion.div>
         <motion.div
-          className="w-[75vw] m-20"
+          className="w-full max-w-sm shrink-0 md:max-w-md"
           variants={slideIn("bottom")}
           {...revealHalf}
         >
           <img
-            className="max-w-[100%] max-h-[100%]"
+            className="h-auto w-full"
             src={cat}
             alt=""
           />

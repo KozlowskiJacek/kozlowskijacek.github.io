@@ -15,167 +15,167 @@ const WebAppsPage = () => {
   return (
     <>
 
-      <Section id="nav_modern" bg="primary">
+      <Section id="nav_modern" padding="hero" bg="primary" className="flex-col md:flex-row">
         <motion.div
-          className="w-full text-white"
+          className="w-full md:max-w-[36rem]"
           variants={slideIn("left")}
           {...revealHalf}
         >
-          <h3 className="text-3xl font-semibold mb-3">{t("web_app.title1")}</h3>
-          <h3 className="text-5xl font-semibold mb-3 text-main_accent">
+          <h3 className="mb-3 text-h3 text-fg-secondary">{t("web_app.title1")}</h3>
+          <h3 className="text-display text-accent">
             {t("web_app.title2")}
           </h3>
 
-          <p className="leading-7 mt-5">{t("web_app.title_text")}</p>
+          <p className="mt-5 text-body text-fg-secondary md:text-body-lg">{t("web_app.title_text")}</p>
         </motion.div>
         <motion.div
-          className="w-[75vw] m-20"
+          className="w-full max-w-sm shrink-0 md:max-w-md"
           variants={slideIn("bottom")}
           {...revealHalf}
         >
           <img
-            className="max-w-[100%] max-h-[100%]"
+            className="h-auto w-full"
             src={Photo_about}
             alt=""
           />
         </motion.div>
       </Section>
 
-      <Section id="nav_discussion" bg="secondary">
+      <Section id="nav_discussion" bg="secondary" className="flex-col-reverse md:flex-row">
         <motion.div
-          className="w-[75vw] m-20"
+          className="w-full max-w-sm shrink-0 md:max-w-md"
           variants={slideIn("bottom")}
           {...revealHalf}
         >
           <img
             src={PixelAvatarWEB}
             alt=""
-            className="max-w-[100%] max-h-[100%]"
+            className="h-auto w-full"
           />
         </motion.div>
         <motion.div
-          className="text-white w-full"
+          className="w-full md:max-w-[36rem]"
           variants={slideIn("right")}
           {...revealHalf}
         >
           <SectionHeading
             as="h3"
-            className="text-4xl font-bold mb-4"
+            className="mb-4"
             title={t("web_app.talk")}
             accent={t("web_app.analysis")}
           />
-          <p className="leading-7 my-5 mb-5">{t("web_app.text3")}</p>
+          <p className="mt-5 text-body text-fg-secondary md:text-body-lg">{t("web_app.text3")}</p>
         </motion.div>
       </Section>
 
-      <Section id="nav_visual" bg="primary">
+      <Section id="nav_visual" bg="primary" className="flex-col md:flex-row">
         <motion.div
-          className="w-full text-white"
+          className="w-full md:max-w-[36rem]"
           variants={slideIn("left")}
           {...revealHalf}
         >
           <SectionHeading
             as="h3"
-            className="text-4xl font-bold mb-4"
+            className="mb-4"
             title={t("web_app.project")}
             accent={t("web_app.concept")}
           />
 
-          <p className="leading-7 mt-5">{t("web_app.text4")}</p>
+          <p className="mt-5 text-body text-fg-secondary md:text-body-lg">{t("web_app.text4")}</p>
         </motion.div>
         <motion.div
-          className="w-[75vw] m-20"
+          className="w-full max-w-sm shrink-0 md:max-w-md"
           variants={slideIn("bottom")}
           {...revealHalf}
         >
           <img
-            className="max-w-[100%] max-h-[100%]"
+            className="h-auto w-full"
             src={Photo_about}
             alt=""
           />
         </motion.div>
       </Section>
 
-      <Section id="nav_development" bg="secondary">
+      <Section id="nav_development" bg="secondary" className="flex-col-reverse md:flex-row">
         <motion.div
-          className="w-[75vw] m-20"
+          className="w-full max-w-sm shrink-0 md:max-w-md"
           variants={slideIn("bottom")}
           {...revealHalf}
         >
           <img
             src={PixelAvatarWEB}
             alt=""
-            className="max-w-[100%] max-h-[100%]"
+            className="h-auto w-full"
           />
         </motion.div>
         <motion.div
-          className="text-white w-full"
+          className="w-full md:max-w-[36rem]"
           variants={slideIn("right")}
           {...revealHalf}
         >
           <SectionHeading
             as="h3"
-            className="text-4xl font-bold mb-4"
+            className="mb-4"
             title={t("web_app.coding")}
             accent={t("web_app.implementation")}
           />
-          <p className="leading-7 my-5 mb-5">{t("web_app.text5")}</p>
+          <p className="mt-5 text-body text-fg-secondary md:text-body-lg">{t("web_app.text5")}</p>
         </motion.div>
       </Section>
 
-      <Section id="nav_presentation" bg="primary">
+      <Section id="nav_presentation" bg="primary" className="flex-col md:flex-row">
         <motion.div
-          className="w-full text-white"
+          className="w-full md:max-w-[36rem]"
           variants={slideIn("left")}
           {...revealHalf}
         >
           <SectionHeading
             as="h3"
-            className="text-4xl font-bold mb-4"
+            className="mb-4"
             title={t("web_app.presentation")}
             accent={t("web_app.ready")}
           />
 
-          <p className="leading-7 mt-5">{t("web_app.text6")}</p>
+          <p className="mt-5 text-body text-fg-secondary md:text-body-lg">{t("web_app.text6")}</p>
         </motion.div>
         <motion.div
-          className="w-[75vw] m-20"
+          className="w-full max-w-sm shrink-0 md:max-w-md"
           variants={slideIn("bottom")}
           {...revealHalf}
         >
           <img
-            className="max-w-[100%] max-h-[100%]"
+            className="h-auto w-full"
             src={Photo_about}
             alt=""
           />
         </motion.div>
       </Section>
 
-      <Section id="nav_support" bg="secondary">
+      <Section id="nav_support" bg="secondary" className="flex-col-reverse md:flex-row">
         <motion.div
-          className="w-[75vw] m-20"
+          className="w-full max-w-sm shrink-0 md:max-w-md"
           variants={slideIn("bottom")}
           {...revealHalf}
         >
           <img
             src={PixelAvatarWEB}
             alt=""
-            className="max-w-[100%] max-h-[100%]"
+            className="h-auto w-full"
           />
         </motion.div>
         <motion.div
-          className="text-white w-full"
+          className="w-full md:max-w-[36rem]"
           variants={slideIn("right")}
           {...revealHalf}
         >
           <SectionHeading
             as="h3"
-            className="text-4xl font-bold mb-4"
+            className="mb-4"
             title={t("web_app.support")}
             accent={t("web_app.after")}
           />
-          <p className="leading-7 my-5 mb-5">{t("web_app.text7")}</p>
-          <Button onClick={() => navigateToSection("contact")} className="text-2xl font-semibold">
+          <p className="mt-5 text-body text-fg-secondary md:text-body-lg">{t("web_app.text7")}</p>
+          <Button onClick={() => navigateToSection("contact")} size="lg" className="mt-8">
             {t("about.questions")}
           </Button>
         </motion.div>

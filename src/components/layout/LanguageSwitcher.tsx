@@ -15,14 +15,14 @@ const LanguageSwitcher = () => {
       type="button"
       onClick={toggleLanguage}
       aria-label={t("navbar.switch_language")}
-      className="font-semibold tracking-wide"
+      className="rounded-sm text-small font-semibold tracking-wider focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
     >
       {languages.map((lang, i) => (
         <span key={lang}>
-          {i > 0 && <span className="text-gray_400"> / </span>}
+          {i > 0 && <span className="text-fg-muted"> / </span>}
           <span
             className={`transition-colors ${
-              lang === current ? "text-main_accent" : "hover:text-main_accent"
+              lang === current ? "text-accent" : "text-fg-secondary hover:text-fg"
             }`}
           >
             {lang.toUpperCase()}

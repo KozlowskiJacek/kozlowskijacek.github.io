@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { fadeIn, reveal } from "../lib/animations";
+import { fadeIn, reveal, staggerContainer, staggerItem } from "../lib/animations";
 import { useTranslation } from "react-i18next";
 import Section from "../components/ui/Section";
 import SectionHeading from "../components/ui/SectionHeading";
 import Button from "../components/ui/Button";
+import Card from "../components/ui/Card";
 import Modal from "../components/ui/Modal";
 import { skills, type SkillTitle } from "../data/skills";
 
@@ -16,17 +17,17 @@ const MySkills = () => {
   const titleOf = (item: SkillTitle) => ("titleKey" in item ? t(item.titleKey) : item.title);
 
   return (
-    <Section id="skills" bg="primary" className="text-white flex-col">
+    <Section id="skills" bg="primary" className="flex-col">
       <SectionHeading
-        className="text-center text-5xl font-bold mb-20"
-        variants={fadeIn("top")}
+        align="center"
+        variants={fadeIn("bottom")}
         {...reveal}
         title={t("skills.my")}
         accent={t("skills.skills")}
       />
-      <motion.div
-        className="grid grid-cols-1 md:grid-cols-3 items-center gap-10 mb-10"
-        variants={fadeIn("bottom")}
+      <motion.ul
+        className="grid w-full gap-5 sm:grid-cols-2 lg:grid-cols-3"
+        variants={staggerContainer()}
         {...reveal}
       >
         {skills.map((skill) => {
@@ -34,45 +35,50 @@ const MySkills = () => {
           const title = titleOf(skill);
 
           return (
-            <div key={skill.id}>
-              <button
-                className="bg-bg_color_2 w-[300px] h-[200px] md:w-[350px] md:h-[180px] mx-auto md:mx-auto mb-5 p-6 pb-8 rounded-2xl text-center border-2 border-bg_color_1 transition duration-500 ease hover:border-main_accent hover:scale-105 cursor-pointer"
+            <motion.li key={skill.id} variants={staggerItem}>
+              <Card
+                as="button"
+                interactive
+                className="group flex h-full w-full items-center gap-5 p-6 text-left"
                 onClick={() => setOpenSkill(skill.id)}
               >
-                <Icon aria-hidden="true" className="text-main_accent text-6xl mx-auto" />
-                <h3 className="text-2xl font-bold mt-4">{title}</h3>
-              </button>
+                <span className="grid h-14 w-14 shrink-0 place-items-center rounded-xl border border-accent/20 bg-accent/10 text-3xl text-accent transition-colors duration-300 group-hover:bg-accent/15">
+                  <Icon aria-hidden="true" />
+                </span>
+                <h3 className="text-h3 text-fg">{title}</h3>
+              </Card>
               <Modal open={openSkill === skill.id} onClose={close}>
                 <div className="flex flex-col gap-4">
-                  <h1 className="text-2xl">{title}</h1>
-                  <hr className="border-t-solid border-1 border-white" />
-                  <p>{t(skill.descriptionKey)}</p>
+                  <h3 className="pr-10 text-h3 text-fg">{title}</h3>
+                  <hr className="border-border" />
+                  <p className="text-fg-secondary">{t(skill.descriptionKey)}</p>
                   {skill.links.map((link) => (
-                    <a
+                    <Button
                       key={link.href + link.labelKey}
-                      className="text-main_accent underline underline-offset-4"
+                      variant="ghost"
+                      className="self-start underline"
                       href={link.href}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
                       {t(link.labelKey)}
-                    </a>
+                    </Button>
                   ))}
-                  <hr className="border-t-solid border-1 border-white" />
-                  <p className="text-xl">{titleOf(skill.highlight)}</p>
-                  <p>{t(skill.highlight.descriptionKey)}</p>
-                  <hr className="border-t-solid border-1 border-white" />
-                  <div className="flex flex-row justify-center">
-                    <Button className="md:text-xl text-base" onClick={close}>
+                  <hr className="border-border" />
+                  <p className="text-body-lg font-medium text-fg">{titleOf(skill.highlight)}</p>
+                  <p className="text-fg-secondary">{t(skill.highlight.descriptionKey)}</p>
+                  <hr className="border-border" />
+                  <div className="flex justify-end">
+                    <Button variant="secondary" onClick={close}>
                       {t("skills.close_btn")}
                     </Button>
                   </div>
                 </div>
               </Modal>
-            </div>
+            </motion.li>
           );
         })}
-      </motion.div>
+      </motion.ul>
     </Section>
   );
 };

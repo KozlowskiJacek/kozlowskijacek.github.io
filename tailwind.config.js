@@ -42,22 +42,6 @@ export default {
         },
         danger: "#FF8A9B",
         rating: "#FFD47F",
-
-        // Kolory legacy — do usunięcia po migracji sekcji na tokeny.
-        button: "#C91F38",
-        bg_color_1: "#1f242d",
-        bg_color_2: "#323946",
-        main_accent: "#74FAC8",
-        gray_200: "#e5e7eb",
-        gray_400: "#9ca3af",
-        gray_600: "#4b5563",
-        gray_800: "#1f2937",
-        accent_color_green: "#8ac186",
-        accent_color_yellow: "#ffd47f",
-        accent_color_pink: "#ffabc7",
-        accent_color_purple: "#7868d8",
-        accent_color_blue: "#154ec5",
-        accent_color_orange: "#ff4d00",
       },
       boxShadow: {
         card: "0 1px 2px 0 rgb(0 0 0 / 0.3), 0 8px 24px -12px rgb(0 0 0 / 0.5)",

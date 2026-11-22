@@ -1,21 +1,28 @@
-import useSmoothScroll from '../../hooks/useSmoothScroll'
-import { FaCaretUp } from "react-icons/fa6";
+import { useTranslation } from "react-i18next";
+import { FaArrowUp } from "react-icons/fa6";
+import useSmoothScroll from "../../hooks/useSmoothScroll";
+import Container from "../ui/Container";
 
 const Footer = () => {
-
-  const scrollTo = useSmoothScroll()
+  const { t } = useTranslation();
+  const scrollTo = useSmoothScroll();
 
   return (
-    <footer className='bg-bg_color_1 text-white flex justify-between items-center flex-wrap p-5 px-[9%]'>
-      <div>
-      <p className=''>Copyrights © 2025 Jacek Kozłowski</p>
-      </div>
+    <footer className="border-t border-border bg-background">
+      <Container className="flex flex-wrap items-center justify-between gap-4 py-8">
+        <p className="text-small text-fg-muted">Copyrights © 2025 Jacek Kozłowski</p>
 
-      <div>
-        <a onClick={() => scrollTo("home")} className='cursor-pointer w-10 h-10 flex justify-center items-center py-3 px-3 bg-main_accent rounded-lg transition-all duration-500 ease-in-out hover:scale-105'><FaCaretUp aria-hidden='true' className=' text-bg_color_1 text-2xl' /></a>
-      </div>
+        <button
+          type="button"
+          onClick={() => scrollTo("home")}
+          aria-label={t("footer.back_to_top")}
+          className="grid h-10 w-10 place-items-center rounded-full border border-border-strong text-fg-secondary transition-[color,border-color,transform] duration-200 ease-out hover:border-accent/50 hover:text-accent motion-safe:hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+        >
+          <FaArrowUp aria-hidden="true" />
+        </button>
+      </Container>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

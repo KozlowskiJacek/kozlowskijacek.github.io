@@ -212,6 +212,9 @@
     "btn_send": "Wyślij",
     "btn_sending": "Wysyłanie...",
     "error": "Nie udało się wysłać wiadomości. Spróbuj ponownie za chwilę lub napisz do mnie na LinkedIn."
-  }
+  },
 
+  "footer": {
+    "back_to_top": "Przewiń na górę strony"
+  }
 }

@@ -1,55 +1,71 @@
 import { motion } from "framer-motion";
-import { fadeIn, reveal } from "../lib/animations";
+import { FaGithub } from "react-icons/fa6";
+import { fadeIn, reveal, staggerContainer, staggerItem } from "../lib/animations";
 import { projects } from "../data/projects";
 import { useTranslation } from "react-i18next";
 import Section from "../components/ui/Section";
 import SectionHeading from "../components/ui/SectionHeading";
+import Card from "../components/ui/Card";
+import Badge from "../components/ui/Badge";
 
 const Projects = () => {
   const { t } = useTranslation();
 
   return (
-    <Section id="projects" bg="secondary" className="text-white flex-col">
+    <Section id="projects" bg="secondary" className="flex-col">
       <SectionHeading
-        className="text-center text-5xl font-bold mb-10"
-        variants={fadeIn("top")}
+        align="center"
+        variants={fadeIn("bottom")}
         {...reveal}
         title={t("projects.my")}
         accent={t("projects.projects")}
       />
-      <motion.div
-        className="grid grid-cols-1 md:grid-cols-3 items-center gap-10 mb-10"
-        variants={fadeIn("bottom")}
+      <motion.ul
+        className="grid w-full gap-6 sm:grid-cols-2 lg:grid-cols-3"
+        variants={staggerContainer()}
         {...reveal}
       >
         {projects.map((project) => (
-          <div
-            key={project.id}
-            className="relative rounded-2xl shadow-[0_0_1rem_bg_color_1] overflow-hidden flex group cursor-pointer"
-          >
-            <img
-              className="w-full transition duration-500 ease-in-out transform group-hover:scale-110"
-              src={project.image}
-              alt=""
-            />
-            <div className="absolute bottom-0 left-0 w-full h-full bg-gradient-to-b from-[rgba(0,0,0,0.1)] to-bg_color_1 flex flex-col justify-center items-center text-center px-16 translate-y-full transition-transform duration-500 ease-in-out group-hover:translate-y-0">
-              <h4 className="md:text-3xl text-xl font-bold">{project.title}</h4>
-              <p className="mx-0 mb-2 mt-3 md:text-base text-sm">{t(project.descriptionKey)}</p>
-              {project.links.github && (
-                <a
-                  href={project.links.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={project.title}
-                  className="inline-flex justify-center items-center md:w-10 md:h-10 w-8 h-8 bg-white rounded-full"
-                >
-                  <i className="bx bx-link text-gray_600 text-lg"></i>
-                </a>
-              )}
-            </div>
-          </div>
+          <motion.li key={project.id} variants={staggerItem}>
+            <Card as="article" interactive className="group flex h-full flex-col overflow-hidden">
+              <div className="aspect-[16/10] overflow-hidden border-b border-border bg-surface">
+                <img
+                  className="h-full w-full object-cover transition-transform duration-500 ease-out motion-safe:group-hover:scale-[1.03]"
+                  src={project.image}
+                  alt=""
+                  loading="lazy"
+                />
+              </div>
+              <div className="flex flex-1 flex-col gap-3 p-5">
+                <div className="flex items-start justify-between gap-3">
+                  <h3 className="text-h3 text-fg">{project.title}</h3>
+                  {project.links.github && (
+                    <a
+                      href={project.links.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={project.title}
+                      className="grid h-9 w-9 shrink-0 place-items-center rounded-full border border-border-strong text-fg-secondary transition-colors hover:border-accent/50 hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                    >
+                      <FaGithub aria-hidden="true" />
+                    </a>
+                  )}
+                </div>
+                <p className="text-small text-fg-secondary">{t(project.descriptionKey)}</p>
+                {project.tech.length > 0 && (
+                  <ul className="mt-auto flex flex-wrap gap-2 pt-2">
+                    {project.tech.map((tech) => (
+                      <li key={tech}>
+                        <Badge>{tech}</Badge>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            </Card>
+          </motion.li>
         ))}
-      </motion.div>
+      </motion.ul>
     </Section>
   );
 };

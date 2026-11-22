@@ -1,4 +1,5 @@
 import { useEffect, type ReactNode } from "react";
+import { createPortal } from "react-dom";
 import { useTranslation } from "react-i18next";
 import { FaXmark } from "react-icons/fa6";
 
@@ -18,7 +19,8 @@ const Modal = ({ open, onClose, children }: ModalProps) => {
     return () => window.removeEventListener("keydown", onKey);
   }, [open, onClose]);
 
-  return (
+  // Portal: modal nie dziedziczy stacking contextu ani transformacji sekcji (animacje framer-motion).
+  return createPortal(
     <div
       className={`fixed inset-0 z-[60] flex items-center justify-center px-4 transition-[background-color,backdrop-filter] duration-300 ease-out ${
         open ? "visible bg-background/70 backdrop-blur-sm" : "invisible bg-transparent"
@@ -43,7 +45,8 @@ const Modal = ({ open, onClose, children }: ModalProps) => {
         </button>
         <div className="max-h-[80vh] overflow-y-auto p-6 md:p-8">{children}</div>
       </div>
-    </div>
+    </div>,
+    document.body,
   );
 };
 
