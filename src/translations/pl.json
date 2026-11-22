@@ -60,6 +60,31 @@
       "text": "Kilka projektów, z których jestem dumny — każdy z krótkim opisem, jak powstał.",
       "case_study": "Zobacz projekt",
       "all": "Całe portfolio"
+    },
+    "process": {
+      "title": "Jak",
+      "accent": "pracuję",
+      "text": "Prosty proces bez niespodzianek — wiesz, co dzieje się na każdym etapie.",
+      "talk": {
+        "title": "Rozmowa",
+        "text": "Poznaję Twoją firmę, cele i styl. Ustalamy zakres projektu oraz kto przygotuje treści i materiały."
+      },
+      "concept": {
+        "title": "Koncepcja i wycena",
+        "text": "Przygotowuję projekt wizualny i schemat działania, który możemy jeszcze zmieniać. Razem z nim dostajesz stałą wycenę."
+      },
+      "build": {
+        "title": "Realizacja",
+        "text": "Po akceptacji projektu biorę się do pracy. Jestem dostępny przez cały czas, przy większych projektach robimy przegląd postępów."
+      },
+      "review": {
+        "title": "Prezentacja i poprawki",
+        "text": "Pokazuję gotowy efekt i zbieram Twoją opinię. Drobne poprawki wprowadzam od razu."
+      },
+      "support": {
+        "title": "Wsparcie",
+        "text": "Pomagam z hostingiem, SEO i pytaniami po wdrożeniu. Współpraca nie kończy się na przekazaniu projektu."
+      }
     }
   },
   "about": {

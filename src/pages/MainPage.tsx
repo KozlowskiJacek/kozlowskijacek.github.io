@@ -2,6 +2,7 @@ import Hero from "../sections/home/Hero";
 import TrustBar from "../sections/home/TrustBar";
 import ServicesOverview from "../sections/home/ServicesOverview";
 import FeaturedWork from "../sections/home/FeaturedWork";
+import Process from "../sections/home/Process";
 import About from "../sections/About";
 import MySkills from "../sections/MySkills";
 import TheyTrustedMe from "../sections/TheyTrustedMe";
@@ -13,6 +14,7 @@ const MainPage = () => (
     <TrustBar />
     <ServicesOverview />
     <FeaturedWork />
+    <Process />
     <About />
     <MySkills />
     <TheyTrustedMe />

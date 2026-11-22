@@ -60,6 +60,31 @@
       "text": "A few projects I'm proud of — each with a short story of how it was made.",
       "case_study": "View project",
       "all": "Full portfolio"
+    },
+    "process": {
+      "title": "How I",
+      "accent": "work",
+      "text": "A simple process with no surprises — you always know what's happening.",
+      "talk": {
+        "title": "Discovery call",
+        "text": "I learn about your business, goals and style. We agree on the scope and who prepares the content and materials."
+      },
+      "concept": {
+        "title": "Concept and quote",
+        "text": "I prepare a visual design and functional outline we can still adjust. Along with it you get a fixed quote."
+      },
+      "build": {
+        "title": "Build",
+        "text": "Once the design is approved, I get to work. I stay available throughout, and for larger projects we review progress together."
+      },
+      "review": {
+        "title": "Presentation and revisions",
+        "text": "I present the finished result and gather your feedback. Small fixes are made right away."
+      },
+      "support": {
+        "title": "Support",
+        "text": "I help with hosting, SEO and questions after launch. Our collaboration doesn't end at handover."
+      }
     }
   },
   "about": {
