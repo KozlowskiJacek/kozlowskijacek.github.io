@@ -236,6 +236,13 @@
     }
   },
 
+  "notFound": {
+    "title": "Nie znalazłem tej strony",
+    "text": "Adres mógł się zmienić albo strona nigdy nie istniała. Wróć na stronę główną lub napisz do mnie.",
+    "back_home": "Wróć na stronę główną",
+    "contact": "Kontakt"
+  },
+
   "footer": {
     "tagline": "Developer & Video Creator. Tworzę strony, aplikacje i treści wideo, które pracują na Twój biznes.",
     "socials": "Media społecznościowe",

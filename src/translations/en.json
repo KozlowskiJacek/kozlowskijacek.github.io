@@ -236,6 +236,13 @@
     }
   },
 
+  "notFound": {
+    "title": "This page doesn't exist",
+    "text": "The address may have changed, or the page never existed. Head back home or get in touch.",
+    "back_home": "Back to home page",
+    "contact": "Contact"
+  },
+
   "footer": {
     "tagline": "Developer & Video Creator. I build websites, apps and video content that work for your business.",
     "socials": "Social media",
