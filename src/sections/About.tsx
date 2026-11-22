@@ -16,7 +16,7 @@ const About = () => {
         variants={fadeIn("bottom")}
         {...reveal}
       >
-       <img src={aboutPhoto} alt="" className='max-w-[100%] max-h-[100%] animate-floatImage'/>
+       <img src={aboutPhoto} alt="" className='max-w-[100%] max-h-[100%]'/>
       </motion.div>
       <motion.div className='text-white w-full'
         variants={fadeIn("right")}

@@ -1,5 +1,6 @@
 import { lazy, Suspense } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { MotionConfig } from "framer-motion";
 import MainPage from "./pages/MainPage";
 import AboutPage from "./pages/AboutPage";
 import WebAppsPage from "./pages/WebAppsPage";
@@ -13,33 +14,36 @@ const UiPreviewPage = import.meta.env.DEV ? lazy(() => import("./pages/dev/UiPre
 
 const App = () => {
   return (
-    <Router>
-      <ScrollToTop />
-      <Routes>
-        {UiPreviewPage && (
-          <Route
-            path="/dev/ui"
-            element={
-              <Suspense fallback={null}>
-                <UiPreviewPage />
-              </Suspense>
-            }
-          />
-        )}
-        <Route element={<Layout nav={mainNav} />}>
-          <Route path="/*" element={<MainPage />} />
-        </Route>
-        <Route element={<Layout nav={aboutNav} withFooter={false} />}>
-          <Route path="/about" element={<AboutPage />} />
-        </Route>
-        <Route element={<Layout nav={webAppsNav} withFooter={false} />}>
-          <Route path="/web-apps" element={<WebAppsPage />} />
-        </Route>
-        <Route element={<Layout nav={videoNav} withFooter={false} />}>
-          <Route path="/social-video" element={<VideoMarketingPage />} />
-        </Route>
-      </Routes>
-    </Router>
+    // reducedMotion="user": przy prefers-reduced-motion framer-motion pomija transformacje.
+    <MotionConfig reducedMotion="user">
+      <Router>
+        <ScrollToTop />
+        <Routes>
+          {UiPreviewPage && (
+            <Route
+              path="/dev/ui"
+              element={
+                <Suspense fallback={null}>
+                  <UiPreviewPage />
+                </Suspense>
+              }
+            />
+          )}
+          <Route element={<Layout nav={mainNav} />}>
+            <Route path="/*" element={<MainPage />} />
+          </Route>
+          <Route element={<Layout nav={aboutNav} withFooter={false} />}>
+            <Route path="/about" element={<AboutPage />} />
+          </Route>
+          <Route element={<Layout nav={webAppsNav} withFooter={false} />}>
+            <Route path="/web-apps" element={<WebAppsPage />} />
+          </Route>
+          <Route element={<Layout nav={videoNav} withFooter={false} />}>
+            <Route path="/social-video" element={<VideoMarketingPage />} />
+          </Route>
+        </Routes>
+      </Router>
+    </MotionConfig>
   );
 };
 

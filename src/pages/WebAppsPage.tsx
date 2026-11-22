@@ -34,7 +34,7 @@ const WebAppsPage = () => {
           {...revealHalf}
         >
           <img
-            className="max-w-[100%] max-h-[100%] animate-floatImage"
+            className="max-w-[100%] max-h-[100%]"
             src={Photo_about}
             alt=""
           />
@@ -50,7 +50,7 @@ const WebAppsPage = () => {
           <img
             src={PixelAvatarWEB}
             alt=""
-            className="max-w-[100%] max-h-[100%] animate-floatImage"
+            className="max-w-[100%] max-h-[100%]"
           />
         </motion.div>
         <motion.div
@@ -89,7 +89,7 @@ const WebAppsPage = () => {
           {...revealHalf}
         >
           <img
-            className="max-w-[100%] max-h-[100%] animate-floatImage"
+            className="max-w-[100%] max-h-[100%]"
             src={Photo_about}
             alt=""
           />
@@ -105,7 +105,7 @@ const WebAppsPage = () => {
           <img
             src={PixelAvatarWEB}
             alt=""
-            className="max-w-[100%] max-h-[100%] animate-floatImage"
+            className="max-w-[100%] max-h-[100%]"
           />
         </motion.div>
         <motion.div
@@ -144,7 +144,7 @@ const WebAppsPage = () => {
           {...revealHalf}
         >
           <img
-            className="max-w-[100%] max-h-[100%] animate-floatImage"
+            className="max-w-[100%] max-h-[100%]"
             src={Photo_about}
             alt=""
           />
@@ -160,7 +160,7 @@ const WebAppsPage = () => {
           <img
             src={PixelAvatarWEB}
             alt=""
-            className="max-w-[100%] max-h-[100%] animate-floatImage"
+            className="max-w-[100%] max-h-[100%]"
           />
         </motion.div>
         <motion.div

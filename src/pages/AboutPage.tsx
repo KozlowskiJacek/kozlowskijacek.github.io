@@ -42,7 +42,7 @@ const AboutPage = () => {
           {...revealHalf}
         >
           <img
-            className="md:max-w-[100%] md:max-h-[100%] max-w-[80%] max-h-[80%] ml-10 animate-floatImage"
+            className="md:max-w-[100%] md:max-h-[100%] max-w-[80%] max-h-[80%] ml-10"
             src={PixelAvatarWEB_animacja}
             alt=""
           />
@@ -58,7 +58,7 @@ const AboutPage = () => {
           <img
             src={fullStack}
             alt=""
-            className="md:max-w-[100%] md:max-h-[100%] animate-floatImage"
+            className="md:max-w-[100%] md:max-h-[100%]"
           />
         </motion.div>
         <motion.div
@@ -101,7 +101,7 @@ const AboutPage = () => {
           {...revealHalf}
         >
           <img
-            className="max-w-[100%] max-h-[100%] animate-floatImage"
+            className="max-w-[100%] max-h-[100%]"
             src={contentCreator}
             alt=""
           />
@@ -117,7 +117,7 @@ const AboutPage = () => {
           <img
             src={development}
             alt=""
-            className="max-w-[100%] max-h-[100%] animate-floatImage"
+            className="max-w-[100%] max-h-[100%]"
           />
         </motion.div>
         <motion.div
@@ -164,7 +164,7 @@ const AboutPage = () => {
           {...revealHalf}
         >
           <img
-            className="max-w-[100%] max-h-[100%] animate-floatImage"
+            className="max-w-[100%] max-h-[100%]"
             src={cat}
             alt=""
           />

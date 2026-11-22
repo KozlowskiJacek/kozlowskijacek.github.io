@@ -12,7 +12,7 @@ const Footer = () => {
       </div>
 
       <div>
-        <a onClick={() => scrollTo("home")} className='cursor-pointer w-10 h-10 flex justify-center items-center py-3 px-3 bg-main_accent rounded-lg transition-all duration-500 ease-in-out hover:shadow-custom-around hover:scale-105'><FaCaretUp aria-hidden='true' className='animate-bounce text-bg_color_1 text-2xl' /></a>
+        <a onClick={() => scrollTo("home")} className='cursor-pointer w-10 h-10 flex justify-center items-center py-3 px-3 bg-main_accent rounded-lg transition-all duration-500 ease-in-out hover:scale-105'><FaCaretUp aria-hidden='true' className=' text-bg_color_1 text-2xl' /></a>
       </div>
     </footer>
   )

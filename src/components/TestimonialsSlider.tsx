@@ -4,6 +4,7 @@ import 'swiper/css'
 import { FaStar } from "react-icons/fa";
 import { Autoplay } from 'swiper/modules';
 import { useTranslation } from "react-i18next";
+import { useReducedMotion } from 'framer-motion';
 import { testimonials, type Testimonial } from '../data/testimonials';
 import Button from './ui/Button';
 
@@ -16,6 +17,7 @@ const TestimonialsSlider = () => {
   const [active, setActive] = useState<number | null>(null)
 
   const { t } = useTranslation()
+  const reduceMotion = useReducedMotion()
 
   return (
     <div className='max-w-5xl mx-auto'>
@@ -25,8 +27,8 @@ const TestimonialsSlider = () => {
         onSlideChange={(cur) => setActive(cur.realIndex)}
         loop={true}
         centeredSlides={true}
-        speed={800}
-        autoplay={{ delay: 5000 }}
+        speed={reduceMotion ? 0 : 600}
+        autoplay={reduceMotion ? false : { delay: 5000, pauseOnMouseEnter: true }}
         modules={[Autoplay]}
       >
         {testimonials.map((testimonial, i) => {
@@ -68,7 +70,7 @@ const TestimonialsSlider = () => {
           <div className='bg-bg_color_2 rounded-xl p-6 max-w-lg w-full relative'>
             <button
               onClick={() => setSelected(null)}
-              className='absolute -top-5 right-2 bg-main_accent inline-block my-7 py-1 px-3 rounded-full text-bg_color_2 font-extrabold hover:drop-shadow-custom-glow hover:scale-110 transition-all duration-500 ease-in-out cursor-pointer text-xl shadow-custom-around shadow-main_accent'
+              className='absolute -top-5 right-2 bg-main_accent inline-block my-7 py-1 px-3 rounded-full text-bg_color_2 font-extrabold hover:scale-110 transition-all duration-500 ease-in-out cursor-pointer text-xl'
             >
               X
             </button>

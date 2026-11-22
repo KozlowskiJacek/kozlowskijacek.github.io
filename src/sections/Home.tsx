@@ -3,7 +3,7 @@ import "boxicons/css/boxicons.min.css";
 import homePhoto1 from "../assets/img/MainPhoto.png";
 import useSmoothScroll from "../hooks/useSmoothScroll";
 import { useTranslation } from "react-i18next";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { fadeIn, reveal } from "../lib/animations";
 import { socials } from "../data/socials";
 import Section from "../components/ui/Section";
@@ -19,6 +19,7 @@ const roles = [
 
 const Home = () => {
   const { t } = useTranslation();
+  const reduceMotion = useReducedMotion();
 
   const [text, setText] = useState("");
   const [index, setIndex] = useState(0);
@@ -31,6 +32,9 @@ const Home = () => {
   const pauseDuration = 2000;
 
   useEffect(() => {
+    // Przy ograniczonym ruchu nie animujemy pisania — pokazujemy pierwszą rolę na stałe.
+    if (reduceMotion) return;
+
     const timeout = setTimeout(
       () => {
         if (!isDeleting && charIndex < roles[index].length) {
@@ -54,7 +58,7 @@ const Home = () => {
     );
 
     return () => clearTimeout(timeout);
-  }, [charIndex, index, isDeleting, pause]);
+  }, [charIndex, index, isDeleting, pause, reduceMotion]);
 
   const scrollTo = useSmoothScroll();
 
@@ -76,8 +80,8 @@ const Home = () => {
           Jacek Kozłowski
         </motion.h1>
         <h3 className="mt-4 md:text-3xl text-xl font-semibold mb-5">
-          {t("home.im")} <span className="text-main_accent">{text}</span>
-          <span className="animate-blink">|</span>
+          {t("home.im")} <span className="text-main_accent">{reduceMotion ? roles[0] : text}</span>
+          {!reduceMotion && <span className="animate-blink">|</span>}
         </h3>
         <motion.p
           className="md:leading-7 md:text-base text-sm"
@@ -101,7 +105,7 @@ const Home = () => {
                 aria-label={link.label}
               >
                 <i
-                  className={`bx ${link.icon} text-main_accent inline-flex justify-center items-center bg-opacity-0 border-main_accent rounded-full p-2 border-[3px] hover:animate-tada hover:bg-main_accent hover:text-bg_color_2 transition-all hover:drop-shadow-custom-glow`}
+                  className={`bx ${link.icon} text-main_accent inline-flex justify-center items-center bg-opacity-0 border-main_accent rounded-full p-2 border-[3px] hover:bg-main_accent hover:text-bg_color_2 transition-all`}
                 ></i>
               </a>
             ))}
@@ -116,7 +120,7 @@ const Home = () => {
         {...reveal}
       >
         <img
-          className="max-w-[100%] max-h-[100%] mt-6 animate-floatImage"
+          className="max-w-[100%] max-h-[100%] mt-6"
           src={homePhoto1}
           alt=""
         />

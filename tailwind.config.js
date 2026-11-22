@@ -62,7 +62,6 @@ export default {
       boxShadow: {
         card: "0 1px 2px 0 rgb(0 0 0 / 0.3), 0 8px 24px -12px rgb(0 0 0 / 0.5)",
         lift: "0 2px 4px 0 rgb(0 0 0 / 0.3), 0 20px 40px -16px rgb(0 0 0 / 0.6)",
-        "custom-around": "0 0 5px #74FAC8",
       },
       fontFamily: {
         sans: ["Inter Variable", "Inter", ...defaultTheme.fontFamily.sans],
@@ -78,36 +77,14 @@ export default {
         body: ["1rem", { lineHeight: "1.625rem" }],
         small: ["0.875rem", { lineHeight: "1.375rem" }],
       },
-      dropShadow: {
-        "custom-glow": "0 0 20px #74FAC8",
-      },
       keyframes: {
-        tada: {
-          "0%": { transform: "scale(1)" },
-          "10%, 20%": { transform: "scale(0.9) rotate(-3deg)" },
-          "30%, 50%, 70%, 90%": { transform: "scale(1.1) rotate(3deg)" },
-          "40%, 60%, 80%": { transform: "scale(1.1) rotate(-3deg)" },
-          "100%": { transform: "scale(1) rotate(0)" },
-        },
-        floatImage: {
-          "0%": { transform: "translateY(0)" },
-          "50%": { transform: "translateY(-2.4rem)" },
-          "100%": { transform: "translateY(0)" },
-        },
-        scroll: {
-          "0%": { transform: "translateX(0)" },
-          "100%": { transform: "translateX(calc(-250px * 4))" },
-        },
         blink: {
           "0%, 50%": { opacity: 1 },
           "51%, 100%": { opacity: 0 },
         },
       },
       animation: {
-        tada: "tada 1s ease-in-out",
-        floatImage: "floatImage 5s ease-in-out infinite",
-        scroll: "scroll 10s linear infinite",
-        blink: "blink 1s infinite",
+        blink: "blink 1s step-end infinite",
       },
     },
   },
