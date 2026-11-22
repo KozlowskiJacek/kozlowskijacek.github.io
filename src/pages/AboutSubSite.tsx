@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import PixelAvatarWEB_animacja from "../assets/img/Pixel_Avatar.gif";
 import cat from "../assets/img/Cat 1.png";
@@ -16,10 +15,6 @@ const AboutSubSite = () => {
 
   const { t } = useTranslation();
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  });
-
   const handleNavigation = () => {
     // setActiveLink("contact")
     navigate(`/`);
@@ -27,7 +22,7 @@ const AboutSubSite = () => {
   };
 
   return (
-    <div className="select-none">
+    <div>
       <HeaderAbout />
 
       <section

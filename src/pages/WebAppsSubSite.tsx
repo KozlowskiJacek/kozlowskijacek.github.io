@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import PixelAvatarWEB from "../assets/img/PixelAvatarWEB.png";
@@ -12,10 +11,6 @@ const WebAppsSubSite = () => {
   // const location = useLocation();
   const navigate = useNavigate();
   const scrollTo = useSmoothScroll();
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  });
 
   const handleNavigation = () => {
     // setActiveLink("contact")
