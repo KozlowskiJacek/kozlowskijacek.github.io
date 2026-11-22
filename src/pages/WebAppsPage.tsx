@@ -3,14 +3,13 @@ import { motion } from "framer-motion";
 import { slideIn, revealHalf } from "../lib/animations";
 import PixelAvatarWEB from "../assets/img/PixelAvatarWEB.png";
 import Photo_about from "../assets/img/Photo_about.png";
-import useNavigateToSection from "../hooks/useNavigateToSection";
+import { paths } from "../data/navigation";
 import Section from "../components/ui/Section";
 import SectionHeading from "../components/ui/SectionHeading";
 import Button from "../components/ui/Button";
 
 const WebAppsPage = () => {
   const { t } = useTranslation();
-  const navigateToSection = useNavigateToSection();
 
   return (
     <>
@@ -175,7 +174,7 @@ const WebAppsPage = () => {
             accent={t("web_app.after")}
           />
           <p className="mt-5 text-body text-fg-secondary md:text-body-lg">{t("web_app.text7")}</p>
-          <Button onClick={() => navigateToSection("contact")} size="lg" className="mt-8">
+          <Button to={paths.contact} size="lg" className="mt-8">
             {t("about.questions")}
           </Button>
         </motion.div>

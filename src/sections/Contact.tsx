@@ -6,13 +6,24 @@ import Section from "../components/ui/Section";
 import SectionHeading from "../components/ui/SectionHeading";
 import Card from "../components/ui/Card";
 
-const Contact = () => {
+type ContactProps = {
+  /** Sekcja jako samodzielna strona /kontakt: nagłówek h1 i odstęp pod headerem. */
+  asPage?: boolean;
+};
+
+const Contact = ({ asPage = false }: ContactProps) => {
   const { t } = useTranslation();
 
   return (
-    <Section id="contact" bg="secondary" className="flex-col">
+    <Section
+      id="contact"
+      bg={asPage ? "primary" : "secondary"}
+      padding={asPage ? "hero" : "default"}
+      className="flex-col"
+    >
       <motion.div className="max-w-2xl text-center" variants={fadeIn("bottom")} {...reveal}>
         <SectionHeading
+          as={asPage ? "h1" : "h2"}
           align="center"
           className="mb-4"
           title={t("contact.lets")}

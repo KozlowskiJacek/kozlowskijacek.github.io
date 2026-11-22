@@ -36,7 +36,7 @@ const Section = ({
   ...props
 }: SectionProps) => (
   <section
-    className={`relative isolate flex w-full items-center overflow-hidden ${backgrounds[bg]} ${paddings[padding]}`}
+    className={`relative isolate flex w-full scroll-mt-16 items-center overflow-hidden ${backgrounds[bg]} ${paddings[padding]}`}
     {...props}
   >
     {backdrop}

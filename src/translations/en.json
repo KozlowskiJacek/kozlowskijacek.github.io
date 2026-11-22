@@ -1,11 +1,13 @@
 {
   "navbar": {
-    "home": "Home",
-    "about": "About",
-    "skills": "My Skills",
-    "projects": "Projects",
     "services": "Services",
-    "feedback": "Feedback",
+    "services_video": "Video creation",
+    "services_video_desc": "Filming, editing, graphics and animation",
+    "services_web": "Websites & apps",
+    "services_web_desc": "Websites, web apps, UI/UX and automation",
+    "portfolio": "Portfolio",
+    "employers": "For employers",
+    "about": "About",
     "contact": "Contact",
     "switch_language": "Switch language to Polish"
   },
@@ -212,6 +214,23 @@
     "btn_send": "Send",
     "btn_sending": "Sending...",
     "error": "Your message could not be sent. Please try again in a moment or reach out on LinkedIn."
+  },
+
+  "pages": {
+    "loading": "Loading page…",
+    "cta": "Let's talk",
+    "portfolio": {
+      "title": "Selected work",
+      "text": "Video, graphics, websites and apps in one place. Filters and detailed case studies are coming soon."
+    },
+    "case_study": {
+      "eyebrow": "Case study",
+      "back": "Back to portfolio"
+    },
+    "employers": {
+      "title": "Profile for employers",
+      "text": "My stack, experience and projects with source code. A downloadable PDF CV is coming soon."
+    }
   },
 
   "footer": {

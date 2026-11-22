@@ -5,6 +5,7 @@ import { fadeIn, reveal } from "../lib/animations";
 import Section from "../components/ui/Section";
 import SectionHeading from "../components/ui/SectionHeading";
 import Button from "../components/ui/Button";
+import { paths } from "../data/navigation";
 
 const About = () => {
   const { t } = useTranslation();
@@ -19,7 +20,7 @@ const About = () => {
         <h3 className="mb-6 text-h3 text-fg-secondary">{t("about.title")}</h3>
         <p className="text-body text-fg-secondary md:text-body-lg">
           {t("about.text")}{" "}
-          <Button variant="ghost" to="/about" className="font-semibold">
+          <Button variant="ghost" to={paths.about} className="font-semibold">
             {t("about.see_more")}
           </Button>
         </p>

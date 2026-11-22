@@ -1,11 +1,13 @@
 {
   "navbar": {
-    "home": "Główna",
-    "about": "O mnie",
-    "skills": "Umiejętności",
-    "projects": "Projekty",
     "services": "Usługi",
-    "feedback": "Zaufali mi",
+    "services_video": "Kreacja wideo",
+    "services_video_desc": "Nagrywanie, montaż, grafiki i animacje",
+    "services_web": "Strony i aplikacje",
+    "services_web_desc": "Strony www, aplikacje webowe, UI/UX i automatyzacje",
+    "portfolio": "Portfolio",
+    "employers": "Dla pracodawców",
+    "about": "O mnie",
     "contact": "Kontakt",
     "switch_language": "Przełącz język na angielski"
   },
@@ -212,6 +214,23 @@
     "btn_send": "Wyślij",
     "btn_sending": "Wysyłanie...",
     "error": "Nie udało się wysłać wiadomości. Spróbuj ponownie za chwilę lub napisz do mnie na LinkedIn."
+  },
+
+  "pages": {
+    "loading": "Ładowanie strony…",
+    "cta": "Porozmawiajmy",
+    "portfolio": {
+      "title": "Wybrane realizacje",
+      "text": "Projekty wideo, grafiki, strony i aplikacje w jednym miejscu. Wkrótce dodam filtry i szczegółowe case study."
+    },
+    "case_study": {
+      "eyebrow": "Case study",
+      "back": "Wróć do portfolio"
+    },
+    "employers": {
+      "title": "Profil dla pracodawców",
+      "text": "Mój stack, doświadczenie i projekty z kodem. Niedługo pojawi się tu też CV do pobrania w PDF."
+    }
   },
 
   "footer": {

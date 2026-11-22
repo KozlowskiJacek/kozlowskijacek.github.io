@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import "boxicons/css/boxicons.min.css";
 import homePhoto1 from "../assets/img/MainPhoto.png";
-import useSmoothScroll from "../hooks/useSmoothScroll";
 import { useTranslation } from "react-i18next";
 import { motion, useReducedMotion } from "framer-motion";
 import { fadeIn, reveal, staggerContainer, staggerItem } from "../lib/animations";
@@ -60,8 +59,6 @@ const Home = () => {
     return () => clearTimeout(timeout);
   }, [charIndex, index, isDeleting, pause, reduceMotion]);
 
-  const scrollTo = useSmoothScroll();
-
   return (
     <Section id="home" padding="hero" className="flex-col md:flex-row md:justify-between" backdrop={<HeroBackdrop />}>
       <motion.div
@@ -88,7 +85,7 @@ const Home = () => {
           <p>{t("home.text2")}</p>
         </motion.div>
         <motion.div variants={staggerItem} className="mt-8 flex flex-wrap items-center gap-4">
-          <Button size="lg" onClick={() => scrollTo("contact")}>
+          <Button size="lg" to={{ hash: "contact" }}>
             {t("home.btn_get_in_touch")}
           </Button>
           <div className="flex items-center gap-2">

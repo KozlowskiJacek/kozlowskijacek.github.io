@@ -1,24 +1,20 @@
+import { Suspense } from "react";
 import { Outlet } from "react-router-dom";
-import type { NavConfig } from "../../data/navigation";
 import Header from "./Header";
 import Footer from "./Footer";
+import PageLoader from "./PageLoader";
 
-type LayoutProps = {
-  nav: NavConfig;
-  /** Stopka (z przyciskiem „do góry”) jest tylko na stronie głównej. */
-  withFooter?: boolean;
-};
-
-const Layout = ({ nav, withFooter = true }: LayoutProps) => {
-  const { id, ...headerProps } = nav;
-
-  return (
-    <div className="min-h-screen bg-background font-sans text-fg">
-      <Header key={id} {...headerProps} />
-      <Outlet />
-      {withFooter && <Footer />}
-    </div>
-  );
-};
+/** Wspólny układ podstron: header, treść trasy (ładowana leniwie) i stopka. */
+const Layout = () => (
+  <div className="flex min-h-screen flex-col bg-background font-sans text-fg">
+    <Header />
+    <main id="main" className="flex-1">
+      <Suspense fallback={<PageLoader />}>
+        <Outlet />
+      </Suspense>
+    </main>
+    <Footer />
+  </div>
+);
 
 export default Layout;

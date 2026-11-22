@@ -4,7 +4,7 @@ import cat from "../assets/img/Cat 1.png";
 import fullStack from "../assets/img/Pixel full stack.png";
 import development from "../assets/img/Development.png";
 import contentCreator from "../assets/img/Content creator img.png";
-import useNavigateToSection from "../hooks/useNavigateToSection";
+import { paths } from "../data/navigation";
 import Section from "../components/ui/Section";
 import SectionHeading from "../components/ui/SectionHeading";
 import Button from "../components/ui/Button";
@@ -12,7 +12,6 @@ import { motion } from "framer-motion";
 import { slideIn, revealHalf } from "../lib/animations";
 
 const AboutPage = () => {
-  const navigateToSection = useNavigateToSection();
 
   const { t } = useTranslation();
 
@@ -153,7 +152,7 @@ const AboutPage = () => {
           <p className="mt-5 text-body text-fg-secondary md:text-body-lg">
             {t("about.text5")}
           </p>
-          <Button onClick={() => navigateToSection("contact")} size="lg" className="mt-8">
+          <Button to={paths.contact} size="lg" className="mt-8">
             {t("about.questions")}
           </Button>
           <h2 className="mt-8 text-h3 text-fg-secondary">{t("about.bye")}</h2>

@@ -2,12 +2,18 @@ import { lazy, Suspense } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { MotionConfig } from "framer-motion";
 import MainPage from "./pages/MainPage";
-import AboutPage from "./pages/AboutPage";
-import WebAppsPage from "./pages/WebAppsPage";
-import VideoMarketingPage from "./pages/VideoMarketingPage";
-import ScrollToTop from "./components/layout/ScrollToTop";
 import Layout from "./components/layout/Layout";
-import { aboutNav, mainNav, videoNav, webAppsNav } from "./data/navigation";
+import ScrollManager from "./components/layout/ScrollManager";
+import { paths } from "./data/navigation";
+
+// Strona główna jest w głównym bundlu, podstrony ładują się na żądanie.
+const VideoMarketingPage = lazy(() => import("./pages/VideoMarketingPage"));
+const WebAppsPage = lazy(() => import("./pages/WebAppsPage"));
+const PortfolioPage = lazy(() => import("./pages/PortfolioPage"));
+const CaseStudyPage = lazy(() => import("./pages/CaseStudyPage"));
+const EmployersPage = lazy(() => import("./pages/EmployersPage"));
+const AboutPage = lazy(() => import("./pages/AboutPage"));
+const ContactPage = lazy(() => import("./pages/ContactPage"));
 
 // Podgląd komponentów tylko w dev — w buildzie produkcyjnym warunek jest stały (false) i moduł znika.
 const UiPreviewPage = import.meta.env.DEV ? lazy(() => import("./pages/dev/UiPreviewPage")) : null;
@@ -17,7 +23,7 @@ const App = () => {
     // reducedMotion="user": przy prefers-reduced-motion framer-motion pomija transformacje.
     <MotionConfig reducedMotion="user">
       <Router>
-        <ScrollToTop />
+        <ScrollManager />
         <Routes>
           {UiPreviewPage && (
             <Route
@@ -29,17 +35,15 @@ const App = () => {
               }
             />
           )}
-          <Route element={<Layout nav={mainNav} />}>
-            <Route path="/*" element={<MainPage />} />
-          </Route>
-          <Route element={<Layout nav={aboutNav} withFooter={false} />}>
-            <Route path="/about" element={<AboutPage />} />
-          </Route>
-          <Route element={<Layout nav={webAppsNav} withFooter={false} />}>
-            <Route path="/web-apps" element={<WebAppsPage />} />
-          </Route>
-          <Route element={<Layout nav={videoNav} withFooter={false} />}>
-            <Route path="/social-video" element={<VideoMarketingPage />} />
+          <Route element={<Layout />}>
+            <Route index element={<MainPage />} />
+            <Route path={paths.servicesVideo} element={<VideoMarketingPage />} />
+            <Route path={paths.servicesWeb} element={<WebAppsPage />} />
+            <Route path={paths.portfolio} element={<PortfolioPage />} />
+            <Route path={paths.caseStudy} element={<CaseStudyPage />} />
+            <Route path={paths.employers} element={<EmployersPage />} />
+            <Route path={paths.about} element={<AboutPage />} />
+            <Route path={paths.contact} element={<ContactPage />} />
           </Route>
         </Routes>
       </Router>
