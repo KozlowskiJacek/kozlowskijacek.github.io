@@ -1,5 +1,6 @@
 import Hero from "../sections/home/Hero";
 import TrustBar from "../sections/home/TrustBar";
+import ServicesOverview from "../sections/home/ServicesOverview";
 import About from "../sections/About";
 import MySkills from "../sections/MySkills";
 import Projects from "../sections/Projects";
@@ -10,6 +11,7 @@ const MainPage = () => (
   <>
     <Hero />
     <TrustBar />
+    <ServicesOverview />
     <About />
     <MySkills />
     <Projects />

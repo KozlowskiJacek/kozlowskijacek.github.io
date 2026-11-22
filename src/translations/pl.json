@@ -31,6 +31,28 @@
         "videos": "zmontowanych filmów",
         "years": "lata doświadczenia"
       }
+    },
+    "services": {
+      "title": "Czym mogę",
+      "accent": "pomóc",
+      "text": "Dwa obszary, jeden wykonawca. Wideo, które przyciąga uwagę, i strona, która zamienia ją w klientów.",
+      "more": "Zobacz szczegóły",
+      "video": {
+        "title": "Kreacja wideo",
+        "text": "Reklamy, rolki i materiały do social mediów — od scenariusza po gotowy plik.",
+        "recording": "Nagrywanie",
+        "editing": "Montaż",
+        "graphics": "Grafiki",
+        "animation": "Animacje"
+      },
+      "web": {
+        "title": "Strony i aplikacje",
+        "text": "Szybkie, responsywne strony i aplikacje, które realnie wspierają sprzedaż i pracę zespołu.",
+        "websites": "Strony www",
+        "webapps": "Aplikacje webowe",
+        "uiux": "Projekty UI/UX",
+        "automation": "Automatyzacje"
+      }
     }
   },
   "about": {
