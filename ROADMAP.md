@@ -134,6 +134,8 @@ Dwa filary oferty + jedna ścieżka kariery:
 - [ ] Logo/monogram osobisty (opcjonalnie) i zdjęcie w lepszej jakości (profesjonalne portretowe).
 - [ ] Zgoda klientów na użycie logotypów i opinii.
 - [ ] Zdjęcia/zrzuty ekranu realizacji web (strony dla klientów).
+- [ ] Docelowe teksty i grafiki podstrony wideo (`/social-video`) — dziś wszystkie sekcje mają zastępcze zdjęcia `Photo_about` / `PixelAvatarWEB`; to samo dotyczy podstrony `/web-apps`.
+- [ ] Opisy usług (dawna sekcja Services, klucze `services.*`) o porównywalnej długości w PL i EN, żeby kafelki nie rozjeżdżały się przy zmianie języka.
 
 ---
 
@@ -220,12 +222,12 @@ Zrób commity:
 ---
 
 ### Etap 2 — Refaktoryzacja architektury `refactor`
-**Status:** ⬜ do zrobienia
+**Status:** ✅ zrobione (2026-11-22)
 
-- [ ] Jeden komponent `Header` z konfiguracją
-- [ ] Wspólne animacje w `src/lib/animations.ts`
-- [ ] Dane w `src/data/*`
-- [ ] Komponenty bazowe UI
+- [x] Jeden komponent `Header` z konfiguracją
+- [x] Wspólne animacje w `src/lib/animations.ts`
+- [x] Dane w `src/data/*`
+- [x] Komponenty bazowe UI
 
 ```text
 Zrefaktoryzuj kod Portfolio-web BEZ zmiany wyglądu i działania (wynik ma wyglądać identycznie):

@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 
-const AutoScroll = () => {
+const ScrollToTop = () => {
   
   const { pathname } = useLocation()
 
@@ -13,4 +13,4 @@ const AutoScroll = () => {
   return null
 }
 
-export default AutoScroll
+export default ScrollToTop

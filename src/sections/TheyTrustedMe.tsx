@@ -1,9 +1,9 @@
-import ImageSlider from "../../components/ImageSlider";
+import TestimonialsSlider from "../components/TestimonialsSlider";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion"
-import { fadeIn, reveal } from "../../lib/animations";
-import Section from "../../components/ui/Section";
-import SectionHeading from "../../components/ui/SectionHeading";
+import { fadeIn, reveal } from "../lib/animations";
+import Section from "../components/ui/Section";
+import SectionHeading from "../components/ui/SectionHeading";
 
 const TheyTrustedMe = () => {
 
@@ -25,7 +25,7 @@ const TheyTrustedMe = () => {
         variants={fadeIn("bottom")}
         {...reveal}
        >
-        <ImageSlider />
+        <TestimonialsSlider />
       </motion.div>
     </Section>
   );

@@ -1,11 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import confetti from 'canvas-confetti';
-import "../index.css";
 import { useTranslation } from 'react-i18next';
-import { serviceId, templateId, publicKey } from '../env';
+import { serviceId, templateId, publicKey } from '../lib/env';
 
-const FormContact = () => {
+const ContactForm = () => {
   const form = useRef<HTMLFormElement>(null);
   const buttonRef = useRef<HTMLInputElement>(null);
   const {t} = useTranslation()
@@ -100,4 +99,4 @@ const FormContact = () => {
   );
 };
 
-export default FormContact;
+export default ContactForm;

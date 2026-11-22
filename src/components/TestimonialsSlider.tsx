@@ -10,7 +10,7 @@ import Button from './ui/Button';
 const STARS = 5;
 const PREVIEW_LENGTH = 200;
 
-const ImageSlider = () => {
+const TestimonialsSlider = () => {
 
   const [selected, setSelected] = useState<Testimonial | null>(null)
   const [active, setActive] = useState<number | null>(null)
@@ -87,4 +87,4 @@ const ImageSlider = () => {
   )
 }
 
-export default ImageSlider
+export default TestimonialsSlider

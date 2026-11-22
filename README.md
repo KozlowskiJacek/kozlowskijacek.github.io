@@ -54,7 +54,7 @@ Plik `.env` nie jest w repozytorium. Szablon znajdziesz w `.env.example`:
 | `VITE_EMAILJS_TEMPLATE_ID`  | ID szablonu wiadomości       |
 | `VITE_EMAILJS_PUBLIC_KEY`   | klucz publiczny EmailJS      |
 
-Wartości są czytane w `src/env.ts` i trafiają do bundla (prefiks `VITE_`), więc mogą tu być tylko klucze przeznaczone do użycia w przeglądarce.
+Wartości są czytane w `src/lib/env.ts` i trafiają do bundla (prefiks `VITE_`), więc mogą tu być tylko klucze przeznaczone do użycia w przeglądarce.
 
 ## Deploy
 
@@ -72,14 +72,17 @@ Skrypt `predeploy` buduje projekt, a `gh-pages -d dist` publikuje zawartość `d
 ├── public/                 # pliki statyczne kopiowane 1:1 (certyfikaty PDF, favicon)
 ├── src/
 │   ├── main.tsx            # bootstrap React + i18n
-│   ├── App.tsx             # routing: /, /about, /web-apps, /social-video
-│   ├── env.ts              # odczyt zmiennych środowiskowych
-│   ├── config/             # konfiguracja i18next
+│   ├── App.tsx             # routing: /, /about, /web-apps, /social-video (każda trasa w Layout)
+│   ├── pages/              # strony: MainPage, AboutPage, WebAppsPage, VideoMarketingPage
+│   ├── sections/           # sekcje strony głównej (Home, About, MySkills, Projects, …)
+│   ├── components/
+│   │   ├── layout/         # Layout, Header, LanguageSwitcher, Footer, ScrollToTop
+│   │   ├── ui/             # Section, Container, SectionHeading, Button, Modal
+│   │   └── *.tsx           # ContactForm, TestimonialsSlider
+│   ├── data/               # typowane dane: navigation, projects, skills, testimonials, socials
+│   ├── lib/                # animations (framer-motion), i18n, env
+│   ├── hooks/              # useSmoothScroll, useScrollSpy, useNavigateToSection
 │   ├── translations/       # pl.json, en.json (jedyne źródło tłumaczeń)
-│   ├── pages/              # podstrony
-│   │   └── sections/       # sekcje strony głównej
-│   ├── components/         # nagłówki, stopka, formularz, slider, modal
-│   ├── hooks/              # własne hooki
 │   └── assets/img/         # obrazy importowane w komponentach
 ├── tailwind.config.js
 └── vite.config.ts

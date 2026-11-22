@@ -1,12 +1,12 @@
 import React from 'react'
 
-type propTypes = {
+type ModalProps = {
   open: boolean;
   onClose: () => void;
   children: React.ReactNode;
 }
 
-const Modal: React.FC<propTypes> = ({open, onClose, children}) => {
+const Modal: React.FC<ModalProps> = ({open, onClose, children}) => {
   return (
     <div className={`fixed inset-0 flex justify-center items-center transition-colors ${open ? "visible bg-black/20" : "invisible"}`} onClick={onClose}>
       <div className={`bg-bg_color_2 rounded-2xl shadow  transition-all max-w-md w-[90%] ${open ? "scale-100 opacity-100" : "scale-110 opacity-0"}`} onClick={(e) => e.stopPropagation()}>

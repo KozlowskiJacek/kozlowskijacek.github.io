@@ -1,10 +1,10 @@
-import aboutPhoto from '../../assets/img/Photo_about.png'
+import aboutPhoto from '../assets/img/Photo_about.png'
 import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
-import { fadeIn, reveal } from "../../lib/animations";
-import Section from "../../components/ui/Section";
-import SectionHeading from "../../components/ui/SectionHeading";
-import Button from "../../components/ui/Button";
+import { fadeIn, reveal } from "../lib/animations";
+import Section from "../components/ui/Section";
+import SectionHeading from "../components/ui/SectionHeading";
+import Button from "../components/ui/Button";
 
 const About = () => {
 

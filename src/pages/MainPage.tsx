@@ -1,12 +1,11 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import Home from "./sections/Home";
-import About from "./sections/About";
-// import Services from "./sections/Services";
-import Projects from "./sections/Projects";
-import TheyTrustedMe from "./sections/TheyTrustedMe";
-import Contact from "./sections/Contact";
-import MySkills from "./sections/MySkills";
+import Home from "../sections/Home";
+import About from "../sections/About";
+import MySkills from "../sections/MySkills";
+import Projects from "../sections/Projects";
+import TheyTrustedMe from "../sections/TheyTrustedMe";
+import Contact from "../sections/Contact";
 
 const MainPage = () => {
   const location = useLocation();
@@ -28,7 +27,6 @@ const MainPage = () => {
       <About />
       <MySkills />
       <Projects />
-      {/* <Services /> */}
       <TheyTrustedMe />
       <Contact />
     </>

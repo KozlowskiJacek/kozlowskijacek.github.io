@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { fadeIn, reveal } from "../../lib/animations";
+import { fadeIn, reveal } from "../lib/animations";
 import { useTranslation } from "react-i18next";
-import Section from "../../components/ui/Section";
-import SectionHeading from "../../components/ui/SectionHeading";
-import Button from "../../components/ui/Button";
-import Modal from "../../components/Modal";
-import { skills, type SkillTitle } from "../../data/skills";
+import Section from "../components/ui/Section";
+import SectionHeading from "../components/ui/SectionHeading";
+import Button from "../components/ui/Button";
+import Modal from "../components/ui/Modal";
+import { skills, type SkillTitle } from "../data/skills";
 
 const MySkills = () => {
   const [openSkill, setOpenSkill] = useState<string | null>(null);

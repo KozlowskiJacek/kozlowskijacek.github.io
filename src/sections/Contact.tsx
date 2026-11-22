@@ -1,9 +1,9 @@
-import FormContact from "../../components/FormContact";
+import ContactForm from "../components/ContactForm";
 import { motion } from "framer-motion";
-import { fadeIn, reveal } from "../../lib/animations";
+import { fadeIn, reveal } from "../lib/animations";
 import { useTranslation } from "react-i18next";
-import Section from "../../components/ui/Section";
-import SectionHeading from "../../components/ui/SectionHeading";
+import Section from "../components/ui/Section";
+import SectionHeading from "../components/ui/SectionHeading";
 
 const Contact = () => {
   const { t } = useTranslation();
@@ -30,7 +30,7 @@ const Contact = () => {
         variants={fadeIn("bottom")}
         {...reveal}
       >
-        <FormContact />
+        <ContactForm />
       </motion.div>
     </Section>
   );

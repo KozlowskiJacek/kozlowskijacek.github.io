@@ -11,7 +11,7 @@ import Button from "../components/ui/Button";
 import { motion } from "framer-motion";
 import { slideIn, revealHalf } from "../lib/animations";
 
-const AboutSubSite = () => {
+const AboutPage = () => {
   const navigateToSection = useNavigateToSection();
 
   const { t } = useTranslation();
@@ -174,4 +174,4 @@ const AboutSubSite = () => {
   );
 };
 
-export default AboutSubSite;
+export default AboutPage;

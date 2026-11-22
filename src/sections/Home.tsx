@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 import "boxicons/css/boxicons.min.css";
-import homePhoto1 from "../../assets/img/MainPhoto.png";
-import useSmoothScroll from "../../hooks/useSmoothScroll";
+import homePhoto1 from "../assets/img/MainPhoto.png";
+import useSmoothScroll from "../hooks/useSmoothScroll";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
-import { fadeIn, reveal } from "../../lib/animations";
-import { socials } from "../../data/socials";
-import Section from "../../components/ui/Section";
-import Button from "../../components/ui/Button";
+import { fadeIn, reveal } from "../lib/animations";
+import { socials } from "../data/socials";
+import Section from "../components/ui/Section";
+import Button from "../components/ui/Button";
 
 const roles = [
   "Full Stack Developer",

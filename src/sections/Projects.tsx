@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
-import { fadeIn, reveal } from "../../lib/animations";
-import { projects } from "../../data/projects";
+import { fadeIn, reveal } from "../lib/animations";
+import { projects } from "../data/projects";
 import { useTranslation } from "react-i18next";
-import Section from "../../components/ui/Section";
-import SectionHeading from "../../components/ui/SectionHeading";
+import Section from "../components/ui/Section";
+import SectionHeading from "../components/ui/SectionHeading";
 
 const Projects = () => {
   const { t } = useTranslation();
