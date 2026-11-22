@@ -5,7 +5,8 @@ import PixelAvatarWEB from "../assets/img/PixelAvatarWEB.png";
 import Photo_about from "../assets/img/Photo_about.png";
 import { useNavigate } from "react-router-dom";
 import useSmoothScroll from "../hooks/useSmoothScroll";
-import HeaderVideos from "../components/HeaderVideos";
+import Header from "../components/layout/Header";
+import { videoNav } from "../data/navigation";
 
 const WebAppsSubSite = () => {
   const { t } = useTranslation();
@@ -21,7 +22,7 @@ const WebAppsSubSite = () => {
   //todo Skończyć pod strone teksty i grafiki
   return (
     <>
-      <HeaderVideos />
+      <Header {...videoNav} />
 
       <section
         className="bg-bg_color_1 flex justify-center items-center min-h-screen w-full pt-[100px] px-[9%] py-[20px]"

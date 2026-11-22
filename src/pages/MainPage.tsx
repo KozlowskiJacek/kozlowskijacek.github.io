@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import Header from "../components/HeaderMain";
+import Header from "../components/layout/Header";
+import { mainNav } from "../data/navigation";
 import Footer from "../components/Footer";
 import Home from "./sections/Home";
 import About from "./sections/About";
@@ -26,7 +27,7 @@ const MainPage = () => {
 
   return (
     <div className="font-playfair">
-      <Header />
+      <Header {...mainNav} />
       <Home />
       <About />
       <MySkills />
