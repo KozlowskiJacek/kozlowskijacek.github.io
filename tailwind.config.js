@@ -1,3 +1,5 @@
+import defaultTheme from "tailwindcss/defaultTheme";
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
@@ -63,7 +65,18 @@ export default {
         "custom-around": "0 0 5px #74FAC8",
       },
       fontFamily: {
-        playfair: ["Playfair Display", "serif"],
+        sans: ["Inter Variable", "Inter", ...defaultTheme.fontFamily.sans],
+        display: ["Space Grotesk Variable", "Space Grotesk", "Inter Variable", ...defaultTheme.fontFamily.sans],
+      },
+      /** Skala typograficzna: [rozmiar, { lineHeight, letterSpacing, fontWeight }]. */
+      fontSize: {
+        display: ["clamp(2.5rem, 1.6rem + 4vw, 4.5rem)", { lineHeight: "1.05", letterSpacing: "-0.03em", fontWeight: "600" }],
+        h1: ["clamp(2.25rem, 1.7rem + 2.4vw, 3.5rem)", { lineHeight: "1.1", letterSpacing: "-0.025em", fontWeight: "600" }],
+        h2: ["clamp(1.875rem, 1.5rem + 1.6vw, 2.75rem)", { lineHeight: "1.15", letterSpacing: "-0.02em", fontWeight: "600" }],
+        h3: ["clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem)", { lineHeight: "1.3", letterSpacing: "-0.01em", fontWeight: "600" }],
+        "body-lg": ["1.125rem", { lineHeight: "1.75rem" }],
+        body: ["1rem", { lineHeight: "1.625rem" }],
+        small: ["0.875rem", { lineHeight: "1.375rem" }],
       },
       dropShadow: {
         "custom-glow": "0 0 20px #74FAC8",

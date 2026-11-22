@@ -8,8 +8,20 @@
     color-scheme: dark;
   }
 
+  html,
   body {
-    @apply bg-background text-fg antialiased;
+    overflow-x: hidden;
+  }
+
+  body {
+    @apply bg-background font-sans text-body text-fg antialiased;
+    font-feature-settings: "cv11", "ss01";
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-display;
   }
 
   ::selection {

@@ -13,7 +13,7 @@ const Layout = ({ nav, withFooter = true }: LayoutProps) => {
   const { id, ...headerProps } = nav;
 
   return (
-    <div className="font-playfair">
+    <div className="min-h-screen bg-background font-sans text-fg">
       <Header key={id} {...headerProps} />
       <Outlet />
       {withFooter && <Footer />}
