@@ -6,6 +6,13 @@ import aureliaHR from "../assets/img/AureliaHR.jpg";
 
 export type ProjectCategory = "web" | "python" | "desktop";
 
+/** Klucze tłumaczeń etykiet kategorii. */
+export const projectCategoryLabelKeys: Record<ProjectCategory, string> = {
+  web: "projects.categories.web",
+  python: "projects.categories.python",
+  desktop: "projects.categories.desktop",
+};
+
 export type ProjectLinks = {
   /** null = brak repozytorium (przycisk nie jest renderowany). */
   github: string | null;
@@ -22,6 +29,8 @@ export type Project = {
   descriptionKey: string;
   tech: string[];
   links: ProjectLinks;
+  /** Projekt pokazywany w „Wybranych realizacjach” na stronie głównej. */
+  featured?: boolean;
 };
 
 export const projects: Project[] = [
@@ -37,6 +46,7 @@ export const projects: Project[] = [
       github: "https://github.com/KozlowskiJacek/Projects-Python/tree/main/Python/GPSMaker",
       live: null,
     },
+    featured: true,
   },
   {
     id: "web-scraping",
@@ -50,6 +60,7 @@ export const projects: Project[] = [
       github: "https://github.com/KozlowskiJacek/Projects-Python/tree/main/Python/Web%20scraping",
       live: null,
     },
+    featured: true,
   },
   {
     id: "aureliahr",
@@ -60,6 +71,7 @@ export const projects: Project[] = [
     descriptionKey: "projects.aureliah",
     tech: ["React", "JavaScript", "MongoDB"],
     links: { github: "https://github.com/KozlowskiJacek/AureliaHR", live: null },
+    featured: true,
   },
   {
     id: "noescapecursor",
@@ -71,6 +83,7 @@ export const projects: Project[] = [
     // TODO: uzupełnić stack projektu NoEscapeCursor.
     tech: [],
     links: { github: "https://github.com/KozlowskiJacek/NoEscapeCursor", live: null },
+    featured: true,
   },
   // TODO: podać link do repozytorium projektu Cooking.
   {
@@ -82,6 +95,7 @@ export const projects: Project[] = [
     descriptionKey: "projects.cooking",
     tech: [],
     links: { github: null, live: null },
+    featured: true,
   },
   {
     id: "cooking-2",
@@ -92,5 +106,11 @@ export const projects: Project[] = [
     descriptionKey: "projects.cooking",
     tech: [],
     links: { github: null, live: null },
+    featured: true,
   },
 ];
+
+/** Maks. liczba realizacji na stronie głównej. */
+export const FEATURED_LIMIT = 6;
+
+export const featuredProjects = projects.filter((project) => project.featured).slice(0, FEATURED_LIMIT);

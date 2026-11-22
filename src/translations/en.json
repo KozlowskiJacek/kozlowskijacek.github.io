@@ -53,6 +53,13 @@
         "uiux": "UI/UX design",
         "automation": "Automation"
       }
+    },
+    "work": {
+      "title": "Selected",
+      "accent": "work",
+      "text": "A few projects I'm proud of — each with a short story of how it was made.",
+      "case_study": "View project",
+      "all": "Full portfolio"
     }
   },
   "about": {
@@ -218,7 +225,12 @@
     "webscraping": "My first script that ended up being used by others.",
     "aureliah": "Engineering thesis project – team management application.",
     "noescapecursor": "Is a simple program that locks the edges of your primary monitor whenever a selected game or application is active.",
-    "cooking": "I'm creating an awesome app – just give me a bit more time 🔥"
+    "cooking": "I'm creating an awesome app – just give me a bit more time 🔥",
+    "categories": {
+      "web": "Web",
+      "python": "Python",
+      "desktop": "Desktop"
+    }
   },
   "feedback": {
     "they_trust": "They Trust",

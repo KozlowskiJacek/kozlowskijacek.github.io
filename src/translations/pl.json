@@ -53,6 +53,13 @@
         "uiux": "Projekty UI/UX",
         "automation": "Automatyzacje"
       }
+    },
+    "work": {
+      "title": "Wybrane",
+      "accent": "realizacje",
+      "text": "Kilka projektów, z których jestem dumny — każdy z krótkim opisem, jak powstał.",
+      "case_study": "Zobacz projekt",
+      "all": "Całe portfolio"
     }
   },
   "about": {
@@ -218,7 +225,12 @@
     "webscraping": "Mój pierwszy skrypt, który był wykorzystany przez innych",
     "aureliah": "Projekt na pracę inżynierską - aplikacja do zarządzania zespołami.",
     "noescapecursor": "To prosty program, który blokuje krawędzie głównego monitora, gdy aktywna jest wybrana gra lub aplikacja.",
-    "cooking": "Tworzę super aplikację daj mi jeszcze trochę czasu 🔥"
+    "cooking": "Tworzę super aplikację daj mi jeszcze trochę czasu 🔥",
+    "categories": {
+      "web": "Web",
+      "python": "Python",
+      "desktop": "Desktop"
+    }
   },
   "feedback": {
     "they_trust": "Zaufali",
