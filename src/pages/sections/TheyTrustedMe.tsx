@@ -1,25 +1,25 @@
-
 import ImageSlider from "../../components/ImageSlider";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion"
 import { fadeIn, reveal } from "../../lib/animations";
+import Section from "../../components/ui/Section";
+import SectionHeading from "../../components/ui/SectionHeading";
 
 const TheyTrustedMe = () => {
 
   const {t} = useTranslation()
 
   return (
-    <section
-      className="text-white bg-bg_color_1 flex flex-col justify-center items-center min-h-screen w-full pt-[50px] px-4"
-      id="feedback"
-    >
-      <motion.div className=""
+    <Section id="feedback" padding="compact" className="text-white flex-col">
+      <motion.div
         variants={fadeIn("top")}
         {...reveal}
        >
-        <h2 className="leading-10 md:text-5xl text-3xl font-semibold mb-12 text-center">
-          {t("feedback.they_trust")} <span className="text-main_accent">{t("feedback.me")}</span>
-        </h2>
+        <SectionHeading
+          className="leading-10 md:text-5xl text-3xl font-semibold mb-12 text-center"
+          title={t("feedback.they_trust")}
+          accent={t("feedback.me")}
+        />
       </motion.div>
       <motion.div
         variants={fadeIn("bottom")}
@@ -27,7 +27,7 @@ const TheyTrustedMe = () => {
        >
         <ImageSlider />
       </motion.div>
-    </section>
+    </Section>
   );
 };
 

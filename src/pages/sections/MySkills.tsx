@@ -2,6 +2,9 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { fadeIn, reveal } from "../../lib/animations";
 import { useTranslation } from "react-i18next";
+import Section from "../../components/ui/Section";
+import SectionHeading from "../../components/ui/SectionHeading";
+import Button from "../../components/ui/Button";
 import Modal from "../../components/Modal";
 import { skills, type SkillTitle } from "../../data/skills";
 
@@ -13,18 +16,14 @@ const MySkills = () => {
   const titleOf = (item: SkillTitle) => ("titleKey" in item ? t(item.titleKey) : item.title);
 
   return (
-    <section
-      className="text-white bg-bg_color_1 flex flex-col justify-center items-center min-h-screen w-full pt-[100px] px-[9%] py-[20px]"
-      id="skills"
-    >
-      <motion.h2
+    <Section id="skills" bg="primary" className="text-white flex-col">
+      <SectionHeading
         className="text-center text-5xl font-bold mb-20"
         variants={fadeIn("top")}
         {...reveal}
-      >
-        {t("skills.my")}
-        <span className="text-main_accent"> {t("skills.skills")}</span>
-      </motion.h2>
+        title={t("skills.my")}
+        accent={t("skills.skills")}
+      />
       <motion.div
         className="grid grid-cols-1 md:grid-cols-3 items-center gap-10 mb-10"
         variants={fadeIn("bottom")}
@@ -64,9 +63,9 @@ const MySkills = () => {
                   <p>{t(skill.highlight.descriptionKey)}</p>
                   <hr className="border-t-solid border-1 border-white" />
                   <div className="flex flex-row justify-center">
-                    <button className="md:text-xl text-base btn" onClick={close}>
+                    <Button className="md:text-xl text-base" onClick={close}>
                       {t("skills.close_btn")}
-                    </button>
+                    </Button>
                   </div>
                 </div>
               </Modal>
@@ -74,7 +73,7 @@ const MySkills = () => {
           );
         })}
       </motion.div>
-    </section>
+    </Section>
   );
 };
 

@@ -2,23 +2,21 @@ import { motion } from "framer-motion";
 import { fadeIn, reveal } from "../../lib/animations";
 import { projects } from "../../data/projects";
 import { useTranslation } from "react-i18next";
+import Section from "../../components/ui/Section";
+import SectionHeading from "../../components/ui/SectionHeading";
 
 const Projects = () => {
   const { t } = useTranslation();
 
   return (
-    <section
-      className="text-white bg-bg_color_2 flex flex-col justify-center items-center min-h-screen w-full pt-[100px] px-[9%] py-[20px]"
-      id="projects"
-    >
-      <motion.h2
+    <Section id="projects" bg="secondary" className="text-white flex-col">
+      <SectionHeading
         className="text-center text-5xl font-bold mb-10"
         variants={fadeIn("top")}
         {...reveal}
-      >
-        {t("projects.my")}
-        <span className="text-main_accent"> {t("projects.projects")}</span>
-      </motion.h2>
+        title={t("projects.my")}
+        accent={t("projects.projects")}
+      />
       <motion.div
         className="grid grid-cols-1 md:grid-cols-3 items-center gap-10 mb-10"
         variants={fadeIn("bottom")}
@@ -52,7 +50,7 @@ const Projects = () => {
           </div>
         ))}
       </motion.div>
-    </section>
+    </Section>
   );
 };
 

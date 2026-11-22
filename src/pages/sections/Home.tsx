@@ -6,6 +6,8 @@ import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import { fadeIn, reveal } from "../../lib/animations";
 import { socials } from "../../data/socials";
+import Section from "../../components/ui/Section";
+import Button from "../../components/ui/Button";
 
 const roles = [
   "Full Stack Developer",
@@ -57,10 +59,7 @@ const Home = () => {
   const scrollTo = useSmoothScroll();
 
   return (
-    <section
-      className="bg-bg_color_1 flex md:flex-row flex-col  justify-center items-center min-h-screen w-full pt-[100px] px-[9%] py-[20px]"
-      id="home"
-    >
+    <Section id="home" className="md:flex-row flex-col">
       <motion.div
         className="w-full text-white"
         variants={fadeIn("top")}
@@ -107,12 +106,9 @@ const Home = () => {
               </a>
             ))}
         </div>
-        <a
-          onClick={() => scrollTo("contact")}
-          className="md:text-xl text-base btn"
-        >
+        <Button onClick={() => scrollTo("contact")} className="md:text-xl text-base">
           {t("home.btn_get_in_touch")}
-        </a>
+        </Button>
       </motion.div>
       <motion.div
         className="w-[75vw] "
@@ -125,7 +121,7 @@ const Home = () => {
           alt=""
         />
       </motion.div>
-    </section>
+    </Section>
   );
 };
 

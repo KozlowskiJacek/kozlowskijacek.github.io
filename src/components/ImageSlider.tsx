@@ -5,6 +5,7 @@ import { FaStar } from "react-icons/fa";
 import { Autoplay } from 'swiper/modules';
 import { useTranslation } from "react-i18next";
 import { testimonials, type Testimonial } from '../data/testimonials';
+import Button from './ui/Button';
 
 const STARS = 5;
 const PREVIEW_LENGTH = 200;
@@ -75,9 +76,9 @@ const ImageSlider = () => {
             <h2 className='text-2xl font-bold text-center mb-2'>{selected.name}</h2>
             <p className='text-center'>{t(selected.textKey)}</p>
             <div className="flex flex-row justify-center">
-              <button className="btn" onClick={() => setSelected(null)}>
-                  {t("skills.close_btn")}
-              </button>
+              <Button onClick={() => setSelected(null)}>
+                {t("skills.close_btn")}
+              </Button>
             </div>
           </div>
         </div>

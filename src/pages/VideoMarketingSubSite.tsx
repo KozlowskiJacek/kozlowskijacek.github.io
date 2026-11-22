@@ -3,28 +3,20 @@ import { motion } from "framer-motion";
 import { slideIn, revealHalf } from "../lib/animations";
 import PixelAvatarWEB from "../assets/img/PixelAvatarWEB.png";
 import Photo_about from "../assets/img/Photo_about.png";
-import { useNavigate } from "react-router-dom";
-import useSmoothScroll from "../hooks/useSmoothScroll";
+import useNavigateToSection from "../hooks/useNavigateToSection";
+import Section from "../components/ui/Section";
+import SectionHeading from "../components/ui/SectionHeading";
+import Button from "../components/ui/Button";
 
 const WebAppsSubSite = () => {
   const { t } = useTranslation();
   // const location = useLocation();
-  const navigate = useNavigate();
-  const scrollTo = useSmoothScroll();
-
-  const handleNavigation = () => {
-    // setActiveLink("contact")
-    navigate(`/`);
-    setTimeout(() => scrollTo("contact"), 100);
-  };
+  const navigateToSection = useNavigateToSection();
   //todo Skończyć pod strone teksty i grafiki
   return (
     <>
 
-      <section
-        className="bg-bg_color_1 flex justify-center items-center min-h-screen w-full pt-[100px] px-[9%] py-[20px]"
-        id="nav_profesional"
-      >
+      <Section id="nav_profesional" bg="primary">
         <motion.div
           className="w-full text-white"
           variants={slideIn("left")}
@@ -48,12 +40,9 @@ const WebAppsSubSite = () => {
             alt=""
           />
         </motion.div>
-      </section>
+      </Section>
 
-      <section
-        className="bg-bg_color_2 flex justify-center items-center min-h-screen w-full pt-[100px] px-[9%] py-[20px]"
-        id="nav_ads"
-      >
+      <Section id="nav_ads" bg="secondary">
         <motion.div
           className="w-[75vw] m-20"
           variants={slideIn("bottom")}
@@ -70,10 +59,12 @@ const WebAppsSubSite = () => {
           variants={slideIn("right")}
           {...revealHalf}
         >
-          <h3 className="text-4xl font-bold mb-4">
-            {t("video.ads")}{" "}
-            <span className="text-main_accent">{t("video.films")}</span>
-          </h3>
+          <SectionHeading
+            as="h3"
+            className="text-4xl font-bold mb-4"
+            title={t("video.ads")}
+            accent={t("video.films")}
+          />
           <p className="leading-7 my-5 mb-5">{t("video.text1")}</p>
           <p className="leading-7 my-5 mb-5">{t("video.text1_montage")}</p>
           <p className="leading-7 my-5 mb-5">{t("video.text1_highlights")}</p>
@@ -81,21 +72,20 @@ const WebAppsSubSite = () => {
           <p className="leading-7 my-5 mb-5">{t("video.text1_plan")}</p>
           <p className="leading-7 my-5 mb-5">{t("video.text1_ideal")}</p>
         </motion.div>
-      </section>
+      </Section>
 
-      <section
-        className="bg-bg_color_1 flex justify-center items-center min-h-screen w-full pt-[100px] px-[9%] py-[20px]"
-        id="nav_vlogs"
-      >
+      <Section id="nav_vlogs" bg="primary">
         <motion.div
           className="w-full text-white"
           variants={slideIn("left")}
           {...revealHalf}
         >
-          <h3 className="text-4xl font-bold mb-4">
-            {t("video.vlogs")}{" "}
-            <span className="text-main_accent">{t("video.storytelling")}</span>
-          </h3>
+          <SectionHeading
+            as="h3"
+            className="text-4xl font-bold mb-4"
+            title={t("video.vlogs")}
+            accent={t("video.storytelling")}
+          />
 
           <p className="leading-7 mt-5">{t("video.text_2")}</p>
           <p className="leading-7 mt-5">{t("video.text_2_strategy")}</p>
@@ -115,12 +105,9 @@ const WebAppsSubSite = () => {
             alt=""
           />
         </motion.div>
-      </section>
+      </Section>
 
-      <section
-        className="bg-bg_color_2 flex justify-center items-center min-h-screen w-full pt-[100px] px-[9%] py-[20px]"
-        id="nav_gaming"
-      >
+      <Section id="nav_gaming" bg="secondary">
         <motion.div
           className="w-[75vw] m-20"
           variants={slideIn("bottom")}
@@ -137,10 +124,12 @@ const WebAppsSubSite = () => {
           variants={slideIn("right")}
           {...revealHalf}
         >
-          <h3 className="text-4xl font-bold mb-4">
-            {t("video.gaming")}{" "}
-            <span className="text-main_accent">{t("video.content")}</span>
-          </h3>
+          <SectionHeading
+            as="h3"
+            className="text-4xl font-bold mb-4"
+            title={t("video.gaming")}
+            accent={t("video.content")}
+          />
           <p className="leading-7 my-5 mb-5">{t("video.text_3")}</p>
           <p className="leading-7 my-5 mb-5">{t("video.text_3_dynamic")}</p>
           <p className="leading-7 my-5 mb-5">{t("video.text_3_effect")}</p>
@@ -148,21 +137,20 @@ const WebAppsSubSite = () => {
           <p className="leading-7 my-5 mb-5">{t("video.text_3_platforms")}</p>
           <p className="leading-7 my-5 mb-5">{t("video.text_3_ideal")}</p>
         </motion.div>
-      </section>
+      </Section>
 
-      <section
-        className="bg-bg_color_1 flex justify-center items-center min-h-screen w-full pt-[100px] px-[9%] py-[20px]"
-        id="nav_reels"
-      >
+      <Section id="nav_reels" bg="primary">
         <motion.div
           className="w-full text-white"
           variants={slideIn("left")}
           {...revealHalf}
         >
-          <h3 className="text-4xl font-bold mb-4">
-            {t("video.reels")}{" "}
-            <span className="text-main_accent">{t("video.tiktok")}</span>
-          </h3>
+          <SectionHeading
+            as="h3"
+            className="text-4xl font-bold mb-4"
+            title={t("video.reels")}
+            accent={t("video.tiktok")}
+          />
 
           <p className="leading-7 mt-5">{t("video.text_4")}</p>
           <p className="leading-7 mt-5">{t("video.text_4_dynamic")}</p>
@@ -182,12 +170,9 @@ const WebAppsSubSite = () => {
             alt=""
           />
         </motion.div>
-      </section>
+      </Section>
 
-      <section
-        className="bg-bg_color_2 flex justify-center items-center min-h-screen w-full pt-[100px] px-[9%] py-[20px]"
-        id="nav_how"
-      >
+      <Section id="nav_how" bg="secondary">
         <motion.div
           className="w-[75vw] m-20"
           variants={slideIn("bottom")}
@@ -204,22 +189,21 @@ const WebAppsSubSite = () => {
           variants={slideIn("right")}
           {...revealHalf}
         >
-          <h3 className="text-4xl font-bold mb-4">
-            {t("video.how")}{" "}
-            <span className="text-main_accent">{t("video.practice")}</span>
-          </h3>
+          <SectionHeading
+            as="h3"
+            className="text-4xl font-bold mb-4"
+            title={t("video.how")}
+            accent={t("video.practice")}
+          />
           <p className="leading-7 my-5 mb-5">{t("video.text_5_create")}</p>
           <p className="leading-7 my-5 mb-5">{t("video.text_5_style")}</p>
           <p className="leading-7 my-5 mb-5">{t("video.text_5_support")}</p>
           <p className="leading-7 my-5 mb-5">{t("video.text_5_ideal")}</p>
-          <a
-            onClick={() => handleNavigation()}
-            className="text-2xl font-semibold btn"
-          >
+          <Button onClick={() => navigateToSection("contact")} className="text-2xl font-semibold">
             {t("about.questions")}
-          </a>
+          </Button>
         </motion.div>
-      </section>
+      </Section>
     </>
     //todo Zaktualizoać zdjęcia
   );

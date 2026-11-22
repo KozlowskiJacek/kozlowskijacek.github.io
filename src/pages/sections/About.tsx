@@ -1,18 +1,17 @@
 import aboutPhoto from '../../assets/img/Photo_about.png'
 import { useTranslation } from 'react-i18next'
-import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { fadeIn, reveal } from "../../lib/animations";
+import Section from "../../components/ui/Section";
+import SectionHeading from "../../components/ui/SectionHeading";
+import Button from "../../components/ui/Button";
 
 const About = () => {
 
   const { t } = useTranslation()
 
   return (
-    <section 
-    className='bg-bg_color_2 flex md:flex-row flex-col-reverse justify-center items-center min-h-screen w-full pt-[100px] px-[9%] py-[20px]' 
-    id='about'
-    >
+    <Section id="about" bg="secondary" className="md:flex-row flex-col-reverse">
       <motion.div className='w-[75vw] m-10'
         variants={fadeIn("bottom")}
         {...reveal}
@@ -23,19 +22,20 @@ const About = () => {
         variants={fadeIn("right")}
         {...reveal}
       >
-        <motion.h2 className='text-left md:text-5xl text-3xl font-semibold mb-2'
+        <SectionHeading
+          className='text-left md:text-5xl text-3xl font-semibold mb-2'
           variants={fadeIn("top")}
           {...reveal}
-        >
-          {t("about.about")}<span className='text-main_accent'> {t("about.me")}</span>
-        </motion.h2>
+          title={t("about.about")}
+          accent={t("about.me")}
+        />
         <h3 className='md:text-3xl text-xl font-bold mb-4'>{t("about.title")}</h3>
         <p className='md:leading-7 md:text-base text-sm my-5 md:mb-5 mb-1'>{t("about.text")} 
-          <Link to="/about" className='cursor-pointer text-main_accent hover:drop-shadow-custom-glow transition-all'> {t("about.see_more")}</Link>
+          <Button variant="ghost" to="/about"> {t("about.see_more")}</Button>
         </p>
       </motion.div>
 
-    </section>
+    </Section>
   )
 }
 

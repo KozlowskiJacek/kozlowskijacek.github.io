@@ -6,6 +6,7 @@ import useSmoothScroll from "../../hooks/useSmoothScroll";
 import useScrollSpy from "../../hooks/useScrollSpy";
 import type { NavConfig } from "../../data/navigation";
 import LanguageSwitcher from "./LanguageSwitcher";
+import Container from "../ui/Container";
 
 type HeaderProps = Omit<NavConfig, "id">;
 
@@ -46,7 +47,7 @@ const Header = ({ links, mode, logoTo }: HeaderProps) => {
 
   return (
     <header className="z-50 bg-bg_color_1 text-white fixed top-0 left-0 w-full p-5 shadow-md">
-      <div className="container mx-auto flex justify-between items-center">
+      <Container className="flex justify-between items-center">
         {logoTo ? (
           <Link to={logoTo} className={logoClass}>
             Jacek Kozłowski
@@ -73,7 +74,7 @@ const Header = ({ links, mode, logoTo }: HeaderProps) => {
             {isOpen ? <FaXmark aria-hidden="true" /> : <FaBars aria-hidden="true" />}
           </button>
         </div>
-      </div>
+      </Container>
 
       {isOpen && (
         <div className="absolute left-0 right-0 bg-bg_color_1 text-white flex flex-col items-center space-y-4 py-4 shadow-lg">

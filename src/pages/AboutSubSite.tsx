@@ -4,30 +4,22 @@ import cat from "../assets/img/Cat 1.png";
 import fullStack from "../assets/img/Pixel full stack.png";
 import development from "../assets/img/Development.png";
 import contentCreator from "../assets/img/Content creator img.png";
-import { useNavigate } from "react-router-dom";
-import useSmoothScroll from "../hooks/useSmoothScroll";
+import useNavigateToSection from "../hooks/useNavigateToSection";
+import Section from "../components/ui/Section";
+import SectionHeading from "../components/ui/SectionHeading";
+import Button from "../components/ui/Button";
 import { motion } from "framer-motion";
 import { slideIn, revealHalf } from "../lib/animations";
 
 const AboutSubSite = () => {
-  const navigate = useNavigate();
-  const scrollTo = useSmoothScroll();
+  const navigateToSection = useNavigateToSection();
 
   const { t } = useTranslation();
-
-  const handleNavigation = () => {
-    // setActiveLink("contact")
-    navigate(`/`);
-    setTimeout(() => scrollTo("contact"), 100);
-  };
 
   return (
     <div>
 
-      <section
-        className="bg-bg_color_1 flex md:flex-row flex-col justify-center items-center min-h-screen w-full pt-[100px] px-[9%] py-[20px]"
-        id="title_hello"
-      >
+      <Section id="title_hello" bg="primary" className="md:flex-row flex-col">
         <motion.div
           className="w-full text-white"
           variants={slideIn("left")}
@@ -55,12 +47,9 @@ const AboutSubSite = () => {
             alt=""
           />
         </motion.div>
-      </section>
+      </Section>
 
-      <section
-        className="bg-bg_color_2 flex md:flex-row flex-col-reverse justify-center items-center min-h-screen w-full pt-[100px] px-[9%] py-[20px]"
-        id="title_why"
-      >
+      <Section id="title_why" bg="secondary" className="md:flex-row flex-col-reverse">
         <motion.div
           className="w-[75vw] m-20"
           variants={slideIn("bottom")}
@@ -77,31 +66,30 @@ const AboutSubSite = () => {
           variants={slideIn("right")}
           {...revealHalf}
         >
-          <h3 className="md:text-4xl text-2xl font-bold mb-4">
-            {t("about.why")}{" "}
-            <span className="text-main_accent">{t("about.full_stack")}</span>
-          </h3>
+          <SectionHeading
+            as="h3"
+            className="md:text-4xl text-2xl font-bold mb-4"
+            title={t("about.why")}
+            accent={t("about.full_stack")}
+          />
           <p className="md:leading-7 md:text-base text-sm my-5 mb-5">
             {t("about.text2")}
           </p>
         </motion.div>
-      </section>
+      </Section>
 
-      <section
-        className="bg-bg_color_1 flex md:flex-row flex-col justify-center items-center min-h-screen w-full pt-[100px] px-[9%] py-[20px]"
-        id="title_how"
-      >
+      <Section id="title_how" bg="primary" className="md:flex-row flex-col">
         <motion.div
           className="w-full text-white"
           variants={slideIn("left")}
           {...revealHalf}
         >
-          <h3 className="md:text-4xl text-2xl font-semibold mb-3">
-            {t("about.how")}{" "}
-            <span className="text-main_accent">
-              {t("about.content_creator")}
-            </span>
-          </h3>
+          <SectionHeading
+            as="h3"
+            className="md:text-4xl text-2xl font-semibold mb-3"
+            title={t("about.how")}
+            accent={t("about.content_creator")}
+          />
 
           <p className="md:leading-7 md:text-base text-sm mt-5">
             {t("about.text3")}
@@ -118,12 +106,9 @@ const AboutSubSite = () => {
             alt=""
           />
         </motion.div>
-      </section>
+      </Section>
 
-      <section
-        className="bg-bg_color_2 flex md:flex-row flex-col-reverse justify-center items-center min-h-screen w-full pt-[100px] px-[9%] py-[20px]"
-        id="title_what"
-      >
+      <Section id="title_what" bg="secondary" className="md:flex-row flex-col-reverse">
         <motion.div
           className="w-[75vw] m-20"
           variants={slideIn("bottom")}
@@ -140,39 +125,37 @@ const AboutSubSite = () => {
           variants={slideIn("right")}
           {...revealHalf}
         >
-          <h3 className="md:text-4xl text-2xl font-bold mb-4">
-            {t("about.what_im")}{" "}
-            <span className="text-main_accent">{t("about.guided_by")}</span>
-          </h3>
+          <SectionHeading
+            as="h3"
+            className="md:text-4xl text-2xl font-bold mb-4"
+            title={t("about.what_im")}
+            accent={t("about.guided_by")}
+          />
           <p className="md:leading-7  md:text-base text-sm my-5 mb-5">
             {t("about.text4")}
           </p>
         </motion.div>
-      </section>
+      </Section>
 
-      <section
-        className="bg-bg_color_1 flex md:flex-row flex-col justify-center items-center min-h-screen w-full pt-[100px] px-[9%] py-[20px]"
-        id="title_after"
-      >
+      <Section id="title_after" bg="primary" className="md:flex-row flex-col">
         <motion.div
           className="w-full text-white"
           variants={slideIn("left")}
           {...revealHalf}
         >
-          <h3 className="md:text-4xl text-2xl font-semibold mb-3">
-            {t("about.after")}{" "}
-            <span className="text-main_accent">{t("about.hour")}</span>
-          </h3>
+          <SectionHeading
+            as="h3"
+            className="md:text-4xl text-2xl font-semibold mb-3"
+            title={t("about.after")}
+            accent={t("about.hour")}
+          />
 
           <p className="md:leading-7 md:text-base text-sm mt-5 ">
             {t("about.text5")}
           </p>
-          <a
-            onClick={() => handleNavigation()}
-            className="md:text-2xl text-base font-semibold btn"
-          >
+          <Button onClick={() => navigateToSection("contact")} className="md:text-2xl text-base font-semibold">
             {t("about.questions")}
-          </a>
+          </Button>
           <h2 className=":md:text-xl text-lg">{t("about.bye")}</h2>
         </motion.div>
         <motion.div
@@ -186,7 +169,7 @@ const AboutSubSite = () => {
             alt=""
           />
         </motion.div>
-      </section>
+      </Section>
     </div>
   );
 };

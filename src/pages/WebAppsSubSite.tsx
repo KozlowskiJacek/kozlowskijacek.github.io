@@ -3,28 +3,20 @@ import { motion } from "framer-motion";
 import { slideIn, revealHalf } from "../lib/animations";
 import PixelAvatarWEB from "../assets/img/PixelAvatarWEB.png";
 import Photo_about from "../assets/img/Photo_about.png";
-import { useNavigate } from "react-router-dom";
-import useSmoothScroll from "../hooks/useSmoothScroll";
+import useNavigateToSection from "../hooks/useNavigateToSection";
+import Section from "../components/ui/Section";
+import SectionHeading from "../components/ui/SectionHeading";
+import Button from "../components/ui/Button";
 
 const WebAppsSubSite = () => {
   const { t } = useTranslation();
   // const location = useLocation();
-  const navigate = useNavigate();
-  const scrollTo = useSmoothScroll();
-
-  const handleNavigation = () => {
-    // setActiveLink("contact")
-    navigate(`/`);
-    setTimeout(() => scrollTo("contact"), 100);
-  };
+  const navigateToSection = useNavigateToSection();
 
   return (
     <>
 
-      <section
-        className="bg-bg_color_1 flex justify-center items-center min-h-screen w-full pt-[100px] px-[9%] py-[20px]"
-        id="nav_modern"
-      >
+      <Section id="nav_modern" bg="primary">
         <motion.div
           className="w-full text-white"
           variants={slideIn("left")}
@@ -48,12 +40,9 @@ const WebAppsSubSite = () => {
             alt=""
           />
         </motion.div>
-      </section>
+      </Section>
 
-      <section
-        className="bg-bg_color_2 flex justify-center items-center min-h-screen w-full pt-[100px] px-[9%] py-[20px]"
-        id="nav_discussion"
-      >
+      <Section id="nav_discussion" bg="secondary">
         <motion.div
           className="w-[75vw] m-20"
           variants={slideIn("bottom")}
@@ -70,27 +59,28 @@ const WebAppsSubSite = () => {
           variants={slideIn("right")}
           {...revealHalf}
         >
-          <h3 className="text-4xl font-bold mb-4">
-            {t("web_app.talk")}{" "}
-            <span className="text-main_accent">{t("web_app.analysis")}</span>
-          </h3>
+          <SectionHeading
+            as="h3"
+            className="text-4xl font-bold mb-4"
+            title={t("web_app.talk")}
+            accent={t("web_app.analysis")}
+          />
           <p className="leading-7 my-5 mb-5">{t("web_app.text3")}</p>
         </motion.div>
-      </section>
+      </Section>
 
-      <section
-        className="bg-bg_color_1 flex justify-center items-center min-h-screen w-full pt-[100px] px-[9%] py-[20px]"
-        id="nav_visual"
-      >
+      <Section id="nav_visual" bg="primary">
         <motion.div
           className="w-full text-white"
           variants={slideIn("left")}
           {...revealHalf}
         >
-          <h3 className="text-4xl font-bold mb-4">
-            {t("web_app.project")}{" "}
-            <span className="text-main_accent">{t("web_app.concept")}</span>
-          </h3>
+          <SectionHeading
+            as="h3"
+            className="text-4xl font-bold mb-4"
+            title={t("web_app.project")}
+            accent={t("web_app.concept")}
+          />
 
           <p className="leading-7 mt-5">{t("web_app.text4")}</p>
         </motion.div>
@@ -105,12 +95,9 @@ const WebAppsSubSite = () => {
             alt=""
           />
         </motion.div>
-      </section>
+      </Section>
 
-      <section
-        className="bg-bg_color_2 flex justify-center items-center min-h-screen w-full pt-[100px] px-[9%] py-[20px]"
-        id="nav_development"
-      >
+      <Section id="nav_development" bg="secondary">
         <motion.div
           className="w-[75vw] m-20"
           variants={slideIn("bottom")}
@@ -127,29 +114,28 @@ const WebAppsSubSite = () => {
           variants={slideIn("right")}
           {...revealHalf}
         >
-          <h3 className="text-4xl font-bold mb-4">
-            {t("web_app.coding")}{" "}
-            <span className="text-main_accent">
-              {t("web_app.implementation")}
-            </span>
-          </h3>
+          <SectionHeading
+            as="h3"
+            className="text-4xl font-bold mb-4"
+            title={t("web_app.coding")}
+            accent={t("web_app.implementation")}
+          />
           <p className="leading-7 my-5 mb-5">{t("web_app.text5")}</p>
         </motion.div>
-      </section>
+      </Section>
 
-      <section
-        className="bg-bg_color_1 flex justify-center items-center min-h-screen w-full pt-[100px] px-[9%] py-[20px]"
-        id="nav_presentation"
-      >
+      <Section id="nav_presentation" bg="primary">
         <motion.div
           className="w-full text-white"
           variants={slideIn("left")}
           {...revealHalf}
         >
-          <h3 className="text-4xl font-bold mb-4">
-            {t("web_app.presentation")}{" "}
-            <span className="text-main_accent">{t("web_app.ready")}</span>
-          </h3>
+          <SectionHeading
+            as="h3"
+            className="text-4xl font-bold mb-4"
+            title={t("web_app.presentation")}
+            accent={t("web_app.ready")}
+          />
 
           <p className="leading-7 mt-5">{t("web_app.text6")}</p>
         </motion.div>
@@ -164,12 +150,9 @@ const WebAppsSubSite = () => {
             alt=""
           />
         </motion.div>
-      </section>
+      </Section>
 
-      <section
-        className="bg-bg_color_2 flex justify-center items-center min-h-screen w-full pt-[100px] px-[9%] py-[20px]"
-        id="nav_support"
-      >
+      <Section id="nav_support" bg="secondary">
         <motion.div
           className="w-[75vw] m-20"
           variants={slideIn("bottom")}
@@ -186,19 +169,18 @@ const WebAppsSubSite = () => {
           variants={slideIn("right")}
           {...revealHalf}
         >
-          <h3 className="text-4xl font-bold mb-4">
-            {t("web_app.support")}{" "}
-            <span className="text-main_accent">{t("web_app.after")}</span>
-          </h3>
+          <SectionHeading
+            as="h3"
+            className="text-4xl font-bold mb-4"
+            title={t("web_app.support")}
+            accent={t("web_app.after")}
+          />
           <p className="leading-7 my-5 mb-5">{t("web_app.text7")}</p>
-          <a
-            onClick={() => handleNavigation()}
-            className="text-2xl font-semibold btn"
-          >
+          <Button onClick={() => navigateToSection("contact")} className="text-2xl font-semibold">
             {t("about.questions")}
-          </a>
+          </Button>
         </motion.div>
-      </section>
+      </Section>
     </>
     //todo Zaktualizoać zdjęcia
   );

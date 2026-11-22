@@ -2,24 +2,25 @@ import FormContact from "../../components/FormContact";
 import { motion } from "framer-motion";
 import { fadeIn, reveal } from "../../lib/animations";
 import { useTranslation } from "react-i18next";
+import Section from "../../components/ui/Section";
+import SectionHeading from "../../components/ui/SectionHeading";
 
 const Contact = () => {
   const { t } = useTranslation();
 
   return (
-    <section
-      className="text-white bg-bg_color_2 flex flex-col justify-center items-center min-h-screen w-full pt-[100px] px-[9%] py-[20px]"
-      id="contact"
-    >
+    <Section id="contact" bg="secondary" className="text-white flex-col">
       <motion.div
         variants={fadeIn("top")}
         {...reveal}
       >
-        <h2 className="mb-5 md:text-5xl text-3xl font-semibold">
-          {t("contact.lets")}{" "}
-          <span className="text-main_accent">{t("contact.collaborate")}</span>{" "}
-          🤝
-        </h2>
+        <SectionHeading
+          className="mb-5 md:text-5xl text-3xl font-semibold"
+          title={t("contact.lets")}
+          accent={t("contact.collaborate")}
+        >
+          {" "}🤝
+        </SectionHeading>
         <p className="md:text-base text-sm text-gray_400 mb-[3rem]">
           {t("contact.write")}
         </p>
@@ -31,7 +32,7 @@ const Contact = () => {
       >
         <FormContact />
       </motion.div>
-    </section>
+    </Section>
   );
 };
 
