@@ -116,6 +116,12 @@
   },
 
   "video": {
+    "nav_profesional": "Professional Videos",
+    "nav_ads": "Ads",
+    "nav_vlogs": "Vlogs",
+    "nav_gaming": "Gaming",
+    "nav_reels": "Reels",
+    "nav_how": "How It Works",
     "title1": "Professional Films and Social Media,",
     "title2": "That Attract Audiences",
     "text": "Do you want your brand to stand out on social media? I create engaging videos that capture attention and build strong relationships with your audience.",
@@ -135,7 +141,7 @@
     "text_2_speed": "✅ Regularity and speed are crucial – In the world of vlogs, consistent publishing is key. If you send me last-minute materials, I’ll do my best to deliver a finished video as quickly as possible – without sacrificing quality. In extreme cases, I’ll let you know if it’s better to delay by a day rather than rush something out.",
     "text_2_collaboration": "✅ Full optimization of collaboration – If you want to streamline the process, I can handle uploading videos to your channel. First, I’ll upload them as unlisted for your approval, then publish them for your audience. I’ve been managing such channels in three languages for two years, so I know how it works.",
     "text_2_ideal": "Perfect for online creators, personal brands, and businesses that want to show behind-the-scenes content.",
-    "gameing": "🎮 Gaming",
+    "gaming": "🎮 Gaming",
     "content": "Content",
     "text_3": "Are you creating gaming content and want to attract a larger audience? I’ll edit your footage so that viewers keep coming back for more.",
     "text_3_dynamic": "✅ Dynamic highlight editing – Fast cuts, the best moments, and smooth narration that keeps viewers engaged from start to finish.",
@@ -178,7 +184,7 @@
     "projects": "Projects",
     "gpsmaker": "A script using the pandas library to process CSV files with GPS data.",
     "webscraping": "My first script that ended up being used by others.",
-    "aureliahr": "Engineering thesis project – team management application.",
+    "aureliah": "Engineering thesis project – team management application.",
     "noescapecursor": "Is a simple program that locks the edges of your primary monitor whenever a selected game or application is active.",
     "cooking": "I'm creating an awesome app – just give me a bit more time 🔥"
   },

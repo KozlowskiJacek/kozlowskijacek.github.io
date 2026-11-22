@@ -110,7 +110,7 @@ const WebAppsSubSite = () => {
         >
           <h3 className="text-4xl font-bold mb-4">
             {t("video.vlogs")}{" "}
-            <span className="video.storytelling">{t("web_app.concept")}</span>
+            <span className="text-main_accent">{t("video.storytelling")}</span>
           </h3>
 
           <p className="leading-7 mt-5">{t("video.text_2")}</p>
@@ -160,7 +160,7 @@ const WebAppsSubSite = () => {
           viewport={{ once: false, amount: 0.5 }}
         >
           <h3 className="text-4xl font-bold mb-4">
-            {t("video.gameing")}{" "}
+            {t("video.gaming")}{" "}
             <span className="text-main_accent">{t("video.content")}</span>
           </h3>
           <p className="leading-7 my-5 mb-5">{t("video.text_3")}</p>

@@ -12,7 +12,8 @@
     "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
-    "typecheck": "tsc -b"
+    "typecheck": "tsc -b",
+    "i18n:check": "node scripts/check-i18n.mjs"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",

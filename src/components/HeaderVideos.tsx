@@ -105,7 +105,7 @@ const Header = () => {
                 activeLink === link ? "scale-110 text-main_accent" : ""
               }`}
             >
-              {t(`navbar.${link}`)}
+              {t(`video.${link}`)}
             </a>
           ))}
         </div>

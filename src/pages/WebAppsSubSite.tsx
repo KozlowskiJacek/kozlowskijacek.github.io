@@ -94,7 +94,7 @@ const WebAppsSubSite = () => {
 
       <section
         className="bg-bg_color_1 flex justify-center items-center min-h-screen w-full pt-[100px] px-[9%] py-[20px]"
-        id="_nav_visual"
+        id="nav_visual"
       >
         <motion.div
           className="w-full text-white"
@@ -161,7 +161,7 @@ const WebAppsSubSite = () => {
 
       <section
         className="bg-bg_color_1 flex justify-center items-center min-h-screen w-full pt-[100px] px-[9%] py-[20px]"
-        id="nav_ presentation"
+        id="nav_presentation"
       >
         <motion.div
           className="w-full text-white"

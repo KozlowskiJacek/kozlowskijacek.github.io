@@ -41,6 +41,7 @@ Pozostałe komendy:
 | `npm run preview`   | podgląd zbudowanej wersji            |
 | `npm run lint`      | ESLint                               |
 | `npm run typecheck` | sprawdzenie typów (`tsc -b`)         |
+| `npm run i18n:check`| klucze `t()` obecne w `pl.json` i `en.json` |
 | `npm run deploy`    | build + publikacja na GitHub Pages   |
 
 ## Zmienne środowiskowe

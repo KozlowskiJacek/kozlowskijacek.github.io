@@ -14,7 +14,7 @@
     "im": "Jestem",
     "text": "Jestem junior full-stack developerem i kreatorem treści, który łączy technologie z marketingiem wizualnym. Tworzę nowoczesne aplikacje webowe, strony internetowe oraz uwielbiam automatyzować procesy biznesowe, dzięki czemu Twoja firma działa szybciej i sprawniej. Poza programowaniem realizuję profesjonalne filmy reklamowe, materiały promocyjne i rolki w social media, które przyciągają uwagę i budują wizerunek marki.",
     "text2": "Moją pasją jest tworzenie rozwiązań od podstaw – projektów, które nie tylko działają, ale przynoszą realną wartość: większą sprzedaż, lepszą komunikację z klientami i rozpoznawalność marki. Lubię współtworzyć innowacyjne projekty i pomagać w realizacji pomysłów, które wyróżniają się na rynku. Jeśli szukasz kogoś, kto połączy technologię z kreatywnością i dostarczy Ci realne rezultaty – działajmy razem!",
-    "btn_get_in_touch": "Skontaktuj się za mną"
+    "btn_get_in_touch": "Skontaktuj się ze mną"
   },
 
 "about": {
@@ -118,7 +118,7 @@
     "concept": "koncepcja działania",
     "text4": "Na podstawie naszej rozmowy przygotowuję wstępny projekt wizualny strony lub aplikacji oraz jej schemat działania. Nie musisz go akceptować od razu – to etap, w którym wprowadzanie zmian jest wskazane. Nie zawsze się z Tobą zgodzę, bo moim celem jest stworzenie rozwiązania funkcjonalnego i intuicyjnego dla Twoich użytkowników, ale zawsze biorę pod uwagę Twoją wizję. Przy prezentacji projektu wizualnego od razu wycenię również koszt całej realizacji. Cena nie zmieni się od tego momentu, chyba że nastąpią krytyczne sytuacje, takie jak ogromna zmiana w końcowej fazie projektu.",
     "coding": "Kodowanie i",
-    "implementation": "realizacaj",
+    "implementation": "realizacja",
     "text5": "Po zaakceptowaniu projektu wizualnego przechodzę do pracy nad stroną lub aplikacją. Na tym etapie mamy nieco mniej kontaktu, ale zawsze jestem dostępny, jeśli pojawią się nowe pomysły lub potrzeba wprowadzenia zmian. Jeśli projekt jest bardziej złożony, możemy umówić się na kolejne spotkanie w celu omówienia postępów.",
     "presentation": "Prezentacja",
     "ready": "Gotowego projektu",
@@ -134,13 +134,13 @@
     "nav_vlogs": "Vlogi",
     "nav_gaming": "Gaming",
     "nav_reels": "Reels",
-    "nav_how": "How It Works",
+    "nav_how": "Jak to działa",
     "title1": "Profesjonalne Filmy i Social Media,",
     "title2": "Które Przyciągają Odbiorców",
     "text": "Chcesz, aby Twoja marka wyróżniała się w mediach społecznościowych? Tworzę angażujące filmy, które przyciągają uwagę i budują silne relacje z Twoimi odbiorcami.",
     "ads": "🎥 Reklamy i",
     "films": "Filmy Promocyjne",
-    "text1": "Krótko, dynamicznie i na temat – reklama powinna przyciągać uwagę w pierwszych sekundach. Tworzę filmy, które skutecznie prezentują Twoją markę, produkt lub usługę. Ty powiedz mi co chcesz przekazać Twoim klientom, a ja dopilnuje, żeby Twój komunikat dotarł do największaj ilości potecjalnych klientów",
+    "text1": "Krótko, dynamicznie i na temat – reklama powinna przyciągać uwagę w pierwszych sekundach. Tworzę filmy, które skutecznie prezentują Twoją markę, produkt lub usługę. Ty powiedz mi co chcesz przekazać Twoim klientom, a ja dopilnuję, żeby Twój komunikat dotarł do największej liczby potencjalnych klientów",
     "text1_montage": "✅ Nie montuję przypadkowych ujęć – tworzę przemyślaną historię. Skupiam się na tym, co chcesz przekazać. Każdy film to nie tylko obraz, ale przede wszystkim komunikat, który ma działać na odbiorcę.",
     "text1_highlights": "✅ Podkreślam to, co wyróżnia Twój produkt, usługę lub markę. Analizuję, czym się zajmujesz, co sprawia, że jesteś najlepszy i jak najlepiej to pokazać w dynamicznym, angażującym materiale.",
     "text1_one": "✅ Jeden film – wiele możliwości. Tworzę materiały, które sprawdzą się zarówno na stronach internetowych, jak i w social mediach. Dopasowuję je tak, by jeden film mógł być skutecznie promowany w różnych formatach – od szerokiego ekranu po pionowe rolki.",
@@ -154,7 +154,7 @@
     "text_2_speed": "✅ Regularność i szybkość mają kluczowe znaczenie – W świecie vlogów liczy się stała publikacja. Jeśli dostarczysz mi materiały na ostatnią chwilę, zrobię wszystko, by jak najszybciej dostarczyć gotowy film – oczywiście bez utraty jakości. W ekstremalnych sytuacjach dam Ci znać, jeśli lepiej będzie opóźnić publikację o jeden dzień, zamiast wrzucać coś na siłę.",
     "text_2_collaboration": "✅ Pełna optymalizacja współpracy – Jeśli chcesz jeszcze bardziej usprawnić proces, mogę zająć się publikacją filmów na Twoim kanale. Najpierw wrzucę je jako niepubliczne do Twojej akceptacji, a potem opublikuję dla Twoich widzów. Prowadzę takie kanały od 2 lat w trzech językach, więc doskonale wiem, jak to działa.",
     "text_2_ideal": "Sprawdza się świetnie dla twórców internetowych, marek osobistych i firm chcących pokazać kulisy swojej pracy.",
-    "gameing": "🎮 Gameing",
+    "gaming": "🎮 Gaming",
     "content": "Content",
     "text_3": "Tworzysz treści gamingowe i chcesz przyciągnąć większą publiczność? Zajmę się montażem Twojego materiału, tak by widzowie wracali po więcej.",
     "text_3_dynamic": "✅ Dynamiczny montaż highlightów – Szybkie cięcia, najlepsze momenty i płynna narracja, która utrzyma uwagę widzów od początku do końca.",
@@ -183,11 +183,11 @@
   "projects": {
     "my": "Moje",
     "projects": "Projekty",
-    "gpsmaker": "Skrypt wykorzystywujący bibliotekę pandas do przetwarzania plików csv z danymi GPS.",
+    "gpsmaker": "Skrypt wykorzystujący bibliotekę pandas do przetwarzania plików csv z danymi GPS.",
     "webscraping": "Mój pierwszy skrypt, który był wykorzystany przez innych",
-    "aureliahr": "Projekt na pracę inżynierską - aplikacja do zarządzania zespołami.",
+    "aureliah": "Projekt na pracę inżynierską - aplikacja do zarządzania zespołami.",
     "noescapecursor": "To prosty program, który blokuje krawędzie głównego monitora, gdy aktywna jest wybrana gra lub aplikacja.",
-    "cooking": "Tworzę super aplikcję daj mi jeszcze trochę czasu 🔥"
+    "cooking": "Tworzę super aplikację daj mi jeszcze trochę czasu 🔥"
   },
 
   "feedback": {
