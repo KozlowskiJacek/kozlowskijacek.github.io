@@ -22,5 +22,11 @@ i18n
     },
   });
 
+// Atrybut lang w <html> podąża za aktywnym językiem (czytniki ekranu, SEO).
+const syncHtmlLang = (lng: string) => {
+  document.documentElement.lang = lng.split("-")[0];
+};
+syncHtmlLang(i18n.resolvedLanguage ?? i18n.language ?? "pl");
+i18n.on("languageChanged", syncHtmlLang);
 
-  export default i18n
+export default i18n
