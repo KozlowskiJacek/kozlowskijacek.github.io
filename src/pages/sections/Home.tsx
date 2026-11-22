@@ -4,6 +4,7 @@ import homePhoto1 from "../../assets/img/MainPhoto.png";
 import useSmoothScroll from "../../hooks/useSmoothScroll";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
+import { fadeInVariants } from "../../utils/animations";
 
 const Home = () => {
   const { t } = useTranslation();
@@ -53,27 +54,6 @@ const Home = () => {
   }, [charIndex, isDeleting, pause]);
 
   const scrollTo = useSmoothScroll();
-
-  const fadeInVariants = (direction: "top" | "bottom" | "left" | "right") => {
-    return {
-      hidden: {
-        opacity: 0,
-        y: direction === "top" ? -80 : direction === "bottom" ? 80 : 0,
-        x: direction === "left" ? -80 : direction === "right" ? 80 : 0,
-      },
-      visible: {
-        opacity: 1,
-        y: 0,
-        x: 0,
-        transition: {
-          duration: 2,
-          opacity: { duration: 2, delay: 0.6 },
-          delay: 0.2,
-          ease: [0.9, 0, 0.2, 1],
-        },
-      },
-    };
-  };
 
   return (
     <section

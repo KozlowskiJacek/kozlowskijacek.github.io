@@ -6,14 +6,14 @@ import { useTranslation } from 'react-i18next';
 import { serviceId, templateId, publicKey } from '../env';
 
 const FormContact = () => {
-  const form = useRef();
-  const buttonRef = useRef(null);
+  const form = useRef<HTMLFormElement>(null);
+  const buttonRef = useRef<HTMLInputElement>(null);
   const {t} = useTranslation()
   
   // Zmieniamy kolor tekstu na biały po załadowaniu formularza (autofill)
   useEffect(() => {
     const changeTextColor = () => {
-      const inputs = document.querySelectorAll('input:-webkit-autofill, textarea:-webkit-autofill');
+      const inputs = document.querySelectorAll<HTMLInputElement | HTMLTextAreaElement>('input:-webkit-autofill, textarea:-webkit-autofill');
       inputs.forEach(input => {
         input.style.color = 'white';  // Wymusza kolor białego tekstu
       });
@@ -32,6 +32,8 @@ const FormContact = () => {
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const formElement = e.currentTarget;
+    if (!form.current) return;
 
     emailjs
       .sendForm(serviceId, templateId, form.current, {
@@ -40,7 +42,7 @@ const FormContact = () => {
       .then(
         () => {
           console.log('SUCCESS!');
-          e.target.reset();
+          formElement.reset();
 
           if (buttonRef.current) {
             const rect = buttonRef.current.getBoundingClientRect();

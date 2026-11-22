@@ -10,16 +10,23 @@ import agataImage from "../assets/img/Agata.png"
 import dawidImage from "../assets/img/Dawid.jfif"
 import julkaImage from '../assets/img/Julka.png'
 
+type Testimonial = {
+  name: string;
+  logo: string;
+  text: string;
+  color: string;
+};
+
 const ImageSlider = () => {
 
   const [isModalOpen, SetIsModalOpen] = useState(false)
-  const [selectedLang, setSelectedLang] = useState(null)
+  const [selectedLang, setSelectedLang] = useState<Testimonial | null>(null)
 
   const { t } = useTranslation()
 
-  const [active, setActive] = useState(null)
+  const [active, setActive] = useState<number | null>(null)
 
-  const langs = [
+  const langs: Testimonial[] = [
     { name: "Serwis Gąsiorek", logo: serwisGasiorek, text: t("feedback.text1"), color: "#FF5733" },
     { name: "Dawid Ferchow", logo: dawidImage, text: t("feedback.text2"), color: "#33FF57" },
     { name: "Agata Sułkowska", logo: agataImage, text:t("feedback.text3"), color: "#5733FF" },

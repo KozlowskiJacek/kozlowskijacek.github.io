@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { fadeInVariants } from "../../utils/animations";
 import { useTranslation } from "react-i18next";
 import Modal from "../../components/Modal";
 
@@ -12,27 +13,6 @@ const Projects = () => {
   const [openGit, setOpenGit] = React.useState(false);
 
   const { t } = useTranslation();
-
-  const fadeInVariants = (direction: "top" | "bottom" | "left" | "right") => {
-    return {
-      hidden: {
-        opacity: 0,
-        y: direction === "top" ? -80 : direction === "bottom" ? 80 : 0,
-        x: direction === "left" ? -80 : direction === "right" ? 80 : 0,
-      },
-      visible: {
-        opacity: 1,
-        y: 0,
-        x: 0,
-        transition: {
-          duration: 2,
-          opacity: { duration: 2, delay: 0.6 },
-          delay: 0.2,
-          ease: [0.9, 0, 0.2, 1],
-        },
-      },
-    };
-  };
 
   return (
     <section
