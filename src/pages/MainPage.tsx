@@ -1,4 +1,4 @@
-import Home from "../sections/Home";
+import Hero from "../sections/home/Hero";
 import About from "../sections/About";
 import MySkills from "../sections/MySkills";
 import Projects from "../sections/Projects";
@@ -7,7 +7,7 @@ import Contact from "../sections/Contact";
 
 const MainPage = () => (
   <>
-    <Home />
+    <Hero />
     <About />
     <MySkills />
     <Projects />

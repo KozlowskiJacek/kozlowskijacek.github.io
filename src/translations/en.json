@@ -14,16 +14,16 @@
     "open_menu": "Open menu",
     "close_menu": "Close menu"
   },
-
   "home": {
     "hello": "Hi, it's me!",
-    "im": "I am a",
-    "text": "I am a junior full-stack developer and content creator, combining technology with visual marketing. I build modern web applications, websites, and love automating business processes, helping your company run faster and more efficiently. Beyond programming, I create professional promotional videos, marketing materials, and social media reels that attract attention and strengthen brand image.",
-    "text2": "My passion is creating solutions from scratch – projects that not only work but bring real value: increased sales, better client communication, and brand recognition. I enjoy collaborating on innovative projects and helping bring ideas to life that stand out in the market. If you’re looking for someone who can combine technology with creativity and deliver real results – let’s work together!",
-    "btn_get_in_touch": "Get in touch with me"
+    "hero": {
+      "badge": "Developer · Video Creator",
+      "title": "Websites, apps and video that work for your business",
+      "subtitle": "I combine code with creative work. I design and build websites and web apps, and I shoot and edit video — one person from idea to launch.",
+      "cta_offer": "See services",
+      "cta_recruiter": "I'm a recruiter"
+    }
   },
-
-
   "about": {
     "title_hello": "Hello",
     "title_why": "Why Full Stack",
@@ -50,7 +50,6 @@
     "questions": "📩 Got questions? Write to me!",
     "bye": "See you! 🚀"
   },
-
   "skills": {
     "my": "My",
     "skills": "Skills",
@@ -93,7 +92,6 @@
     },
     "close_btn": "Close"
   },
-
   "web_app": {
     "nav_modern": "Modern Website",
     "nav_discussion": "Discussion",
@@ -120,7 +118,6 @@
     "after": "after launch",
     "text7": "My collaboration with you doesn’t end when I hand over the project! If you need help choosing hosting, SEO optimization, or have any questions about how the site works, you can always count on me. And if you ever need a new website or application – just let me know, we’ll surely work something out! 😊"
   },
-
   "video": {
     "nav_profesional": "Professional Videos",
     "nav_ads": "Ads",
@@ -171,20 +168,18 @@
     "text_5_ideal": "Do you want to stand out online? Whether you're building a personal brand, growing a business, or just creating content for fun – I’ll help you produce videos that capture attention! 🎥✨ Contact me, and let’s create something amazing together. 🚀",
     "questions": "📩 Have questions? Message me!"
   },
-
   "services": {
     "my": "My",
     "services": "Services",
     "title": "Code. Creation. Automation.",
     "web_app": "Modern websites and web apps – functionality that sells.",
     "web_app_text": "I design and create websites and web applications tailored to your needs. I listen to your expectations, but always remember that ✨users✨ are the most important!",
-    "video_editor" : "Ads, vlogs, gaming, reels – I create videos that engage, and I’ll take care of your social media too!",
-    "video_editor_text" : "I create content from A to Z – I write scripts, create scenes, shoot footage, adjust colors, and add ✨editing magic✨ to craft a content tailored specifically for your audience! 🎬🚀",
-    "automate" : "Less clicking, more results – automation that saves your time and money.",
-    "automate_text" : "If a process takes too much time for your employee, time they could spend on more productive tasks like working with data instead of clicking through tables, I’ll create automation that will save you time and money! 💡💸",
+    "video_editor": "Ads, vlogs, gaming, reels – I create videos that engage, and I’ll take care of your social media too!",
+    "video_editor_text": "I create content from A to Z – I write scripts, create scenes, shoot footage, adjust colors, and add ✨editing magic✨ to craft a content tailored specifically for your audience! 🎬🚀",
+    "automate": "Less clicking, more results – automation that saves your time and money.",
+    "automate_text": "If a process takes too much time for your employee, time they could spend on more productive tasks like working with data instead of clicking through tables, I’ll create automation that will save you time and money! 💡💸",
     "btn_learn_more": "Learn more!"
   },
-
   "projects": {
     "my": "My",
     "projects": "Projects",
@@ -194,7 +189,6 @@
     "noescapecursor": "Is a simple program that locks the edges of your primary monitor whenever a selected game or application is active.",
     "cooking": "I'm creating an awesome app – just give me a bit more time 🔥"
   },
-
   "feedback": {
     "they_trust": "They Trust",
     "me": "Me",
@@ -203,9 +197,7 @@
     "text3": "Working with Jacek was absolutely smooth and professional from start to finish. The website he created for me exceeded my expectations – it's modern, clear, responsive, and perfectly reflects the character of my brand. I was especially impressed by his personalized approach, quick communication, and great understanding of my needs. Every adjustment was implemented instantly, and the entire process went efficiently and in a friendly atmosphere. I wholeheartedly recommend working with Jacek Kozłowski to anyone looking for a reliable and creative web designer. It’s an investment that truly pays off!",
     "text4": "Awesome collaboration! The concept, execution, and attitude were 100%. Thanks for handling everything – I didn’t have to worry about a thing.",
     "text5": "Ambitious and highly dedicated, which is clearly reflected in the projects he completes. I'm very satisfied with the results and will definitely come back again. Highly recommended! 😊"
-
   },
-  
   "contact": {
     "lets": "Let's",
     "collaborate": "Collaborate",
@@ -218,7 +210,6 @@
     "btn_sending": "Sending...",
     "error": "Your message could not be sent. Please try again in a moment or reach out on LinkedIn."
   },
-
   "pages": {
     "loading": "Loading page…",
     "cta": "Let's talk",
@@ -235,14 +226,12 @@
       "text": "My stack, experience and projects with source code. A downloadable PDF CV is coming soon."
     }
   },
-
   "notFound": {
     "title": "This page doesn't exist",
     "text": "The address may have changed, or the page never existed. Head back home or get in touch.",
     "back_home": "Back to home page",
     "contact": "Contact"
   },
-
   "footer": {
     "tagline": "Developer & Video Creator. I build websites, apps and video content that work for your business.",
     "socials": "Social media",
