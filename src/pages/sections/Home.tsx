@@ -7,16 +7,16 @@ import { motion } from "framer-motion";
 import { fadeInVariants } from "../../utils/animations";
 import { socialLinks } from "../../data/socialLinks";
 
+const roles = [
+  "Full Stack Developer",
+  "YouTuber",
+  "Video Editor",
+  "Content Creator",
+  "Marketing Specialist",
+];
+
 const Home = () => {
   const { t } = useTranslation();
-
-  const roles = [
-    "Full Stack Developer",
-    "YouTuber",
-    "Video Editor",
-    "Content Creator",
-    "Marketing Specialist",
-  ];
 
   const [text, setText] = useState("");
   const [index, setIndex] = useState(0);
@@ -52,7 +52,7 @@ const Home = () => {
     );
 
     return () => clearTimeout(timeout);
-  }, [charIndex, isDeleting, pause]);
+  }, [charIndex, index, isDeleting, pause]);
 
   const scrollTo = useSmoothScroll();
 

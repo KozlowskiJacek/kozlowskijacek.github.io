@@ -3,6 +3,8 @@ import useSmoothScroll from '../hooks/useSmoothScroll'
 import { useTranslation } from "react-i18next"
 import { FaBars, FaXmark } from "react-icons/fa6";
 
+const links = ["home", "about", "skills", "projects", "feedback", "contact"]
+
 const Header = () => {
   const { t, i18n } = useTranslation()
   const scrollTo = useSmoothScroll()
@@ -13,8 +15,6 @@ const Header = () => {
 
   const toggleNavbar = () => setIsOpen(!isOpen)
   
-  const links = ["home", "about", "skills", "projects", "feedback", "contact"]
-
   const toggleLanguage = () => {
     const newLang = currentLang === "pl" ? "en" : "pl"
     i18n.changeLanguage(newLang)

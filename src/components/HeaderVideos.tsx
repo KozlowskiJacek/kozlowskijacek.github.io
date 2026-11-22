@@ -4,6 +4,8 @@ import { useTranslation } from "react-i18next"
 import { Link } from 'react-router-dom'
 import { FaBars, FaXmark } from "react-icons/fa6";
 
+const links = ["nav_profesional", "nav_ads", "nav_vlogs", "nav_gaming", "nav_reels", "nav_how"]
+
 const Header = () => {
   const { t, i18n } = useTranslation()
   const scrollTo = useSmoothScroll()
@@ -14,8 +16,6 @@ const Header = () => {
 
   const toggleNavbar = () => setIsOpen(!isOpen)
   
-  const links = ["nav_profesional", "nav_ads", "nav_vlogs", "nav_gaming", "nav_reels", "nav_how"]
-   
   const toggleLanguage = () => {
     const newLang = currentLang === "pl" ? "en" : "pl"
     i18n.changeLanguage(newLang)
