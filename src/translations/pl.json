@@ -208,7 +208,9 @@
     "email": "Email",
     "subject": "Temat",
     "message": "Twoja wiadomość...",
-    "btn_send": "Wyślij"
+    "btn_send": "Wyślij",
+    "btn_sending": "Wysyłanie...",
+    "error": "Nie udało się wysłać wiadomości. Spróbuj ponownie za chwilę lub napisz do mnie na LinkedIn."
   }
 
 }

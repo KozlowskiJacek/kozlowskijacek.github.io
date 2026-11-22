@@ -208,6 +208,8 @@
     "email": "Email",
     "subject": "Subject",
     "message": "Your message...",
-    "btn_send": "Send"
+    "btn_send": "Send",
+    "btn_sending": "Sending...",
+    "error": "Your message could not be sent. Please try again in a moment or reach out on LinkedIn."
   }
 }

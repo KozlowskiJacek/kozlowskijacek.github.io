@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import confetti from 'canvas-confetti';
 import "../index.css";
@@ -9,6 +9,8 @@ const FormContact = () => {
   const form = useRef<HTMLFormElement>(null);
   const buttonRef = useRef<HTMLInputElement>(null);
   const {t} = useTranslation()
+  const [status, setStatus] = useState<'idle' | 'sending' | 'error'>('idle');
+  const isSending = status === 'sending';
   
   // Zmieniamy kolor tekstu na biały po załadowaniu formularza (autofill)
   useEffect(() => {
@@ -33,7 +35,9 @@ const FormContact = () => {
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formElement = e.currentTarget;
-    if (!form.current) return;
+    if (!form.current || isSending) return;
+
+    setStatus('sending');
 
     emailjs
       .sendForm(serviceId, templateId, form.current, {
@@ -41,7 +45,7 @@ const FormContact = () => {
       })
       .then(
         () => {
-          console.log('SUCCESS!');
+          setStatus('idle');
           formElement.reset();
 
           if (buttonRef.current) {
@@ -56,8 +60,8 @@ const FormContact = () => {
             });
           }
         },
-        (error) => {
-          console.log('FAILED...', error.text);
+        () => {
+          setStatus('error');
         },
       );
   };
@@ -79,7 +83,19 @@ const FormContact = () => {
         required
         className="w-full p-5 text-base text-white bg-bg_color_1 rounded-xl my-4 mx-0"
       />
-      <input type="submit" value={t("contact.btn_send")} ref={buttonRef} className="btn" />
+      {status === 'error' && (
+        <p role="alert" className="text-accent_color_pink md:text-base text-sm mt-2">
+          {t("contact.error")}
+        </p>
+      )}
+      <input
+        type="submit"
+        value={isSending ? t("contact.btn_sending") : t("contact.btn_send")}
+        ref={buttonRef}
+        disabled={isSending}
+        aria-busy={isSending}
+        className="btn disabled:opacity-60 disabled:cursor-not-allowed"
+      />
     </form>
   );
 };
