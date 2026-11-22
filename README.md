@@ -1,50 +1,89 @@
-# React + TypeScript + Vite
+# Portfolio-web
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Osobista strona-wizytówka Jacka Kozłowskiego: **https://jacekkozlowski.github.io**
 
-Currently, two official plugins are available:
+Strona ma dwa cele:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **dla klientów**: prezentuje usługi w dwóch obszarach, czyli kreacja wideo (nagrywanie, montaż, grafiki, animacje) oraz IT (strony www, aplikacje webowe, UI/UX, automatyzacje),
+- **dla rekruterów**: pokazuje stack, projekty, doświadczenie i certyfikaty.
 
-## Expanding the ESLint configuration
+Strona jest dwujęzyczna (PL / EN) i ma formularz kontaktowy wysyłany przez EmailJS.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Stack
 
-- Configure the top-level `parserOptions` property like this:
+| Obszar     | Technologia                                                 |
+| ---------- | ----------------------------------------------------------- |
+| Framework  | React 18 + TypeScript + Vite (SWC)                          |
+| Stylowanie | Tailwind CSS 3 (własna paleta w `tailwind.config.js`)       |
+| Animacje   | framer-motion, keyframes Tailwind                           |
+| Routing    | react-router-dom 7                                          |
+| i18n       | i18next + react-i18next + i18next-browser-languagedetector |
+| Formularz  | @emailjs/browser + canvas-confetti                          |
+| Slider     | Swiper                                                      |
+| Ikony      | boxicons, react-icons                                       |
+| Deploy     | gh-pages → GitHub Pages                                     |
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Uruchomienie
+
+Wymagany Node.js 20+.
+
+```bash
+npm i
+cp .env.example .env   # uzupełnij wartości, patrz niżej
+npm run dev            # serwer deweloperski: http://localhost:5173
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Pozostałe komendy:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+| Komenda             | Opis                                 |
+| ------------------- | ------------------------------------ |
+| `npm run build`     | build produkcyjny do `dist/`         |
+| `npm run preview`   | podgląd zbudowanej wersji            |
+| `npm run lint`      | ESLint                               |
+| `npm run typecheck` | sprawdzenie typów (`tsc -b`)         |
+| `npm run deploy`    | build + publikacja na GitHub Pages   |
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+## Zmienne środowiskowe
+
+Plik `.env` nie jest w repozytorium. Szablon znajdziesz w `.env.example`:
+
+| Zmienna                     | Opis                         |
+| --------------------------- | ---------------------------- |
+| `VITE_EMAILJS_SERVICE_ID`   | ID usługi w EmailJS          |
+| `VITE_EMAILJS_TEMPLATE_ID`  | ID szablonu wiadomości       |
+| `VITE_EMAILJS_PUBLIC_KEY`   | klucz publiczny EmailJS      |
+
+Wartości są czytane w `src/env.ts` i trafiają do bundla (prefiks `VITE_`), więc mogą tu być tylko klucze przeznaczone do użycia w przeglądarce.
+
+## Deploy
+
+```bash
+npm run deploy
 ```
+
+Skrypt `predeploy` buduje projekt, a `gh-pages -d dist` publikuje zawartość `dist/` na gałąź `gh-pages`, z której serwowany jest GitHub Pages. Katalog `dist/` nie jest commitowany.
+
+## Struktura katalogów
+
+```
+.
+├── index.html              # punkt wejścia Vite
+├── public/                 # pliki statyczne kopiowane 1:1 (certyfikaty PDF, favicon)
+├── src/
+│   ├── main.tsx            # bootstrap React + i18n
+│   ├── App.tsx             # routing: /, /about, /web-apps, /social-video
+│   ├── env.ts              # odczyt zmiennych środowiskowych
+│   ├── config/             # konfiguracja i18next
+│   ├── translations/       # pl.json, en.json (jedyne źródło tłumaczeń)
+│   ├── pages/              # podstrony
+│   │   └── sections/       # sekcje strony głównej
+│   ├── components/         # nagłówki, stopka, formularz, slider, modal
+│   ├── hooks/              # własne hooki
+│   └── assets/img/         # obrazy importowane w komponentach
+├── tailwind.config.js
+└── vite.config.ts
+```
+
+## Plan rozwoju
+
+Plan modernizacji strony jest opisany w [ROADMAP.md](ROADMAP.md).
