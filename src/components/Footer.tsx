@@ -1,4 +1,5 @@
 import useSmoothScroll from '../hooks/useSmoothScroll'
+import { FaCaretUp } from "react-icons/fa6";
 
 const Footer = () => {
 
@@ -11,7 +12,7 @@ const Footer = () => {
       </div>
 
       <div>
-        <a onClick={() => scrollTo("home")} className='cursor-pointer w-10 h-10 flex justify-center items-center py-3 px-3 bg-main_accent rounded-lg transition-all duration-500 ease-in-out hover:shadow-custom-around hover:scale-105'><i className='fa-solid fa-caret-up fa-bounce text-bg_color_1 text-2xl'></i></a>
+        <a onClick={() => scrollTo("home")} className='cursor-pointer w-10 h-10 flex justify-center items-center py-3 px-3 bg-main_accent rounded-lg transition-all duration-500 ease-in-out hover:shadow-custom-around hover:scale-105'><FaCaretUp aria-hidden='true' className='animate-bounce text-bg_color_1 text-2xl' /></a>
       </div>
     </footer>
   )

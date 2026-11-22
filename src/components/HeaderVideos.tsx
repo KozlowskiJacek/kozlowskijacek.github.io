@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import useSmoothScroll from '../hooks/useSmoothScroll'
 import { useTranslation } from "react-i18next"
 import { Link } from 'react-router-dom'
+import { FaBars, FaXmark } from "react-icons/fa6";
 
 const Header = () => {
   const { t, i18n } = useTranslation()
@@ -87,8 +88,8 @@ const Header = () => {
               )}
             </button>
          
-          <button onClick={toggleNavbar} className="text-2xl md:hidden">
-            {isOpen ? <i className="fa-solid fa-xmark"></i> : <i className="fa-solid fa-bars"></i>}
+          <button onClick={toggleNavbar} className="text-2xl md:hidden" aria-label="Menu">
+            {isOpen ? <FaXmark aria-hidden="true" /> : <FaBars aria-hidden="true" />}
           </button>
         </div>
       </div>

@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { fadeInVariants } from "../../utils/animations";
 import { useTranslation } from "react-i18next";
 import Modal from "../../components/Modal";
+import { FaReact, FaPython, FaCss3Alt, FaDatabase, FaPuzzlePiece, FaGithub } from "react-icons/fa6";
 
 const Projects = () => {
   const [openReact, setOpenReact] = React.useState(false);
@@ -41,7 +42,7 @@ const Projects = () => {
             className="bg-bg_color_2 w-[300px] h-[200px] md:w-[350px] md:h-[180px] mx-auto md:mx-auto mb-5 p-6 pb-8 rounded-2xl text-center border-2 border-bg_color_1 transition duration-500 ease hover:border-main_accent hover:scale-105 cursor-pointer"
             onClick={() => setOpenReact(true)}
           >
-            <i className="fa-brands fa-react text-main_accent text-6xl"></i>
+            <FaReact aria-hidden="true" className="text-main_accent text-6xl mx-auto" />
             <h3 className="text-2xl font-bold mt-4">React / JS / TS</h3>
           </button>
           <Modal open={openReact} onClose={() => setOpenReact(false)}>
@@ -74,7 +75,7 @@ const Projects = () => {
             className="bg-bg_color_2 w-[300px] h-[200px] md:w-[350px] md:h-[180px] mx-auto md:mx-auto mb-5 p-6 pb-8 rounded-2xl text-center border-2 border-bg_color_1 transition duration-500 ease hover:border-main_accent hover:scale-105 cursor-pointer"
             onClick={() => setOpenPython(true)}
           >
-            <i className="fa-brands fa-python text-main_accent text-6xl"></i>
+            <FaPython aria-hidden="true" className="text-main_accent text-6xl mx-auto" />
             <h3 className="text-2xl font-bold mt-4">Python</h3>
           </button>
           <Modal open={openPython} onClose={() => setOpenPython(false)}>
@@ -114,7 +115,7 @@ const Projects = () => {
             className="bg-bg_color_2 w-[300px] h-[200px] md:w-[350px] md:h-[180px] mx-auto md:mx-auto mb-5 p-6 pb-8 rounded-2xl text-center border-2 border-bg_color_1 transition duration-500 ease hover:border-main_accent hover:scale-105 cursor-pointer"
             onClick={() => setOpenTailwind(true)}
           >
-            <i className="fa-brands fa-css3-alt text-main_accent text-6xl"></i>
+            <FaCss3Alt aria-hidden="true" className="text-main_accent text-6xl mx-auto" />
             <h3 className="text-2xl font-bold mt-4">Tailwind CSS</h3>
           </button>
           <Modal open={openTailwind} onClose={() => setOpenTailwind(false)}>
@@ -147,7 +148,7 @@ const Projects = () => {
             className="bg-bg_color_2 w-[300px] h-[200px] md:w-[350px] md:h-[180px] mx-auto md:mx-auto mb-5 p-6 pb-8 rounded-2xl text-center border-2 border-bg_color_1 transition duration-500 ease hover:border-main_accent hover:scale-105 cursor-pointer"
             onClick={() => setOpenDatabase(true)}
           >
-            <i className="fa-solid fa-database text-main_accent text-6xl"></i>
+            <FaDatabase aria-hidden="true" className="text-main_accent text-6xl mx-auto" />
             <h3 className="text-2xl font-bold mt-4">{t("skills.database")}</h3>
           </button>
           <Modal open={openDatabase} onClose={() => setOpenDatabase(false)}>
@@ -180,7 +181,7 @@ const Projects = () => {
             className="bg-bg_color_2 w-[300px] h-[200px] md:w-[350px] md:h-[180px] mx-auto md:mx-auto mb-5 p-6 pb-8 rounded-2xl text-center border-2 border-bg_color_1 transition duration-500 ease hover:border-main_accent hover:scale-105 cursor-pointer"
             onClick={() => setOpenCreative(true)}
           >
-            <i className="fa-solid fa-puzzle-piece text-main_accent text-6xl"></i>
+            <FaPuzzlePiece aria-hidden="true" className="text-main_accent text-6xl mx-auto" />
             <h3 className="text-2xl font-bold mt-4">{t("skills.creative")}</h3>
           </button>
           <Modal open={openCreatve} onClose={() => setOpenCreative(false)}>
@@ -213,7 +214,7 @@ const Projects = () => {
             className="bg-bg_color_2 w-[300px] h-[200px] md:w-[350px] md:h-[180px] mx-auto md:mx-auto mb-5 p-6 pb-8 rounded-2xl text-center border-2 border-bg_color_1 transition duration-500 ease hover:border-main_accent hover:scale-105 cursor-pointer"
             onClick={() => setOpenGit(true)}
           >
-            <i className="fa-brands fa-github text-main_accent text-6xl"></i>
+            <FaGithub aria-hidden="true" className="text-main_accent text-6xl mx-auto" />
             <h3 className="text-2xl font-bold mt-4">Git</h3>
           </button>
           <Modal open={openGit} onClose={() => setOpenGit(false)}>
