@@ -52,3 +52,30 @@ export const mainLinks: NavItem[] = [
 ];
 
 export const contactLink: NavItem = { to: paths.contact, labelKey: "navbar.contact" };
+
+export type FooterColumn = {
+  titleKey: string;
+  links: NavItem[];
+};
+
+export const footerColumns: FooterColumn[] = [
+  {
+    titleKey: "footer.services",
+    links: serviceLinks.map(({ to, labelKey }) => ({ to, labelKey })),
+  },
+  {
+    titleKey: "footer.portfolio",
+    links: [{ to: paths.portfolio, labelKey: "footer.portfolio_all" }],
+  },
+  {
+    titleKey: "footer.employers",
+    links: [
+      { to: paths.employers, labelKey: "footer.employers_profile" },
+      { to: paths.about, labelKey: "footer.about" },
+    ],
+  },
+  {
+    titleKey: "footer.contact",
+    links: [{ to: paths.contact, labelKey: "footer.contact_form" }],
+  },
+];

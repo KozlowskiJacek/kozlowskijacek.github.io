@@ -237,6 +237,18 @@
   },
 
   "footer": {
+    "tagline": "Developer & Video Creator. I build websites, apps and video content that work for your business.",
+    "socials": "Social media",
+    "sitemap": "Sitemap",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "portfolio_all": "All work",
+    "employers": "For employers",
+    "employers_profile": "Profile & CV",
+    "about": "About",
+    "contact": "Contact",
+    "contact_form": "Contact form",
+    "rights": "All rights reserved.",
     "back_to_top": "Back to top"
   }
 }

@@ -237,6 +237,18 @@
   },
 
   "footer": {
-    "back_to_top": "Przewiń na górę strony"
+    "tagline": "Developer & Video Creator. Tworzę strony, aplikacje i treści wideo, które pracują na Twój biznes.",
+    "socials": "Media społecznościowe",
+    "sitemap": "Mapa strony",
+    "services": "Usługi",
+    "portfolio": "Portfolio",
+    "portfolio_all": "Wszystkie realizacje",
+    "employers": "Dla pracodawców",
+    "employers_profile": "Profil i CV",
+    "about": "O mnie",
+    "contact": "Kontakt",
+    "contact_form": "Formularz kontaktowy",
+    "rights": "Wszelkie prawa zastrzeżone.",
+    "back_to_top": "Do góry"
   }
 }
