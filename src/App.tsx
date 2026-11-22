@@ -5,16 +5,26 @@ import AboutSubSite from "./pages/AboutSubSite";
 import WebAppsSubSite from "./pages/WebAppsSubSite";
 import VideoMarketingSubSite from "./pages/VideoMarketingSubSite";
 import AutoScroll from "./components/AutoScroll";
+import Layout from "./components/layout/Layout";
+import { aboutNav, mainNav, videoNav, webAppsNav } from "./data/navigation";
 
 const App = () => {
   return (
     <Router>
       <AutoScroll />
       <Routes>
-        <Route path="/*" element={<MainPage />} />
-        <Route path="/about" element={<AboutSubSite />} />
-        <Route path="/web-apps" element={<WebAppsSubSite />} />
-        <Route path="/social-video" element={<VideoMarketingSubSite />} />
+        <Route element={<Layout nav={mainNav} />}>
+          <Route path="/*" element={<MainPage />} />
+        </Route>
+        <Route element={<Layout nav={aboutNav} withFooter={false} />}>
+          <Route path="/about" element={<AboutSubSite />} />
+        </Route>
+        <Route element={<Layout nav={webAppsNav} withFooter={false} />}>
+          <Route path="/web-apps" element={<WebAppsSubSite />} />
+        </Route>
+        <Route element={<Layout nav={videoNav} withFooter={false} />}>
+          <Route path="/social-video" element={<VideoMarketingSubSite />} />
+        </Route>
       </Routes>
     </Router>
   );

@@ -1,8 +1,5 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import Header from "../components/layout/Header";
-import { mainNav } from "../data/navigation";
-import Footer from "../components/Footer";
 import Home from "./sections/Home";
 import About from "./sections/About";
 // import Services from "./sections/Services";
@@ -26,8 +23,7 @@ const MainPage = () => {
   }, [location]);
 
   return (
-    <div className="font-playfair">
-      <Header {...mainNav} />
+    <>
       <Home />
       <About />
       <MySkills />
@@ -35,8 +31,7 @@ const MainPage = () => {
       {/* <Services /> */}
       <TheyTrustedMe />
       <Contact />
-      <Footer />
-    </div>
+    </>
   );
 };
 

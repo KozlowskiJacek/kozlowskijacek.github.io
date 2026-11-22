@@ -1,4 +1,4 @@
-import useSmoothScroll from '../hooks/useSmoothScroll'
+import useSmoothScroll from '../../hooks/useSmoothScroll'
 import { FaCaretUp } from "react-icons/fa6";
 
 const Footer = () => {

@@ -8,8 +8,6 @@ import { useNavigate } from "react-router-dom";
 import useSmoothScroll from "../hooks/useSmoothScroll";
 import { motion } from "framer-motion";
 import { slideIn, revealHalf } from "../lib/animations";
-import Header from "../components/layout/Header";
-import { aboutNav } from "../data/navigation";
 
 const AboutSubSite = () => {
   const navigate = useNavigate();
@@ -25,7 +23,6 @@ const AboutSubSite = () => {
 
   return (
     <div>
-      <Header {...aboutNav} />
 
       <section
         className="bg-bg_color_1 flex md:flex-row flex-col justify-center items-center min-h-screen w-full pt-[100px] px-[9%] py-[20px]"
