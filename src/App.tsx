@@ -4,7 +4,8 @@ import { MotionConfig } from "framer-motion";
 import MainPage from "./pages/MainPage";
 import Layout from "./components/layout/Layout";
 import ScrollManager from "./components/layout/ScrollManager";
-import { paths } from "./data/navigation";
+import LegacyRedirect from "./components/layout/LegacyRedirect";
+import { legacyRedirects, paths } from "./data/navigation";
 
 // Strona główna jest w głównym bundlu, podstrony ładują się na żądanie.
 const VideoMarketingPage = lazy(() => import("./pages/VideoMarketingPage"));
@@ -44,6 +45,9 @@ const App = () => {
             <Route path={paths.employers} element={<EmployersPage />} />
             <Route path={paths.about} element={<AboutPage />} />
             <Route path={paths.contact} element={<ContactPage />} />
+            {legacyRedirects.map(({ from, to }) => (
+              <Route key={from} path={from} element={<LegacyRedirect to={to} />} />
+            ))}
           </Route>
         </Routes>
       </Router>

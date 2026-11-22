@@ -15,6 +15,13 @@ export const servicesPrefix = "/uslugi";
 
 export const caseStudyPath = (slug: string) => `${paths.portfolio}/${slug}`;
 
+/** Stare adresy → nowe (przekierowanie z `replace`). */
+export const legacyRedirects: { from: string; to: string }[] = [
+  { from: "/about", to: paths.about },
+  { from: "/web-apps", to: paths.servicesWeb },
+  { from: "/social-video", to: paths.servicesVideo },
+];
+
 export type NavItem = {
   to: string;
   /** Klucz tłumaczenia etykiety. */
