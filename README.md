@@ -61,7 +61,7 @@ Wartości są czytane w `src/env.ts` i trafiają do bundla (prefiks `VITE_`), wi
 npm run deploy
 ```
 
-Skrypt `predeploy` buduje projekt, a `gh-pages -d dist` publikuje zawartość `dist/` na gałąź `gh-pages`, z której serwowany jest GitHub Pages. Katalog `dist/` nie jest commitowany.
+Skrypt `predeploy` buduje projekt, a `gh-pages -d dist` publikuje zawartość `dist/` na gałąź `gh-pages`, z której serwowany jest GitHub Pages. Katalog `dist/` nie jest commitowany. Skrypt `postbuild` kopiuje `dist/index.html` do `dist/404.html`, dzięki czemu GitHub Pages serwuje aplikację także przy bezpośrednim wejściu lub odświeżeniu podstron (`/about`, `/web-apps`, `/social-video`).
 
 ## Struktura katalogów
 
