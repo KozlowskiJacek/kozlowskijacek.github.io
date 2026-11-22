@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  html {
+    @apply bg-background;
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-background text-fg antialiased;
+  }
+
+  ::selection {
+    @apply bg-accent/30 text-fg;
+  }
+}
+
 .card {
   @apply w-72 cursor-pointer border-b-4 rounded-xl h-44 text-center px-3 py-7 self-end duration-500 delay-100
 }
