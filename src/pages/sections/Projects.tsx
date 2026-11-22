@@ -24,9 +24,9 @@ const Projects = () => {
         variants={fadeIn("bottom")}
         {...reveal}
       >
-        {projects.map((project, i) => (
+        {projects.map((project) => (
           <div
-            key={`${project.title}-${i}`}
+            key={project.id}
             className="relative rounded-2xl shadow-[0_0_1rem_bg_color_1] overflow-hidden flex group cursor-pointer"
           >
             <img
@@ -37,9 +37,9 @@ const Projects = () => {
             <div className="absolute bottom-0 left-0 w-full h-full bg-gradient-to-b from-[rgba(0,0,0,0.1)] to-bg_color_1 flex flex-col justify-center items-center text-center px-16 translate-y-full transition-transform duration-500 ease-in-out group-hover:translate-y-0">
               <h4 className="md:text-3xl text-xl font-bold">{project.title}</h4>
               <p className="mx-0 mb-2 mt-3 md:text-base text-sm">{t(project.descriptionKey)}</p>
-              {project.href && (
+              {project.links.github && (
                 <a
-                  href={project.href}
+                  href={project.links.github}
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={project.title}

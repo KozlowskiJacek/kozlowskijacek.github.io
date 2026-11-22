@@ -1,4 +1,4 @@
-export type SocialLink = {
+export type Social = {
   id: string;
   /** Nazwa serwisu – używana jako aria-label. */
   label: string;
@@ -8,7 +8,7 @@ export type SocialLink = {
   href: string | null;
 };
 
-export const socialLinks: SocialLink[] = [
+export const socials: Social[] = [
   {
     id: "instagram",
     label: "Instagram",

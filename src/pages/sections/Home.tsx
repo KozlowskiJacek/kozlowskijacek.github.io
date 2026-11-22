@@ -5,7 +5,7 @@ import useSmoothScroll from "../../hooks/useSmoothScroll";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import { fadeIn, reveal } from "../../lib/animations";
-import { socialLinks } from "../../data/socialLinks";
+import { socials } from "../../data/socials";
 
 const roles = [
   "Full Stack Developer",
@@ -91,7 +91,7 @@ const Home = () => {
           {t("home.text2")}
         </motion.p>
         <div className="flex space-x-4 mt-5 md:text-3xl text-2xl">
-          {socialLinks
+          {socials
             .filter((link) => link.href)
             .map((link) => (
               <a
