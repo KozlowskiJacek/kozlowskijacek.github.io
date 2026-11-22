@@ -1,3 +1,4 @@
+import { lazy, Suspense } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import MainPage from "./pages/MainPage";
 import AboutPage from "./pages/AboutPage";
@@ -7,11 +8,24 @@ import ScrollToTop from "./components/layout/ScrollToTop";
 import Layout from "./components/layout/Layout";
 import { aboutNav, mainNav, videoNav, webAppsNav } from "./data/navigation";
 
+// Podgląd komponentów tylko w dev — w buildzie produkcyjnym warunek jest stały (false) i moduł znika.
+const UiPreviewPage = import.meta.env.DEV ? lazy(() => import("./pages/dev/UiPreviewPage")) : null;
+
 const App = () => {
   return (
     <Router>
       <ScrollToTop />
       <Routes>
+        {UiPreviewPage && (
+          <Route
+            path="/dev/ui"
+            element={
+              <Suspense fallback={null}>
+                <UiPreviewPage />
+              </Suspense>
+            }
+          />
+        )}
         <Route element={<Layout nav={mainNav} />}>
           <Route path="/*" element={<MainPage />} />
         </Route>
