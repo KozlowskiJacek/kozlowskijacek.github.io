@@ -2,7 +2,7 @@
 import ImageSlider from "../../components/ImageSlider";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion"
-import { fadeInVariants } from "../../utils/animations";
+import { fadeIn, reveal } from "../../lib/animations";
 
 const TheyTrustedMe = () => {
 
@@ -14,20 +14,16 @@ const TheyTrustedMe = () => {
       id="feedback"
     >
       <motion.div className=""
-        variants = {fadeInVariants("top")}
-        initial = "hidden"
-        whileInView = "visible"
-        viewport = {{ once: false}}
+        variants={fadeIn("top")}
+        {...reveal}
        >
         <h2 className="leading-10 md:text-5xl text-3xl font-semibold mb-12 text-center">
           {t("feedback.they_trust")} <span className="text-main_accent">{t("feedback.me")}</span>
         </h2>
       </motion.div>
       <motion.div
-        variants = {fadeInVariants("bottom")}
-        initial = "hidden"
-        whileInView = "visible"
-        viewport = {{ once: false}}
+        variants={fadeIn("bottom")}
+        {...reveal}
        >
         <ImageSlider />
       </motion.div>

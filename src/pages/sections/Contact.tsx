@@ -1,6 +1,6 @@
 import FormContact from "../../components/FormContact";
 import { motion } from "framer-motion";
-import { fadeInVariants } from "../../utils/animations";
+import { fadeIn, reveal } from "../../lib/animations";
 import { useTranslation } from "react-i18next";
 
 const Contact = () => {
@@ -12,10 +12,8 @@ const Contact = () => {
       id="contact"
     >
       <motion.div
-        variants={fadeInVariants("top")}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: false }}
+        variants={fadeIn("top")}
+        {...reveal}
       >
         <h2 className="mb-5 md:text-5xl text-3xl font-semibold">
           {t("contact.lets")}{" "}
@@ -28,10 +26,8 @@ const Contact = () => {
       </motion.div>
 
       <motion.div
-        variants={fadeInVariants("bottom")}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: false }}
+        variants={fadeIn("bottom")}
+        {...reveal}
       >
         <FormContact />
       </motion.div>

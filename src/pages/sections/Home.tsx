@@ -4,7 +4,7 @@ import homePhoto1 from "../../assets/img/MainPhoto.png";
 import useSmoothScroll from "../../hooks/useSmoothScroll";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
-import { fadeInVariants } from "../../utils/animations";
+import { fadeIn, reveal } from "../../lib/animations";
 import { socialLinks } from "../../data/socialLinks";
 
 const roles = [
@@ -63,20 +63,16 @@ const Home = () => {
     >
       <motion.div
         className="w-full text-white"
-        variants={fadeInVariants("top")}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: false }}
+        variants={fadeIn("top")}
+        {...reveal}
       >
         <h3 className="md:text-3xl text-2xl font-semibold mb-3">
           {t("home.hello")}
         </h3>
         <motion.h1
           className="md:text-6xl text-4xl font-semibold"
-          variants={fadeInVariants("left")}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: false }}
+          variants={fadeIn("left")}
+          {...reveal}
         >
           Jacek Kozłowski
         </motion.h1>
@@ -86,10 +82,8 @@ const Home = () => {
         </h3>
         <motion.p
           className="md:leading-7 md:text-base text-sm"
-          variants={fadeInVariants("right")}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: false }}
+          variants={fadeIn("right")}
+          {...reveal}
         >
           {t("home.text")}
           <br />
@@ -122,10 +116,8 @@ const Home = () => {
       </motion.div>
       <motion.div
         className="w-[75vw] "
-        variants={fadeInVariants("bottom")}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: false }}
+        variants={fadeIn("bottom")}
+        {...reveal}
       >
         <img
           className="max-w-[100%] max-h-[100%] mt-6 animate-floatImage"

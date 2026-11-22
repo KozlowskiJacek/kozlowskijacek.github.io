@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { fadeInVariants } from "../../utils/animations";
+import { fadeIn, reveal } from "../../lib/animations";
 import { useTranslation } from "react-i18next";
 import Modal from "../../components/Modal";
 import { FaReact, FaPython, FaCss3Alt, FaDatabase, FaPuzzlePiece, FaGithub } from "react-icons/fa6";
@@ -22,20 +22,16 @@ const Projects = () => {
     >
       <motion.h2
         className="text-center text-5xl font-bold mb-20"
-        variants={fadeInVariants("top")}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: false }}
+        variants={fadeIn("top")}
+        {...reveal}
       >
         {t("skills.my")}
         <span className="text-main_accent"> {t("skills.skills")}</span>
       </motion.h2>
       <motion.div
         className="grid grid-cols-1 md:grid-cols-3 items-center gap-10 mb-10"
-        variants={fadeInVariants("bottom")}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: false }}
+        variants={fadeIn("bottom")}
+        {...reveal}
       >
         <div>
           <button

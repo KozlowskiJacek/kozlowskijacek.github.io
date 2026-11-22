@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { fadeInVariants } from "../../utils/animations";
+import { fadeIn, reveal } from "../../lib/animations";
 import { projects } from "../../data/projects";
 import { useTranslation } from "react-i18next";
 
@@ -13,20 +13,16 @@ const Projects = () => {
     >
       <motion.h2
         className="text-center text-5xl font-bold mb-10"
-        variants={fadeInVariants("top")}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: false }}
+        variants={fadeIn("top")}
+        {...reveal}
       >
         {t("projects.my")}
         <span className="text-main_accent"> {t("projects.projects")}</span>
       </motion.h2>
       <motion.div
         className="grid grid-cols-1 md:grid-cols-3 items-center gap-10 mb-10"
-        variants={fadeInVariants("bottom")}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: false }}
+        variants={fadeIn("bottom")}
+        {...reveal}
       >
         {projects.map((project, i) => (
           <div

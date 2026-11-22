@@ -2,7 +2,7 @@ import aboutPhoto from '../../assets/img/Photo_about.png'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { fadeInVariants } from '../../utils/animations'
+import { fadeIn, reveal } from "../../lib/animations";
 
 const About = () => {
 
@@ -14,24 +14,18 @@ const About = () => {
     id='about'
     >
       <motion.div className='w-[75vw] m-10'
-        variants = {fadeInVariants("bottom")}
-        initial = "hidden"
-        whileInView = "visible"
-        viewport = {{ once: false}}
+        variants={fadeIn("bottom")}
+        {...reveal}
       >
        <img src={aboutPhoto} alt="" className='max-w-[100%] max-h-[100%] animate-floatImage'/>
       </motion.div>
       <motion.div className='text-white w-full'
-        variants = {fadeInVariants("right")}
-        initial = "hidden"
-        whileInView = "visible"
-        viewport = {{ once: false}}
+        variants={fadeIn("right")}
+        {...reveal}
       >
         <motion.h2 className='text-left md:text-5xl text-3xl font-semibold mb-2'
-          variants = {fadeInVariants("top")}
-          initial = "hidden"
-          whileInView = "visible"
-          viewport = {{ once: false}}
+          variants={fadeIn("top")}
+          {...reveal}
         >
           {t("about.about")}<span className='text-main_accent'> {t("about.me")}</span>
         </motion.h2>

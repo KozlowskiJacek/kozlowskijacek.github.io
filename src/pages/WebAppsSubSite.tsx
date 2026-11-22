@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
+import { slideIn, revealHalf } from "../lib/animations";
 import PixelAvatarWEB from "../assets/img/PixelAvatarWEB.png";
 import Photo_about from "../assets/img/Photo_about.png";
 import { useNavigate } from "react-router-dom";
@@ -28,10 +29,8 @@ const WebAppsSubSite = () => {
       >
         <motion.div
           className="w-full text-white"
-          initial={{ opacity: 0, x: -80 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: false, amount: 0.5 }}
+          variants={slideIn("left")}
+          {...revealHalf}
         >
           <h3 className="text-3xl font-semibold mb-3">{t("web_app.title1")}</h3>
           <h3 className="text-5xl font-semibold mb-3 text-main_accent">
@@ -42,10 +41,8 @@ const WebAppsSubSite = () => {
         </motion.div>
         <motion.div
           className="w-[75vw] m-20"
-          initial={{ opacity: 0, y: 80 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: false, amount: 0.5 }}
+          variants={slideIn("bottom")}
+          {...revealHalf}
         >
           <img
             className="max-w-[100%] max-h-[100%] animate-floatImage"
@@ -61,10 +58,8 @@ const WebAppsSubSite = () => {
       >
         <motion.div
           className="w-[75vw] m-20"
-          initial={{ opacity: 0, y: 80 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: false, amount: 0.5 }}
+          variants={slideIn("bottom")}
+          {...revealHalf}
         >
           <img
             src={PixelAvatarWEB}
@@ -74,10 +69,8 @@ const WebAppsSubSite = () => {
         </motion.div>
         <motion.div
           className="text-white w-full"
-          initial={{ opacity: 0, x: 80 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: false, amount: 0.5 }}
+          variants={slideIn("right")}
+          {...revealHalf}
         >
           <h3 className="text-4xl font-bold mb-4">
             {t("web_app.talk")}{" "}
@@ -93,10 +86,8 @@ const WebAppsSubSite = () => {
       >
         <motion.div
           className="w-full text-white"
-          initial={{ opacity: 0, x: -80 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: false, amount: 0.5 }}
+          variants={slideIn("left")}
+          {...revealHalf}
         >
           <h3 className="text-4xl font-bold mb-4">
             {t("web_app.project")}{" "}
@@ -107,10 +98,8 @@ const WebAppsSubSite = () => {
         </motion.div>
         <motion.div
           className="w-[75vw] m-20"
-          initial={{ opacity: 0, y: 80 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: false, amount: 0.5 }}
+          variants={slideIn("bottom")}
+          {...revealHalf}
         >
           <img
             className="max-w-[100%] max-h-[100%] animate-floatImage"
@@ -126,10 +115,8 @@ const WebAppsSubSite = () => {
       >
         <motion.div
           className="w-[75vw] m-20"
-          initial={{ opacity: 0, y: 80 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: false, amount: 0.5 }}
+          variants={slideIn("bottom")}
+          {...revealHalf}
         >
           <img
             src={PixelAvatarWEB}
@@ -139,10 +126,8 @@ const WebAppsSubSite = () => {
         </motion.div>
         <motion.div
           className="text-white w-full"
-          initial={{ opacity: 0, x: 80 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: false, amount: 0.5 }}
+          variants={slideIn("right")}
+          {...revealHalf}
         >
           <h3 className="text-4xl font-bold mb-4">
             {t("web_app.coding")}{" "}
@@ -160,10 +145,8 @@ const WebAppsSubSite = () => {
       >
         <motion.div
           className="w-full text-white"
-          initial={{ opacity: 0, x: -80 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: false, amount: 0.5 }}
+          variants={slideIn("left")}
+          {...revealHalf}
         >
           <h3 className="text-4xl font-bold mb-4">
             {t("web_app.presentation")}{" "}
@@ -174,10 +157,8 @@ const WebAppsSubSite = () => {
         </motion.div>
         <motion.div
           className="w-[75vw] m-20"
-          initial={{ opacity: 0, y: 80 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: false, amount: 0.5 }}
+          variants={slideIn("bottom")}
+          {...revealHalf}
         >
           <img
             className="max-w-[100%] max-h-[100%] animate-floatImage"
@@ -193,10 +174,8 @@ const WebAppsSubSite = () => {
       >
         <motion.div
           className="w-[75vw] m-20"
-          initial={{ opacity: 0, y: 80 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: false, amount: 0.5 }}
+          variants={slideIn("bottom")}
+          {...revealHalf}
         >
           <img
             src={PixelAvatarWEB}
@@ -206,10 +185,8 @@ const WebAppsSubSite = () => {
         </motion.div>
         <motion.div
           className="text-white w-full"
-          initial={{ opacity: 0, x: 80 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: false, amount: 0.5 }}
+          variants={slideIn("right")}
+          {...revealHalf}
         >
           <h3 className="text-4xl font-bold mb-4">
             {t("web_app.support")}{" "}

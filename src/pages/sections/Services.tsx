@@ -1,7 +1,7 @@
 // import React, { useTransition } from "react";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
-import { fadeInVariants } from "../../utils/animations";
+import { fadeIn, reveal } from "../../lib/animations";
 import { Link } from "react-router-dom";
 import { FaLaptopCode, FaClapperboard, FaRobot } from "react-icons/fa6";
 
@@ -14,30 +14,24 @@ const Services = () => {
     >
       <motion.h2
         className="text-5xl font-semibold mb-5"
-        variants={fadeInVariants("top")}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: false }}
+        variants={fadeIn("top")}
+        {...reveal}
       >
         {t("services.my")}{" "}
         <span className="text-main_accent">{t("services.services")}</span>
       </motion.h2>
       <motion.p
         className="mb-36 text-lg"
-        variants={fadeInVariants("top")}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: false }}
+        variants={fadeIn("top")}
+        {...reveal}
       >
         {t("services.title")}
       </motion.p>
 
       <motion.div
         className="grid grid-cols-1 md:grid-cols-3 gap-6"
-        variants={fadeInVariants("bottom")}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: false }}
+        variants={fadeIn("bottom")}
+        {...reveal}
       >
         <div className="bg-bg_color_2 w-[350px] h-[500px] md:w-[480px] md:h-[400px] mx-auto md:mx-auto mb-5 p-6 pb-8 rounded-2xl text-center border-2 border-bg_color_1 transition duration-500 ease hover:border-main_accent hover:scale-105">
           <FaLaptopCode aria-hidden="true" className="animate-pulse text-main_accent text-6xl mx-auto" />

@@ -7,6 +7,7 @@ import contentCreator from "../assets/img/Content creator img.png";
 import { useNavigate } from "react-router-dom";
 import useSmoothScroll from "../hooks/useSmoothScroll";
 import { motion } from "framer-motion";
+import { slideIn, revealHalf } from "../lib/animations";
 import HeaderAbout from "../components/HeaderAbout";
 
 const AboutSubSite = () => {
@@ -31,10 +32,8 @@ const AboutSubSite = () => {
       >
         <motion.div
           className="w-full text-white"
-          initial={{ opacity: 0, x: -80 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: false, amount: 0.5 }}
+          variants={slideIn("left")}
+          {...revealHalf}
         >
           <h3 className="md:text-3xl text-2xl font-semibold mb-3">
             {t("home.hello")}
@@ -49,10 +48,8 @@ const AboutSubSite = () => {
         </motion.div>
         <motion.div
           className="w-[75vw] m-20"
-          initial={{ opacity: 0, y: 80 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: false, amount: 0.5 }}
+          variants={slideIn("bottom")}
+          {...revealHalf}
         >
           <img
             className="md:max-w-[100%] md:max-h-[100%] max-w-[80%] max-h-[80%] ml-10 animate-floatImage"
@@ -68,10 +65,8 @@ const AboutSubSite = () => {
       >
         <motion.div
           className="w-[75vw] m-20"
-          initial={{ opacity: 0, y: 80 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: false, amount: 0.5 }}
+          variants={slideIn("bottom")}
+          {...revealHalf}
         >
           <img
             src={fullStack}
@@ -81,10 +76,8 @@ const AboutSubSite = () => {
         </motion.div>
         <motion.div
           className="text-white w-full"
-          initial={{ opacity: 0, x: 80 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: false, amount: 0.5 }}
+          variants={slideIn("right")}
+          {...revealHalf}
         >
           <h3 className="md:text-4xl text-2xl font-bold mb-4">
             {t("about.why")}{" "}
@@ -102,10 +95,8 @@ const AboutSubSite = () => {
       >
         <motion.div
           className="w-full text-white"
-          initial={{ opacity: 0, x: -80 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: false, amount: 0.5 }}
+          variants={slideIn("left")}
+          {...revealHalf}
         >
           <h3 className="md:text-4xl text-2xl font-semibold mb-3">
             {t("about.how")}{" "}
@@ -120,10 +111,8 @@ const AboutSubSite = () => {
         </motion.div>
         <motion.div
           className="w-[75vw] m-20"
-          initial={{ opacity: 0, y: 80 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: false, amount: 0.5 }}
+          variants={slideIn("bottom")}
+          {...revealHalf}
         >
           <img
             className="max-w-[100%] max-h-[100%] animate-floatImage"
@@ -139,10 +128,8 @@ const AboutSubSite = () => {
       >
         <motion.div
           className="w-[75vw] m-20"
-          initial={{ opacity: 0, y: 80 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: false, amount: 0.5 }}
+          variants={slideIn("bottom")}
+          {...revealHalf}
         >
           <img
             src={development}
@@ -152,10 +139,8 @@ const AboutSubSite = () => {
         </motion.div>
         <motion.div
           className="text-white w-full"
-          initial={{ opacity: 0, x: 80 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: false, amount: 0.5 }}
+          variants={slideIn("right")}
+          {...revealHalf}
         >
           <h3 className="md:text-4xl text-2xl font-bold mb-4">
             {t("about.what_im")}{" "}
@@ -173,10 +158,8 @@ const AboutSubSite = () => {
       >
         <motion.div
           className="w-full text-white"
-          initial={{ opacity: 0, x: -80 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: false, amount: 0.5 }}
+          variants={slideIn("left")}
+          {...revealHalf}
         >
           <h3 className="md:text-4xl text-2xl font-semibold mb-3">
             {t("about.after")}{" "}
@@ -196,10 +179,8 @@ const AboutSubSite = () => {
         </motion.div>
         <motion.div
           className="w-[75vw] m-20"
-          initial={{ opacity: 0, y: 80 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: false, amount: 0.5 }}
+          variants={slideIn("bottom")}
+          {...revealHalf}
         >
           <img
             className="max-w-[100%] max-h-[100%] animate-floatImage"
