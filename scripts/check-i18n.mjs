@@ -38,6 +38,8 @@ for (const file of walk(join(root, "src"))) {
     if (items.length) arrays[m[1]] = items;
   }
   const lineOf = (idx) => src.slice(0, idx).split("\n").length;
+  // Klucze trzymane w danych, np. descriptionKey: "projects.gpsmaker".
+  for (const m of src.matchAll(/\w*Key:\s*["']([\w.]+)["']/g)) add(m[1], `${rel}:${lineOf(m.index)}`);
   for (const m of src.matchAll(/\bt\(\s*(["'`])((?:(?!\1).)*)\1/g)) {
     const where = `${rel}:${lineOf(m.index)}`;
     const key = m[2];

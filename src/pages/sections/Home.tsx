@@ -5,6 +5,7 @@ import useSmoothScroll from "../../hooks/useSmoothScroll";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import { fadeInVariants } from "../../utils/animations";
+import { socialLinks } from "../../data/socialLinks";
 
 const Home = () => {
   const { t } = useTranslation();
@@ -96,24 +97,21 @@ const Home = () => {
           {t("home.text2")}
         </motion.p>
         <div className="flex space-x-4 mt-5 md:text-3xl text-2xl">
-          <a href="https://www.instagram.com/life_of_jaca/" target="_blank">
-            <i className="bx bxl-instagram-alt text-main_accent inline-flex justify-center items-center  bg-opacity-0 border-main_accent rounded-full p-2 border-[3px] hover:animate-tada hover:bg-main_accent hover:text-bg_color_2 transition-all hover:drop-shadow-custom-glow"></i>
-          </a>
-          <a href="#">
-            <i className="bx bxl-youtube text-main_accent inline-flex justify-center items-center bg-opacity-0 border-main_accent rounded-full p-2 border-[3px] hover:animate-tada hover:bg-main_accent hover:text-bg_color_2 transition-all hover:drop-shadow-custom-glow"></i>
-          </a>
-          <a href="#">
-            <i className="bx bxl-discord-alt text-main_accent inline-flex justify-center items-center bg-opacity-0 border-main_accent rounded-full p-2 border-[3px] hover:animate-tada hover:bg-main_accent hover:text-bg_color_2 transition-all hover:drop-shadow-custom-glow"></i>
-          </a>
-          <a
-            href="https://www.linkedin.com/in/jacek-kozłowski-a43b21265/"
-            target="_blank"
-          >
-            <i className="bx bxl-linkedin text-main_accent inline-flex justify-center items-center bg-opacity-0 border-main_accent rounded-full p-2 border-[3px] hover:animate-tada hover:bg-main_accent hover:text-bg_color_2 transition-all hover:drop-shadow-custom-glow"></i>
-          </a>
-          <a href="#">
-            <i className="bx bx-coffee-togo text-main_accent inline-flex justify-center items-center bg-opacity-0 border-main_accent rounded-full p-2 border-[3px] hover:animate-tada hover:bg-main_accent hover:text-bg_color_2 transition-all hover:drop-shadow-custom-glow"></i>
-          </a>
+          {socialLinks
+            .filter((link) => link.href)
+            .map((link) => (
+              <a
+                key={link.id}
+                href={link.href ?? undefined}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={link.label}
+              >
+                <i
+                  className={`bx ${link.icon} text-main_accent inline-flex justify-center items-center bg-opacity-0 border-main_accent rounded-full p-2 border-[3px] hover:animate-tada hover:bg-main_accent hover:text-bg_color_2 transition-all hover:drop-shadow-custom-glow`}
+                ></i>
+              </a>
+            ))}
         </div>
         <a
           onClick={() => scrollTo("contact")}

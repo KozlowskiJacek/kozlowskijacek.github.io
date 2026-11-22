@@ -54,6 +54,7 @@ const Projects = () => {
                 className="text-main_accent text-base underline underline-offset-4"
                 href="/Certyfikaty/Frontend ang.pdf"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 {t("skills.react.certificate")}
               </a>
@@ -87,6 +88,7 @@ const Projects = () => {
                 className="text-main_accent underline underline-offset-4"
                 href="/Certyfikaty/Full Stack Python ang.pdf"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 {t("skills.python.certificate_1")}
               </a>
@@ -94,6 +96,7 @@ const Projects = () => {
                 className="text-main_accent underline underline-offset-4"
                 href="/Certyfikaty/Python backend ang.pdf"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 {t("skills.python.certificate_2")}
               </a>
@@ -127,6 +130,7 @@ const Projects = () => {
                 className="text-main_accent underline underline-offset-4"
                 href="/Certyfikaty/Full Stack Python ang.pdf"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 {t("skills.tailwind.certificate")}
               </a>
@@ -160,6 +164,7 @@ const Projects = () => {
                 className="text-main_accent underline underline-offset-4"
                 href="/Certyfikaty/Full Stack Python ang.pdf"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 {t("skills.database_pop.certificate")}
               </a>
@@ -193,6 +198,7 @@ const Projects = () => {
                 className="text-main_accent underline underline-offset-4"
                 href="https://www.youtube.com/watch?v=oTUANW-PJ0E&ab_channel=Otinus"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 {t("skills.creativity.certificate")}
               </a>
@@ -226,6 +232,7 @@ const Projects = () => {
                 className="text-main_accent underline underline-offset-4"
                 href="https://github.com/JacekKoz?tab=overview&from=2025-02-01&to=2025-02-10"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 {t("skills.git.git")}
               </a>
