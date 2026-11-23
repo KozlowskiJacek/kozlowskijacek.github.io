@@ -452,18 +452,59 @@
   "projects": {
     "my": "My",
     "projects": "Projects",
-    "gpsmaker": "A script using the pandas library to process CSV files with GPS data.",
-    "webscraping": "My first script that ended up being used by others.",
-    "aureliah": "Engineering thesis project – team management application.",
-    "noescapecursor": "Is a simple program that locks the edges of your primary monitor whenever a selected game or application is active.",
-    "cooking": "I'm creating an awesome app – just give me a bit more time 🔥",
     "categories": {
-      "web": "Web",
-      "python": "Python",
-      "desktop": "Desktop",
       "video": "Video",
       "graphics": "Graphics",
-      "animation": "Animation"
+      "animation": "Animation",
+      "website": "Websites",
+      "webapp": "Apps",
+      "automation": "Automation"
+    },
+    "roles": {
+      "fullstack": "Full-stack developer",
+      "author": "Author — design and code",
+      "design_dev": "UI design and development",
+      "video": "Filming and editing",
+      "graphics": "Graphic design",
+      "animation": "Animation and motion design"
+    },
+    "items": {
+      "aureliahr": {
+        "summary": "A team management web app built as my engineering thesis.",
+        "problem": "Information about a team, its tasks and responsibilities is often scattered across spreadsheets, emails and chat apps — it's hard to get one up-to-date picture of the team's work.",
+        "solution": "I designed and built a React web app backed by MongoDB that brings team data and work together in one place.",
+        "result": "A working application delivered as my engineering thesis — the full stack from interface to database. The code is available on GitHub."
+      },
+      "gpsmaker": {
+        "summary": "A Python and pandas script that processes CSV files with GPS data.",
+        "problem": "Cleaning up large CSV files with GPS points by hand is tedious and error-prone.",
+        "solution": "I wrote a Python script that uses pandas to load, clean and transform GPS data into the required format.",
+        "result": "Repeatable data processing with a single script run instead of manual spreadsheet work."
+      },
+      "webscraping": {
+        "summary": "My first script that ended up being used by others.",
+        "problem": "The data we needed was only available on web pages — copying it by hand took a lot of time.",
+        "solution": "I wrote a Python script that automatically fetches and saves the data from those pages.",
+        "result": "Other people started using the tool — my first code with real users."
+      },
+      "noescapecursor": {
+        "summary": "A program that locks the cursor to the primary monitor while a selected game or app is active.",
+        "problem": "On multi-monitor setups the cursor in fullscreen games can slip onto another screen and minimise the window at the worst possible moment.",
+        "solution": "I built a lightweight program that detects the selected game or app and locks the edges of the primary monitor while it runs.",
+        "result": "The cursor stays where it should, and the program runs in the background with no extra setup."
+      },
+      "portfolio": {
+        "summary": "This website — a bilingual showcase combining a client offer with a profile for recruiters.",
+        "problem": "The previous version mixed roles and styles, had no offer or path for recruiters, and the code was full of duplication.",
+        "solution": "I rebuilt the site with React, TypeScript and Tailwind: a UI component system, data in typed modules, PL/EN translations, service pages and a portfolio with case studies.",
+        "result": "A consistent, accessible and fast site on GitHub Pages that's easy to extend — a new project is a single data entry."
+      },
+      "cooking": {
+        "summary": "I'm creating an awesome app – just give me a bit more time 🔥"
+      },
+      "draft": {
+        "summary": "Project description coming soon."
+      }
     }
   },
   "feedback": {

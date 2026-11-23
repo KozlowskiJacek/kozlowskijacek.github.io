@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { FaArrowRight } from "react-icons/fa6";
 import { fadeIn, reveal, staggerContainer, staggerItem } from "../../lib/animations";
-import { featuredProjects, projectCategoryLabelKeys, type ProjectCategory } from "../../data/projects";
+import { featuredProjects, projectCategoryLabelKeys, projectCategoryTone } from "../../data/projects";
 import { caseStudyPath, paths } from "../../data/navigation";
 import Section from "../../components/ui/Section";
 import SectionHeading from "../../components/ui/SectionHeading";
@@ -11,14 +11,6 @@ import Card from "../../components/ui/Card";
 import Badge from "../../components/ui/Badge";
 import Button from "../../components/ui/Button";
 
-const categoryTone: Record<ProjectCategory, "accent" | "video" | "neutral"> = {
-  web: "accent",
-  python: "neutral",
-  desktop: "neutral",
-  video: "video",
-  graphics: "video",
-  animation: "video",
-};
 
 /** Wybrane realizacje (flaga `featured` w projects.ts) z linkiem do case study. */
 const FeaturedWork = () => {
@@ -41,7 +33,7 @@ const FeaturedWork = () => {
         {...reveal}
       >
         {featuredProjects.map((project) => (
-          <motion.li key={project.id} variants={staggerItem}>
+          <motion.li key={project.slug} variants={staggerItem}>
             <Card
               as="article"
               interactive
@@ -50,13 +42,13 @@ const FeaturedWork = () => {
               <div className="aspect-[16/10] overflow-hidden border-b border-border bg-surface">
                 <img
                   className="h-full w-full object-cover transition-transform duration-500 ease-out motion-safe:group-hover:scale-[1.03]"
-                  src={project.image}
+                  src={project.cover}
                   alt=""
                   loading="lazy"
                 />
               </div>
               <div className="flex flex-1 flex-col gap-3 p-5">
-                <Badge tone={categoryTone[project.category]} className="self-start">
+                <Badge tone={projectCategoryTone[project.category]} className="self-start">
                   {t(projectCategoryLabelKeys[project.category])}
                 </Badge>
                 <h3 className="text-h3 text-fg">

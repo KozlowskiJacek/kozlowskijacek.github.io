@@ -452,18 +452,59 @@
   "projects": {
     "my": "Moje",
     "projects": "Projekty",
-    "gpsmaker": "Skrypt wykorzystujący bibliotekę pandas do przetwarzania plików csv z danymi GPS.",
-    "webscraping": "Mój pierwszy skrypt, który był wykorzystany przez innych",
-    "aureliah": "Projekt na pracę inżynierską - aplikacja do zarządzania zespołami.",
-    "noescapecursor": "To prosty program, który blokuje krawędzie głównego monitora, gdy aktywna jest wybrana gra lub aplikacja.",
-    "cooking": "Tworzę super aplikację daj mi jeszcze trochę czasu 🔥",
     "categories": {
-      "web": "Web",
-      "python": "Python",
-      "desktop": "Desktop",
       "video": "Wideo",
       "graphics": "Grafika",
-      "animation": "Animacja"
+      "animation": "Animacja",
+      "website": "Strony",
+      "webapp": "Aplikacje",
+      "automation": "Automatyzacje"
+    },
+    "roles": {
+      "fullstack": "Full-stack developer",
+      "author": "Autor — projekt i kod",
+      "design_dev": "Projekt UI i development",
+      "video": "Nagranie i montaż",
+      "graphics": "Projekt graficzny",
+      "animation": "Animacja i motion design"
+    },
+    "items": {
+      "aureliahr": {
+        "summary": "Aplikacja webowa do zarządzania zespołami, zrealizowana jako praca inżynierska.",
+        "problem": "Informacje o zespole, zadaniach i obowiązkach często są rozproszone między arkuszami, mailami i komunikatorami — trudno mieć jeden, aktualny obraz pracy zespołu.",
+        "solution": "Zaprojektowałem i zbudowałem aplikację webową w React z bazą MongoDB, która zbiera dane o zespole i jego pracy w jednym miejscu.",
+        "result": "Działająca aplikacja zrealizowana w ramach pracy inżynierskiej — pełny przekrój od interfejsu po bazę danych. Kod jest dostępny na GitHubie."
+      },
+      "gpsmaker": {
+        "summary": "Skrypt w Pythonie i pandas, który przetwarza pliki CSV z danymi GPS.",
+        "problem": "Ręczne porządkowanie dużych plików CSV z punktami GPS jest żmudne i łatwo w nim o błąd.",
+        "solution": "Napisałem skrypt w Pythonie, który z pomocą biblioteki pandas wczytuje, czyści i przekształca dane GPS do potrzebnego formatu.",
+        "result": "Powtarzalna obróbka danych jednym uruchomieniem skryptu zamiast ręcznej pracy w arkuszu."
+      },
+      "webscraping": {
+        "summary": "Mój pierwszy skrypt, który trafił do użytku innych osób.",
+        "problem": "Potrzebne dane były dostępne tylko na stronach www — kopiowanie ich ręcznie zajmowało dużo czasu.",
+        "solution": "Napisałem w Pythonie skrypt, który automatycznie pobiera i zapisuje dane ze stron.",
+        "result": "Narzędzie zaczęło być używane przez inne osoby — to był mój pierwszy kod z realnymi użytkownikami."
+      },
+      "noescapecursor": {
+        "summary": "Program blokujący kursor na głównym monitorze, gdy aktywna jest wybrana gra lub aplikacja.",
+        "problem": "Przy kilku monitorach kursor w grach pełnoekranowych potrafi „uciec” na drugi ekran i zminimalizować okno w najmniej odpowiednim momencie.",
+        "solution": "Stworzyłem lekki program, który wykrywa wybraną grę lub aplikację i na czas jej działania blokuje krawędzie głównego monitora.",
+        "result": "Kursor zostaje tam, gdzie powinien, a program działa w tle bez dodatkowej konfiguracji."
+      },
+      "portfolio": {
+        "summary": "Ta strona — dwujęzyczna wizytówka łącząca ofertę dla klientów z profilem dla rekruterów.",
+        "problem": "Poprzednia wersja strony mieszała role i style, nie miała oferty ani ścieżki dla rekrutera, a kod był pełen duplikatów.",
+        "solution": "Przebudowałem stronę na React, TypeScript i Tailwind: system komponentów UI, dane w typowanych modułach, tłumaczenia PL/EN, podstrony usług i portfolio z case study.",
+        "result": "Spójna, dostępna i szybka strona na GitHub Pages, którą łatwo rozwijać — nowe realizacje dodaje się jednym wpisem w danych."
+      },
+      "cooking": {
+        "summary": "Tworzę super aplikację daj mi jeszcze trochę czasu 🔥"
+      },
+      "draft": {
+        "summary": "Opis realizacji w przygotowaniu."
+      }
     }
   },
   "feedback": {

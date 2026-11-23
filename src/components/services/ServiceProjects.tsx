@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { FaArrowRight } from "react-icons/fa6";
 import { reveal, staggerContainer, staggerItem } from "../../lib/animations";
-import { projectCategoryLabelKeys, projects } from "../../data/projects";
+import { projectCategoryLabelKeys, publishedProjects } from "../../data/projects";
 import { caseStudyPath, paths } from "../../data/navigation";
 import type { ServicePortfolioData, ServiceTone } from "../../data/services/types";
 import Section from "../ui/Section";
@@ -27,8 +27,8 @@ type ServiceProjectsProps = {
 const ServiceProjects = ({ id, portfolio, tone, bg = "primary" }: ServiceProjectsProps) => {
   const { t } = useTranslation();
   const classes = toneClasses[tone];
-  const items = projects
-    .filter((project) => portfolio.categories.includes(project.category))
+  const items = publishedProjects
+    .filter((project) => project.audience !== "employer" && portfolio.categories.includes(project.category))
     .slice(0, LIMIT);
 
   return (
@@ -42,7 +42,7 @@ const ServiceProjects = ({ id, portfolio, tone, bg = "primary" }: ServiceProject
           {...reveal}
         >
           {items.map((project) => (
-            <motion.li key={project.id} variants={staggerItem}>
+            <motion.li key={project.slug} variants={staggerItem}>
               <Card
                 as="article"
                 interactive
@@ -51,7 +51,7 @@ const ServiceProjects = ({ id, portfolio, tone, bg = "primary" }: ServiceProject
                 <div className="aspect-[16/10] overflow-hidden border-b border-border bg-surface">
                   <img
                     className="h-full w-full object-cover transition-transform duration-500 ease-out motion-safe:group-hover:scale-[1.03]"
-                    src={project.image}
+                    src={project.cover}
                     alt=""
                     loading="lazy"
                   />
@@ -69,7 +69,7 @@ const ServiceProjects = ({ id, portfolio, tone, bg = "primary" }: ServiceProject
                       {project.title}
                     </Link>
                   </h3>
-                  <p className="text-small text-fg-secondary">{t(project.descriptionKey)}</p>
+                  <p className="text-small text-fg-secondary">{t(project.summaryKey)}</p>
                   <span
                     aria-hidden="true"
                     className={`mt-auto inline-flex items-center gap-2 pt-2 text-small font-semibold ${classes.text}`}

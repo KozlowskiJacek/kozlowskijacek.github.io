@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { FaGithub } from "react-icons/fa6";
 import { fadeIn, reveal, staggerContainer, staggerItem } from "../lib/animations";
-import { projects } from "../data/projects";
+import { publishedProjects as projects } from "../data/projects";
 import { useTranslation } from "react-i18next";
 import Section from "../components/ui/Section";
 import SectionHeading from "../components/ui/SectionHeading";
@@ -26,12 +26,12 @@ const Projects = () => {
         {...reveal}
       >
         {projects.map((project) => (
-          <motion.li key={project.id} variants={staggerItem}>
+          <motion.li key={project.slug} variants={staggerItem}>
             <Card as="article" interactive className="group flex h-full flex-col overflow-hidden">
               <div className="aspect-[16/10] overflow-hidden border-b border-border bg-surface">
                 <img
                   className="h-full w-full object-cover transition-transform duration-500 ease-out motion-safe:group-hover:scale-[1.03]"
-                  src={project.image}
+                  src={project.cover}
                   alt=""
                   loading="lazy"
                 />
@@ -51,7 +51,7 @@ const Projects = () => {
                     </a>
                   )}
                 </div>
-                <p className="text-small text-fg-secondary">{t(project.descriptionKey)}</p>
+                <p className="text-small text-fg-secondary">{t(project.summaryKey)}</p>
                 {project.tech.length > 0 && (
                   <ul className="mt-auto flex flex-wrap gap-2 pt-2">
                     {project.tech.map((tech) => (

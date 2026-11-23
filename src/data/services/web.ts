@@ -198,7 +198,7 @@ export const webPortfolio: ServicePortfolioData = {
   titleKey: "web_app.portfolio.title",
   accentKey: "web_app.portfolio.accent",
   textKey: "web_app.portfolio.text",
-  categories: ["web", "python", "desktop"],
+  categories: ["website", "webapp", "automation"],
 };
 
 export const webFaqCopy: SectionCopy = {
