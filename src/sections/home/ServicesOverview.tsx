@@ -33,10 +33,10 @@ const ServicesOverview = () => {
       <motion.div className="max-w-2xl text-center" variants={fadeIn("bottom")} {...reveal}>
         <SectionHeading
           align="center"
-          title={t("home.services.title")}
-          accent={t("home.services.accent")}
+          title={t("home:services.title")}
+          accent={t("home:services.accent")}
         />
-        <p className="mt-4 text-body text-fg-secondary md:text-body-lg">{t("home.services.text")}</p>
+        <p className="mt-4 text-body text-fg-secondary md:text-body-lg">{t("home:services.text")}</p>
       </motion.div>
 
       <motion.ul
@@ -74,7 +74,7 @@ const ServicesOverview = () => {
                   to={pillar.to}
                   className={`mt-8 inline-flex items-center gap-2 self-start rounded-sm font-semibold transition-colors after:absolute after:inset-0 after:rounded-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent ${tone.link}`}
                 >
-                  {t("home.services.more")}
+                  {t("home:services.more")}
                   <span className="sr-only">: {t(pillar.titleKey)}</span>
                   <FaArrowRight aria-hidden="true" className="text-small" />
                 </Link>

@@ -1,0 +1,48 @@
+{
+  "navbar": {
+    "services": "Usługi",
+    "services_video": "Kreacja wideo",
+    "services_video_desc": "Nagrywanie, montaż, grafiki i animacje",
+    "services_web": "Strony i aplikacje",
+    "services_web_desc": "Strony www, aplikacje webowe, UI/UX i automatyzacje",
+    "portfolio": "Portfolio",
+    "employers": "Dla pracodawców",
+    "about": "O mnie",
+    "contact": "Kontakt",
+    "switch_language": "Przełącz język na angielski",
+    "main_nav": "Nawigacja główna",
+    "open_menu": "Otwórz menu",
+    "close_menu": "Zamknij menu"
+  },
+  "loading": "Ładowanie strony…",
+  "cta": "Porozmawiajmy",
+  "not_found": {
+    "title": "Nie znalazłem tej strony",
+    "text": "Adres mógł się zmienić albo strona nigdy nie istniała. Wróć na stronę główną lub napisz do mnie.",
+    "back_home": "Wróć na stronę główną",
+    "contact": "Kontakt",
+    "meta": {
+      "title": "Nie znaleziono strony"
+    }
+  },
+  "footer": {
+    "tagline": "Developer & Video Creator. Tworzę strony, aplikacje i treści wideo, które pracują na Twój biznes.",
+    "socials": "Media społecznościowe",
+    "sitemap": "Mapa strony",
+    "services": "Usługi",
+    "portfolio": "Portfolio",
+    "portfolio_all": "Wszystkie realizacje",
+    "employers": "Dla pracodawców",
+    "employers_profile": "Profil i CV",
+    "about": "O mnie",
+    "contact": "Kontakt",
+    "contact_form": "Formularz kontaktowy",
+    "rights": "Wszelkie prawa zastrzeżone.",
+    "back_to_top": "Do góry",
+    "privacy": "Polityka prywatności"
+  },
+  "close": "Zamknij",
+  "seo": {
+    "job_title": "Full Stack Developer i twórca wideo"
+  }
+}

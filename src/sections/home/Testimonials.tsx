@@ -22,14 +22,14 @@ const Testimonials = () => {
       <motion.div className="max-w-2xl text-center" variants={fadeIn("bottom")} {...reveal}>
         <SectionHeading
           align="center"
-          title={t("home.testimonials.title")}
-          accent={t("home.testimonials.accent")}
+          title={t("home:testimonials.title")}
+          accent={t("home:testimonials.accent")}
         />
-        <p className="mt-4 text-body text-fg-secondary md:text-body-lg">{t("home.testimonials.text")}</p>
+        <p className="mt-4 text-body text-fg-secondary md:text-body-lg">{t("home:testimonials.text")}</p>
       </motion.div>
 
       <motion.ul
-        aria-label={t("home.testimonials.list_label")}
+        aria-label={t("home:testimonials.list_label")}
         className="-mx-5 flex w-[calc(100%+2.5rem)] snap-x snap-mandatory scroll-px-5 gap-4 overflow-x-auto px-5 pb-4 sm:-mx-6 sm:w-[calc(100%+3rem)] sm:scroll-px-6 sm:px-6 lg:mx-0 lg:grid lg:w-full lg:grid-cols-3 lg:gap-6 lg:overflow-visible lg:px-0 lg:pb-0"
         variants={staggerContainer()}
         {...reveal}
@@ -57,7 +57,7 @@ const Testimonials = () => {
               <p>{t(selected.textKey)}</p>
             </blockquote>
             <Button variant="secondary" className="mt-6" onClick={() => setSelected(null)}>
-              {t("common.close")}
+              {t("common:close")}
             </Button>
           </figure>
         )}

@@ -39,7 +39,7 @@ const VideoModal = ({ project, onClose }: VideoModalProps) => {
               to={caseStudyPath(project.slug)}
               className="inline-flex shrink-0 items-center gap-2 rounded-sm text-small font-semibold text-video underline-offset-4 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
             >
-              {t("home.work.case_study")}
+              {t("home:work.case_study")}
               <FaArrowRight aria-hidden="true" />
             </Link>
           </div>

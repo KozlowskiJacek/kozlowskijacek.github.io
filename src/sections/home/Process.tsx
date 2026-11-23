@@ -14,10 +14,10 @@ const Process = () => {
       <motion.div className="max-w-2xl text-center" variants={fadeIn("bottom")} {...reveal}>
         <SectionHeading
           align="center"
-          title={t("home.process.title")}
-          accent={t("home.process.accent")}
+          title={t("home:process.title")}
+          accent={t("home:process.accent")}
         />
-        <p className="mt-4 text-body text-fg-secondary md:text-body-lg">{t("home.process.text")}</p>
+        <p className="mt-4 text-body text-fg-secondary md:text-body-lg">{t("home:process.text")}</p>
       </motion.div>
 
       <motion.ol

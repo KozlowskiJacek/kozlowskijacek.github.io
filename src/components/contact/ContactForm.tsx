@@ -200,10 +200,10 @@ const ContactForm = () => {
         className="flex flex-col items-center gap-4 py-10 text-center"
       >
         <FaCircleCheck aria-hidden="true" className="text-5xl text-accent" />
-        <h2 className="font-display text-h3 text-fg">{t("contact.state.success_title")}</h2>
-        <p className="max-w-md text-body text-fg-secondary">{t("contact.state.success_text")}</p>
+        <h2 className="font-display text-h3 text-fg">{t("contact:state.success_title")}</h2>
+        <p className="max-w-md text-body text-fg-secondary">{t("contact:state.success_text")}</p>
         <button type="button" onClick={resetForm} className={buttonClasses({ variant: "secondary", className: "mt-2" })}>
-          {t("contact.state.send_another")}
+          {t("contact:state.send_another")}
         </button>
       </motion.div>
     );
@@ -214,7 +214,7 @@ const ContactForm = () => {
   const mailtoHref = toMailtoHref(
     contactEmail,
     values,
-    `${t(contactTopicKeys[values.topic || "inne"])} — ${values.name.trim() || t("contact.state.mailto_subject")}`,
+    `${t(contactTopicKeys[values.topic || "inne"])} — ${values.name.trim() || t("contact:state.mailto_subject")}`,
   );
 
   return (
@@ -227,7 +227,7 @@ const ContactForm = () => {
 
       {/* Pole-pułapka: poza ekranem, pominięte przez czytniki ekranu i nawigację klawiaturą. */}
       <div aria-hidden="true" className="absolute -left-[10000px] top-auto h-px w-px overflow-hidden">
-        <label htmlFor="contact-website">{t("contact.form.honeypot")}</label>
+        <label htmlFor="contact-website">{t("contact:form.honeypot")}</label>
         <input
           id="contact-website"
           type="text"
@@ -242,7 +242,7 @@ const ContactForm = () => {
       {/* disabled na fieldset blokuje wszystkie kontrolki na czas wysyłki. */}
       <fieldset disabled={isSending} className="flex min-w-0 flex-col gap-5">
         <div className="grid gap-5 md:grid-cols-2">
-          <FormField id="contact-name" label={t("contact.full_name")} error={errorFor("name")}>
+          <FormField id="contact-name" label={t("contact:full_name")} error={errorFor("name")}>
             <input
               id="contact-name"
               type="text"
@@ -256,7 +256,7 @@ const ContactForm = () => {
               {...a11y("name", "contact-name")}
             />
           </FormField>
-          <FormField id="contact-email" label={t("contact.email")} error={errorFor("email")}>
+          <FormField id="contact-email" label={t("contact:email")} error={errorFor("email")}>
             <input
               id="contact-email"
               type="email"
@@ -277,7 +277,7 @@ const ContactForm = () => {
         <AnimatePresence mode="wait" initial={false}>
           {showProjectFields && (
             <motion.div key="project" {...fieldsMotion} className="grid gap-5 md:grid-cols-2">
-              <FormField id="contact-budget" label={t("contact.form.budget")} error={errorFor("budget")}>
+              <FormField id="contact-budget" label={t("contact:form.budget")} error={errorFor("budget")}>
                 <select
                   id="contact-budget"
                   name="budget"
@@ -289,7 +289,7 @@ const ContactForm = () => {
                   {...a11y("budget", "contact-budget")}
                 >
                   <option value="" disabled>
-                    {t("contact.form.select_placeholder")}
+                    {t("contact:form.select_placeholder")}
                   </option>
                   {budgetOptions.map((option) => (
                     <option key={option} value={option}>
@@ -298,7 +298,7 @@ const ContactForm = () => {
                   ))}
                 </select>
               </FormField>
-              <FormField id="contact-deadline" label={t("contact.form.deadline")} error={errorFor("deadline")}>
+              <FormField id="contact-deadline" label={t("contact:form.deadline")} error={errorFor("deadline")}>
                 <select
                   id="contact-deadline"
                   name="deadline"
@@ -310,7 +310,7 @@ const ContactForm = () => {
                   {...a11y("deadline", "contact-deadline")}
                 >
                   <option value="" disabled>
-                    {t("contact.form.select_placeholder")}
+                    {t("contact:form.select_placeholder")}
                   </option>
                   {deadlineOptions.map((option) => (
                     <option key={option} value={option}>
@@ -321,7 +321,7 @@ const ContactForm = () => {
               </FormField>
               <FormField
                 id="contact-materials"
-                label={t("contact.form.materials")}
+                label={t("contact:form.materials")}
                 optional
                 error={errorFor("materials")}
                 className="md:col-span-2"
@@ -344,7 +344,7 @@ const ContactForm = () => {
 
           {showJobFields && (
             <motion.div key="job" {...fieldsMotion} className="grid gap-5 md:grid-cols-2">
-              <FormField id="contact-company" label={t("contact.form.company")} error={errorFor("company")}>
+              <FormField id="contact-company" label={t("contact:form.company")} error={errorFor("company")}>
                 <input
                   id="contact-company"
                   type="text"
@@ -358,7 +358,7 @@ const ContactForm = () => {
                   {...a11y("company", "contact-company")}
                 />
               </FormField>
-              <FormField id="contact-position" label={t("contact.form.position")} error={errorFor("position")}>
+              <FormField id="contact-position" label={t("contact:form.position")} error={errorFor("position")}>
                 <input
                   id="contact-position"
                   type="text"
@@ -377,7 +377,7 @@ const ContactForm = () => {
                 aria-describedby={errorFor("employment") ? errorId("contact-employment") : undefined}
               >
                 <legend className="mb-1.5 text-small font-medium text-fg-secondary">
-                  {t("contact.form.employment")}
+                  {t("contact:form.employment")}
                 </legend>
                 <div className="flex flex-wrap gap-2">
                   {employmentOptions.map((option) => (
@@ -414,14 +414,14 @@ const ContactForm = () => {
           )}
         </AnimatePresence>
 
-        <FormField id="contact-message" label={t("contact.form.message")} error={errorFor("message")}>
+        <FormField id="contact-message" label={t("contact:form.message")} error={errorFor("message")}>
           <textarea
             id="contact-message"
             name="message"
             rows={6}
             required
             maxLength={MESSAGE_MAX}
-            placeholder={t("contact.message")}
+            placeholder={t("contact:message")}
             value={values.message}
             onChange={handleChange("message")}
             onBlur={markTouched("message")}
@@ -448,7 +448,7 @@ const ContactForm = () => {
             />
             <span>
               <Trans
-                i18nKey="contact.form.consent"
+                i18nKey="contact:form.consent"
                 components={{
                   policy: (
                     <Link
@@ -471,13 +471,13 @@ const ContactForm = () => {
 
       {submitAttempted && Object.keys(errors).length > 0 && (
         <p className="sr-only" role="alert">
-          {t("contact.validation.summary")}
+          {t("contact:validation.summary")}
         </p>
       )}
 
       {status === "too_fast" && (
         <p role="alert" className="rounded-xl border border-video/40 bg-video/10 px-4 py-3 text-small text-fg">
-          {t("contact.state.too_fast")}
+          {t("contact:state.too_fast")}
         </p>
       )}
 
@@ -487,13 +487,13 @@ const ContactForm = () => {
           className="flex flex-col gap-3 rounded-xl border border-danger/40 bg-danger/10 px-4 py-4 text-small sm:flex-row sm:items-center"
         >
           <FaTriangleExclamation aria-hidden="true" className="shrink-0 text-lg text-danger" />
-          <p className="flex-1 text-fg">{t("contact.state.error_text")}</p>
+          <p className="flex-1 text-fg">{t("contact:state.error_text")}</p>
           <a
             href={mailtoHref}
             className={buttonClasses({ variant: "secondary", size: "sm", className: "shrink-0" })}
           >
             <FaEnvelope aria-hidden="true" />
-            {t("contact.state.mailto")}
+            {t("contact:state.mailto")}
           </a>
         </div>
       )}
@@ -506,7 +506,7 @@ const ContactForm = () => {
         className={buttonClasses({ size: "lg", className: "mt-1 w-full sm:w-auto sm:self-end" })}
       >
         {isSending && <FaSpinner aria-hidden="true" className="animate-spin" />}
-        {isSending ? t("contact.btn_sending") : t("contact.btn_send")}
+        {isSending ? t("contact:btn_sending") : t("contact:btn_send")}
       </button>
     </form>
   );

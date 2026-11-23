@@ -31,15 +31,15 @@ const VideoMarketingPage = () => {
   const { t } = useTranslation();
   const service = useServiceJsonLd({
     path: paths.servicesVideo,
-    nameKey: "video.meta.title",
-    descriptionKey: "video.meta.description",
+    nameKey: "services:video.meta.title",
+    descriptionKey: "services:video.meta.description",
     serviceType: "Video production",
     packages: videoPackages,
   });
 
   return (
     <>
-      <Seo titleKey="video.meta.title" descriptionKey="video.meta.description" jsonLd={[service]} />
+      <Seo titleKey="services:video.meta.title" descriptionKey="services:video.meta.description" jsonLd={[service]} />
       <ServiceHero
         hero={videoHero}
         tone={videoTone}
@@ -47,7 +47,7 @@ const VideoMarketingPage = () => {
         secondaryHref="#packages"
         media={
           videoShowreelUrl ? (
-            <YouTubeEmbed url={videoShowreelUrl} title={t("video.hero.showreel")} />
+            <YouTubeEmbed url={videoShowreelUrl} title={t("services:video.hero.showreel")} />
           ) : undefined
         }
       />

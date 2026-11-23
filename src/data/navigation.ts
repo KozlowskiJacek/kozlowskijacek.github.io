@@ -35,24 +35,24 @@ export type NavItem = {
 export const serviceLinks: NavItem[] = [
   {
     to: paths.servicesVideo,
-    labelKey: "navbar.services_video",
-    descriptionKey: "navbar.services_video_desc",
+    labelKey: "common:navbar.services_video",
+    descriptionKey: "common:navbar.services_video_desc",
   },
   {
     to: paths.servicesWeb,
-    labelKey: "navbar.services_web",
-    descriptionKey: "navbar.services_web_desc",
+    labelKey: "common:navbar.services_web",
+    descriptionKey: "common:navbar.services_web_desc",
   },
 ];
 
 /** Linki głównej nawigacji (po dropdownie „Usługi”). */
 export const mainLinks: NavItem[] = [
-  { to: paths.portfolio, labelKey: "navbar.portfolio" },
-  { to: paths.employers, labelKey: "navbar.employers" },
-  { to: paths.about, labelKey: "navbar.about" },
+  { to: paths.portfolio, labelKey: "common:navbar.portfolio" },
+  { to: paths.employers, labelKey: "common:navbar.employers" },
+  { to: paths.about, labelKey: "common:navbar.about" },
 ];
 
-export const contactLink: NavItem = { to: paths.contact, labelKey: "navbar.contact" };
+export const contactLink: NavItem = { to: paths.contact, labelKey: "common:navbar.contact" };
 
 export type FooterColumn = {
   titleKey: string;
@@ -61,22 +61,22 @@ export type FooterColumn = {
 
 export const footerColumns: FooterColumn[] = [
   {
-    titleKey: "footer.services",
+    titleKey: "common:footer.services",
     links: serviceLinks.map(({ to, labelKey }) => ({ to, labelKey })),
   },
   {
-    titleKey: "footer.portfolio",
-    links: [{ to: paths.portfolio, labelKey: "footer.portfolio_all" }],
+    titleKey: "common:footer.portfolio",
+    links: [{ to: paths.portfolio, labelKey: "common:footer.portfolio_all" }],
   },
   {
-    titleKey: "footer.employers",
+    titleKey: "common:footer.employers",
     links: [
-      { to: paths.employers, labelKey: "footer.employers_profile" },
-      { to: paths.about, labelKey: "footer.about" },
+      { to: paths.employers, labelKey: "common:footer.employers_profile" },
+      { to: paths.about, labelKey: "common:footer.about" },
     ],
   },
   {
-    titleKey: "footer.contact",
-    links: [{ to: paths.contact, labelKey: "footer.contact_form" }],
+    titleKey: "common:footer.contact",
+    links: [{ to: paths.contact, labelKey: "common:footer.contact_form" }],
   },
 ];

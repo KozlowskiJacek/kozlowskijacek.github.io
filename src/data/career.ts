@@ -28,18 +28,18 @@ export type WorkMode = "remote" | "hybrid" | "onsite" | "employment" | "b2b" | "
 
 /** Klucze tłumaczeń etykiet dostępności. */
 export const availabilityLabelKeys: Record<Availability, string> = {
-  open: "career.availability.open",
-  "freelance-only": "career.availability.freelance_only",
-  closed: "career.availability.closed",
+  open: "career:availability.open",
+  "freelance-only": "career:availability.freelance_only",
+  closed: "career:availability.closed",
 };
 
 export const workModeLabelKeys: Record<WorkMode, string> = {
-  remote: "career.work_modes.remote",
-  hybrid: "career.work_modes.hybrid",
-  onsite: "career.work_modes.onsite",
-  employment: "career.work_modes.employment",
-  b2b: "career.work_modes.b2b",
-  freelance: "career.work_modes.freelance",
+  remote: "career:work_modes.remote",
+  hybrid: "career:work_modes.hybrid",
+  onsite: "career:work_modes.onsite",
+  employment: "career:work_modes.employment",
+  b2b: "career:work_modes.b2b",
+  freelance: "career:work_modes.freelance",
 };
 
 // --- Okresy -----------------------------------------------------------------------------------
@@ -168,8 +168,8 @@ const certFiles = {
 
 export const career: CareerProfile = {
   name: "Jacek Kozłowski",
-  headlineKey: "career.headline",
-  summaryKeys: ["career.summary.p1", "career.summary.p2"],
+  headlineKey: "career:headline",
+  summaryKeys: ["career:summary.p1", "career:summary.p2"],
   // TODO: potwierdzić status i preferowane formy współpracy.
   availability: "open",
   workModes: ["remote", "hybrid", "employment", "b2b"],
@@ -186,28 +186,28 @@ export const career: CareerProfile = {
       id: "company-automation",
       // TODO: nazwa firmy, w której wdrożono skrypty (albo zostaw null — pokaże się opis zastępczy).
       company: null,
-      companyFallbackKey: "career.experience.company_job.company_fallback",
+      companyFallbackKey: "career:experience.company_job.company_fallback",
       // TODO: dokładna nazwa stanowiska.
-      positionKey: "career.experience.company_job.position",
+      positionKey: "career:experience.company_job.position",
       // TODO: potwierdzić datę rozpoczęcia (najstarszy wdrożony skrypt — 2022).
       period: { from: "2022", to: null },
       achievementKeys: [
-        "career.experience.company_job.a1",
-        "career.experience.company_job.a2",
-        "career.experience.company_job.a3",
+        "career:experience.company_job.a1",
+        "career:experience.company_job.a2",
+        "career:experience.company_job.a3",
       ],
       tech: ["Python", "pandas", "BeautifulSoup"],
     },
     {
       id: "freelance",
       company: "Freelance",
-      positionKey: "career.experience.freelance.position",
+      positionKey: "career:experience.freelance.position",
       // TODO: potwierdzić datę rozpoczęcia działalności freelance.
       period: { from: "2023", to: null },
       achievementKeys: [
-        "career.experience.freelance.a1",
-        "career.experience.freelance.a2",
-        "career.experience.freelance.a3",
+        "career:experience.freelance.a1",
+        "career:experience.freelance.a2",
+        "career:experience.freelance.a3",
       ],
       tech: ["React", "TypeScript", "Tailwind CSS", "DaVinci Resolve", "After Effects"],
     },
@@ -218,18 +218,18 @@ export const career: CareerProfile = {
       id: "engineer",
       // TODO: nazwa uczelni i kierunek.
       school: null,
-      degreeKey: "career.education.engineer.degree",
+      degreeKey: "career:education.engineer.degree",
       // TODO: potwierdzić lata studiów.
       period: null,
-      noteKey: "career.education.engineer.note",
+      noteKey: "career:education.engineer.note",
     },
     {
       id: "courses",
       // TODO: organizator kursów (ten sam co wystawca certyfikatów).
       school: null,
-      degreeKey: "career.education.courses.degree",
+      degreeKey: "career:education.courses.degree",
       period: null,
-      noteKey: "career.education.courses.note",
+      noteKey: "career:education.courses.note",
     },
   ],
 
@@ -269,7 +269,7 @@ export const career: CareerProfile = {
   skillGroups: [
     {
       id: "frontend",
-      titleKey: "career.skills.frontend.title",
+      titleKey: "career:skills.frontend.title",
       icon: FaCode,
       items: [
         { label: "React" },
@@ -283,17 +283,17 @@ export const career: CareerProfile = {
         { label: "Vite" },
       ],
       details: {
-        textKey: "career.skills.frontend.text",
+        textKey: "career:skills.frontend.text",
         highlight: {
-          titleKey: "career.skills.frontend.highlight_title",
-          textKey: "career.skills.frontend.highlight_text",
+          titleKey: "career:skills.frontend.highlight_title",
+          textKey: "career:skills.frontend.highlight_text",
         },
-        links: [{ href: certFiles.frontend, labelKey: "career.skills.links.cert_frontend" }],
+        links: [{ href: certFiles.frontend, labelKey: "career:skills.links.cert_frontend" }],
       },
     },
     {
       id: "backend",
-      titleKey: "career.skills.backend.title",
+      titleKey: "career:skills.backend.title",
       icon: FaServer,
       items: [
         { label: "Python" },
@@ -303,108 +303,108 @@ export const career: CareerProfile = {
         { label: "BeautifulSoup" },
       ],
       details: {
-        textKey: "career.skills.backend.text",
+        textKey: "career:skills.backend.text",
         highlight: {
-          titleKey: "career.skills.backend.highlight_title",
-          textKey: "career.skills.backend.highlight_text",
+          titleKey: "career:skills.backend.highlight_title",
+          textKey: "career:skills.backend.highlight_text",
         },
         links: [
-          { href: certFiles.fullStackPython, labelKey: "career.skills.links.cert_full_stack" },
-          { href: certFiles.pythonBackend, labelKey: "career.skills.links.cert_backend" },
+          { href: certFiles.fullStackPython, labelKey: "career:skills.links.cert_full_stack" },
+          { href: certFiles.pythonBackend, labelKey: "career:skills.links.cert_backend" },
         ],
       },
     },
     {
       id: "databases",
-      titleKey: "career.skills.databases.title",
+      titleKey: "career:skills.databases.title",
       icon: FaDatabase,
       items: [{ label: "SQL" }, { label: "MongoDB" }],
       details: {
-        textKey: "career.skills.databases.text",
+        textKey: "career:skills.databases.text",
         highlight: {
-          titleKey: "career.skills.databases.highlight_title",
-          textKey: "career.skills.databases.highlight_text",
+          titleKey: "career:skills.databases.highlight_title",
+          textKey: "career:skills.databases.highlight_text",
         },
-        links: [{ href: certFiles.fullStackPython, labelKey: "career.skills.links.cert_full_stack" }],
+        links: [{ href: certFiles.fullStackPython, labelKey: "career:skills.links.cert_full_stack" }],
       },
     },
     {
       id: "tools",
-      titleKey: "career.skills.tools.title",
+      titleKey: "career:skills.tools.title",
       icon: FaScrewdriverWrench,
       items: [
         { label: "Git" },
         { label: "GitHub" },
         { label: "GitLab" },
-        { labelKey: "career.skills.tools.ci" },
+        { labelKey: "career:skills.tools.ci" },
         { label: "Unix" },
         { label: "GitHub Pages" },
       ],
       details: {
-        textKey: "career.skills.tools.text",
+        textKey: "career:skills.tools.text",
         highlight: {
-          titleKey: "career.skills.tools.highlight_title",
-          textKey: "career.skills.tools.highlight_text",
+          titleKey: "career:skills.tools.highlight_title",
+          textKey: "career:skills.tools.highlight_text",
         },
-        links: [{ href: "https://github.com/KozlowskiJacek", labelKey: "career.skills.links.github" }],
+        links: [{ href: "https://github.com/KozlowskiJacek", labelKey: "career:skills.links.github" }],
       },
     },
     {
       id: "design",
-      titleKey: "career.skills.design.title",
+      titleKey: "career:skills.design.title",
       icon: FaPenRuler,
       items: [
         { label: "Figma" },
         { label: "UI / UX" },
-        { labelKey: "career.skills.design.rwd" },
-        { labelKey: "career.skills.design.prototyping" },
+        { labelKey: "career:skills.design.rwd" },
+        { labelKey: "career:skills.design.prototyping" },
       ],
     },
     {
       id: "video",
-      titleKey: "career.skills.video.title",
+      titleKey: "career:skills.video.title",
       icon: FaFilm,
       items: [
         { label: "DaVinci Resolve" },
         { label: "Premiere Pro" },
         { label: "After Effects" },
-        { labelKey: "career.skills.video.color" },
-        { labelKey: "career.skills.video.script" },
+        { labelKey: "career:skills.video.color" },
+        { labelKey: "career:skills.video.script" },
       ],
       details: {
-        textKey: "career.skills.video.text",
+        textKey: "career:skills.video.text",
         highlight: {
-          titleKey: "career.skills.video.highlight_title",
-          textKey: "career.skills.video.highlight_text",
+          titleKey: "career:skills.video.highlight_title",
+          textKey: "career:skills.video.highlight_text",
         },
         links: [
           {
             href: "https://www.youtube.com/watch?v=oTUANW-PJ0E&ab_channel=Otinus",
-            labelKey: "career.skills.links.video_sample",
+            labelKey: "career:skills.links.video_sample",
           },
         ],
       },
     },
     {
       id: "languages",
-      titleKey: "career.skills.languages.title",
+      titleKey: "career:skills.languages.title",
       icon: FaLanguage,
       items: [
-        { labelKey: "career.skills.languages.polish", levelKey: "career.skills.languages.native" },
+        { labelKey: "career:skills.languages.polish", levelKey: "career:skills.languages.native" },
         // TODO: poziom angielskiego (np. B2 / C1) — wtedy dodaj levelKey.
-        { labelKey: "career.skills.languages.english" },
+        { labelKey: "career:skills.languages.english" },
       ],
     },
     {
       id: "soft",
-      titleKey: "career.skills.soft.title",
+      titleKey: "career:skills.soft.title",
       icon: FaComments,
       items: [
-        { labelKey: "career.skills.soft.independence" },
-        { labelKey: "career.skills.soft.self_learning" },
-        { labelKey: "career.skills.soft.client_communication" },
-        { labelKey: "career.skills.soft.analytical_creative" },
-        { labelKey: "career.skills.soft.ownership" },
+        { labelKey: "career:skills.soft.independence" },
+        { labelKey: "career:skills.soft.self_learning" },
+        { labelKey: "career:skills.soft.client_communication" },
+        { labelKey: "career:skills.soft.analytical_creative" },
+        { labelKey: "career:skills.soft.ownership" },
       ],
     },
   ],
@@ -413,26 +413,26 @@ export const career: CareerProfile = {
     {
       id: "dev-creative",
       icon: FaWandMagicSparkles,
-      titleKey: "career.why_me.dev_creative.title",
-      textKey: "career.why_me.dev_creative.text",
+      titleKey: "career:why_me.dev_creative.title",
+      textKey: "career:why_me.dev_creative.text",
     },
     {
       id: "independence",
       icon: FaUserGear,
-      titleKey: "career.why_me.independence.title",
-      textKey: "career.why_me.independence.text",
+      titleKey: "career:why_me.independence.title",
+      textKey: "career:why_me.independence.text",
     },
     {
       id: "shipped",
       icon: FaRocket,
-      titleKey: "career.why_me.shipped.title",
-      textKey: "career.why_me.shipped.text",
+      titleKey: "career:why_me.shipped.title",
+      textKey: "career:why_me.shipped.text",
     },
     {
       id: "product",
       icon: FaComments,
-      titleKey: "career.why_me.product.title",
-      textKey: "career.why_me.product.text",
+      titleKey: "career:why_me.product.title",
+      textKey: "career:why_me.product.text",
     },
   ],
 };

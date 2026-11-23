@@ -92,7 +92,7 @@ const ServicesDropdown = () => {
         aria-controls={panelId}
         className={desktopLinkClass(active)}
       >
-        {t("navbar.services")}
+        {t("common:navbar.services")}
         <FaChevronDown
           aria-hidden="true"
           className={`text-[0.65rem] transition-transform duration-200 ${open ? "rotate-180" : ""}`}
@@ -216,7 +216,7 @@ const Header = () => {
           </Link>
 
           <nav
-            aria-label={t("navbar.main_nav")}
+            aria-label={t("common:navbar.main_nav")}
             className="hidden flex-1 items-center justify-end gap-8 lg:flex"
           >
             <ServicesDropdown />
@@ -239,7 +239,7 @@ const Header = () => {
               type="button"
               onClick={() => setMenuOpen((open) => !open)}
               className={`grid h-10 w-10 place-items-center rounded-full text-xl text-fg transition-colors hover:bg-surface-elevated ${focusRing}`}
-              aria-label={t(menuOpen ? "navbar.close_menu" : "navbar.open_menu")}
+              aria-label={t(menuOpen ? "common:navbar.close_menu" : "common:navbar.open_menu")}
               aria-expanded={menuOpen}
               aria-controls="mobile-menu"
             >
@@ -254,7 +254,7 @@ const Header = () => {
         {menuOpen && (
           <motion.nav
             id="mobile-menu"
-            aria-label={t("navbar.main_nav")}
+            aria-label={t("common:navbar.main_nav")}
             className="fixed inset-x-0 bottom-0 top-16 z-40 overflow-y-auto overscroll-contain bg-background lg:hidden print:hidden"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -264,7 +264,7 @@ const Header = () => {
             <Container className="flex min-h-full flex-col gap-8 py-8">
               <div>
                 <p className="mb-2 px-4 text-small font-semibold uppercase tracking-wider text-fg-muted">
-                  {t("navbar.services")}
+                  {t("common:navbar.services")}
                 </p>
                 <ul className="flex flex-col gap-1">
                   {serviceLinks.map((link) => (

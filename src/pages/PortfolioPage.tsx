@@ -53,7 +53,7 @@ const PortfolioPage = () => {
 
   return (
     <Section id="portfolio" padding="page" className="flex-col">
-      <Seo titleKey="pages.portfolio.meta.title" descriptionKey="pages.portfolio.meta.description" />
+      <Seo titleKey="portfolio:page.meta.title" descriptionKey="portfolio:page.meta.description" />
       <motion.header
         className="flex w-full max-w-3xl flex-col items-center gap-4 text-center"
         variants={staggerContainer(0.08)}
@@ -64,18 +64,18 @@ const PortfolioPage = () => {
           variants={staggerItem}
           className="text-small font-semibold uppercase tracking-wider text-accent"
         >
-          {t("navbar.portfolio")}
+          {t("common:navbar.portfolio")}
         </motion.p>
         <SectionHeading
           as="h1"
           size="h1"
           align="center"
           variants={staggerItem}
-          title={t("pages.portfolio.title")}
-          accent={t("pages.portfolio.accent")}
+          title={t("portfolio:page.title")}
+          accent={t("portfolio:page.accent")}
         />
         <motion.p variants={staggerItem} className="max-w-2xl text-body text-fg-secondary md:text-body-lg">
-          {t("pages.portfolio.text")}
+          {t("portfolio:page.text")}
         </motion.p>
       </motion.header>
 
@@ -83,7 +83,7 @@ const PortfolioPage = () => {
 
       {/* Ogłoszenie liczby wyników po zmianie filtra. */}
       <p aria-live="polite" className="sr-only">
-        {t("pages.portfolio.results", { count: items.length })}
+        {t("portfolio:page.results", { count: items.length })}
       </p>
 
       {items.length > 0 ? (
@@ -111,12 +111,12 @@ const PortfolioPage = () => {
           transition={cardTransition}
           className="flex w-full max-w-xl flex-col items-center gap-5 rounded-2xl border border-dashed border-border-strong px-6 py-10 text-center"
         >
-          <p className="text-body text-fg-secondary">{t("pages.portfolio.empty")}</p>
+          <p className="text-body text-fg-secondary">{t("portfolio:page.empty")}</p>
           <div className="flex flex-wrap justify-center gap-3">
             <Button variant="secondary" onClick={() => changeFilter("all")}>
-              {t("pages.portfolio.show_all")}
+              {t("portfolio:page.show_all")}
             </Button>
-            <Button to={paths.contact}>{t("pages.cta")}</Button>
+            <Button to={paths.contact}>{t("common:cta")}</Button>
           </div>
         </motion.div>
       )}

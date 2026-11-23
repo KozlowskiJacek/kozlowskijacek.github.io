@@ -53,12 +53,12 @@ const ContactChannels = () => {
   return (
     <Card as="div" className="flex flex-col gap-6 p-5 sm:p-6">
       <div>
-        <h2 className="font-display text-h3 text-fg">{t("contact.channels.title")}</h2>
-        <p className="mt-2 text-small text-fg-secondary">{t("contact.channels.text")}</p>
+        <h2 className="font-display text-h3 text-fg">{t("contact:channels.title")}</h2>
+        <p className="mt-2 text-small text-fg-secondary">{t("contact:channels.text")}</p>
       </div>
 
       <div className="flex flex-col gap-2">
-        <span className="text-small font-medium text-fg-secondary">{t("contact.channels.email")}</span>
+        <span className="text-small font-medium text-fg-secondary">{t("contact:channels.email")}</span>
         <div className="flex items-center gap-2">
           <a
             href={`mailto:${contactEmail}`}
@@ -74,8 +74,8 @@ const ContactChannels = () => {
           <button
             type="button"
             onClick={handleCopy}
-            aria-label={t("contact.channels.copy")}
-            title={t("contact.channels.copy")}
+            aria-label={t("contact:channels.copy")}
+            title={t("contact:channels.copy")}
             className={`grid h-12 w-12 shrink-0 place-items-center rounded-xl border border-border bg-background text-fg-secondary transition-colors hover:border-accent/50 hover:text-accent ${focusRing}`}
           >
             {copyState === "copied" ? (
@@ -86,8 +86,8 @@ const ContactChannels = () => {
           </button>
         </div>
         <p aria-live="polite" className="min-h-[1.375rem] text-small">
-          {copyState === "copied" && <span className="text-accent">{t("contact.channels.copied")}</span>}
-          {copyState === "failed" && <span className="text-danger">{t("contact.channels.copy_failed")}</span>}
+          {copyState === "copied" && <span className="text-accent">{t("contact:channels.copied")}</span>}
+          {copyState === "failed" && <span className="text-danger">{t("contact:channels.copy_failed")}</span>}
         </p>
       </div>
 
@@ -107,7 +107,7 @@ const ContactChannels = () => {
                   <span className="truncate text-xs text-fg-muted">{detail}</span>
                 </span>
                 <FaArrowUpRightFromSquare aria-hidden="true" className="shrink-0 text-xs text-fg-muted" />
-                <span className="sr-only">{t("pages.case_study.new_tab")}</span>
+                <span className="sr-only">{t("portfolio:case_study.new_tab")}</span>
               </a>
             </li>
           ))}
@@ -117,8 +117,8 @@ const ContactChannels = () => {
       <p className="flex items-center gap-3 rounded-xl border border-accent/20 bg-accent/5 px-4 py-3 text-small text-fg-secondary">
         <FaClock aria-hidden="true" className="shrink-0 text-accent" />
         <span>
-          {t("contact.channels.response_label")}{" "}
-          <strong className="font-semibold text-fg">{t("contact.channels.response_time")}</strong>
+          {t("contact:channels.response_label")}{" "}
+          <strong className="font-semibold text-fg">{t("contact:channels.response_time")}</strong>
         </span>
       </p>
     </Card>

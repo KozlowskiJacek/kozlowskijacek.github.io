@@ -57,7 +57,7 @@ const StackGroupCard = ({ group }: { group: SkillGroup }) => {
             onClick={() => setOpen((value) => !value)}
             className="inline-flex items-center gap-2 rounded-sm text-small font-medium text-accent hover:text-accent-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-surface-elevated"
           >
-            {t(open ? "employer.stack.hide_details" : "employer.stack.show_details")}
+            {t(open ? "career:employer.stack.hide_details" : "career:employer.stack.show_details")}
             <FaChevronDown
               aria-hidden="true"
               className={`text-xs transition-transform duration-200 ${open ? "rotate-180" : ""}`}
@@ -94,7 +94,7 @@ const StackGroupCard = ({ group }: { group: SkillGroup }) => {
                           >
                             {t(link.labelKey)}
                             <FaArrowUpRightFromSquare aria-hidden="true" className="text-[0.7em]" />
-                            <span className="sr-only">{t("pages.case_study.new_tab")}</span>
+                            <span className="sr-only">{t("portfolio:case_study.new_tab")}</span>
                           </a>
                         </li>
                       ))}
@@ -118,9 +118,9 @@ const StackGroups = () => {
     <EmployerSection
       id="stack"
       bg="secondary"
-      title={t("employer.stack.title")}
-      accent={t("employer.stack.accent")}
-      text={t("employer.stack.text")}
+      title={t("career:employer.stack.title")}
+      accent={t("career:employer.stack.accent")}
+      text={t("career:employer.stack.text")}
     >
       <motion.ul
         className="grid items-start gap-4 md:grid-cols-2 xl:grid-cols-3 print:grid-cols-1 print:gap-y-0.5"

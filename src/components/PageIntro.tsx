@@ -51,7 +51,7 @@ const PageIntro = ({ id, eyebrow, title, text, children }: PageIntroProps) => {
           className="mt-8 flex flex-wrap items-center justify-center gap-4"
         >
           <Button to={paths.contact} size="lg">
-            {t("pages.cta")}
+            {t("common:cta")}
           </Button>
           {children}
         </motion.div>

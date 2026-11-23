@@ -14,7 +14,7 @@ const MainPage = () => {
 
   return (
     <>
-      <Seo titleKey="home.meta.title" descriptionKey="home.meta.description" bareTitle jsonLd={[person]} />
+      <Seo titleKey="home:meta.title" descriptionKey="home:meta.description" bareTitle jsonLd={[person]} />
       <Hero />
       <TrustBar />
       <ServicesOverview />

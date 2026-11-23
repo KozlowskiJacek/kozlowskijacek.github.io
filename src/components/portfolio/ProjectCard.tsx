@@ -40,7 +40,7 @@ const ProjectCard = ({ project, onPlay }: ProjectCardProps) => {
             >
               <FaPlay className="translate-x-0.5" />
             </span>
-            <span className="sr-only">{t("services.play_video", { title: project.title })}</span>
+            <span className="sr-only">{t("services:shared.play_video", { title: project.title })}</span>
           </button>
         )}
       </div>
@@ -61,7 +61,7 @@ const ProjectCard = ({ project, onPlay }: ProjectCardProps) => {
         <p className="text-small text-fg-secondary">{t(project.summaryKey)}</p>
 
         {project.tech.length > 0 && (
-          <ul aria-label={t("projects.tech_label")} className="flex flex-wrap gap-2 pt-1">
+          <ul aria-label={t("portfolio:tech_label")} className="flex flex-wrap gap-2 pt-1">
             {project.tech.map((tech) => (
               <li key={tech}>
                 <Badge>{tech}</Badge>
@@ -76,7 +76,7 @@ const ProjectCard = ({ project, onPlay }: ProjectCardProps) => {
             tone === "video" ? "text-video" : "text-accent"
           }`}
         >
-          {t("home.work.case_study")}
+          {t("home:work.case_study")}
           <FaArrowRight className="transition-transform duration-200 motion-safe:group-hover:translate-x-1" />
         </span>
       </div>

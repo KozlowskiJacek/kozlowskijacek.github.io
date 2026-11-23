@@ -14,7 +14,7 @@ const TrustBar = () => {
       id="trust"
       bg="secondary"
       padding="compact"
-      aria-label={t("home.trust.label")}
+      aria-label={t("home:trust.label")}
       className="flex-col gap-10 lg:flex-row lg:justify-between md:gap-12"
     >
       <motion.div
@@ -26,7 +26,7 @@ const TrustBar = () => {
           variants={staggerItem}
           className="text-small font-semibold uppercase tracking-wider text-fg-muted"
         >
-          {t("home.trust.title")}
+          {t("home:trust.title")}
         </motion.p>
         <ul className="flex flex-wrap items-center justify-center gap-4">
           {clientLogos.map((client) => (

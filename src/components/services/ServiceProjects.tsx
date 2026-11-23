@@ -70,7 +70,7 @@ const ServiceProjects = ({ id, portfolio, tone, bg = "primary" }: ServiceProject
                     aria-hidden="true"
                     className={`mt-auto inline-flex items-center gap-2 pt-2 text-small font-semibold ${classes.text}`}
                   >
-                    {t("home.work.case_study")}
+                    {t("home:work.case_study")}
                     <FaArrowRight className="transition-transform duration-200 motion-safe:group-hover:translate-x-1" />
                   </span>
                 </div>
@@ -80,12 +80,12 @@ const ServiceProjects = ({ id, portfolio, tone, bg = "primary" }: ServiceProject
         </motion.ul>
       ) : (
         <p className="w-full max-w-xl rounded-2xl border border-dashed border-border-strong px-6 py-8 text-center text-body text-fg-secondary">
-          {t("services.portfolio_empty")}
+          {t("services:shared.portfolio_empty")}
         </p>
       )}
 
       <Button to={paths.portfolio} variant="secondary" size="lg">
-        {t("home.work.all")}
+        {t("home:work.all")}
         <FaArrowRight aria-hidden="true" className="text-small" />
       </Button>
     </Section>

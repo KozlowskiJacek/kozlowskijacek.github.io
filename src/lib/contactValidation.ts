@@ -39,7 +39,7 @@ const isHttpUrl = (value: string) => {
   }
 };
 
-const required = { key: "contact.validation.required" };
+const required = { key: "contact:validation.required" };
 
 /** Walidacja bez zewnętrznych bibliotek. Pola niedotyczące wybranego tematu są pomijane. */
 export const validateContactForm = (values: ContactFormValues): ContactErrors => {
@@ -49,19 +49,19 @@ export const validateContactForm = (values: ContactFormValues): ContactErrors =>
   const message = values.message.trim();
 
   if (!name) errors.name = required;
-  else if (name.length < NAME_MIN) errors.name = { key: "contact.validation.too_short", params: { min: NAME_MIN } };
-  else if (name.length > NAME_MAX) errors.name = { key: "contact.validation.too_long", params: { max: NAME_MAX } };
+  else if (name.length < NAME_MIN) errors.name = { key: "contact:validation.too_short", params: { min: NAME_MIN } };
+  else if (name.length > NAME_MAX) errors.name = { key: "contact:validation.too_long", params: { max: NAME_MAX } };
 
   if (!email) errors.email = required;
-  else if (!EMAIL_PATTERN.test(email)) errors.email = { key: "contact.validation.email" };
+  else if (!EMAIL_PATTERN.test(email)) errors.email = { key: "contact:validation.email" };
 
-  if (!values.topic) errors.topic = { key: "contact.validation.topic" };
+  if (!values.topic) errors.topic = { key: "contact:validation.topic" };
 
   if (isProjectTopic(values.topic)) {
-    if (!values.budget) errors.budget = { key: "contact.validation.choose" };
-    if (!values.deadline) errors.deadline = { key: "contact.validation.choose" };
+    if (!values.budget) errors.budget = { key: "contact:validation.choose" };
+    if (!values.deadline) errors.deadline = { key: "contact:validation.choose" };
     const materials = values.materials.trim();
-    if (materials && !isHttpUrl(materials)) errors.materials = { key: "contact.validation.url" };
+    if (materials && !isHttpUrl(materials)) errors.materials = { key: "contact:validation.url" };
   }
 
   if (values.topic === "praca") {
@@ -69,20 +69,20 @@ export const validateContactForm = (values: ContactFormValues): ContactErrors =>
     const position = values.position.trim();
     if (!company) errors.company = required;
     else if (company.length > SHORT_TEXT_MAX)
-      errors.company = { key: "contact.validation.too_long", params: { max: SHORT_TEXT_MAX } };
+      errors.company = { key: "contact:validation.too_long", params: { max: SHORT_TEXT_MAX } };
     if (!position) errors.position = required;
     else if (position.length > SHORT_TEXT_MAX)
-      errors.position = { key: "contact.validation.too_long", params: { max: SHORT_TEXT_MAX } };
-    if (!values.employment) errors.employment = { key: "contact.validation.choose" };
+      errors.position = { key: "contact:validation.too_long", params: { max: SHORT_TEXT_MAX } };
+    if (!values.employment) errors.employment = { key: "contact:validation.choose" };
   }
 
   if (!message) errors.message = required;
   else if (message.length < MESSAGE_MIN)
-    errors.message = { key: "contact.validation.too_short", params: { min: MESSAGE_MIN } };
+    errors.message = { key: "contact:validation.too_short", params: { min: MESSAGE_MIN } };
   else if (message.length > MESSAGE_MAX)
-    errors.message = { key: "contact.validation.too_long", params: { max: MESSAGE_MAX } };
+    errors.message = { key: "contact:validation.too_long", params: { max: MESSAGE_MAX } };
 
-  if (!values.consent) errors.consent = { key: "contact.validation.consent" };
+  if (!values.consent) errors.consent = { key: "contact:validation.consent" };
 
   return errors;
 };

@@ -22,13 +22,13 @@ const FinalCta = () => {
           className="absolute inset-0 -z-10 bg-gradient-to-b from-accent/10 via-transparent to-transparent"
         />
         <h2 className="text-balance font-display text-h2 text-fg">
-          {t("home.cta.title")} <span className="text-accent">{t("home.cta.accent")}</span>
+          {t("home:cta.title")} <span className="text-accent">{t("home:cta.accent")}</span>
         </h2>
         <p className="mx-auto mt-4 max-w-xl text-body text-fg-secondary md:text-body-lg">
-          {t("home.cta.text")}
+          {t("home:cta.text")}
         </p>
         <Button to={paths.contact} size="lg" className="mt-8">
-          {t("home.cta.button")}
+          {t("home:cta.button")}
           <FaArrowRight aria-hidden="true" className="text-small" />
         </Button>
       </motion.div>

@@ -24,8 +24,8 @@ const FeaturedWork = () => {
         variants={fadeIn("bottom")}
         {...reveal}
       >
-        <SectionHeading align="center" title={t("home.work.title")} accent={t("home.work.accent")} />
-        <p className="max-w-2xl text-body text-fg-secondary md:text-body-lg">{t("home.work.text")}</p>
+        <SectionHeading align="center" title={t("home:work.title")} accent={t("home:work.accent")} />
+        <p className="max-w-2xl text-body text-fg-secondary md:text-body-lg">{t("home:work.text")}</p>
       </motion.div>
 
       <motion.ul
@@ -60,7 +60,7 @@ const FeaturedWork = () => {
                   aria-hidden="true"
                   className="mt-auto inline-flex items-center gap-2 pt-2 text-small font-semibold text-accent"
                 >
-                  {t("home.work.case_study")}
+                  {t("home:work.case_study")}
                   <FaArrowRight className="transition-transform duration-200 motion-safe:group-hover:translate-x-1" />
                 </span>
               </div>
@@ -70,7 +70,7 @@ const FeaturedWork = () => {
       </motion.ul>
 
       <Button to={paths.portfolio} variant="secondary" size="lg">
-        {t("home.work.all")}
+        {t("home:work.all")}
         <FaArrowRight aria-hidden="true" className="text-small" />
       </Button>
     </Section>

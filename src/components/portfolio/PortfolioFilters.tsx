@@ -19,7 +19,7 @@ const PortfolioFilters = ({ value, onChange, counts }: PortfolioFiltersProps) =>
   return (
     <div
       role="group"
-      aria-label={t("pages.portfolio.filters_label")}
+      aria-label={t("portfolio:page.filters_label")}
       className="flex w-full flex-wrap justify-center gap-2"
     >
       {filters.map((filter) => {
@@ -36,7 +36,7 @@ const PortfolioFilters = ({ value, onChange, counts }: PortfolioFiltersProps) =>
                 : "border-border-strong bg-surface/60 text-fg-secondary hover:border-accent/50 hover:text-fg"
             }`}
           >
-            {filter === "all" ? t("pages.portfolio.all") : t(projectCategoryLabelKeys[filter])}
+            {filter === "all" ? t("portfolio:page.all") : t(projectCategoryLabelKeys[filter])}
             <span
               aria-hidden="true"
               className={`text-xs tabular-nums ${active ? "text-accent-contrast/70" : "text-fg-muted"}`}

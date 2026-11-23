@@ -42,13 +42,13 @@ Pozostałe komendy:
 | `npm run preview`   | podgląd zbudowanej wersji            |
 | `npm run lint`      | ESLint                               |
 | `npm run typecheck` | sprawdzenie typów (`tsc -b`)         |
-| `npm run i18n:check`| klucze `t()` obecne w `pl.json` i `en.json` |
+| `npm run i18n:check`| spójność kluczy PL/EN, klucze użyte w kodzie istnieją |
 | `npm run deploy`    | build + publikacja na GitHub Pages   |
 | `npm run og:render` | renderuje `scripts/og/og-template.html` do `public/og/default.png` (headless Chrome/Edge) |
 
 ## SEO
 
-- Każda strona renderuje `<Seo />` (`src/components/Seo.tsx`): title, description, canonical, Open Graph, Twitter Card i `hreflang`. Teksty pochodzą z kluczy `*.meta.title` / `*.meta.description` w tłumaczeniach.
+- Każda strona renderuje `<Seo />` (`src/components/Seo.tsx`): title, description, canonical, Open Graph, Twitter Card i `hreflang`. Teksty pochodzą z kluczy `…:meta.title` / `…:meta.description` w tłumaczeniach.
 - Adres strony, domyślny obraz OG i lista indeksowanych tras: `src/data/site.ts`.
 - Język jest w parametrze adresu: wersja PL to `/sciezka`, EN to `/sciezka?lang=en` (parametr ma pierwszeństwo przed wyborem zapisanym w `localStorage`).
 - `public/robots.txt` wskazuje na `sitemap.xml`, którą po buildzie generuje `scripts/generate-sitemap.mjs` (krok `postbuild`) z `indexableRoutes` w `src/data/site.ts` i slugów opublikowanych projektów. Nowa podstrona = dopisz trasę do `indexableRoutes`.
@@ -124,7 +124,7 @@ ograniczenie wysyłek do własnej domeny i limity, jeśli plan na to pozwala.
 
 Kanały kontaktu obok formularza (e-mail, LinkedIn, GitHub, opcjonalnie Calendly) są w `src/data/contact.ts`;
 link do Calendly pojawi się po wpisaniu adresu w `contactLinks` (`href: null` = ukryty).
-Treść polityki prywatności (`/polityka-prywatnosci`) jest w `privacy.*` w plikach tłumaczeń, a lista sekcji i data
+Treść polityki prywatności (`/polityka-prywatnosci`) jest w `contact:privacy.*` (`src/translations/{pl,en}/contact.json`), a lista sekcji i data
 aktualizacji w `src/data/privacy.ts`.
 
 ## Deploy
@@ -154,7 +154,7 @@ Skrypt `predeploy` buduje projekt, a `gh-pages -d dist` publikuje zawartość `d
 │   ├── data/               # typowane dane: navigation, projects, career (CV), stack, testimonials, socials
 │   ├── lib/                # animations (framer-motion), i18n, env
 │   ├── hooks/              # useSmoothScroll, useScrollSpy, useNavigateToSection
-│   ├── translations/       # pl.json, en.json (jedyne źródło tłumaczeń)
+│   ├── translations/       # {pl,en}/<namespace>.json: common, home, services, portfolio, career, contact
 │   └── assets/img/         # obrazy importowane w komponentach
 ├── tailwind.config.js
 └── vite.config.ts

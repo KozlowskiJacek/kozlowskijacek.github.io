@@ -18,7 +18,7 @@ const AboutPage = () => {
 
   return (
     <div>
-      <Seo titleKey="about.meta.title" descriptionKey="about.meta.description" type="profile" />
+      <Seo titleKey="career:about.meta.title" descriptionKey="career:about.meta.description" type="profile" />
 
       <Section id="title_hello" padding="hero" bg="primary" className="md:flex-row flex-col">
         <motion.div
@@ -27,14 +27,14 @@ const AboutPage = () => {
           {...revealHalf}
         >
           <h3 className="mb-3 text-h3 text-fg-secondary">
-            {t("home.hello")}
+            {t("home:hello")}
           </h3>
           <h1 className="text-display text-accent">
             Jacek
           </h1>
 
           <p className="mt-5 text-body text-fg-secondary md:text-body-lg">
-            {t("about.text")}
+            {t("career:about.text")}
           </p>
         </motion.div>
         <motion.div
@@ -70,11 +70,11 @@ const AboutPage = () => {
           <SectionHeading
             as="h3"
             className="mb-4"
-            title={t("about.why")}
-            accent={t("about.full_stack")}
+            title={t("career:about.why")}
+            accent={t("career:about.full_stack")}
           />
           <p className="mt-5 text-body text-fg-secondary md:text-body-lg">
-            {t("about.text2")}
+            {t("career:about.text2")}
           </p>
         </motion.div>
       </Section>
@@ -88,12 +88,12 @@ const AboutPage = () => {
           <SectionHeading
             as="h3"
             className="mb-4"
-            title={t("about.how")}
-            accent={t("about.content_creator")}
+            title={t("career:about.how")}
+            accent={t("career:about.content_creator")}
           />
 
           <p className="mt-5 text-body text-fg-secondary md:text-body-lg">
-            {t("about.text3")}
+            {t("career:about.text3")}
           </p>
         </motion.div>
         <motion.div
@@ -129,11 +129,11 @@ const AboutPage = () => {
           <SectionHeading
             as="h3"
             className="mb-4"
-            title={t("about.what_im")}
-            accent={t("about.guided_by")}
+            title={t("career:about.what_im")}
+            accent={t("career:about.guided_by")}
           />
           <p className="mt-5 text-body text-fg-secondary md:text-body-lg">
-            {t("about.text4")}
+            {t("career:about.text4")}
           </p>
         </motion.div>
       </Section>
@@ -147,17 +147,17 @@ const AboutPage = () => {
           <SectionHeading
             as="h3"
             className="mb-4"
-            title={t("about.after")}
-            accent={t("about.hour")}
+            title={t("career:about.after")}
+            accent={t("career:about.hour")}
           />
 
           <p className="mt-5 text-body text-fg-secondary md:text-body-lg">
-            {t("about.text5")}
+            {t("career:about.text5")}
           </p>
           <Button to={paths.contact} size="lg" className="mt-8">
-            {t("about.questions")}
+            {t("career:about.questions")}
           </Button>
-          <h2 className="mt-8 text-h3 text-fg-secondary">{t("about.bye")}</h2>
+          <h2 className="mt-8 text-h3 text-fg-secondary">{t("career:about.bye")}</h2>
         </motion.div>
         <motion.div
           className="w-full max-w-sm shrink-0 md:max-w-md"

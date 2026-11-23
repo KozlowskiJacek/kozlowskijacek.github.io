@@ -14,7 +14,7 @@ const LanguageSwitcher = () => {
     <button
       type="button"
       onClick={toggleLanguage}
-      aria-label={t("navbar.switch_language")}
+      aria-label={t("common:navbar.switch_language")}
       className="rounded-sm text-small font-semibold tracking-wider focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
     >
       {languages.map((lang, i) => (

@@ -1,10 +1,12 @@
-// Sprawdza, czy każdy klucz użyty w t() istnieje w pl.json i en.json,
-// oraz czy oba pliki tłumaczeń mają ten sam zestaw kluczy.
+// Sprawdza tłumaczenia podzielone na namespace'y (src/translations/<język>/<ns>.json):
+//  - czy PL i EN mają te same pliki i te same klucze,
+//  - czy każdy klucz użyty w kodzie ("ns:ścieżka") istnieje w obu językach.
 // Użycie: npm run i18n:check
 import { readFileSync, readdirSync, statSync } from "node:fs";
 import { join, relative } from "node:path";
 
 const root = process.cwd();
+const translationsDir = join(root, "src/translations");
 const locales = ["pl", "en"];
 
 const flatten = (obj, prefix = "") =>
@@ -12,12 +14,20 @@ const flatten = (obj, prefix = "") =>
     v && typeof v === "object" ? flatten(v, `${prefix}${k}.`) : [`${prefix}${k}`],
   );
 
+/** { pl: Set("common:navbar.contact", …), en: … } */
 const dicts = Object.fromEntries(
-  locales.map((l) => [
-    l,
-    new Set(flatten(JSON.parse(readFileSync(join(root, `src/translations/${l}.json`), "utf8")))),
-  ]),
+  locales.map((lang) => {
+    const dir = join(translationsDir, lang);
+    const keys = readdirSync(dir)
+      .filter((file) => file.endsWith(".json"))
+      .flatMap((file) => {
+        const ns = file.replace(/\.json$/, "");
+        return flatten(JSON.parse(readFileSync(join(dir, file), "utf8"))).map((key) => `${ns}:${key}`);
+      });
+    return [lang, new Set(keys)];
+  }),
 );
+const namespaces = new Set([...dicts[locales[0]]].map((key) => key.split(":")[0]));
 
 const walk = (dir) =>
   readdirSync(dir).flatMap((name) => {
@@ -25,58 +35,59 @@ const walk = (dir) =>
     return statSync(p).isDirectory() ? walk(p) : /\.(tsx?|jsx?)$/.test(name) ? [p] : [];
   });
 
-const used = new Map(); // key -> [file:line]
-const add = (key, where) => used.set(key, [...(used.get(key) ?? []), where]);
+/** Klucze użyte w kodzie: każdy literał "ns:ścieżka" ze znanym namespace'em. */
+const used = new Map(); // klucz -> [plik:linia]
+/** Klucze składane w szablonie, np. `contact:privacy.sections.${id}.title` → wzorzec. */
+const patterns = [];
 
 for (const file of walk(join(root, "src"))) {
   const src = readFileSync(file, "utf8");
   const rel = relative(root, file).replaceAll("\\", "/");
-  // Tablice stringów zdefiniowane w pliku (np. const links = [...]) do rozwinięcia `prefix.${link}`.
-  const arrays = {};
-  for (const m of src.matchAll(/const\s+(\w+)(?:\s*:[^=]+)?\s*=\s*\[([^\]]*)\]/g)) {
-    const items = [...m[2].matchAll(/["']([^"']+)["']/g)].map((x) => x[1]);
-    if (items.length) arrays[m[1]] = items;
-  }
   const lineOf = (idx) => src.slice(0, idx).split("\n").length;
-  // Klucze trzymane w danych, np. descriptionKey: "projects.gpsmaker".
-  for (const m of src.matchAll(/\w*Key:\s*["']([\w.]+)["']/g)) add(m[1], `${rel}:${lineOf(m.index)}`);
-  for (const m of src.matchAll(/\bt\(\s*(["'`])((?:(?!\1).)*)\1/g)) {
+  for (const m of src.matchAll(/(["'`])(\w+):([\w.]+(?:\$\{[^}]+\}[\w.]*)*)\1/g)) {
+    const [, quote, ns, path] = m;
+    if (!namespaces.has(ns)) continue;
     const where = `${rel}:${lineOf(m.index)}`;
-    const key = m[2];
-    const dyn = key.match(/^(.*)\$\{(\w+)\}(.*)$/);
-    if (m[1] === "`" && dyn) {
-      // Zmienna z `${link}` pochodzi zwykle z `links.map((link) => ...)`.
-      const source = src.match(new RegExp(String.raw`(\w+)\.map\(\(?\s*${dyn[2]}\b`))?.[1];
-      const values = arrays[dyn[2]] ?? arrays[source];
-      if (!values) {
-        console.warn(`? nie można rozwinąć klucza dynamicznego ${key} (${where})`);
-        continue;
-      }
-      values.forEach((v) => add(`${dyn[1]}${v}${dyn[3]}`, where));
+    if (quote === "`" && path.includes("${")) {
+      const source = `${ns}:${path}`;
+      const regex = new RegExp(
+        `^${source
+          .split(/\$\{[^}]+\}/)
+          .map((part) => part.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"))
+          .join("\\w+")}$`,
+      );
+      patterns.push({ source, regex, where });
     } else {
-      add(key, where);
+      const key = `${ns}:${path}`;
+      used.set(key, [...(used.get(key) ?? []), where]);
     }
   }
 }
 
 let problems = 0;
+const report = (message) => {
+  problems++;
+  console.log(`✗ ${message}`);
+};
+
 for (const [key, places] of [...used].sort()) {
-  const missing = locales.filter((l) => !dicts[l].has(key));
-  if (missing.length) {
-    problems++;
-    console.log(`✗ ${key} — brak w: ${missing.join(", ")} (${places.join(", ")})`);
-  }
+  const missing = locales.filter((lang) => !dicts[lang].has(key));
+  if (missing.length) report(`${key} — brak w: ${missing.join(", ")} (${places.join(", ")})`);
 }
-for (const l of locales) {
-  for (const other of locales.filter((x) => x !== l)) {
-    for (const key of dicts[l]) {
-      if (!dicts[other].has(key)) {
-        problems++;
-        console.log(`✗ ${key} — jest w ${l}.json, brak w ${other}.json`);
-      }
+for (const { source, regex, where } of patterns) {
+  if (![...dicts[locales[0]]].some((key) => regex.test(key))) report(`${source} — żaden klucz nie pasuje (${where})`);
+}
+for (const lang of locales) {
+  for (const other of locales.filter((x) => x !== lang)) {
+    for (const key of dicts[lang]) {
+      if (!dicts[other].has(key)) report(`${key} — jest w ${lang}/, brak w ${other}/`);
     }
   }
 }
 
-console.log(problems ? `\n${problems} problem(ów).` : `✓ ${used.size} kluczy, wszystkie obecne w ${locales.join(" i ")}.`);
+console.log(
+  problems
+    ? `\n${problems} problem(ów).`
+    : `✓ ${dicts[locales[0]].size} kluczy w ${namespaces.size} namespace'ach, PL i EN spójne, wszystkie użyte klucze istnieją.`,
+);
 process.exit(problems ? 1 : 0);

@@ -17,7 +17,7 @@ const PrivacyPolicyPage = () => {
 
   return (
     <Section id="privacy" padding="page" className="flex-col">
-      <Seo titleKey="privacy.meta.title" descriptionKey="privacy.meta.description" />
+      <Seo titleKey="contact:privacy.meta.title" descriptionKey="contact:privacy.meta.description" />
       <motion.header
         className="mx-auto w-full max-w-3xl"
         variants={staggerContainer(0.08)}
@@ -25,16 +25,16 @@ const PrivacyPolicyPage = () => {
         animate="visible"
       >
         <motion.p variants={staggerItem} className="mb-4 text-small font-semibold uppercase tracking-wider text-accent">
-          {t("privacy.eyebrow")}
+          {t("contact:privacy.eyebrow")}
         </motion.p>
         <motion.h1 variants={staggerItem} className="text-balance font-display text-h1 text-fg">
-          {t("privacy.title")}
+          {t("contact:privacy.title")}
         </motion.h1>
         <motion.p variants={staggerItem} className="mt-5 text-body text-fg-secondary md:text-body-lg">
-          {t("privacy.intro")}
+          {t("contact:privacy.intro")}
         </motion.p>
         <motion.p variants={staggerItem} className="mt-3 text-small text-fg-muted">
-          <time dateTime={privacyUpdatedAt}>{t("privacy.updated", { date: updated })}</time>
+          <time dateTime={privacyUpdatedAt}>{t("contact:privacy.updated", { date: updated })}</time>
         </motion.p>
       </motion.header>
 
@@ -62,7 +62,7 @@ const PrivacyPolicyPage = () => {
         <div className="border-t border-border pt-8">
           <Button to={paths.contact} variant="secondary">
             <FaArrowLeft aria-hidden="true" />
-            {t("privacy.back")}
+            {t("contact:privacy.back")}
           </Button>
         </div>
       </motion.div>

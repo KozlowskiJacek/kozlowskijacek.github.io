@@ -56,7 +56,7 @@ const YouTubeEmbed = ({ url, title, className = "", autoLoad = false }: YouTubeE
           >
             <FaPlay className="translate-x-0.5" />
           </span>
-          <span className="sr-only">{t("services.play_video", { title })}</span>
+          <span className="sr-only">{t("services:shared.play_video", { title })}</span>
         </button>
       )}
     </div>

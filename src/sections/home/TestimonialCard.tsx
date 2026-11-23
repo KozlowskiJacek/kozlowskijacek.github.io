@@ -63,7 +63,7 @@ const TestimonialCard = ({ testimonial, onReadMore }: TestimonialCardProps) => {
           onClick={() => onReadMore(testimonial)}
           className="mt-3 rounded-sm text-small font-semibold text-accent underline-offset-4 transition-colors hover:text-accent-hover hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
         >
-          {t("home.testimonials.read_more")}
+          {t("home:testimonials.read_more")}
           <span className="sr-only">: {testimonial.name}</span>
         </button>
         )}

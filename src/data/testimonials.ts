@@ -26,8 +26,8 @@ export const testimonials: Testimonial[] = [
     name: "Serwis Gąsiorek",
     kind: "company",
     image: serwisGasiorek,
-    roleKey: "feedback.roles.client",
-    textKey: "feedback.text1",
+    roleKey: "home:feedback.roles.client",
+    textKey: "home:feedback.text1",
   },
   {
     id: "dawid-ferchow",
@@ -35,8 +35,8 @@ export const testimonials: Testimonial[] = [
     kind: "person",
     image: dawidImage,
     // TODO: uzupełnić nazwę firmy (pole `company`).
-    roleKey: "feedback.roles.it_lead",
-    textKey: "feedback.text2",
+    roleKey: "home:feedback.roles.it_lead",
+    textKey: "home:feedback.text2",
   },
   {
     id: "agata-sulkowska",
@@ -44,16 +44,16 @@ export const testimonials: Testimonial[] = [
     kind: "person",
     image: agataImage,
     // TODO: uzupełnić nazwę firmy / marki (pole `company`).
-    roleKey: "feedback.roles.website_client",
-    textKey: "feedback.text3",
+    roleKey: "home:feedback.roles.website_client",
+    textKey: "home:feedback.text3",
   },
   {
     id: "grupa-degie",
     name: "Grupa DeGie",
     kind: "company",
     image: grupaDeGie,
-    roleKey: "feedback.roles.client",
-    textKey: "feedback.text4",
+    roleKey: "home:feedback.roles.client",
+    textKey: "home:feedback.text4",
   },
   {
     id: "julia-pitula",
@@ -61,8 +61,8 @@ export const testimonials: Testimonial[] = [
     kind: "person",
     image: julkaImage,
     // TODO: uzupełnić nazwę firmy / marki (pole `company`).
-    roleKey: "feedback.roles.client",
-    textKey: "feedback.text5",
+    roleKey: "home:feedback.roles.client",
+    textKey: "home:feedback.text5",
   },
 ];
 

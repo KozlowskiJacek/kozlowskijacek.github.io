@@ -10,7 +10,7 @@ const PageLoader = () => {
         aria-hidden="true"
         className="h-8 w-8 rounded-full border-2 border-border-strong border-t-accent motion-safe:animate-spin"
       />
-      <span className="sr-only">{t("pages.loading")}</span>
+      <span className="sr-only">{t("common:loading")}</span>
     </div>
   );
 };

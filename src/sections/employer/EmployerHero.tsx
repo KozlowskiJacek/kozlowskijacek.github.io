@@ -41,7 +41,7 @@ const EmployerHero = () => {
           variants={staggerItem}
           className="mb-4 text-small font-semibold uppercase tracking-wider text-accent print:hidden"
         >
-          {t("navbar.employers")}
+          {t("common:navbar.employers")}
         </motion.p>
         <motion.h1 variants={staggerItem} className="font-display text-h1 text-fg print:!text-[20pt]">
           {career.name}
@@ -60,7 +60,7 @@ const EmployerHero = () => {
           >
             {t(availabilityLabelKeys[career.availability])}
           </Tag>
-          <ul aria-label={t("employer.hero.work_modes")} className="flex flex-wrap gap-2 print:gap-1">
+          <ul aria-label={t("career:employer.hero.work_modes")} className="flex flex-wrap gap-2 print:gap-1">
             {career.workModes.map((mode) => (
               <li key={mode}>
                 <Tag className="print:px-1.5 print:py-0 print:!text-[8pt]">{t(workModeLabelKeys[mode])}</Tag>
@@ -83,7 +83,7 @@ const EmployerHero = () => {
               href && (
                 <Button key={lang} href={href} download>
                   <FaDownload aria-hidden="true" />
-                  {t("employer.hero.download_cv", { lang: lang.toUpperCase() })}
+                  {t("career:employer.hero.download_cv", { lang: lang.toUpperCase() })}
                 </Button>
               )
             );
@@ -108,18 +108,18 @@ const EmployerHero = () => {
           </Button>
           <Button to={contactTopicPath("praca")} variant={hasCv ? "secondary" : "primary"}>
             <FaEnvelope aria-hidden="true" />
-            {t("employer.hero.contact")}
+            {t("career:employer.hero.contact")}
           </Button>
           <Button variant="secondary" onClick={() => window.print()}>
             <FaPrint aria-hidden="true" />
-            {t("employer.hero.print")}
+            {t("career:employer.hero.print")}
           </Button>
         </motion.div>
       </motion.div>
 
       <motion.img
         src={mainPhoto}
-        alt={t("employer.hero.photo_alt")}
+        alt={t("career:employer.hero.photo_alt")}
         width={320}
         height={320}
         className="aspect-square w-48 shrink-0 rounded-full border border-border-strong bg-surface-elevated object-cover shadow-lift md:w-72 print:w-[26mm] print:border-0"

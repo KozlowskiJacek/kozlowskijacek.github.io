@@ -30,13 +30,13 @@ const usePriceLabel = () => {
   const { t, i18n } = useTranslation();
 
   return (price: PackagePrice) => {
-    if (!price) return { amount: t("services.price_custom"), prefix: null };
+    if (!price) return { amount: t("services:shared.price_custom"), prefix: null };
     const amount = new Intl.NumberFormat(i18n.language, {
       style: "currency",
       currency: "PLN",
       maximumFractionDigits: 0,
     }).format(price.from);
-    return { amount, prefix: t("services.price_from") };
+    return { amount, prefix: t("services:shared.price_from") };
   };
 };
 
@@ -68,7 +68,7 @@ const PackageCards = ({ id, copy, packages, tone, topic, bg = "primary" }: Packa
                   <span
                     className={`absolute -top-3 left-6 rounded-full border bg-background px-3 py-0.5 text-xs font-semibold uppercase tracking-wider ${classes.icon}`}
                   >
-                    {t("services.popular")}
+                    {t("services:shared.popular")}
                   </span>
                 )}
                 <h3 className="font-display text-h3 text-fg">{t(pkg.titleKey)}</h3>
@@ -93,7 +93,7 @@ const PackageCards = ({ id, copy, packages, tone, topic, bg = "primary" }: Packa
                   variant={pkg.highlighted ? classes.button : "secondary"}
                   className="mt-8 w-full"
                 >
-                  {t("services.package_cta")}
+                  {t("services:shared.package_cta")}
                   <span className="sr-only">: {t(pkg.titleKey)}</span>
                   <FaArrowRight aria-hidden="true" className="text-small" />
                 </Button>
@@ -103,7 +103,7 @@ const PackageCards = ({ id, copy, packages, tone, topic, bg = "primary" }: Packa
         })}
       </motion.ul>
 
-      <p className="max-w-2xl text-center text-small text-fg-muted">{t("services.price_note")}</p>
+      <p className="max-w-2xl text-center text-small text-fg-muted">{t("services:shared.price_note")}</p>
     </Section>
   );
 };

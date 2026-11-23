@@ -33,8 +33,8 @@ import {
 const WebAppsPage = () => {
   const service = useServiceJsonLd({
     path: paths.servicesWeb,
-    nameKey: "web_app.meta.title",
-    descriptionKey: "web_app.meta.description",
+    nameKey: "services:web.meta.title",
+    descriptionKey: "services:web.meta.description",
     serviceType: "Web development",
     packages: webPackages,
   });
@@ -42,8 +42,8 @@ const WebAppsPage = () => {
   return (
     <>
       <Seo
-        titleKey="web_app.meta.title"
-        descriptionKey="web_app.meta.description"
+        titleKey="services:web.meta.title"
+        descriptionKey="services:web.meta.description"
         jsonLd={[service]}
       />
       <ServiceHero hero={webHero} tone={webTone} topic={webTopic} secondaryHref="#packages" />

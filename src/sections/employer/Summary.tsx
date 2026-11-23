@@ -10,8 +10,8 @@ const Summary = () => {
   return (
     <EmployerSection
       id="summary"
-      title={t("employer.summary.title")}
-      accent={t("employer.summary.accent")}
+      title={t("career:employer.summary.title")}
+      accent={t("career:employer.summary.accent")}
     >
       <motion.div
         className="flex max-w-3xl flex-col gap-4 text-body text-fg-secondary md:text-body-lg print:max-w-none print:gap-1 print:!text-[9pt] print:leading-snug"

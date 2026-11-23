@@ -27,9 +27,9 @@ const Footer = () => {
             <span aria-hidden="true" className="h-2.5 w-2.5 rounded-[3px] bg-accent" />
             Jacek Kozłowski
           </Link>
-          <p className="mt-3 text-small text-fg-muted">{t("footer.tagline")}</p>
+          <p className="mt-3 text-small text-fg-muted">{t("common:footer.tagline")}</p>
 
-          <ul className="mt-5 flex flex-wrap gap-2" aria-label={t("footer.socials")}>
+          <ul className="mt-5 flex flex-wrap gap-2" aria-label={t("common:footer.socials")}>
             {socials
               .filter((social) => social.href)
               .map((social) => (
@@ -48,7 +48,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        <nav aria-label={t("footer.sitemap")} className="contents">
+        <nav aria-label={t("common:footer.sitemap")} className="contents">
           {footerColumns.map((column) => (
             <div key={column.titleKey}>
               <h2 className="text-small font-semibold uppercase tracking-wider text-fg">
@@ -74,12 +74,12 @@ const Footer = () => {
       <div className="border-t border-border">
         <Container className="flex flex-wrap items-center justify-between gap-4 py-6">
           <p className="text-small text-fg-muted">
-            © {year} Jacek Kozłowski. {t("footer.rights")}{" "}
+            © {year} Jacek Kozłowski. {t("common:footer.rights")}{" "}
             <Link
               to={paths.privacy}
               className={`rounded-sm underline-offset-4 transition-colors hover:text-accent hover:underline ${focusRing}`}
             >
-              {t("footer.privacy")}
+              {t("common:footer.privacy")}
             </Link>
           </p>
 
@@ -88,7 +88,7 @@ const Footer = () => {
             onClick={scrollToTop}
             className={`group inline-flex items-center gap-2 rounded-full text-small text-fg-secondary transition-colors hover:text-accent ${focusRing}`}
           >
-            {t("footer.back_to_top")}
+            {t("common:footer.back_to_top")}
             <span className="grid h-9 w-9 place-items-center rounded-full border border-border-strong transition-[border-color,transform] duration-200 ease-out group-hover:border-accent/50 motion-safe:group-hover:-translate-y-0.5">
               <FaArrowUp aria-hidden="true" />
             </span>

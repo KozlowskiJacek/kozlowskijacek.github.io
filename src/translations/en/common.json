@@ -1,0 +1,48 @@
+{
+  "navbar": {
+    "services": "Services",
+    "services_video": "Video creation",
+    "services_video_desc": "Filming, editing, graphics and animation",
+    "services_web": "Websites & apps",
+    "services_web_desc": "Websites, web apps, UI/UX and automation",
+    "portfolio": "Portfolio",
+    "employers": "For employers",
+    "about": "About",
+    "contact": "Contact",
+    "switch_language": "Switch language to Polish",
+    "main_nav": "Main navigation",
+    "open_menu": "Open menu",
+    "close_menu": "Close menu"
+  },
+  "loading": "Loading page…",
+  "cta": "Let's talk",
+  "not_found": {
+    "title": "This page doesn't exist",
+    "text": "The address may have changed, or the page never existed. Head back home or get in touch.",
+    "back_home": "Back to home page",
+    "contact": "Contact",
+    "meta": {
+      "title": "Page not found"
+    }
+  },
+  "footer": {
+    "tagline": "Developer & Video Creator. I build websites, apps and video content that work for your business.",
+    "socials": "Social media",
+    "sitemap": "Sitemap",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "portfolio_all": "All work",
+    "employers": "For employers",
+    "employers_profile": "Profile & CV",
+    "about": "About",
+    "contact": "Contact",
+    "contact_form": "Contact form",
+    "rights": "All rights reserved.",
+    "back_to_top": "Back to top",
+    "privacy": "Privacy policy"
+  },
+  "close": "Close",
+  "seo": {
+    "job_title": "Full Stack Developer & Video Creator"
+  }
+}

@@ -18,26 +18,26 @@ const RecruiterTeaser = () => {
     <Section id="recruiters" className="flex-col lg:flex-row lg:items-center lg:justify-between">
       <motion.div className="w-full lg:max-w-md" variants={fadeIn("bottom")} {...reveal}>
         <p className="mb-4 text-small font-semibold uppercase tracking-wider text-accent">
-          {t("home.recruiter.eyebrow")}
+          {t("home:recruiter.eyebrow")}
         </p>
-        <SectionHeading title={t("home.recruiter.title")} accent={t("home.recruiter.accent")} />
-        <p className="mt-4 text-body text-fg-secondary md:text-body-lg">{t("home.recruiter.text")}</p>
+        <SectionHeading title={t("home:recruiter.title")} accent={t("home:recruiter.accent")} />
+        <p className="mt-4 text-body text-fg-secondary md:text-body-lg">{t("home:recruiter.text")}</p>
         <div className="mt-8 flex flex-wrap gap-3 sm:gap-4">
           <Button to={paths.employers} size="lg">
-            {t("home.recruiter.profile")}
+            {t("home:recruiter.profile")}
             <FaArrowRight aria-hidden="true" className="text-small" />
           </Button>
           {cvUrl && (
             <Button href={cvUrl} download variant="secondary" size="lg">
               <FaDownload aria-hidden="true" className="text-small" />
-              {t("home.recruiter.cv")}
+              {t("home:recruiter.cv")}
             </Button>
           )}
         </div>
       </motion.div>
 
       <motion.ul
-        aria-label={t("home.recruiter.stack_label")}
+        aria-label={t("home:recruiter.stack_label")}
         className="grid w-full grid-cols-2 gap-3 sm:grid-cols-3 lg:max-w-xl"
         variants={staggerContainer(0.04)}
         {...reveal}

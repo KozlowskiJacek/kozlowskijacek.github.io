@@ -21,7 +21,7 @@ Po każdej zmianie kodu uruchom `npm run build` i `npm run lint`.
 ## Zasady
 
 - **Commity**: Conventional Commits (`feat:`, `fix:`, `chore:`, `docs:`, `refactor:`, `style:` …), jeden logiczny temat na commit.
-- **Tłumaczenia**: każdy tekst widoczny dla użytkownika idzie przez `t()` z react-i18next. Klucz dodajesz **zawsze w obu plikach**: `src/translations/pl.json` i `src/translations/en.json`. Nie ma innych plików tłumaczeń.
+- **Tłumaczenia**: każdy tekst widoczny dla użytkownika idzie przez `t()` z react-i18next. Tłumaczenia są podzielone na namespace'y odpowiadające stronom: `src/translations/{pl,en}/{common,home,services,portfolio,career,contact}.json`. Klucz w kodzie zawsze z namespace'em, np. `t("home:hero.title")`, i dodajesz go **zawsze w obu językach** (ten sam plik w `pl/` i `en/`). Po zmianach uruchom `npm run i18n:check`.
 - **Style**: Tailwind (klasy utility i paleta z `tailwind.config.js`) zamiast inline `style={{}}` i nowych plików CSS. Nowe kolory i animacje dodawaj do `tailwind.config.js`.
 - **Dane**: treści o strukturze listowej (projekty, usługi, opinie, umiejętności) trzymaj w `src/data/` jako typowane moduły TS, a nie zaszyte w JSX.
 - **Pliki statyczne**: certyfikaty i inne pliki do pobrania trzymaj w `public/`, a obrazy importowane w komponentach w `src/assets/img/`. Nie commituj `dist/`, `.vite/` ani `node_modules/`.

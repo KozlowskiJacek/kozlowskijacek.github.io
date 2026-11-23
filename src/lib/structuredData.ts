@@ -25,8 +25,8 @@ export const personJsonLd = (t: TFunction) => ({
   name: career.name,
   url: `${siteUrl}/`,
   image: absoluteAsset(mainPhoto),
-  jobTitle: t("common.seo.job_title"),
-  description: t("career.headline"),
+  jobTitle: t("common:seo.job_title"),
+  description: t("career:headline"),
   sameAs,
 });
 

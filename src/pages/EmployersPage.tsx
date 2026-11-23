@@ -11,9 +11,9 @@ import WhyMe from "../sections/employer/WhyMe";
 import ServiceCTA from "../components/services/ServiceCTA";
 
 const employerCta = {
-  titleKey: "employer.cta.title",
-  accentKey: "employer.cta.accent",
-  textKey: "employer.cta.text",
+  titleKey: "career:employer.cta.title",
+  accentKey: "career:employer.cta.accent",
+  textKey: "career:employer.cta.text",
 };
 
 /** CV online dla rekruterów i pracodawców (/dla-pracodawcow). */
@@ -23,8 +23,8 @@ const EmployersPage = () => {
   return (
     <div data-print-cv>
       <Seo
-        titleKey="employer.meta.title"
-        descriptionKey="employer.meta.description"
+        titleKey="career:employer.meta.title"
+        descriptionKey="career:employer.meta.description"
         type="profile"
         jsonLd={[person]}
       />
@@ -38,7 +38,7 @@ const EmployersPage = () => {
       {/* Na wydruku zostaje samo CV — bez sekcji perswazyjnych. */}
       <div className="print:hidden">
         <WhyMe />
-        <ServiceCTA cta={employerCta} tone="accent" topic="praca" buttonKey="employer.cta.button" />
+        <ServiceCTA cta={employerCta} tone="accent" topic="praca" buttonKey="career:employer.cta.button" />
       </div>
     </div>
   );

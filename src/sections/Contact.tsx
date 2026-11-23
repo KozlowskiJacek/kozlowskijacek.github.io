@@ -27,12 +27,12 @@ const Contact = ({ asPage = false }: ContactProps) => {
           as={asPage ? "h1" : "h2"}
           align="center"
           className="mb-4"
-          title={t("contact.lets")}
-          accent={t("contact.collaborate")}
+          title={t("contact:lets")}
+          accent={t("contact:collaborate")}
         >
           {" "}🤝
         </SectionHeading>
-        <p className="text-body text-fg-secondary md:text-body-lg">{t("contact.write")}</p>
+        <p className="text-body text-fg-secondary md:text-body-lg">{t("contact:write")}</p>
       </motion.div>
 
       <div className="grid w-full max-w-6xl items-start gap-6 lg:grid-cols-[minmax(0,1fr)_24rem]">
@@ -42,7 +42,7 @@ const Contact = ({ asPage = false }: ContactProps) => {
           </Card>
         </motion.div>
         <motion.aside
-          aria-label={t("contact.channels.title")}
+          aria-label={t("contact:channels.title")}
           className="lg:sticky lg:top-24"
           variants={fadeIn("bottom", 0.2)}
           {...reveal}

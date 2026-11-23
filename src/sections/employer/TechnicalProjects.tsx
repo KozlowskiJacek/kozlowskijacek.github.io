@@ -26,9 +26,9 @@ const TechnicalProjects = () => {
     <EmployerSection
       id="projects"
       bg="secondary"
-      title={t("employer.projects.title")}
-      accent={t("employer.projects.accent")}
-      text={t("employer.projects.text")}
+      title={t("career:employer.projects.title")}
+      accent={t("career:employer.projects.accent")}
+      text={t("career:employer.projects.text")}
     >
       <motion.ul
         className="grid gap-4 md:grid-cols-2 print:grid-cols-2 print:gap-x-6 print:gap-y-1.5"
@@ -46,7 +46,7 @@ const TechnicalProjects = () => {
                 {t(project.summaryKey)}
               </p>
               {project.tech.length > 0 && (
-                <ul aria-label={t("pages.case_study.tech")} className="mt-4 flex flex-wrap gap-2 print:hidden">
+                <ul aria-label={t("portfolio:case_study.tech")} className="mt-4 flex flex-wrap gap-2 print:hidden">
                   {project.tech.map((tech) => (
                     <li key={tech}>
                       <Badge tone="accent">{tech}</Badge>
@@ -62,8 +62,8 @@ const TechnicalProjects = () => {
                   className={linkClasses}
                 >
                   <FaGithub aria-hidden="true" />
-                  {t("employer.projects.code")}
-                  <span className="sr-only">{t("pages.case_study.new_tab")}</span>
+                  {t("career:employer.projects.code")}
+                  <span className="sr-only">{t("portfolio:case_study.new_tab")}</span>
                 </a>
                 {project.links.live && (
                   <a
@@ -73,12 +73,12 @@ const TechnicalProjects = () => {
                     className={linkClasses}
                   >
                     <FaArrowUpRightFromSquare aria-hidden="true" className="text-[0.8em]" />
-                    {t("pages.case_study.live")}
-                    <span className="sr-only">{t("pages.case_study.new_tab")}</span>
+                    {t("portfolio:case_study.live")}
+                    <span className="sr-only">{t("portfolio:case_study.new_tab")}</span>
                   </a>
                 )}
                 <Link to={caseStudyPath(project.slug)} className={linkClasses}>
-                  {t("home.work.case_study")}
+                  {t("home:work.case_study")}
                   <FaArrowRight aria-hidden="true" className="text-[0.8em]" />
                   <span className="sr-only">: {project.title}</span>
                 </Link>

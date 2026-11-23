@@ -14,8 +14,8 @@ const Education = () => {
   return (
     <EmployerSection
       id="education"
-      title={t("employer.education.title")}
-      accent={t("employer.education.accent")}
+      title={t("career:employer.education.title")}
+      accent={t("career:employer.education.accent")}
     >
       <motion.ul
         className="grid gap-4 md:grid-cols-2 print:grid-cols-2 print:gap-x-6 print:gap-y-1"
@@ -32,7 +32,7 @@ const Education = () => {
               <div>
                 {item.period && (
                   <p className="text-small font-medium text-accent">
-                    {formatPeriod(item.period, language, t("employer.experience.present"))}
+                    {formatPeriod(item.period, language, t("career:employer.experience.present"))}
                   </p>
                 )}
                 <h3 className="text-body-lg font-semibold text-fg print:!text-[9pt] print:leading-snug">{t(item.degreeKey)}</h3>

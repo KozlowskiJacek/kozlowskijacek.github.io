@@ -23,15 +23,15 @@ import Seo from "../components/Seo";
 import NotFoundPage from "./NotFoundPage";
 
 const storySteps = [
-  { id: "problem", field: "problemKey", labelKey: "pages.case_study.problem" },
-  { id: "solution", field: "solutionKey", labelKey: "pages.case_study.solution" },
-  { id: "result", field: "resultKey", labelKey: "pages.case_study.result" },
+  { id: "problem", field: "problemKey", labelKey: "portfolio:case_study.problem" },
+  { id: "solution", field: "solutionKey", labelKey: "portfolio:case_study.solution" },
+  { id: "result", field: "resultKey", labelKey: "portfolio:case_study.result" },
 ] as const;
 
 const caseStudyCta = {
-  titleKey: "pages.case_study.cta_title",
-  accentKey: "pages.case_study.cta_accent",
-  textKey: "pages.case_study.cta_text",
+  titleKey: "portfolio:case_study.cta_title",
+  accentKey: "portfolio:case_study.cta_accent",
+  textKey: "portfolio:case_study.cta_text",
 };
 
 /** Sąsiednie realizacje (z zawinięciem) do nawigacji poprzedni / następny. */
@@ -79,12 +79,12 @@ const CaseStudyPage = () => {
           <motion.div variants={staggerItem}>
             <Button to={paths.portfolio} variant="ghost" className="text-small">
               <FaArrowLeft aria-hidden="true" />
-              {t("pages.case_study.back")}
+              {t("portfolio:case_study.back")}
             </Button>
           </motion.div>
           <motion.div variants={staggerItem} className="flex flex-wrap items-center gap-3">
             <span className={`text-small font-semibold uppercase tracking-wider ${classes.text}`}>
-              {t("pages.case_study.eyebrow")}
+              {t("portfolio:case_study.eyebrow")}
             </span>
             <Badge tone={tone}>{t(projectCategoryLabelKeys[project.category])}</Badge>
           </motion.div>
@@ -107,15 +107,15 @@ const CaseStudyPage = () => {
         </motion.div>
 
         <motion.dl
-          aria-label={t("pages.case_study.meta_label")}
+          aria-label={t("portfolio:case_study.meta_label")}
           className="grid gap-6 rounded-2xl border border-border bg-surface-elevated p-6 shadow-card sm:grid-cols-2 lg:grid-cols-4 md:p-8"
           variants={fadeIn("bottom")}
           {...reveal}
         >
-          <MetaItem label={t("pages.case_study.role")}>{t(project.roleKey)}</MetaItem>
-          <MetaItem label={t("pages.case_study.year")}>{project.year}</MetaItem>
+          <MetaItem label={t("portfolio:case_study.role")}>{t(project.roleKey)}</MetaItem>
+          <MetaItem label={t("portfolio:case_study.year")}>{project.year}</MetaItem>
           {project.tech.length > 0 && (
-            <MetaItem label={t("pages.case_study.tech")}>
+            <MetaItem label={t("portfolio:case_study.tech")}>
               <ul className="flex flex-wrap gap-2">
                 {project.tech.map((tech) => (
                   <li key={tech}>
@@ -126,20 +126,20 @@ const CaseStudyPage = () => {
             </MetaItem>
           )}
           {(project.links.github || project.links.live) && (
-            <MetaItem label={t("pages.case_study.links")}>
+            <MetaItem label={t("portfolio:case_study.links")}>
               <span className="flex flex-wrap gap-2">
                 {project.links.github && (
                   <Button href={project.links.github} variant="secondary" size="sm" {...externalLinkProps}>
                     <FaGithub aria-hidden="true" />
                     GitHub
-                    <span className="sr-only">{t("pages.case_study.new_tab")}</span>
+                    <span className="sr-only">{t("portfolio:case_study.new_tab")}</span>
                   </Button>
                 )}
                 {project.links.live && (
                   <Button href={project.links.live} variant="secondary" size="sm" {...externalLinkProps}>
                     <FaArrowUpRightFromSquare aria-hidden="true" />
-                    {t("pages.case_study.live")}
-                    <span className="sr-only">{t("pages.case_study.new_tab")}</span>
+                    {t("portfolio:case_study.live")}
+                    <span className="sr-only">{t("portfolio:case_study.new_tab")}</span>
                   </Button>
                 )}
               </span>
@@ -177,7 +177,7 @@ const CaseStudyPage = () => {
 
       {project.gallery && project.gallery.length > 0 && (
         <Section id="gallery" padding="compact" className="flex-col !items-stretch">
-          <h2 className="font-display text-h2 text-fg">{t("pages.case_study.gallery")}</h2>
+          <h2 className="font-display text-h2 text-fg">{t("portfolio:case_study.gallery")}</h2>
           <motion.ul
             className="grid gap-4 sm:grid-cols-2"
             variants={staggerContainer()}
@@ -204,10 +204,10 @@ const CaseStudyPage = () => {
 
       {hasNav && (
         <Section id="more-work" padding="compact" className="flex-col !items-stretch">
-          <nav aria-label={t("pages.case_study.nav_label")} className="grid gap-4 sm:grid-cols-2">
+          <nav aria-label={t("portfolio:case_study.nav_label")} className="grid gap-4 sm:grid-cols-2">
             {[
-              { item: prev, labelKey: "pages.case_study.prev", dir: "prev" as const },
-              { item: next, labelKey: "pages.case_study.next", dir: "next" as const },
+              { item: prev, labelKey: "portfolio:case_study.prev", dir: "prev" as const },
+              { item: next, labelKey: "portfolio:case_study.next", dir: "next" as const },
             ].map(({ item, labelKey, dir }) => (
               <Button
                 key={dir}

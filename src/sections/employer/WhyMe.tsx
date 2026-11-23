@@ -12,8 +12,8 @@ const WhyMe = () => {
     <EmployerSection
       id="why-me"
       bg="secondary"
-      title={t("employer.why_me.title")}
-      accent={t("employer.why_me.accent")}
+      title={t("career:employer.why_me.title")}
+      accent={t("career:employer.why_me.accent")}
     >
       <motion.ul
         className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4"

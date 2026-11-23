@@ -21,7 +21,7 @@ const FormField = ({ id, label, optional = false, error, children, className = "
     <div className={`flex flex-col gap-1.5 ${className}`}>
       <label htmlFor={id} className="text-small font-medium text-fg-secondary">
         {label}
-        {optional && <span className="font-normal text-fg-muted"> ({t("contact.form.optional")})</span>}
+        {optional && <span className="font-normal text-fg-muted"> ({t("contact:form.optional")})</span>}
       </label>
       {children}
       {error && (

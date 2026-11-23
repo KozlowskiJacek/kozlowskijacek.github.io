@@ -13,8 +13,8 @@ const Certificates = () => {
   return (
     <EmployerSection
       id="certificates"
-      title={t("employer.certificates.title")}
-      accent={t("employer.certificates.accent")}
+      title={t("career:employer.certificates.title")}
+      accent={t("career:employer.certificates.accent")}
     >
       <motion.ul
         className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 print:grid-cols-2 print:gap-x-6 print:gap-y-0"
@@ -38,9 +38,9 @@ const Certificates = () => {
                   className="mt-auto inline-flex items-center gap-1.5 self-start rounded-sm pt-4 print:hidden text-small font-medium text-accent underline-offset-4 hover:text-accent-hover hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
                 >
                   <FaFilePdf aria-hidden="true" />
-                  {t("employer.certificates.open")}
+                  {t("career:employer.certificates.open")}
                   <span className="sr-only">
-                    : {cert.name} {t("pages.case_study.new_tab")}
+                    : {cert.name} {t("portfolio:case_study.new_tab")}
                   </span>
                 </a>
               </Card>

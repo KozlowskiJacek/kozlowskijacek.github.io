@@ -18,9 +18,9 @@ export type PrivacySection = {
 
 const section = (id: string, paragraphs: number, list = 0): PrivacySection => ({
   id,
-  titleKey: `privacy.sections.${id}.title`,
-  paragraphKeys: Array.from({ length: paragraphs }, (_, i) => `privacy.sections.${id}.p${i + 1}`),
-  listKeys: list ? Array.from({ length: list }, (_, i) => `privacy.sections.${id}.l${i + 1}`) : undefined,
+  titleKey: `contact:privacy.sections.${id}.title`,
+  paragraphKeys: Array.from({ length: paragraphs }, (_, i) => `contact:privacy.sections.${id}.p${i + 1}`),
+  listKeys: list ? Array.from({ length: list }, (_, i) => `contact:privacy.sections.${id}.l${i + 1}`) : undefined,
 });
 
 export const privacySections: PrivacySection[] = [

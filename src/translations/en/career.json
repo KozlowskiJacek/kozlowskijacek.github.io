@@ -1,0 +1,204 @@
+{
+  "about": {
+    "title_hello": "Hello",
+    "title_why": "Why Full Stack",
+    "title_how": "Content Creator",
+    "title_what": "What Guides Me",
+    "title_after": "After Hours",
+    "text": "🚀 The greatest satisfaction comes from the process of turning an idea into a real project – an application, a website, or content that reaches an audience and delivers tangible results. I value the ability to create solutions from scratch and bring them to a point where they generate business value, reach, or engagement. Every project is an opportunity to combine technology, strategy, and creativity into practical results.",
+    "why": "Why",
+    "full_stack": "Full Stack?",
+    "text2": "💻 I combine backend and frontend to deliver comprehensive solutions – from intuitive interfaces to efficient systems behind the scenes. I create web applications, websites, and process automations, focusing on functionality, usability, and business value. This allows me to take a project from an idea all the way to a finished product.",
+    "how": "How I became a",
+    "content_creator": "Content Creator?",
+    "text3": "🎬 Creating content became a natural complement to my work in IT. I develop projects in video, marketing, and visual communication, using editing tools and strategies that engage audiences. I combine technical knowledge with a creative approach, producing promotional videos, marketing materials, and other types of content that support brands and businesses.",
+    "what_im": "What",
+    "guided_by": "guides me?",
+    "text4": "💡 Every project should bring real value. A website – supports business goals, an application – solves specific problems, automation – saves time and resources. I focus on analyzing needs and delivering solutions tailored to users and organizations. For me, growth, efficiency, and quality matter.",
+    "after": "🔥 After",
+    "hour": "Hours",
+    "text5": "Outside of IT and marketing projects, I spend a lot of my free time on my own ideas. Currently, I’m tinkering with my own application, experimenting with features and solutions that could make it stand out. I have an idea for a computer game and want to test my skills in game development, and I plan to eventually release it. I combine my passion for games with my technical and creative skills, hoping to create something truly exciting.",
+    "questions": "📩 Got questions? Write to me!",
+    "bye": "See you! 🚀",
+    "meta": {
+      "title": "About me",
+      "description": "Who I am and how I work: a full-stack developer and video creator who blends code with creativity."
+    }
+  },
+  "headline": "Full-stack developer (React · Python/Django) who blends code with video creation",
+  "summary": {
+    "p1": "I build web applications end to end — day to day I work with React, TypeScript and Tailwind CSS, and on the server side with Python (Django, Flask) plus SQL and MongoDB databases. I completed the Web Front-end, Python Back-end and Full Stack Python Developer courses, and my engineering thesis was AureliaHR, a team management app.",
+    "p2": "My Python scripts were deployed at the company I work for — one of them cut a recurring task from 4–5 days down to two clicks. I also shoot and edit video, so I understand product and marketing, not just code. I run most projects on my own: from understanding the problem, through the docs, to deployment."
+  },
+  "availability": {
+    "open": "Open to job offers",
+    "freelance_only": "Available for freelance only",
+    "closed": "Currently unavailable"
+  },
+  "work_modes": {
+    "remote": "Remote",
+    "hybrid": "Hybrid",
+    "onsite": "On-site",
+    "employment": "Employment contract",
+    "b2b": "B2B",
+    "freelance": "Freelance"
+  },
+  "experience": {
+    "company_job": {
+      "company_fallback": "Current employer",
+      "position": "Process automation with Python",
+      "a1": "Wrote a Python (pandas) script that processes CSV files with company-car GPS data — a task that took 4–5 days now takes two clicks.",
+      "a2": "Built a web scraping script (BeautifulSoup) to analyse competitors' listings on external websites.",
+      "a3": "Both tools were deployed and are used in the team's daily work."
+    },
+    "freelance": {
+      "position": "Web developer and video creator",
+      "a1": "I design and build websites and web apps for small businesses — from a Figma mockup to deployment.",
+      "a2": "I shoot and edit ads, reels and social media content.",
+      "a3": "I handle client communication, quotes and project schedules on my own."
+    }
+  },
+  "education": {
+    "engineer": {
+      "degree": "Engineering degree (BEng)",
+      "note": "Engineering thesis: AureliaHR — a team management application (React, MongoDB)."
+    },
+    "courses": {
+      "degree": "Web Front-end Developer, Python Back-end Developer and Full Stack Python Developer courses",
+      "note": "React, TypeScript, Tailwind CSS, Python, Flask, Django, SQL and NoSQL databases, Git, Figma, Unix."
+    }
+  },
+  "skills": {
+    "frontend": {
+      "title": "Frontend",
+      "text": "I completed React courses covering React Router, React Query, Tailwind CSS and TypeScript, among others. I build projects — small and large — on my own, which taught me to find answers in documentation and adapt solutions to the project's needs. I use Tailwind in all my projects and know both its strengths and its limits.",
+      "highlight_title": "In practice: AureliaHR",
+      "highlight_text": "The app helps companies manage teams and reduces communication chaos: employees talk within their own team, and managers handle contact between teams. Managers assign tasks and track their team's progress."
+    },
+    "backend": {
+      "title": "Backend",
+      "text": "I started out self-taught, and after mastering the basics I completed the Python Back-end Developer and Full Stack Python Developer courses. There I learned the Flask and Django frameworks as well as working with Git, databases and Unix.",
+      "highlight_title": "In practice: scripts deployed at work",
+      "highlight_text": "I independently wrote two scripts used at the company: scraping competitors' listings (BeautifulSoup) and processing company-car GPS data (pandas), which cut the work from 4–5 days to two clicks."
+    },
+    "databases": {
+      "title": "Databases",
+      "text": "At university and during the Full Stack course I worked with relational (SQL) and document (MongoDB) databases. I know when to choose which and how to design data structures with application performance in mind.",
+      "highlight_title": "In practice: MongoDB in AureliaHR",
+      "highlight_text": "The app stores user data and the tasks assigned to each team in MongoDB."
+    },
+    "tools": {
+      "title": "Tools / DevOps",
+      "ci": "CI/CD (basics)",
+      "text": "I use Git every day — in my own projects and in team projects at university. I work with branches, keep commits and pull requests readable, resolve conflicts and take part in code reviews.",
+      "highlight_title": "In practice: GitHub and deployments",
+      "highlight_text": "I use GitHub and GitLab along with basic CI/CD features to automate testing and deployment. This website is published on GitHub Pages."
+    },
+    "design": {
+      "title": "Design",
+      "rwd": "Responsive design",
+      "prototyping": "Wireframes and prototypes"
+    },
+    "video": {
+      "title": "Video and graphics",
+      "color": "Color grading",
+      "script": "Scripts and shot planning",
+      "text": "I combine creative work with analytical thinking — editing and programming. That lets me care about both aesthetics and functionality when building websites and apps.",
+      "highlight_title": "In practice: editing and production",
+      "highlight_text": "As an editor I learned timing, choosing music, writing copy and using AI to streamline work. I know the principles of scripting, shot planning, lighting, framing, color grading and composition."
+    },
+    "languages": {
+      "title": "Languages",
+      "polish": "Polish",
+      "english": "English",
+      "native": "native"
+    },
+    "soft": {
+      "title": "Soft skills",
+      "independence": "Independence",
+      "self_learning": "Fast learning from docs",
+      "client_communication": "Client communication",
+      "analytical_creative": "Analytical + creative thinking",
+      "ownership": "Ownership of results"
+    },
+    "links": {
+      "cert_frontend": "Web Front-end Developer certificate",
+      "cert_full_stack": "Full Stack Python Developer certificate",
+      "cert_backend": "Python Back-end Developer certificate",
+      "github": "My GitHub",
+      "video_sample": "Sample video project"
+    }
+  },
+  "why_me": {
+    "dev_creative": {
+      "title": "I combine development with creativity",
+      "text": "I code and edit video, so I look at a product through the eyes of users and marketing — not just through the code."
+    },
+    "independence": {
+      "title": "I work independently",
+      "text": "I take most projects from zero to deployment. I look for answers in the docs instead of waiting for ready-made solutions."
+    },
+    "shipped": {
+      "title": "My solutions run in production",
+      "text": "Python scripts I wrote are used every day — one of them cut a task from 4–5 days to two clicks."
+    },
+    "product": {
+      "title": "I understand the business goal",
+      "text": "Working with clients taught me to ask “why?” before writing code — and to deliver what actually helps."
+    }
+  },
+  "employer": {
+    "hero": {
+      "work_modes": "Preferred ways of working",
+      "contact": "Contact",
+      "photo_alt": "Photo of Jacek Kozłowski",
+      "download_cv": "Download CV {{lang}}",
+      "print": "Print / PDF"
+    },
+    "summary": {
+      "title": "About me",
+      "accent": "in short"
+    },
+    "stack": {
+      "title": "Tech",
+      "accent": "stack",
+      "text": "Technologies I use in my projects. Expand a group to see real-world examples and certificates.",
+      "show_details": "Show details",
+      "hide_details": "Hide details"
+    },
+    "experience": {
+      "title": "Work",
+      "accent": "experience",
+      "present": "present"
+    },
+    "projects": {
+      "title": "Selected technical",
+      "accent": "projects",
+      "text": "Projects with public code — you can jump straight into the repository.",
+      "code": "Code on GitHub"
+    },
+    "education": {
+      "title": "Education",
+      "accent": "and courses"
+    },
+    "why_me": {
+      "title": "Why",
+      "accent": "me?"
+    },
+    "cta": {
+      "title": "Looking for someone like me",
+      "accent": "for your team?",
+      "text": "Send a few words about the role and the company — I'll reply within one business day.",
+      "button": "Invite me to an interview"
+    },
+    "certificates": {
+      "title": "My",
+      "accent": "certificates",
+      "open": "Open PDF"
+    },
+    "meta": {
+      "title": "For employers – CV and experience",
+      "description": "Full-stack developer (React · Python/Django): stack, experience, technical projects, certificates and a downloadable CV."
+    }
+  }
+}

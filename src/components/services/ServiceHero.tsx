@@ -63,12 +63,12 @@ const ServiceHero = ({ hero, tone, topic, secondaryHref, media }: ServiceHeroPro
           className={`mt-8 flex flex-wrap items-center gap-4 ${centered ? "justify-center" : ""}`}
         >
           <Button to={contactTopicPath(topic)} variant={classes.button} size="lg">
-            {t("services.cta_button")}
+            {t("services:shared.cta_button")}
             <FaArrowRight aria-hidden="true" className="text-small" />
           </Button>
           {secondaryHref && (
             <Button href={secondaryHref} variant="secondary" size="lg">
-              {t("services.see_packages")}
+              {t("services:shared.see_packages")}
             </Button>
           )}
         </motion.div>

@@ -17,7 +17,7 @@ type ServiceCTAProps = {
 };
 
 /** Końcowe wezwanie do kontaktu z tematem podstrony (/kontakt?temat=…). */
-const ServiceCTA = ({ cta, tone, topic, buttonKey = "services.cta_button" }: ServiceCTAProps) => {
+const ServiceCTA = ({ cta, tone, topic, buttonKey = "services:shared.cta_button" }: ServiceCTAProps) => {
   const { t } = useTranslation();
   const classes = toneClasses[tone];
 

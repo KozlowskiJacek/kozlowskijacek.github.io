@@ -1,0 +1,111 @@
+{
+  "hello": "Hi, it's me!",
+  "hero": {
+    "badge": "Developer · Video Creator",
+    "title": "Websites, apps and video that work for your business",
+    "subtitle": "I combine code with creative work. I design and build websites and web apps, and I shoot and edit video — one person from idea to launch.",
+    "cta_offer": "See services",
+    "cta_recruiter": "I'm a recruiter"
+  },
+  "trust": {
+    "label": "Clients and numbers",
+    "title": "Trusted by",
+    "stats": {
+      "projects": "projects delivered",
+      "videos": "videos edited",
+      "years": "years of experience"
+    }
+  },
+  "services": {
+    "title": "How I can",
+    "accent": "help",
+    "text": "Two areas, one person. Video that grabs attention and a website that turns it into customers.",
+    "more": "See details",
+    "video": {
+      "title": "Video production",
+      "text": "Ads, reels and social media content — from script to final file.",
+      "recording": "Filming",
+      "editing": "Editing",
+      "graphics": "Graphics",
+      "animation": "Animation"
+    },
+    "web": {
+      "title": "Websites and apps",
+      "text": "Fast, responsive websites and apps that support your sales and your team's work.",
+      "websites": "Websites",
+      "webapps": "Web applications",
+      "uiux": "UI/UX design",
+      "automation": "Automation"
+    }
+  },
+  "work": {
+    "title": "Selected",
+    "accent": "work",
+    "text": "A few projects I'm proud of — each with a short story of how it was made.",
+    "case_study": "View project",
+    "all": "Full portfolio"
+  },
+  "process": {
+    "title": "How I",
+    "accent": "work",
+    "text": "A simple process with no surprises — you always know what's happening.",
+    "talk": {
+      "title": "Discovery call",
+      "text": "I learn about your business, goals and style. We agree on the scope and who prepares the content and materials."
+    },
+    "concept": {
+      "title": "Concept and quote",
+      "text": "I prepare a visual design and functional outline we can still adjust. Along with it you get a fixed quote."
+    },
+    "build": {
+      "title": "Build",
+      "text": "Once the design is approved, I get to work. I stay available throughout, and for larger projects we review progress together."
+    },
+    "review": {
+      "title": "Presentation and revisions",
+      "text": "I present the finished result and gather your feedback. Small fixes are made right away."
+    },
+    "support": {
+      "title": "Support",
+      "text": "I help with hosting, SEO and questions after launch. Our collaboration doesn't end at handover."
+    }
+  },
+  "testimonials": {
+    "title": "What clients",
+    "accent": "say",
+    "text": "Feedback from people and companies I've worked with.",
+    "list_label": "Client testimonials",
+    "read_more": "Read more"
+  },
+  "recruiter": {
+    "eyebrow": "For employers",
+    "title": "Looking for a",
+    "accent": "developer?",
+    "text": "A full-stack developer working with React and Django who also understands product and marketing. My profile page covers my stack, certificates and projects with code.",
+    "profile": "View profile",
+    "cv": "Download CV",
+    "stack_label": "Main tech stack"
+  },
+  "cta": {
+    "title": "Have a project?",
+    "accent": "Let's talk",
+    "text": "Tell me briefly what you need — I'll reply with suggested next steps.",
+    "button": "Get in touch"
+  },
+  "meta": {
+    "title": "Jacek Kozłowski – Full Stack Developer & Video Creator",
+    "description": "Websites and web apps in React and Python, plus video creation: filming, editing, graphics and animation. One person from idea to launch."
+  },
+  "feedback": {
+    "text1": "Full professionalism, but with a relaxed vibe – just the way I like it. The website works great, looks awesome, and the whole process was stress-free. Highly recommend!",
+    "text2": "I had the opportunity to work with Jacek several times over the past year and watched with appreciation how much effort he puts into learning and how much progress he has made. He went from creating a simple Python script that generates PDFs from HTML to building a full application in React with a Django backend. He’s able to find solutions on his own, learns quickly, and isn’t afraid of challenges. As an IT team leader, I’m convinced that with this mindset, he will quickly become a valuable member of any team.",
+    "text3": "Working with Jacek was absolutely smooth and professional from start to finish. The website he created for me exceeded my expectations – it's modern, clear, responsive, and perfectly reflects the character of my brand. I was especially impressed by his personalized approach, quick communication, and great understanding of my needs. Every adjustment was implemented instantly, and the entire process went efficiently and in a friendly atmosphere. I wholeheartedly recommend working with Jacek Kozłowski to anyone looking for a reliable and creative web designer. It’s an investment that truly pays off!",
+    "text4": "Awesome collaboration! The concept, execution, and attitude were 100%. Thanks for handling everything – I didn’t have to worry about a thing.",
+    "text5": "Ambitious and highly dedicated, which is clearly reflected in the projects he completes. I'm very satisfied with the results and will definitely come back again. Highly recommended! 😊",
+    "roles": {
+      "client": "Client",
+      "website_client": "Client — website",
+      "it_lead": "IT team lead"
+    }
+  }
+}

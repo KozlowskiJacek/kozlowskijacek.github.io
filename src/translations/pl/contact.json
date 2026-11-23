@@ -1,0 +1,155 @@
+{
+  "lets": "Współpracujmy",
+  "collaborate": "Razem",
+  "write": "Wybierz temat i opisz krótko, czego potrzebujesz. Wolisz bez formularza? Napisz bezpośrednio.",
+  "full_name": "Imię i nazwisko",
+  "email": "Email",
+  "message": "Opisz krótko, czego potrzebujesz…",
+  "btn_send": "Wyślij",
+  "btn_sending": "Wysyłanie...",
+  "topics": {
+    "wideo": "Kreacja wideo",
+    "web": "Strona lub aplikacja",
+    "praca": "Oferta pracy",
+    "inne": "Inne"
+  },
+  "form": {
+    "optional": "opcjonalnie",
+    "topic": "Czego dotyczy wiadomość?",
+    "topic_hints": {
+      "wideo": "Nagranie, montaż, grafiki, animacje",
+      "web": "Strona www, aplikacja, automatyzacja",
+      "praca": "Rekrutacja, etat, B2B",
+      "inne": "Pytanie lub współpraca"
+    },
+    "budget": "Budżet",
+    "deadline": "Termin",
+    "select_placeholder": "Wybierz…",
+    "budget_options": {
+      "lt2k": "do 2 000 zł",
+      "2k-5k": "2 000 – 5 000 zł",
+      "5k-10k": "5 000 – 10 000 zł",
+      "10k-20k": "10 000 – 20 000 zł",
+      "gt20k": "powyżej 20 000 zł",
+      "unknown": "Jeszcze nie wiem"
+    },
+    "deadline_options": {
+      "asap": "Jak najszybciej",
+      "2w": "Do 2 tygodni",
+      "1m": "Do miesiąca",
+      "3m": "1–3 miesiące",
+      "flexible": "Elastyczny"
+    },
+    "materials": "Link do materiałów",
+    "company": "Nazwa firmy",
+    "position": "Stanowisko",
+    "employment": "Forma współpracy",
+    "employment_options": {
+      "uop": "Umowa o pracę",
+      "b2b": "B2B",
+      "zlecenie": "Umowa zlecenie"
+    },
+    "message": "Wiadomość",
+    "consent": "Wyrażam zgodę na przetwarzanie moich danych w celu odpowiedzi na wiadomość. Szczegóły w <policy>polityce prywatności</policy>.",
+    "honeypot": "Nie wypełniaj tego pola"
+  },
+  "validation": {
+    "required": "To pole jest wymagane.",
+    "too_short": "Za krótko — minimalna liczba znaków: {{min}}.",
+    "too_long": "Za długo — maksymalna liczba znaków: {{max}}.",
+    "email": "Podaj poprawny adres e-mail, np. jan@firma.pl.",
+    "topic": "Wybierz temat wiadomości.",
+    "choose": "Wybierz jedną z opcji.",
+    "url": "Podaj pełny adres zaczynający się od http:// lub https://.",
+    "consent": "Zgoda jest potrzebna, żebym mógł odpowiedzieć na wiadomość.",
+    "summary": "Formularz zawiera błędy. Popraw zaznaczone pola, aby wysłać wiadomość."
+  },
+  "state": {
+    "success_title": "Dzięki, wiadomość dotarła!",
+    "success_text": "Odpowiem najpóźniej w ciągu 1 dnia roboczego na podany adres e-mail.",
+    "send_another": "Wyślij kolejną wiadomość",
+    "error_text": "Nie udało się wysłać wiadomości. Spróbuj ponownie za chwilę albo napisz bezpośrednio — treść wiadomości przeniosę do Twojego programu pocztowego.",
+    "mailto": "Napisz e-mail",
+    "mailto_subject": "wiadomość ze strony",
+    "too_fast": "Formularz został wysłany zbyt szybko. Odczekaj kilka sekund i kliknij „Wyślij” ponownie."
+  },
+  "channels": {
+    "title": "Kontakt bezpośredni",
+    "text": "Mail, LinkedIn albo GitHub — jak Ci wygodniej.",
+    "email": "E-mail",
+    "copy": "Kopiuj adres e-mail",
+    "copied": "Skopiowano adres do schowka.",
+    "copy_failed": "Nie udało się skopiować — zaznacz adres ręcznie.",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "calendly": "Umów krótką rozmowę",
+    "response_label": "Czas odpowiedzi:",
+    "response_time": "do 1 dnia roboczego"
+  },
+  "meta": {
+    "title": "Kontakt",
+    "description": "Napisz w sprawie wideo, strony, aplikacji albo współpracy — formularzem, e-mailem lub przez LinkedIn."
+  },
+  "privacy": {
+    "eyebrow": "Dane osobowe",
+    "title": "Polityka prywatności",
+    "intro": "Tu opisuję, co dzieje się z danymi, które wysyłasz przez formularz kontaktowy na tej stronie.",
+    "updated": "Ostatnia aktualizacja: {{date}}",
+    "back": "Wróć do formularza",
+    "sections": {
+      "controller": {
+        "title": "Administrator danych",
+        "p1": "Administratorem Twoich danych osobowych jest Jacek Kozłowski. W sprawach dotyczących danych możesz pisać na adres {{email}}."
+      },
+      "data": {
+        "title": "Jakie dane zbieram",
+        "p1": "Przez formularz kontaktowy przekazujesz mi:",
+        "l1": "imię i nazwisko, adres e-mail, temat i treść wiadomości,",
+        "l2": "w zależności od tematu: przedział budżetu, termin i link do materiałów albo nazwę firmy, stanowisko i formę współpracy,",
+        "l3": "informacje techniczne: adres podstrony, z której wysłano formularz, i język strony."
+      },
+      "purpose": {
+        "title": "Cel i podstawa przetwarzania",
+        "p1": "Dane przetwarzam wyłącznie po to, żeby:",
+        "l1": "odpowiedzieć na Twoją wiadomość i prowadzić dalszą korespondencję (art. 6 ust. 1 lit. a i f RODO — zgoda i prawnie uzasadniony interes),",
+        "l2": "przygotować wycenę lub ofertę na Twoją prośbę (art. 6 ust. 1 lit. b RODO — działania przed zawarciem umowy),",
+        "l3": "w przypadku oferty pracy — wziąć udział w procesie rekrutacji, o który pytasz."
+      },
+      "processors": {
+        "title": "Komu przekazuję dane",
+        "p1": "Nie sprzedaję ani nie udostępniam danych w celach marketingowych. Korzystam z usług podmiotów, które przetwarzają dane w moim imieniu:",
+        "l1": "EmailJS (EmailJS Pte. Ltd.) — przekazuje treść formularza na moją skrzynkę e-mail; działa jako podmiot przetwarzający, a dane mogą trafić poza Europejski Obszar Gospodarczy na podstawie standardowych klauzul umownych,",
+        "l2": "dostawca mojej poczty e-mail (Google — Gmail), w której przechowuję korespondencję,",
+        "l3": "GitHub (GitHub Pages) — hosting strony; serwer może zapisywać adres IP w logach technicznych."
+      },
+      "retention": {
+        "title": "Jak długo przechowuję dane",
+        "p1": "Wiadomości przechowuję przez czas prowadzenia korespondencji, a potem nie dłużej niż 12 miesięcy od ostatniego kontaktu. Jeśli dojdzie do współpracy, dane mogą być przechowywane dłużej — tak długo, jak wymagają tego przepisy (np. podatkowe).",
+        "p2": "Historia wysłanych wiadomości w panelu EmailJS jest przechowywana zgodnie z ustawieniami konta EmailJS i usuwana nie później niż po upływie powyższego okresu."
+      },
+      "rights": {
+        "title": "Twoje prawa",
+        "p1": "W każdej chwili możesz:",
+        "l1": "uzyskać dostęp do swoich danych i ich kopię,",
+        "l2": "sprostować nieprawidłowe dane,",
+        "l3": "żądać usunięcia lub ograniczenia przetwarzania,",
+        "l4": "wnieść sprzeciw wobec przetwarzania i przenieść dane,",
+        "l5": "cofnąć zgodę — bez wpływu na zgodność z prawem przetwarzania przed jej cofnięciem,",
+        "l6": "złożyć skargę do Prezesa Urzędu Ochrony Danych Osobowych (uodo.gov.pl)."
+      },
+      "voluntary": {
+        "title": "Dobrowolność",
+        "p1": "Podanie danych jest dobrowolne, ale bez imienia, adresu e-mail i treści wiadomości nie mogę odpowiedzieć. Nie podejmuję decyzji w sposób zautomatyzowany ani nie profiluję."
+      },
+      "storage": {
+        "title": "Pliki cookies i pamięć przeglądarki",
+        "p1": "Strona nie używa cookies analitycznych ani reklamowych. W pamięci przeglądarki (localStorage) zapisuje tylko wybrany język strony.",
+        "p2": "Filmy z YouTube ładują się w trybie rozszerzonej prywatności (youtube-nocookie.com) dopiero po kliknięciu odtwarzania — wtedy obowiązuje polityka prywatności Google."
+      }
+    },
+    "meta": {
+      "title": "Polityka prywatności",
+      "description": "Jakie dane zbiera formularz kontaktowy, w jakim celu i jak długo są przechowywane."
+    }
+  }
+}

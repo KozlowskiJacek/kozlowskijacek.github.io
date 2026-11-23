@@ -27,26 +27,26 @@ const Hero = () => {
         animate="visible"
       >
         <motion.div variants={staggerItem}>
-          <Tag dot="accent">{t("home.hero.badge")}</Tag>
+          <Tag dot="accent">{t("home:hero.badge")}</Tag>
         </motion.div>
         <motion.h1
           variants={staggerItem}
           className="mt-6 text-balance font-display text-h1 text-fg"
         >
-          {t("home.hero.title")}
+          {t("home:hero.title")}
         </motion.h1>
         <motion.p
           variants={staggerItem}
           className="mt-6 max-w-xl text-body text-fg-secondary md:text-body-lg"
         >
-          {t("home.hero.subtitle")}
+          {t("home:hero.subtitle")}
         </motion.p>
         <motion.div variants={staggerItem} className="mt-8 flex flex-wrap items-center gap-3 sm:gap-4">
           <Button size="lg" to={{ hash: "services" }}>
-            {t("home.hero.cta_offer")}
+            {t("home:hero.cta_offer")}
           </Button>
           <Button size="lg" variant="secondary" to={paths.employers}>
-            {t("home.hero.cta_recruiter")}
+            {t("home:hero.cta_recruiter")}
             <FaArrowRight aria-hidden="true" className="text-small" />
           </Button>
         </motion.div>

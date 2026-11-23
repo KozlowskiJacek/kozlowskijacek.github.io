@@ -19,7 +19,7 @@ const TopicPicker = ({ value, onChange, error }: TopicPickerProps) => {
 
   return (
     <fieldset id={ID} aria-describedby={error ? errorId(ID) : undefined} className="flex flex-col gap-1.5">
-      <legend className="mb-1.5 text-small font-medium text-fg-secondary">{t("contact.form.topic")}</legend>
+      <legend className="mb-1.5 text-small font-medium text-fg-secondary">{t("contact:form.topic")}</legend>
       <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
         {contactTopicOptions.map(({ id, icon: Icon, hintKey }) => {
           const checked = value === id;

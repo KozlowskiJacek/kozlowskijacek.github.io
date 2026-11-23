@@ -1,0 +1,286 @@
+{
+  "shared": {
+    "cta_button": "Zapytaj o wycenę",
+    "see_packages": "Zobacz pakiety",
+    "package_cta": "Zapytaj o pakiet",
+    "popular": "Najczęściej wybierany",
+    "price_from": "od",
+    "price_custom": "Wycena indywidualna",
+    "price_note": "Ceny są orientacyjne. Dokładną wycenę dostajesz po krótkiej rozmowie — i ta kwota już się nie zmienia.",
+    "portfolio_empty": "Realizacje z tej kategorii właśnie trafiają do portfolio. Zajrzyj wkrótce albo napisz — pokażę przykłady prywatnie.",
+    "play_video": "Odtwórz film: {{title}}"
+  },
+  "web": {
+    "hero": {
+      "eyebrow": "Strony i aplikacje",
+      "title": "Strony i aplikacje webowe —",
+      "accent": "funkcjonalność, która sprzedaje",
+      "text": "Projektuję i koduję strony, aplikacje oraz automatyzacje dopasowane do Twojego biznesu. Słucham Twoich oczekiwań, ale zawsze pamiętam, że najważniejsi są użytkownicy."
+    },
+    "services": {
+      "title": "W czym",
+      "accent": "pomogę",
+      "text": "Od prostej wizytówki, przez aplikację dla zespołu, po skrypt, który zdejmie z Ciebie nudną, powtarzalną pracę.",
+      "websites": {
+        "title": "Strony www",
+        "text": "Szybkie, responsywne strony, które jasno mówią, czym się zajmujesz, i prowadzą klienta do kontaktu.",
+        "p1": "Strony wizytówki",
+        "p2": "Landing page pod kampanie"
+      },
+      "webapps": {
+        "title": "Aplikacje webowe",
+        "text": "Narzędzia szyte na miarę: panele, systemy rezerwacji, aplikacje do zarządzania zespołem.",
+        "p1": "Frontend w React + TypeScript",
+        "p2": "Backend w Django / Pythonie"
+      },
+      "uiux": {
+        "title": "Projektowanie UI/UX",
+        "text": "Projekt, który przed napisaniem kodu sprawdzamy na klikalnym prototypie — zmiany są wtedy najtańsze.",
+        "p1": "Makiety i projekty w Figmie",
+        "p2": "Klikalne prototypy"
+      },
+      "automation": {
+        "title": "Automatyzacje",
+        "text": "Mniej klikania, więcej efektów. Jeśli proces zabiera Twojemu zespołowi godziny, zamienię go w skrypt.",
+        "p1": "Skrypty w Pythonie",
+        "p2": "Integracje i przetwarzanie danych",
+        "example_label": "Przykład: GPSMaker",
+        "example": "Obróbka plików z danymi GPS: 4–5 dni pracy → 2 kliknięcia."
+      }
+    },
+    "process": {
+      "title": "Jak wygląda",
+      "accent": "współpraca",
+      "text": "Pięć kroków od pierwszej rozmowy do wsparcia po wdrożeniu.",
+      "talk": {
+        "title": "Rozmowa i analiza",
+        "text": "Poznaję Twoją firmę, cel strony i styl marki. Ustalamy zakres oraz kto przygotuje teksty i zdjęcia."
+      },
+      "design": {
+        "title": "Projekt i wycena",
+        "text": "Przygotowuję projekt wizualny i schemat działania. Razem z nim dostajesz wycenę, która już się nie zmienia."
+      },
+      "build": {
+        "title": "Kodowanie",
+        "text": "Po akceptacji projektu koduję. Jestem dostępny, gdy pojawią się nowe pomysły lub zmiany."
+      },
+      "review": {
+        "title": "Prezentacja",
+        "text": "Pokazuję gotową stronę lub aplikację. Drobne poprawki wprowadzam od razu."
+      },
+      "support": {
+        "title": "Wsparcie",
+        "text": "Pomagam z hostingiem, SEO i pytaniami po wdrożeniu. Współpraca nie kończy się na przekazaniu."
+      }
+    },
+    "tech": {
+      "title": "Mój",
+      "accent": "stack",
+      "frontend": "Frontend",
+      "backend": "Backend i dane",
+      "automation": "Automatyzacje",
+      "design": "Projekt i narzędzia"
+    },
+    "packages": {
+      "title": "Pakiety",
+      "accent": "web",
+      "text": "Punkt wyjścia do rozmowy — zakres każdego pakietu dopasujemy do Twoich potrzeb.",
+      "card": {
+        "title": "Strona wizytówka",
+        "text": "Kilka podstron, które przedstawiają Ciebie i Twoją ofertę.",
+        "f1": "Do 5 podstron i formularz kontaktowy",
+        "f2": "Projekt dopasowany do marki",
+        "f3": "Podstawowe SEO i wdrożenie"
+      },
+      "landing": {
+        "title": "Landing page",
+        "text": "Jedna strona nastawiona na konkretny cel — zapis, sprzedaż, kontakt.",
+        "f1": "Struktura prowadząca do jednego celu",
+        "f2": "Sekcje pod kampanie i reklamy",
+        "f3": "Integracja formularza lub analityki"
+      },
+      "app": {
+        "title": "Aplikacja na zamówienie",
+        "text": "Aplikacja webowa lub automatyzacja rozwiązująca konkretny problem w firmie.",
+        "f1": "Analiza procesu i prototyp UI",
+        "f2": "React + Django / Python",
+        "f3": "Wdrożenie i wsparcie po starcie"
+      }
+    },
+    "benefits": {
+      "title": "Co",
+      "accent": "dostajesz",
+      "responsive": {
+        "title": "Responsywność",
+        "text": "Strona działa i wygląda dobrze na telefonie, tablecie i komputerze."
+      },
+      "seo": {
+        "title": "Podstawowe SEO",
+        "text": "Poprawna struktura nagłówków, metadane i czytelne adresy podstron."
+      },
+      "speed": {
+        "title": "Szybkość",
+        "text": "Lekki kod i zoptymalizowane obrazy — strona ładuje się bez czekania."
+      },
+      "support": {
+        "title": "Wsparcie po wdrożeniu",
+        "text": "Pomogę z hostingiem, aktualizacjami i pytaniami także po starcie."
+      }
+    },
+    "portfolio": {
+      "title": "Wybrane",
+      "accent": "realizacje",
+      "text": "Strony, aplikacje i automatyzacje — z kodem do wglądu."
+    },
+    "faq": {
+      "title": "Częste",
+      "accent": "pytania",
+      "hosting": {
+        "q": "Czy zajmiesz się hostingiem?",
+        "a": "Tak. Pomogę dobrać hosting do projektu i skonfiguruję go. Prostą stronę można często utrzymać bardzo tanio, aplikacja z backendem potrzebuje serwera — doradzę najrozsądniejszą opcję."
+      },
+      "domain": {
+        "q": "Co z domeną?",
+        "a": "Jeśli masz domenę, podepnę ją pod nową stronę. Jeśli nie — pomogę wybrać i zarejestrować ją na Ciebie, tak żeby zawsze należała do Ciebie."
+      },
+      "content": {
+        "q": "Kto przygotuje teksty i zdjęcia?",
+        "a": "Ustalamy to na pierwszej rozmowie: możesz dostarczyć gotowe materiały, mogę je przygotować sam albo współpracujemy z inną osobą. Grafiki i zdjęcia omawiamy tak samo."
+      },
+      "time": {
+        "q": "Ile trwa realizacja?",
+        "a": "Zależy od zakresu: landing page czy wizytówka to zwykle kilka tygodni, aplikacja — więcej. Konkretny termin podaję razem z projektem i wyceną."
+      }
+    },
+    "cta": {
+      "title": "Porozmawiajmy o",
+      "accent": "Twoim projekcie",
+      "text": "Napisz, czego potrzebujesz — odpowiem w ciągu 1 dnia roboczego i zaproponuję termin krótkiej rozmowy."
+    },
+    "meta": {
+      "title": "Strony i aplikacje webowe",
+      "description": "Projektuję i koduję szybkie strony www, aplikacje webowe w React i Pythonie, UI/UX oraz automatyzacje, które oszczędzają czas."
+    }
+  },
+  "video": {
+    "hero": {
+      "eyebrow": "Kreacja wideo",
+      "title": "Filmy i grafiki, które",
+      "accent": "zatrzymują uwagę",
+      "text": "Reklamy, vlogi, gaming i rolki — od scenariusza, przez nagranie, po montaż, grafiki i animacje. Nie sklejam przypadkowych ujęć: każdy materiał to przemyślana historia z jasnym komunikatem.",
+      "showreel": "Showreel — wybrane realizacje wideo"
+    },
+    "services": {
+      "title": "Co dla Ciebie",
+      "accent": "zrobię",
+      "text": "Możesz zamówić cały proces od A do Z albo tylko jeden etap — np. sam montaż Twojego surowego materiału.",
+      "recording": {
+        "title": "Nagrywanie",
+        "text": "Zanim nacisnę „nagrywaj”, planujemy. Poznaję Twój produkt i przekaz, a potem przygotowuję plan i nagrywam.",
+        "script": "Scenariusz i pomysł na film",
+        "shotlist": "Plan zdjęciowy",
+        "light": "Ustawienie światła",
+        "framing": "Kadrowanie i kompozycja"
+      },
+      "editing": {
+        "title": "Montaż",
+        "text": "Dynamiczne cięcia, narracja, muzyka i sound design dopasowane do platformy i Twojej społeczności.",
+        "ads": "Reklamy i filmy promocyjne",
+        "vlogs": "Vlogi i storytelling",
+        "gaming": "Gaming: highlighty i let's playe",
+        "shorts": "Rolki, TikToki i Shorts"
+      },
+      "graphics": {
+        "title": "Grafiki",
+        "text": "Spójna oprawa wizualna, która zachęca do kliknięcia i buduje rozpoznawalność marki.",
+        "thumbnails": "Miniatury na YouTube",
+        "social": "Grafiki do social mediów",
+        "promo": "Materiały promocyjne"
+      },
+      "animation": {
+        "title": "Animacje",
+        "text": "Ruch, który porządkuje przekaz i dodaje filmom charakteru — bez efektów dla samych efektów.",
+        "motion": "Motion design",
+        "captions": "Animowane napisy",
+        "intro": "Intro i outro",
+        "logo": "Animowane logo"
+      }
+    },
+    "audience": {
+      "title": "Dla",
+      "accent": "kogo",
+      "companies": {
+        "title": "Firmy",
+        "text": "Reklamy i filmy promocyjne, które pokazują, co wyróżnia Twój produkt. Jeden materiał w wielu formatach — od strony www po pionowe rolki."
+      },
+      "creators": {
+        "title": "Twórcy internetowi",
+        "text": "Ty nagrywasz, ja zajmuję się resztą. Regularny montaż vlogów i gamingu, a na życzenie także publikacja na kanale — najpierw jako niepubliczny film do akceptacji."
+      },
+      "personal": {
+        "title": "Marki osobiste",
+        "text": "Autentyczne treści, które budują zaangażowaną społeczność i nie wywołują cringe'u po kilku miesiącach."
+      }
+    },
+    "packages": {
+      "title": "Pakiety",
+      "accent": "wideo",
+      "text": "Trzy najczęstsze formy współpracy. Każdy pakiet dopasujemy do Twoich potrzeb.",
+      "reels": {
+        "title": "Rolki",
+        "text": "Krótkie, pionowe formy na Instagram, TikTok i YouTube Shorts.",
+        "f1": "Montaż zgodny z trendami, ale z jakością na dłużej",
+        "f2": "Napisy, przejścia i dobrana muzyka",
+        "f3": "Format 9:16 gotowy do publikacji"
+      },
+      "recurring": {
+        "title": "Montaż cykliczny",
+        "text": "Stała współpraca dla twórców i marek publikujących regularnie.",
+        "f1": "Ustalony rytm publikacji (np. co tydzień)",
+        "f2": "Montaż z Twojego surowego materiału",
+        "f3": "Opcjonalnie miniatury i publikacja na kanale"
+      },
+      "ad": {
+        "title": "Film reklamowy od A do Z",
+        "text": "Kompletna produkcja: od pomysłu do gotowego pliku.",
+        "f1": "Scenariusz i plan zdjęciowy",
+        "f2": "Nagranie, montaż, korekcja kolorów i dźwięk",
+        "f3": "Wersje pod stronę www i social media"
+      }
+    },
+    "portfolio": {
+      "title": "Wybrane",
+      "accent": "realizacje",
+      "text": "Filmy, grafiki i animacje z ostatnich projektów."
+    },
+    "faq": {
+      "title": "Częste",
+      "accent": "pytania",
+      "time": {
+        "q": "Ile trwa realizacja?",
+        "a": "To zależy od formy: rolka czy montaż odcinka to zwykle kilka dni, film reklamowy od A do Z — od tygodnia do kilku tygodni. Termin ustalamy przed startem, a gdy materiał przychodzi na ostatnią chwilę, robię wszystko, żeby zdążyć bez utraty jakości."
+      },
+      "revisions": {
+        "q": "Ile poprawek obejmuje cena?",
+        "a": "Liczbę rund poprawek ustalamy razem z wyceną. Drobne zmiany po prezentacji wprowadzam od razu — zależy mi, żebyś był w pełni zadowolony z efektu."
+      },
+      "formats": {
+        "q": "W jakim formacie dostanę pliki?",
+        "a": "Standardowo MP4 (H.264) w rozdzielczości i proporcjach pod docelową platformę: 16:9 na YouTube i stronę, 9:16 na rolki. Grafiki dostajesz jako PNG lub JPG. Inne formaty — po ustaleniu."
+      },
+      "recording": {
+        "q": "Kto nagrywa materiał?",
+        "a": "Obie opcje są możliwe. Przy filmie reklamowym nagrywam ja. Przy vlogach i gamingu zwykle to Ty nagrywasz, a ja dostaję surowy materiał i zajmuję się montażem."
+      }
+    },
+    "cta": {
+      "title": "Masz pomysł na",
+      "accent": "film?",
+      "text": "Opisz krótko, czego potrzebujesz — odpowiem w ciągu 1 dnia roboczego z propozycją i wyceną."
+    },
+    "meta": {
+      "title": "Kreacja wideo – nagrywanie, montaż i rolki",
+      "description": "Nagrywanie, montaż, rolki, grafiki i animacje do social mediów. Wideo, które przyciąga uwagę i sprzedaje Twoją markę."
+    }
+  }
+}
