@@ -38,7 +38,11 @@ const PrivacyPolicyPage = () => {
         </motion.p>
       </motion.header>
 
-      <motion.div className="mx-auto flex w-full max-w-3xl flex-col gap-10" variants={fadeIn("bottom", 0.1)} {...reveal}>
+      <motion.div
+        className="mx-auto flex w-full max-w-3xl flex-col gap-10"
+        variants={fadeIn("bottom", 0.1)}
+        {...reveal}
+      >
         {privacySections.map(({ id, titleKey, paragraphKeys, listKeys }) => (
           <section key={id} aria-labelledby={`privacy-${id}`} className="border-t border-border pt-8">
             <h2 id={`privacy-${id}`} className="font-display text-h3 text-fg">

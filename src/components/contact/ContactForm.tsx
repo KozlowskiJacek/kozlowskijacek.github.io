@@ -16,18 +16,8 @@ import {
 } from "../../data/contact";
 import { paths } from "../../data/navigation";
 import type { ContactTopic } from "../../data/services/types";
-import {
-  emptyContactForm,
-  toMailtoHref,
-  toTemplateParams,
-  type ContactFormValues,
-} from "../../lib/contactForm";
-import {
-  contactFieldOrder,
-  validateContactForm,
-  MESSAGE_MAX,
-  type ContactField,
-} from "../../lib/contactValidation";
+import { emptyContactForm, toMailtoHref, toTemplateParams, type ContactFormValues } from "../../lib/contactForm";
+import { contactFieldOrder, validateContactForm, MESSAGE_MAX, type ContactField } from "../../lib/contactValidation";
 import { checkSpam, HONEYPOT_FIELD } from "../../lib/contactSpam";
 import { emailJsConfig, missingEmailJsMessage } from "../../lib/env";
 import { buttonClasses } from "../ui/buttonStyles";
@@ -204,7 +194,11 @@ const ContactForm = () => {
         <FaCircleCheck aria-hidden="true" className="text-5xl text-accent" />
         <h2 className="font-display text-h3 text-fg">{t("contact:state.success_title")}</h2>
         <p className="max-w-md text-body text-fg-secondary">{t("contact:state.success_text")}</p>
-        <button type="button" onClick={resetForm} className={buttonClasses({ variant: "secondary", className: "mt-2" })}>
+        <button
+          type="button"
+          onClick={resetForm}
+          className={buttonClasses({ variant: "secondary", className: "mt-2" })}
+        >
           {t("contact:state.send_another")}
         </button>
       </motion.div>
@@ -490,10 +484,7 @@ const ContactForm = () => {
         >
           <FaTriangleExclamation aria-hidden="true" className="shrink-0 text-lg text-danger" />
           <p className="flex-1 text-fg">{t("contact:state.error_text")}</p>
-          <a
-            href={mailtoHref}
-            className={buttonClasses({ variant: "secondary", size: "sm", className: "shrink-0" })}
-          >
+          <a href={mailtoHref} className={buttonClasses({ variant: "secondary", size: "sm", className: "shrink-0" })}>
             <FaEnvelope aria-hidden="true" />
             {t("contact:state.mailto")}
           </a>

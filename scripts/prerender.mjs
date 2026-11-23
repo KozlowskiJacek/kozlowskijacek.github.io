@@ -56,7 +56,8 @@ for (const route of routes) {
     // data-prerendered: main.tsx hydratuje tylko, gdy adres i język zgadzają się z tym HTML.
     .replace('<div id="root"></div>', `<div id="root" data-prerendered="${route}">${appHtml}</div>`);
 
-  if (!page.includes(`data-prerendered="${route}"`)) throw new Error("Nie znaleziono <div id=\"root\"></div> w szablonie");
+  if (!page.includes(`data-prerendered="${route}"`))
+    throw new Error('Nie znaleziono <div id="root"></div> w szablonie');
 
   const file = join(dist, fileFor(route));
   mkdirSync(dirname(file), { recursive: true });

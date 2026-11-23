@@ -13,12 +13,7 @@ const NotFoundPage = () => {
   return (
     <Section id="not-found" padding="hero" className="flex-col">
       <Seo titleKey="common:not_found.meta.title" noindex />
-      <motion.div
-        className="max-w-xl text-center"
-        variants={staggerContainer(0.08)}
-        initial="hidden"
-        animate="visible"
-      >
+      <motion.div className="max-w-xl text-center" variants={staggerContainer(0.08)} initial="hidden" animate="visible">
         <motion.p
           variants={staggerItem}
           aria-hidden="true"
@@ -32,10 +27,7 @@ const NotFoundPage = () => {
         <motion.p variants={staggerItem} className="mt-4 text-body text-fg-secondary md:text-body-lg">
           {t("common:not_found.text")}
         </motion.p>
-        <motion.div
-          variants={staggerItem}
-          className="mt-8 flex flex-wrap items-center justify-center gap-4"
-        >
+        <motion.div variants={staggerItem} className="mt-8 flex flex-wrap items-center justify-center gap-4">
           <Button to={paths.home} size="lg">
             <FaArrowLeft aria-hidden="true" />
             {t("common:not_found.back_home")}

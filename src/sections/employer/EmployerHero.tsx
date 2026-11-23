@@ -36,9 +36,7 @@ const EmployerHero = () => {
           {t("common:navbar.employers")}
         </p>
         <h1 className={`font-display text-h1 text-fg print:!text-[20pt] ${enter(1)}`}>{career.name}</h1>
-        <p
-          className={`mt-4 text-balance text-body-lg text-fg-secondary print:mt-0.5 print:!text-[10pt] ${enter(2)}`}
-        >
+        <p className={`mt-4 text-balance text-body-lg text-fg-secondary print:mt-0.5 print:!text-[10pt] ${enter(2)}`}>
           {t(career.headlineKey)}
         </p>
 
@@ -77,21 +75,11 @@ const EmployerHero = () => {
               )
             );
           })}
-          <Button
-            variant="secondary"
-            href={career.links.linkedin}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <Button variant="secondary" href={career.links.linkedin} target="_blank" rel="noopener noreferrer">
             <FaLinkedin aria-hidden="true" />
             LinkedIn
           </Button>
-          <Button
-            variant="secondary"
-            href={career.links.github}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <Button variant="secondary" href={career.links.github} target="_blank" rel="noopener noreferrer">
             <FaGithub aria-hidden="true" />
             GitHub
           </Button>

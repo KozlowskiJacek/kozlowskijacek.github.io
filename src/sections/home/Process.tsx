@@ -12,11 +12,7 @@ const Process = () => {
   return (
     <Section id="process" className="flex-col">
       <motion.div className="max-w-2xl text-center" variants={fadeIn("bottom")} {...reveal}>
-        <SectionHeading
-          align="center"
-          title={t("home:process.title")}
-          accent={t("home:process.accent")}
-        />
+        <SectionHeading align="center" title={t("home:process.title")} accent={t("home:process.accent")} />
         <p className="mt-4 text-body text-fg-secondary md:text-body-lg">{t("home:process.text")}</p>
       </motion.div>
 
@@ -31,11 +27,7 @@ const Process = () => {
           className="absolute bottom-6 left-6 top-6 w-px bg-border-strong lg:bottom-auto lg:left-6 lg:right-6 lg:top-6 lg:h-px lg:w-auto"
         />
         {processSteps.map((step, index) => (
-          <motion.li
-            key={step.id}
-            variants={staggerItem}
-            className="relative flex gap-5 lg:flex-col lg:gap-5"
-          >
+          <motion.li key={step.id} variants={staggerItem} className="relative flex gap-5 lg:flex-col lg:gap-5">
             <span
               aria-hidden="true"
               className="relative grid h-12 w-12 shrink-0 place-items-center rounded-full border border-accent/40 bg-background font-display text-body-lg font-semibold text-accent"

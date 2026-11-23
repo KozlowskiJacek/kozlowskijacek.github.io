@@ -22,16 +22,10 @@ const TechBadges = ({ id, copy, groups, tone, bg = "primary" }: TechBadgesProps)
     <Section id={id} bg={bg} className="flex-col">
       <ServiceSectionHeader copy={copy} tone={tone} />
 
-      <motion.dl
-        className="grid w-full max-w-4xl gap-6 sm:grid-cols-2"
-        variants={fadeIn("bottom", 0.1)}
-        {...reveal}
-      >
+      <motion.dl className="grid w-full max-w-4xl gap-6 sm:grid-cols-2" variants={fadeIn("bottom", 0.1)} {...reveal}>
         {groups.map((group) => (
           <div key={group.id} className="rounded-2xl border border-border bg-surface-elevated p-5 shadow-card">
-            <dt className="text-small font-semibold uppercase tracking-wider text-fg-muted">
-              {t(group.labelKey)}
-            </dt>
+            <dt className="text-small font-semibold uppercase tracking-wider text-fg-muted">{t(group.labelKey)}</dt>
             <dd className="mt-3 flex flex-wrap gap-2">
               {group.items.map((item) => (
                 <Badge key={item} tone={tone}>

@@ -35,9 +35,7 @@ const ServiceCTA = ({ cta, tone, topic, buttonKey = "services:shared.cta_button"
         <h2 className="text-balance font-display text-h2 text-fg">
           {t(cta.titleKey)} <span className={classes.text}>{t(cta.accentKey)}</span>
         </h2>
-        <p className="mx-auto mt-4 max-w-xl text-body text-fg-secondary md:text-body-lg">
-          {t(cta.textKey)}
-        </p>
+        <p className="mx-auto mt-4 max-w-xl text-body text-fg-secondary md:text-body-lg">{t(cta.textKey)}</p>
         <Button to={contactTopicPath(topic)} variant={classes.button} size="lg" className="mt-8">
           {t(buttonKey)}
           <FaArrowRight aria-hidden="true" className="text-small" />

@@ -10,9 +10,7 @@ import Card from "../../components/ui/Card";
 import EmployerSection from "./EmployerSection";
 
 /** Projekty istotne dla pracodawcy (audience employer/both), które mają publiczny kod. */
-const technicalProjects = publishedProjects.filter(
-  (project) => project.audience !== "client" && project.links.github,
-);
+const technicalProjects = publishedProjects.filter((project) => project.audience !== "client" && project.links.github);
 
 const linkClasses =
   "inline-flex items-center gap-1.5 rounded-sm text-small font-medium text-accent underline-offset-4 hover:text-accent-hover hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent";
@@ -55,23 +53,13 @@ const TechnicalProjects = () => {
                 </ul>
               )}
               <div className="mt-auto flex flex-wrap gap-x-5 gap-y-2 pt-5 print:hidden">
-                <a
-                  href={project.links.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={linkClasses}
-                >
+                <a href={project.links.github} target="_blank" rel="noopener noreferrer" className={linkClasses}>
                   <FaGithub aria-hidden="true" />
                   {t("career:employer.projects.code")}
                   <span className="sr-only">{t("portfolio:case_study.new_tab")}</span>
                 </a>
                 {project.links.live && (
-                  <a
-                    href={project.links.live}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={linkClasses}
-                  >
+                  <a href={project.links.live} target="_blank" rel="noopener noreferrer" className={linkClasses}>
                     <FaArrowUpRightFromSquare aria-hidden="true" className="text-[0.8em]" />
                     {t("portfolio:case_study.live")}
                     <span className="sr-only">{t("portfolio:case_study.new_tab")}</span>

@@ -1,6 +1,7 @@
 # Portfolio-web — plan modernizacji
 
 > **Cel:** zamienić obecne portfolio w profesjonalną stronę-wizytówkę, która:
+>
 > 1. **sprzedaje usługi** klientom w dwóch filarach: **Kreacja wideo** (nagrywanie, montaż, grafiki, animacje) oraz **IT** (strony www, aplikacje webowe, projektowanie UI/UX, automatyzacje),
 > 2. **pokazuje kompetencje pracodawcom/rekruterom** (stack, projekty, doświadczenie, certyfikaty, CV do pobrania).
 >
@@ -11,19 +12,21 @@
 ## 1. Analiza obecnego stanu
 
 ### Stack
-| Obszar | Technologia |
-|---|---|
-| Framework | React 18 + TypeScript 5.6 + Vite 7 (SWC) |
+
+| Obszar     | Technologia                                                                                  |
+| ---------- | -------------------------------------------------------------------------------------------- |
+| Framework  | React 18 + TypeScript 5.6 + Vite 7 (SWC)                                                     |
 | Stylowanie | Tailwind CSS 3 (własna paleta: `bg_color_1/2`, `main_accent #74FAC8`), font Playfair Display |
-| Animacje | framer-motion 12, keyframes Tailwind (float, tada, blink) |
-| Routing | react-router-dom 7 (`BrowserRouter`) |
-| i18n | i18next + react-i18next + language detector (PL/EN, pliki w `src/translations/`) |
-| Formularz | EmailJS (`@emailjs/browser`) + canvas-confetti |
-| Slider | Swiper (opinie) |
-| Ikony | boxicons, react-icons, **Font Awesome (niezaładowany w źródłach!)** |
-| Deploy | `gh-pages -d dist` → https://jacekkozlowski.github.io (gałąź `gh-pages`) |
+| Animacje   | framer-motion 12, keyframes Tailwind (float, tada, blink)                                    |
+| Routing    | react-router-dom 7 (`BrowserRouter`)                                                         |
+| i18n       | i18next + react-i18next + language detector (PL/EN, pliki w `src/translations/`)             |
+| Formularz  | EmailJS (`@emailjs/browser`) + canvas-confetti                                               |
+| Slider     | Swiper (opinie)                                                                              |
+| Ikony      | boxicons, react-icons, **Font Awesome (niezaładowany w źródłach!)**                          |
+| Deploy     | `gh-pages -d dist` → https://jacekkozlowski.github.io (gałąź `gh-pages`)                     |
 
 ### Struktura
+
 ```
 src/
   App.tsx                 # routing: /, /about, /web-apps, /social-video
@@ -35,6 +38,7 @@ src/
 ```
 
 ### Mocne strony
+
 - Dobry fundament technologiczny (Vite + TS + Tailwind), dwujęzyczność.
 - Prawdziwe opinie klientów i realne projekty (AureliaHR, GPSMaker, NoEscapeCursor, web scraping).
 - Treści o procesie współpracy (web) i ofercie wideo są już napisane — da się je przerobić.
@@ -42,6 +46,7 @@ src/
 ### Problemy znalezione w kodzie
 
 **Krytyczne / bugi**
+
 - [ ] **`.env` jest commitowany do repo** (mimo wpisu w `.gitignore` — był dodany wcześniej).
 - [ ] **Font Awesome nie jest ładowany w `index.html`** — jest tylko w starym buildzie na `gh-pages`. Następny deploy zgubi ikony (menu mobilne, skille, stopka, usługi).
 - [ ] **29 błędów TypeScript** (`tsc --noEmit`) — głównie typowanie `Variants` we framer-motion (`ease: number[]`), nietypowane `useRef()` w `FormContact`.
@@ -54,6 +59,7 @@ src/
 - [ ] `<html lang="en">` przy domyślnym języku PL; literówki („Skontaktuj się **za** mną”, „realizacaj”, „Gameing”).
 
 **Porządek w repo**
+
 - [ ] W `master` są zacommitowane artefakty buildu: `assets/`, `.vite/`, `translations/`, `Certyfikaty/`, `vite.svg` w katalogu głównym.
 - [ ] Zduplikowane tłumaczenia `public/translations/*` (nieużywane — i18n importuje z `src/translations`).
 - [ ] Nieużywane / błędnie dodane zależności: `jsonwebtoken`, `jws`, `intl-tel-input`, `i18next-http-backend`, `clsx`, `brace-expansion`, `picomatch`, `rollup`, `@eslint/*` w `dependencies`, `react-router` obok `react-router-dom`; `gh-pages` powinien być w `devDependencies`.
@@ -61,6 +67,7 @@ src/
 - [ ] Dwie gałęzie główne (`main` i `master`) — warto ujednolicić na `main`.
 
 **Jakość kodu**
+
 - [ ] 4 skopiowane komponenty `Header*` (~116 linii każdy), `fadeInVariants` skopiowane w ~8 plikach.
 - [ ] Projekty, skille i opinie zahardkodowane w JSX zamiast w danych.
 - [ ] `VideoMarketingSubSite.tsx` eksportuje komponent nazwany `WebAppsSubSite`.
@@ -69,7 +76,8 @@ src/
 - [ ] `select-none` na całej stronie (nie da się skopiować maila/tekstu), brak `alt` na obrazach.
 
 **Wizerunek / UX (dlaczego strona wygląda „amatorsko”)**
-- Komunikat rozmyty: hero wymienia 5 ról (YouTuber, Marketing Specialist…) — klient nie wie, *co konkretnie kupuje*, rekruter — *na jakie stanowisko aplikujesz*.
+
+- Komunikat rozmyty: hero wymienia 5 ról (YouTuber, Marketing Specialist…) — klient nie wie, _co konkretnie kupuje_, rekruter — _na jakie stanowisko aplikujesz_.
 - Brak sekcji usług (zakomentowana), brak oferty/pakietów, brak portfolio wideo/grafik/animacji (a to połowa oferty!).
 - Brak ścieżki dla rekrutera: CV, doświadczenie, stack, GitHub w jednym miejscu.
 - Emoji w treściach, długie akapity, Playfair (szeryf) w całym UI, neonowy glow — styl „hobby”, nie „studio”.
@@ -80,18 +88,20 @@ src/
 ## 2. Docelowa koncepcja
 
 ### Pozycjonowanie
+
 > **Jacek Kozłowski — Developer & Video Creator**
-> *Tworzę strony, aplikacje i treści wideo, które pracują na Twój biznes.*
+> _Tworzę strony, aplikacje i treści wideo, które pracują na Twój biznes._
 
 Dwa filary oferty + jedna ścieżka kariery:
 
-| Filar | Zakres |
-|---|---|
-| 🎬 **Kreacja wideo** | Nagrywanie, montaż (reklamy, vlogi, gaming, rolki), grafiki (miniatury, social media, identyfikacja), animacje / motion design |
-| 💻 **IT** | Strony www, aplikacje webowe (React/Django), projektowanie UI/UX (Figma), automatyzacje (Python) |
-| 👔 **Dla pracodawców** | Profil zawodowy, stack, doświadczenie, projekty z kodem, certyfikaty, CV PDF |
+| Filar                  | Zakres                                                                                                                         |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| 🎬 **Kreacja wideo**   | Nagrywanie, montaż (reklamy, vlogi, gaming, rolki), grafiki (miniatury, social media, identyfikacja), animacje / motion design |
+| 💻 **IT**              | Strony www, aplikacje webowe (React/Django), projektowanie UI/UX (Figma), automatyzacje (Python)                               |
+| 👔 **Dla pracodawców** | Profil zawodowy, stack, doświadczenie, projekty z kodem, certyfikaty, CV PDF                                                   |
 
 ### Mapa strony (nowa architektura informacji)
+
 ```
 /                       Strona główna (oba filary + skrót dla rekrutera)
 /uslugi/wideo           Kreacja wideo: nagrywanie, montaż, grafiki, animacje
@@ -103,10 +113,12 @@ Dwa filary oferty + jedna ścieżka kariery:
 /kontakt                Formularz z wyborem tematu
 *                       404
 ```
+
 (stare adresy `/about`, `/web-apps`, `/social-video` → przekierowania)
 
 ### Strona główna — sekcje
-1. **Hero** — jasny nagłówek, 1 zdanie wartości, 2 CTA: *„Zobacz ofertę”* i *„Jestem rekruterem →”*, zdjęcie / krótka pętla showreela.
+
+1. **Hero** — jasny nagłówek, 1 zdanie wartości, 2 CTA: _„Zobacz ofertę”_ i _„Jestem rekruterem →”_, zdjęcie / krótka pętla showreela.
 2. **Pasek zaufania** — logotypy klientów (Serwis Gąsiorek, Grupa DeGie…) + liczby (np. „X zrealizowanych projektów”, „3 kanały YT w 3 językach”).
 3. **Usługi** — 2 duże karty filarów → podstrony.
 4. **Wybrane realizacje** — 4–6 najlepszych prac (mix wideo + web) → `/portfolio`.
@@ -116,6 +128,7 @@ Dwa filary oferty + jedna ścieżka kariery:
 8. **CTA + kontakt**.
 
 ### Kierunek wizualny
+
 - Ciemny, stonowany motyw (grafit/granat) + **jeden akcent** (zachowany miętowy `#74FAC8` lub bardziej stonowany wariant) — bez neonowego glow.
 - Typografia: bezszeryfowa do UI i treści (np. **Inter** / **Manrope**), opcjonalnie wyrazisty display font do nagłówków.
 - Siatka 12-kolumnowa, kontener `max-w-7xl`, duże odstępy, krótkie akapity, listy zamiast ścian tekstu.
@@ -142,6 +155,7 @@ Dwa filary oferty + jedna ścieżka kariery:
 ## 4. Etapy wdrożenia z promptami dla Claude Code
 
 > **Zasady dla każdego etapu**
+>
 > - Pracuj na osobnej gałęzi: `git checkout -b <typ>/<nazwa>` (np. `chore/repo-cleanup`), po etapie merge do `main`.
 > - Każdy etap kończy się zielonym: `npm run lint`, `npx tsc -p tsconfig.app.json --noEmit`, `npm run build`.
 > - Commity w konwencji **Conventional Commits**:
@@ -156,6 +170,7 @@ Dwa filary oferty + jedna ścieżka kariery:
 ---
 
 ### Etap 0 — Porządki w repozytorium i zależnościach `chore`
+
 **Status:** ⬜ do zrobienia
 
 - [ ] Usunięcie artefaktów buildu z repo (`assets/`, `.vite/`, `translations/`, `Certyfikaty/`, `vite.svg` w root)
@@ -186,6 +201,7 @@ Zrób commity (osobno dla każdej logicznej zmiany):
 ---
 
 ### Etap 1 — Naprawa błędów `fix`
+
 **Status:** ⬜ do zrobienia
 
 - [ ] 0 błędów TypeScript
@@ -222,6 +238,7 @@ Zrób commity:
 ---
 
 ### Etap 2 — Refaktoryzacja architektury `refactor`
+
 **Status:** ✅ zrobione (2026-11-22)
 
 - [x] Jeden komponent `Header` z konfiguracją
@@ -260,6 +277,7 @@ Zrób commity:
 ---
 
 ### Etap 3 — Nowy design system `style`
+
 **Status:** ⬜ do zrobienia
 
 - [ ] Tokeny kolorów, typografii, cieni w Tailwind
@@ -294,6 +312,7 @@ Zrób commity:
 ---
 
 ### Etap 4 — Nowa architektura informacji i routing `feat`
+
 **Status:** ⬜ do zrobienia
 
 - [ ] Nowe trasy + przekierowania ze starych
@@ -328,6 +347,7 @@ Zrób commity:
 ---
 
 ### Etap 5 — Nowa strona główna `feat`
+
 **Status:** ⬜ do zrobienia
 
 - [ ] Hero z dwoma CTA (klient / rekruter)
@@ -362,6 +382,7 @@ Zrób commity:
 ---
 
 ### Etap 6 — Podstrony usług `feat`
+
 **Status:** ⬜ do zrobienia
 
 - [ ] `/uslugi/wideo` — nagrywanie, montaż, grafiki, animacje
@@ -401,6 +422,7 @@ Zrób commity:
 ---
 
 ### Etap 7 — Portfolio z filtrami i case studies `feat`
+
 **Status:** ⬜ do zrobienia
 
 - [ ] `/portfolio` z filtrami kategorii
@@ -431,6 +453,7 @@ Zrób commity:
 ---
 
 ### Etap 8 — Strona dla pracodawców `feat`
+
 **Status:** ⬜ do zrobienia
 
 - [ ] Profil zawodowy + status dostępności
@@ -461,6 +484,7 @@ Zrób commity:
 ---
 
 ### Etap 9 — Kontakt v2 `feat`
+
 **Status:** ⬜ do zrobienia
 
 - [ ] Wybór tematu (Wideo / Web / Praca / Inne) + pola zależne
@@ -495,6 +519,7 @@ Zrób commity:
 ---
 
 ### Etap 10 — SEO, meta i i18n `feat`
+
 **Status:** ⬜ do zrobienia
 
 - [ ] Meta per strona, Open Graph, JSON-LD
@@ -527,6 +552,7 @@ Zrób commity:
 ---
 
 ### Etap 11 — Wydajność i dostępność `perf`
+
 **Status:** ⬜ do zrobienia
 
 - [ ] Obrazy WebP/AVIF, lazy, wymiary
@@ -554,6 +580,7 @@ Zrób commity:
 ---
 
 ### Etap 12 — Jakość kodu, testy i CI/CD `ci`
+
 **Status:** ⬜ do zrobienia
 
 - [ ] Prettier + ESLint bez błędów
@@ -585,6 +612,7 @@ Zrób commity:
 ---
 
 ### Etap 13 — Rozszerzenia opcjonalne `feat`
+
 **Status:** ⬜ pomysły na później
 
 - [ ] **Analityka** z poszanowaniem prywatności (Plausible / Umami) lub GA4 z banerem zgód — `feat: add privacy-friendly analytics`
@@ -596,6 +624,7 @@ Zrób commity:
 - [ ] **Migracja na Astro/Next (SSG)**, jeśli prerendering w Vite okaże się niewystarczający dla SEO
 
 Prompt szablonowy dla każdej z nich:
+
 ```text
 Na podstawie ROADMAP.md (etap 13) zaimplementuj: <nazwa funkcji>. Najpierw przedstaw mi krótki plan i wybór bibliotek (z uzasadnieniem i wpływem na rozmiar bundla), poczekaj na akceptację, potem zaimplementuj z tłumaczeniami PL/EN, testem i aktualizacją README. lint + typecheck + test + build zielone.
 Zrób commit: feat: <opis po angielsku w trybie rozkazującym>
@@ -605,22 +634,22 @@ Zrób commit: feat: <opis po angielsku w trybie rozkazującym>
 
 ## 5. Kolejność i szacunek
 
-| # | Etap | Typ | Zależy od | Szac. czas |
-|---|---|---|---|---|
-| 0 | Porządki w repo | chore | — | 1 h |
-| 1 | Naprawa błędów | fix | 0 | 2–3 h |
-| 2 | Refaktoryzacja | refactor | 1 | 3–4 h |
-| 3 | Design system | style | 2 | 4–6 h |
-| 4 | Routing i nawigacja | feat | 2, 3 | 3 h |
-| 5 | Strona główna | feat | 4 | 4–6 h |
-| 6 | Podstrony usług | feat | 4 | 5–7 h |
-| 7 | Portfolio | feat | 4 | 4–6 h |
-| 8 | Dla pracodawców | feat | 4 | 4–5 h |
-| 9 | Kontakt v2 | feat | 4 | 3–4 h |
-| 10 | SEO i i18n | feat | 5–9 | 3–5 h |
-| 11 | Wydajność i a11y | perf | 5–9 | 3–4 h |
-| 12 | Testy i CI/CD | ci | 9 | 3–4 h |
-| 13 | Opcjonalne | feat | 12 | — |
+| #   | Etap                | Typ      | Zależy od | Szac. czas |
+| --- | ------------------- | -------- | --------- | ---------- |
+| 0   | Porządki w repo     | chore    | —         | 1 h        |
+| 1   | Naprawa błędów      | fix      | 0         | 2–3 h      |
+| 2   | Refaktoryzacja      | refactor | 1         | 3–4 h      |
+| 3   | Design system       | style    | 2         | 4–6 h      |
+| 4   | Routing i nawigacja | feat     | 2, 3      | 3 h        |
+| 5   | Strona główna       | feat     | 4         | 4–6 h      |
+| 6   | Podstrony usług     | feat     | 4         | 5–7 h      |
+| 7   | Portfolio           | feat     | 4         | 4–6 h      |
+| 8   | Dla pracodawców     | feat     | 4         | 4–5 h      |
+| 9   | Kontakt v2          | feat     | 4         | 3–4 h      |
+| 10  | SEO i i18n          | feat     | 5–9       | 3–5 h      |
+| 11  | Wydajność i a11y    | perf     | 5–9       | 3–4 h      |
+| 12  | Testy i CI/CD       | ci       | 9         | 3–4 h      |
+| 13  | Opcjonalne          | feat     | 12        | —          |
 
 Etapy **6, 7, 8, 9** są niezależne od siebie (po etapie 4) — można je robić równolegle w osobnych gałęziach/sesjach.
 
@@ -629,4 +658,5 @@ Etapy **6, 7, 8, 9** są niezależne od siebie (po etapie 4) — można je robi�
 ---
 
 ## 6. Dziennik zmian planu
+
 - **2026-11-22** — utworzenie planu na podstawie analizy kodu (stan: commit `31aa9c0`).

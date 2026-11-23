@@ -16,5 +16,4 @@ export const isContactTopic = (value: string | null): value is ContactTopic =>
   value !== null && value in contactTopicKeys;
 
 /** Link do formularza z wybranym tematem, np. /kontakt?temat=wideo. */
-export const contactTopicPath = (topic: ContactTopic) =>
-  `${paths.contact}?${CONTACT_TOPIC_PARAM}=${topic}`;
+export const contactTopicPath = (topic: ContactTopic) => `${paths.contact}?${CONTACT_TOPIC_PARAM}=${topic}`;

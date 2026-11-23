@@ -1,13 +1,5 @@
 import type { IconType } from "react-icons";
-import {
-  FaBriefcase,
-  FaCalendarCheck,
-  FaCode,
-  FaComments,
-  FaGithub,
-  FaLinkedin,
-  FaVideo,
-} from "react-icons/fa6";
+import { FaBriefcase, FaCalendarCheck, FaCode, FaComments, FaGithub, FaLinkedin, FaVideo } from "react-icons/fa6";
 import { career } from "./career";
 import type { ContactTopic } from "./services/types";
 
@@ -30,8 +22,7 @@ export const contactTopicOptions: ContactTopicOption[] = [
 /** Tematy projektowe — pokazują budżet, termin i link do materiałów. */
 export const projectTopics: readonly ContactTopic[] = ["wideo", "web"];
 
-export const isProjectTopic = (topic: ContactTopic | "") =>
-  topic !== "" && projectTopics.includes(topic);
+export const isProjectTopic = (topic: ContactTopic | "") => topic !== "" && projectTopics.includes(topic);
 
 export type BudgetOption = "lt2k" | "2k-5k" | "5k-10k" | "10k-20k" | "gt20k" | "unknown";
 export type DeadlineOption = "asap" | "2w" | "1m" | "3m" | "flexible";

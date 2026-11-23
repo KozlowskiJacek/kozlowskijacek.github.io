@@ -85,9 +85,7 @@ const CaseStudyPage = () => {
             <Badge tone={tone}>{t(projectCategoryLabelKeys[project.category])}</Badge>
           </div>
           <h1 className={`text-balance font-display text-h1 text-fg ${enter(2)}`}>{project.title}</h1>
-          <p className={`max-w-3xl text-body text-fg-secondary md:text-body-lg ${enter(3)}`}>
-            {t(project.summaryKey)}
-          </p>
+          <p className={`max-w-3xl text-body text-fg-secondary md:text-body-lg ${enter(3)}`}>{t(project.summaryKey)}</p>
         </header>
 
         <div className={enter(3)}>
@@ -102,7 +100,7 @@ const CaseStudyPage = () => {
 
         <motion.dl
           aria-label={t("portfolio:case_study.meta_label")}
-          className="grid gap-6 rounded-2xl border border-border bg-surface-elevated p-6 shadow-card sm:grid-cols-2 lg:grid-cols-4 md:p-8"
+          className="grid gap-6 rounded-2xl border border-border bg-surface-elevated p-6 shadow-card sm:grid-cols-2 md:p-8 lg:grid-cols-4"
           variants={fadeIn("bottom")}
           {...reveal}
         >
@@ -144,11 +142,7 @@ const CaseStudyPage = () => {
 
       {steps.length > 0 && (
         <Section id="story" bg="secondary" padding="compact" className="flex-col !items-stretch">
-          <motion.ol
-            className="grid gap-6 md:grid-cols-3"
-            variants={staggerContainer(0.12)}
-            {...reveal}
-          >
+          <motion.ol className="grid gap-6 md:grid-cols-3" variants={staggerContainer(0.12)} {...reveal}>
             {steps.map((step, index) => (
               <motion.li
                 key={step.id}
@@ -172,11 +166,7 @@ const CaseStudyPage = () => {
       {project.gallery && project.gallery.length > 0 && (
         <Section id="gallery" padding="compact" className="flex-col !items-stretch">
           <h2 className="font-display text-h2 text-fg">{t("portfolio:case_study.gallery")}</h2>
-          <motion.ul
-            className="grid gap-4 sm:grid-cols-2"
-            variants={staggerContainer()}
-            {...reveal}
-          >
+          <motion.ul className="grid gap-4 sm:grid-cols-2" variants={staggerContainer()} {...reveal}>
             {project.gallery.map((image) => (
               <motion.li
                 key={image.src.img.src}
@@ -210,9 +200,7 @@ const CaseStudyPage = () => {
               >
                 {dir === "prev" && <FaArrowLeft aria-hidden="true" className="shrink-0" />}
                 <span className="flex min-w-0 flex-1 flex-col">
-                  <span className="text-xs font-semibold uppercase tracking-wider text-fg-muted">
-                    {t(labelKey)}
-                  </span>
+                  <span className="text-xs font-semibold uppercase tracking-wider text-fg-muted">{t(labelKey)}</span>
                   <span className="truncate font-display text-h3 text-fg">{item.title}</span>
                 </span>
                 {dir === "next" && <FaArrowRight aria-hidden="true" className="shrink-0" />}

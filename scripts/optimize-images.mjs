@@ -51,7 +51,9 @@ for (const file of files) {
   const kb = Math.round(info.size / 1024);
   const before = Math.round(statSync(file).size / 1024);
   if (kb > LIMIT_KB) failed = true;
-  console.log(`${kb > LIMIT_KB ? "!" : "✓"} ${basename(file)} (${before} KB) → ${basename(output)} ${info.width}×${info.height}, ${kb} KB`);
+  console.log(
+    `${kb > LIMIT_KB ? "!" : "✓"} ${basename(file)} (${before} KB) → ${basename(output)} ${info.width}×${info.height}, ${kb} KB`,
+  );
   if (output !== file) unlinkSync(file);
 }
 

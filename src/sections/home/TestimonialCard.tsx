@@ -13,13 +13,7 @@ type TestimonialCardProps = {
 };
 
 /** Logo w jasnym kaflu (białe tło pliku) albo okrągłe zdjęcie osoby. */
-export const TestimonialAvatar = ({
-  testimonial,
-  size = "md",
-}: {
-  testimonial: Testimonial;
-  size?: "md" | "lg";
-}) => {
+export const TestimonialAvatar = ({ testimonial, size = "md" }: { testimonial: Testimonial; size?: "md" | "lg" }) => {
   const box = size === "lg" ? "h-20 w-20" : "h-14 w-14";
 
   if (testimonial.kind === "company") {
@@ -59,14 +53,14 @@ const TestimonialCard = ({ testimonial, onReadMore }: TestimonialCardProps) => {
           <p className={`text-body text-fg-secondary ${isLong ? "line-clamp-3" : ""}`}>{quote}</p>
         </blockquote>
         {isLong && (
-        <button
-          type="button"
-          onClick={() => onReadMore(testimonial)}
-          className="mt-3 rounded-sm text-small font-semibold text-accent underline-offset-4 transition-colors hover:text-accent-hover hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
-        >
-          {t("home:testimonials.read_more")}
-          <span className="sr-only">: {testimonial.name}</span>
-        </button>
+          <button
+            type="button"
+            onClick={() => onReadMore(testimonial)}
+            className="mt-3 rounded-sm text-small font-semibold text-accent underline-offset-4 transition-colors hover:text-accent-hover hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+          >
+            {t("home:testimonials.read_more")}
+            <span className="sr-only">: {testimonial.name}</span>
+          </button>
         )}
       </div>
       <footer className="mt-6 flex items-center gap-4 border-t border-border pt-5">

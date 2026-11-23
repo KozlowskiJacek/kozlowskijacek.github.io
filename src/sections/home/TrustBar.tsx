@@ -16,17 +16,14 @@ const TrustBar = () => {
       bg="secondary"
       padding="compact"
       aria-label={t("home:trust.label")}
-      className="flex-col gap-10 lg:flex-row lg:justify-between md:gap-12"
+      className="flex-col gap-10 md:gap-12 lg:flex-row lg:justify-between"
     >
       <motion.div
         className="flex w-full flex-col items-center gap-5 lg:w-auto lg:items-start"
         variants={staggerContainer(0.08)}
         {...reveal}
       >
-        <motion.p
-          variants={staggerItem}
-          className="text-small font-semibold uppercase tracking-wider text-fg-muted"
-        >
+        <motion.p variants={staggerItem} className="text-small font-semibold uppercase tracking-wider text-fg-muted">
           {t("home:trust.title")}
         </motion.p>
         <ul className="flex flex-wrap items-center justify-center gap-4">

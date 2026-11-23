@@ -17,10 +17,7 @@ const escapeXml = (value) =>
   value.replace(/[<>&'"]/g, (c) => ({ "<": "&lt;", ">": "&gt;", "&": "&amp;", "'": "&apos;", '"': "&quot;" })[c]);
 
 const alternates = (path) =>
-  [
-    ...siteLanguages.map((lng) => [lng, absoluteUrl(path, lng)]),
-    ["x-default", absoluteUrl(path, defaultLanguage)],
-  ]
+  [...siteLanguages.map((lng) => [lng, absoluteUrl(path, lng)]), ["x-default", absoluteUrl(path, defaultLanguage)]]
     .map(([lng, href]) => `    <xhtml:link rel="alternate" hreflang="${lng}" href="${escapeXml(href)}"/>`)
     .join("\n");
 

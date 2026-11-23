@@ -25,7 +25,14 @@ const mimeTypes: Record<string, string> = {
  * Responsywny obraz: <picture> z AVIF/WebP w kilku szerokościach, wymiary (bez przesunięć layoutu),
  * lazy loading i asynchroniczne dekodowanie.
  */
-const Img = ({ picture, alt, sizes = "100vw", priority = false, pictureClassName = "contents", ...props }: ImgProps) => {
+const Img = ({
+  picture,
+  alt,
+  sizes = "100vw",
+  priority = false,
+  pictureClassName = "contents",
+  ...props
+}: ImgProps) => {
   // React 18 nie zna propa fetchPriority — atrybut z małej litery trafia do DOM bez ostrzeżenia.
   const fetchPriority = priority ? ({ fetchpriority: "high" } as Record<string, string>) : {};
 

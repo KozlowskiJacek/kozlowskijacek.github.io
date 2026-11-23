@@ -15,8 +15,7 @@ const variants: Record<ButtonVariant, string> = {
     "rounded-full bg-video text-background shadow-card hover:bg-video-hover hover:shadow-lift motion-safe:hover:-translate-y-0.5",
   secondary:
     "rounded-full border border-border-strong bg-surface/60 text-fg hover:border-accent/50 hover:bg-surface-elevated",
-  ghost:
-    "rounded-sm text-accent underline-offset-4 hover:text-accent-hover hover:underline",
+  ghost: "rounded-sm text-accent underline-offset-4 hover:text-accent-hover hover:underline",
 };
 
 const sizes: Record<ButtonSize, string> = {
@@ -31,6 +30,4 @@ export const buttonClasses = ({
   size = "md",
   className = "",
 }: { variant?: ButtonVariant; size?: ButtonSize; className?: string } = {}) =>
-  [base, variants[variant], variant === "ghost" ? "" : sizes[size], className]
-    .filter(Boolean)
-    .join(" ");
+  [base, variants[variant], variant === "ghost" ? "" : sizes[size], className].filter(Boolean).join(" ");

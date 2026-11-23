@@ -25,17 +25,16 @@ const Education = () => {
         {career.education.map((item) => (
           <motion.li key={item.id} variants={staggerItem}>
             <Card className="flex h-full gap-4 p-5 sm:p-6 print:rounded-none print:border-0 print:p-0">
-              <FaGraduationCap
-                aria-hidden="true"
-                className="mt-1 shrink-0 text-xl text-accent print:hidden"
-              />
+              <FaGraduationCap aria-hidden="true" className="mt-1 shrink-0 text-xl text-accent print:hidden" />
               <div>
                 {item.period && (
                   <p className="text-small font-medium text-accent">
                     {formatPeriod(item.period, language, t("career:employer.experience.present"))}
                   </p>
                 )}
-                <h3 className="text-body-lg font-semibold text-fg print:!text-[9pt] print:leading-snug">{t(item.degreeKey)}</h3>
+                <h3 className="text-body-lg font-semibold text-fg print:!text-[9pt] print:leading-snug">
+                  {t(item.degreeKey)}
+                </h3>
                 {item.school && <p className="text-body text-fg-secondary">{item.school}</p>}
                 {item.noteKey && (
                   <p className="mt-2 text-small text-fg-secondary print:mt-0 print:!text-[8pt] print:leading-snug">

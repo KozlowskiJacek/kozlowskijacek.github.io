@@ -41,36 +41,13 @@ const WebAppsPage = () => {
 
   return (
     <>
-      <Seo
-        titleKey="services:web.meta.title"
-        descriptionKey="services:web.meta.description"
-        jsonLd={[service]}
-      />
+      <Seo titleKey="services:web.meta.title" descriptionKey="services:web.meta.description" jsonLd={[service]} />
       <ServiceHero hero={webHero} tone={webTone} topic={webTopic} secondaryHref="#packages" />
-      <ServiceGrid
-        id="services"
-        bg="secondary"
-        copy={webServicesCopy}
-        items={webServices}
-        tone={webTone}
-      />
+      <ServiceGrid id="services" bg="secondary" copy={webServicesCopy} items={webServices} tone={webTone} />
       <ProcessSteps id="process" copy={webProcessCopy} steps={webProcess} tone={webTone} />
       <TechBadges id="tech" bg="secondary" copy={webTechCopy} groups={webTech} tone={webTone} />
-      <PackageCards
-        id="packages"
-        copy={webPackagesCopy}
-        packages={webPackages}
-        tone={webTone}
-        topic={webTopic}
-      />
-      <ServiceGrid
-        id="benefits"
-        bg="secondary"
-        copy={webBenefitsCopy}
-        items={webBenefits}
-        tone={webTone}
-        columns={4}
-      />
+      <PackageCards id="packages" copy={webPackagesCopy} packages={webPackages} tone={webTone} topic={webTopic} />
+      <ServiceGrid id="benefits" bg="secondary" copy={webBenefitsCopy} items={webBenefits} tone={webTone} columns={4} />
       <ServiceProjects id="work" portfolio={webPortfolio} tone={webTone} />
       <FAQ id="faq" bg="secondary" copy={webFaqCopy} items={webFaq} tone={webTone} />
       <ServiceCTA cta={webCta} tone={webTone} topic={webTopic} />

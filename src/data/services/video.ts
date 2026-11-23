@@ -1,12 +1,4 @@
-import {
-  FaBuilding,
-  FaImage,
-  FaScissors,
-  FaUserTie,
-  FaVideo,
-  FaWandMagicSparkles,
-  FaYoutube,
-} from "react-icons/fa6";
+import { FaBuilding, FaImage, FaScissors, FaUserTie, FaVideo, FaWandMagicSparkles, FaYoutube } from "react-icons/fa6";
 import type {
   ContactTopic,
   FaqItem,
@@ -153,11 +145,7 @@ export const videoPackages: ServicePackage[] = [
     textKey: "services:video.packages.ad.text",
     // TODO: cena pakietu „Film reklamowy od A do Z”, np. { from: 0 }. null = wycena indywidualna.
     price: null,
-    featureKeys: [
-      "services:video.packages.ad.f1",
-      "services:video.packages.ad.f2",
-      "services:video.packages.ad.f3",
-    ],
+    featureKeys: ["services:video.packages.ad.f1", "services:video.packages.ad.f2", "services:video.packages.ad.f3"],
   },
 ];
 

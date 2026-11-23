@@ -31,19 +31,11 @@ const ServicesOverview = () => {
   return (
     <Section id="services" className="flex-col">
       <motion.div className="max-w-2xl text-center" variants={fadeIn("bottom")} {...reveal}>
-        <SectionHeading
-          align="center"
-          title={t("home:services.title")}
-          accent={t("home:services.accent")}
-        />
+        <SectionHeading align="center" title={t("home:services.title")} accent={t("home:services.accent")} />
         <p className="mt-4 text-body text-fg-secondary md:text-body-lg">{t("home:services.text")}</p>
       </motion.div>
 
-      <motion.ul
-        className="grid w-full gap-6 md:grid-cols-2"
-        variants={staggerContainer(0.1)}
-        {...reveal}
-      >
+      <motion.ul className="grid w-full gap-6 md:grid-cols-2" variants={staggerContainer(0.1)} {...reveal}>
         {servicePillars.map((pillar) => {
           const tone = toneClasses[pillar.tone];
           const Icon = pillar.icon;

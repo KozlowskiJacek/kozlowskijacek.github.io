@@ -30,7 +30,8 @@ const Contact = ({ asPage = false }: ContactProps) => {
           title={t("contact:lets")}
           accent={t("contact:collaborate")}
         >
-          {" "}🤝
+          {" "}
+          🤝
         </SectionHeading>
         <p className="text-body text-fg-secondary md:text-body-lg">{t("contact:write")}</p>
       </motion.div>

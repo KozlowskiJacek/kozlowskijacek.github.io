@@ -57,13 +57,11 @@ export const toTemplateParams = (values: ContactFormValues): ContactTemplatePara
   const job = topic === "praca";
 
   const budget = project && values.budget ? pl(budgetLabelKeys[values.budget]) : EMPTY;
-  const deadline =
-    project && values.deadline ? pl(deadlineLabelKeys[values.deadline]) : EMPTY;
+  const deadline = project && values.deadline ? pl(deadlineLabelKeys[values.deadline]) : EMPTY;
   const materials = project && values.materials.trim() ? values.materials.trim() : EMPTY;
   const company = job && values.company.trim() ? values.company.trim() : EMPTY;
   const position = job && values.position.trim() ? values.position.trim() : EMPTY;
-  const employment =
-    job && values.employment ? pl(employmentLabelKeys[values.employment]) : EMPTY;
+  const employment = job && values.employment ? pl(employmentLabelKeys[values.employment]) : EMPTY;
 
   // Gotowe podsumowanie pól zależnych od tematu — wystarczy jedna zmienna w prostym szablonie.
   const details = project

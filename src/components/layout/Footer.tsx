@@ -50,9 +50,7 @@ const Footer = () => {
         <nav aria-label={t("common:footer.sitemap")} className="contents">
           {footerColumns.map((column) => (
             <div key={column.titleKey}>
-              <h2 className="text-small font-semibold uppercase tracking-wider text-fg">
-                {t(column.titleKey)}
-              </h2>
+              <h2 className="text-small font-semibold uppercase tracking-wider text-fg">{t(column.titleKey)}</h2>
               <ul className="mt-4 flex flex-col gap-3">
                 {column.links.map((link) => (
                   <li key={link.to}>

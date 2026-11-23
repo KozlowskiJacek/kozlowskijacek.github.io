@@ -50,10 +50,7 @@ const SectionHeading = ({
   const Tag = tags[as];
 
   return (
-    <Tag
-      className={`font-display text-balance text-fg ${sizes[size]} ${aligns[align]} ${className}`}
-      {...props}
-    >
+    <Tag className={`text-balance font-display text-fg ${sizes[size]} ${aligns[align]} ${className}`} {...props}>
       {title} <span className={tones[tone]}>{accent}</span>
       {children}
     </Tag>

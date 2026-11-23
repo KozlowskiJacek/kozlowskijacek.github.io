@@ -129,11 +129,7 @@ export const webPackages: ServicePackage[] = [
     textKey: "services:web.packages.card.text",
     // TODO: cena pakietu „Strona wizytówka”, np. { from: 0 }. null = wycena indywidualna.
     price: null,
-    featureKeys: [
-      "services:web.packages.card.f1",
-      "services:web.packages.card.f2",
-      "services:web.packages.card.f3",
-    ],
+    featureKeys: ["services:web.packages.card.f1", "services:web.packages.card.f2", "services:web.packages.card.f3"],
   },
   {
     id: "landing",
@@ -154,11 +150,7 @@ export const webPackages: ServicePackage[] = [
     textKey: "services:web.packages.app.text",
     // TODO: cena pakietu „Aplikacja na zamówienie”, np. { from: 0 }. null = wycena indywidualna.
     price: null,
-    featureKeys: [
-      "services:web.packages.app.f1",
-      "services:web.packages.app.f2",
-      "services:web.packages.app.f3",
-    ],
+    featureKeys: ["services:web.packages.app.f1", "services:web.packages.app.f2", "services:web.packages.app.f3"],
   },
 ];
 

@@ -15,11 +15,7 @@ const WhyMe = () => {
       title={t("career:employer.why_me.title")}
       accent={t("career:employer.why_me.accent")}
     >
-      <motion.ul
-        className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4"
-        variants={staggerContainer(0.06)}
-        {...reveal}
-      >
+      <motion.ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4" variants={staggerContainer(0.06)} {...reveal}>
         {career.whyMe.map((point) => {
           const Icon = point.icon;
           return (

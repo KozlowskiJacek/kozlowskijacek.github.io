@@ -16,12 +16,7 @@ const interactiveClasses =
   "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background";
 
 /** Powierzchnia treści: karta umiejętności, projektu, opinii. */
-const Card = <T extends CardElement = "div">({
-  as,
-  interactive = false,
-  className = "",
-  ...props
-}: CardProps<T>) => {
+const Card = <T extends CardElement = "div">({ as, interactive = false, className = "", ...props }: CardProps<T>) => {
   const Tag = (as ?? "div") as ElementType;
 
   return (

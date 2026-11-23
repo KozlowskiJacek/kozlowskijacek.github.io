@@ -3,13 +3,7 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { AnimatePresence, motion } from "framer-motion";
 import { FaBars, FaChevronDown, FaXmark } from "react-icons/fa6";
-import {
-  contactLink,
-  mainLinks,
-  paths,
-  serviceLinks,
-  servicesPrefix,
-} from "../../data/navigation";
+import { contactLink, mainLinks, paths, serviceLinks, servicesPrefix } from "../../data/navigation";
 import { buttonClasses } from "../ui/buttonStyles";
 import LanguageSwitcher from "./LanguageSwitcher";
 import Container from "../ui/Container";
@@ -109,36 +103,32 @@ const ServicesDropdown = () => {
               exit={{ opacity: 0, y: -4 }}
               transition={{ duration: 0.15, ease: "easeOut" }}
             >
-            <ul className="rounded-xl border border-border-strong bg-surface-elevated p-2 shadow-lift">
-              {serviceLinks.map((link) => (
-                <li key={link.to}>
-                  <NavLink
-                    to={link.to}
-                    onClick={() => setOpen(false)}
-                    className={({ isActive }) =>
-                      `block rounded-lg px-4 py-3 transition-colors ${focusRing} ${
-                        isActive ? "bg-surface" : "hover:bg-surface"
-                      }`
-                    }
-                  >
-                    {({ isActive }) => (
-                      <>
-                        <span
-                          className={`block text-small font-semibold ${isActive ? "text-accent" : "text-fg"}`}
-                        >
-                          {t(link.labelKey)}
-                        </span>
-                        {link.descriptionKey && (
-                          <span className="mt-0.5 block text-small text-fg-muted">
-                            {t(link.descriptionKey)}
+              <ul className="rounded-xl border border-border-strong bg-surface-elevated p-2 shadow-lift">
+                {serviceLinks.map((link) => (
+                  <li key={link.to}>
+                    <NavLink
+                      to={link.to}
+                      onClick={() => setOpen(false)}
+                      className={({ isActive }) =>
+                        `block rounded-lg px-4 py-3 transition-colors ${focusRing} ${
+                          isActive ? "bg-surface" : "hover:bg-surface"
+                        }`
+                      }
+                    >
+                      {({ isActive }) => (
+                        <>
+                          <span className={`block text-small font-semibold ${isActive ? "text-accent" : "text-fg"}`}>
+                            {t(link.labelKey)}
                           </span>
-                        )}
-                      </>
-                    )}
-                  </NavLink>
-                </li>
-              ))}
-            </ul>
+                          {link.descriptionKey && (
+                            <span className="mt-0.5 block text-small text-fg-muted">{t(link.descriptionKey)}</span>
+                          )}
+                        </>
+                      )}
+                    </NavLink>
+                  </li>
+                ))}
+              </ul>
             </motion.div>
           </div>
         )}
@@ -204,7 +194,7 @@ const Header = () => {
   return (
     <>
       <header
-        className={`fixed inset-x-0 top-0 z-50 border-b print:hidden transition-[background-color,border-color,backdrop-filter] duration-300 ease-out ${
+        className={`fixed inset-x-0 top-0 z-50 border-b transition-[background-color,border-color,backdrop-filter] duration-300 ease-out print:hidden ${
           solid
             ? "border-border bg-background/80 backdrop-blur-md supports-[backdrop-filter]:bg-background/70"
             : "border-transparent bg-transparent"

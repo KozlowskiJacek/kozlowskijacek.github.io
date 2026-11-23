@@ -52,7 +52,10 @@ const YouTubeEmbed = ({ url, title, className = "", autoLoad = false }: YouTubeE
             decoding="async"
             className="h-full w-full object-cover transition-transform duration-500 ease-out motion-safe:group-hover:scale-[1.03]"
           />
-          <span aria-hidden="true" className="absolute inset-0 bg-background/30 transition-colors group-hover:bg-background/10" />
+          <span
+            aria-hidden="true"
+            className="absolute inset-0 bg-background/30 transition-colors group-hover:bg-background/10"
+          />
           <span
             aria-hidden="true"
             className="absolute left-1/2 top-1/2 grid h-16 w-16 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full bg-video text-xl text-background shadow-lift transition-transform duration-200 motion-safe:group-hover:scale-110"

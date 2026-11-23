@@ -3,13 +3,7 @@ import { motion } from "framer-motion";
 import { FaArrowRight, FaCheck } from "react-icons/fa6";
 import { reveal, staggerContainer, staggerItem } from "../../lib/animations";
 import { contactTopicPath } from "../../data/services/contact";
-import type {
-  ContactTopic,
-  PackagePrice,
-  SectionCopy,
-  ServicePackage,
-  ServiceTone,
-} from "../../data/services/types";
+import type { ContactTopic, PackagePrice, SectionCopy, ServicePackage, ServiceTone } from "../../data/services/types";
 import Section from "../ui/Section";
 import Card from "../ui/Card";
 import Button from "../ui/Button";
@@ -50,11 +44,7 @@ const PackageCards = ({ id, copy, packages, tone, topic, bg = "primary" }: Packa
     <Section id={id} bg={bg} className="flex-col">
       <ServiceSectionHeader copy={copy} tone={tone} />
 
-      <motion.ul
-        className="grid w-full gap-6 lg:grid-cols-3"
-        variants={staggerContainer(0.1)}
-        {...reveal}
-      >
+      <motion.ul className="grid w-full gap-6 lg:grid-cols-3" variants={staggerContainer(0.1)} {...reveal}>
         {packages.map((pkg) => {
           const price = priceLabel(pkg.price);
 

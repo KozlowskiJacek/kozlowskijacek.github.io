@@ -62,9 +62,7 @@ const Seo = ({
       {noindex && <meta name="robots" content="noindex" />}
       {!noindex && <link rel="canonical" href={url} />}
       {!noindex &&
-        siteLanguages.map((lng) => (
-          <link key={lng} rel="alternate" hrefLang={lng} href={absoluteUrl(pathname, lng)} />
-        ))}
+        siteLanguages.map((lng) => <link key={lng} rel="alternate" hrefLang={lng} href={absoluteUrl(pathname, lng)} />)}
       {!noindex && <link rel="alternate" hrefLang="x-default" href={absoluteUrl(pathname)} />}
 
       <meta property="og:type" content={type} />

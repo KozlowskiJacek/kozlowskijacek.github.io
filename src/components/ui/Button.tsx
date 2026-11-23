@@ -6,8 +6,7 @@ type StyleProps = { variant?: ButtonVariant; size?: ButtonSize };
 
 type AnchorButtonProps = StyleProps & ComponentPropsWithoutRef<"a"> & { href: string; to?: never };
 type LinkButtonProps = StyleProps & LinkProps & { href?: never };
-type NativeButtonProps = StyleProps &
-  ComponentPropsWithoutRef<"button"> & { href?: never; to?: never };
+type NativeButtonProps = StyleProps & ComponentPropsWithoutRef<"button"> & { href?: never; to?: never };
 
 export type ButtonProps = AnchorButtonProps | LinkButtonProps | NativeButtonProps;
 
@@ -25,12 +24,7 @@ const Button = (props: ButtonProps) => {
 
   if ("to" in props && props.to !== undefined) {
     const { variant, size, className, ...rest } = props as LinkButtonProps;
-    return (
-      <Link
-        className={buttonClasses({ variant, size, className: className as string | undefined })}
-        {...rest}
-      />
-    );
+    return <Link className={buttonClasses({ variant, size, className: className as string | undefined })} {...rest} />;
   }
 
   const { variant, size, className, type = "button", ...rest } = props as NativeButtonProps;

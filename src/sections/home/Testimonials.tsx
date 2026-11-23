@@ -20,11 +20,7 @@ const Testimonials = () => {
   return (
     <Section id="feedback" bg="secondary" className="flex-col">
       <motion.div className="max-w-2xl text-center" variants={fadeIn("bottom")} {...reveal}>
-        <SectionHeading
-          align="center"
-          title={t("home:testimonials.title")}
-          accent={t("home:testimonials.accent")}
-        />
+        <SectionHeading align="center" title={t("home:testimonials.title")} accent={t("home:testimonials.accent")} />
         <p className="mt-4 text-body text-fg-secondary md:text-body-lg">{t("home:testimonials.text")}</p>
       </motion.div>
 

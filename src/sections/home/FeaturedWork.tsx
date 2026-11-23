@@ -12,7 +12,6 @@ import Badge from "../../components/ui/Badge";
 import Button from "../../components/ui/Button";
 import ProjectCover from "../../components/portfolio/ProjectCover";
 
-
 /** Wybrane realizacje (flaga `featured` w projects.ts) z linkiem do case study. */
 const FeaturedWork = () => {
   const { t } = useTranslation();
@@ -28,11 +27,7 @@ const FeaturedWork = () => {
         <p className="max-w-2xl text-body text-fg-secondary md:text-body-lg">{t("home:work.text")}</p>
       </motion.div>
 
-      <motion.ul
-        className="grid w-full gap-6 sm:grid-cols-2 lg:grid-cols-3"
-        variants={staggerContainer()}
-        {...reveal}
-      >
+      <motion.ul className="grid w-full gap-6 sm:grid-cols-2 lg:grid-cols-3" variants={staggerContainer()} {...reveal}>
         {featuredProjects.map((project) => (
           <motion.li key={project.slug} variants={staggerItem}>
             <Card

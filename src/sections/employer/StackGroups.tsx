@@ -34,7 +34,9 @@ const StackGroupCard = ({ group }: { group: SkillGroup }) => {
         <span className="grid h-10 w-10 shrink-0 place-items-center rounded-lg border border-accent/20 bg-accent/10 text-lg text-accent print:hidden">
           <Icon aria-hidden="true" />
         </span>
-        <h3 className="text-h3 text-fg print:!text-[8.5pt] print:font-semibold print:leading-snug">{t(group.titleKey)}</h3>
+        <h3 className="text-h3 text-fg print:!text-[8.5pt] print:font-semibold print:leading-snug">
+          {t(group.titleKey)}
+        </h3>
       </div>
 
       <ul className="mt-4 flex flex-wrap gap-2 print:mt-0 print:gap-x-1 print:gap-y-0">

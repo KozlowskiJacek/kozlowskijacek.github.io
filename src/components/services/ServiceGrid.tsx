@@ -68,7 +68,9 @@ const ServiceGrid = ({ id, copy, items, tone, bg = "primary", columns = 2 }: Ser
 
                 {item.example && (
                   <div className="mt-auto pt-6">
-                    <p className={`rounded-xl border bg-background/60 p-4 text-small text-fg-secondary ${classes.border}`}>
+                    <p
+                      className={`rounded-xl border bg-background/60 p-4 text-small text-fg-secondary ${classes.border}`}
+                    >
                       <span className={`block font-semibold ${classes.text}`}>{t(item.example.labelKey)}</span>
                       {t(item.example.textKey)}
                     </p>

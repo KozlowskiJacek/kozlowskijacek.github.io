@@ -31,9 +31,7 @@ const ExperienceTimeline = () => {
             <p className="text-small font-medium text-accent print:float-right print:!text-[8.5pt] print:!text-print-muted">
               {formatPeriod(job.period, language, t("career:employer.experience.present"))}
             </p>
-            <h3 className="mt-1 text-h3 text-fg print:mt-0 print:inline print:!text-[10pt]">
-              {t(job.positionKey)}
-            </h3>
+            <h3 className="mt-1 text-h3 text-fg print:mt-0 print:inline print:!text-[10pt]">{t(job.positionKey)}</h3>
             <p className="text-body text-fg-secondary print:inline print:!text-[9pt] print:before:content-['_·_']">
               {job.company ?? (job.companyFallbackKey ? t(job.companyFallbackKey) : null)}
             </p>

@@ -20,11 +20,7 @@ const LanguageSwitcher = () => {
       {languages.map((lang, i) => (
         <span key={lang}>
           {i > 0 && <span className="text-fg-muted"> / </span>}
-          <span
-            className={`transition-colors ${
-              lang === current ? "text-accent" : "text-fg-secondary hover:text-fg"
-            }`}
-          >
+          <span className={`transition-colors ${lang === current ? "text-accent" : "text-fg-secondary hover:text-fg"}`}>
             {lang.toUpperCase()}
           </span>
         </span>

@@ -51,20 +51,8 @@ const VideoMarketingPage = () => {
           ) : undefined
         }
       />
-      <ServiceGrid
-        id="services"
-        bg="secondary"
-        copy={videoServicesCopy}
-        items={videoServices}
-        tone={videoTone}
-      />
-      <ServiceGrid
-        id="audience"
-        copy={videoAudienceCopy}
-        items={videoAudience}
-        tone={videoTone}
-        columns={3}
-      />
+      <ServiceGrid id="services" bg="secondary" copy={videoServicesCopy} items={videoServices} tone={videoTone} />
+      <ServiceGrid id="audience" copy={videoAudienceCopy} items={videoAudience} tone={videoTone} columns={3} />
       <PackageCards
         id="packages"
         bg="secondary"

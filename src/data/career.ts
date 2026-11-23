@@ -90,15 +90,7 @@ export type Certificate = {
 
 // --- Umiejętności -------------------------------------------------------------------------------
 
-export type SkillGroupId =
-  | "frontend"
-  | "backend"
-  | "databases"
-  | "tools"
-  | "design"
-  | "video"
-  | "languages"
-  | "soft";
+export type SkillGroupId = "frontend" | "backend" | "databases" | "tools" | "design" | "video" | "languages" | "soft";
 
 /** Pozycja w grupie: nazwa własna (`label`) albo tekst tłumaczony (`labelKey`). */
 export type SkillItem = ({ label: string } | { labelKey: string }) & {

@@ -11,18 +11,18 @@ Strona jest dwujęzyczna (PL / EN) i ma formularz kontaktowy wysyłany przez Ema
 
 ## Stack
 
-| Obszar     | Technologia                                                 |
-| ---------- | ----------------------------------------------------------- |
-| Framework  | React 18 + TypeScript + Vite (SWC)                          |
-| Stylowanie | Tailwind CSS 3 (własna paleta w `tailwind.config.js`)       |
-| Animacje   | framer-motion, keyframes Tailwind                           |
-| Routing    | react-router-dom 7                                          |
-| SEO        | react-helmet-async (komponent `<Seo />`)                    |
+| Obszar     | Technologia                                                |
+| ---------- | ---------------------------------------------------------- |
+| Framework  | React 18 + TypeScript + Vite (SWC)                         |
+| Stylowanie | Tailwind CSS 3 (własna paleta w `tailwind.config.js`)      |
+| Animacje   | framer-motion, keyframes Tailwind                          |
+| Routing    | react-router-dom 7                                         |
+| SEO        | react-helmet-async (komponent `<Seo />`)                   |
 | i18n       | i18next + react-i18next + i18next-browser-languagedetector |
-| Formularz  | @emailjs/browser + canvas-confetti                          |
-| Slider     | Swiper                                                      |
-| Ikony      | react-icons                                                 |
-| Deploy     | gh-pages → GitHub Pages                                     |
+| Formularz  | @emailjs/browser + canvas-confetti                         |
+| Slider     | Swiper                                                     |
+| Ikony      | react-icons                                                |
+| Deploy     | gh-pages → GitHub Pages                                    |
 
 ## Uruchomienie
 
@@ -36,18 +36,18 @@ npm run dev            # serwer deweloperski: http://localhost:5173
 
 Pozostałe komendy:
 
-| Komenda             | Opis                                 |
-| ------------------- | ------------------------------------ |
-| `npm run build`     | build produkcyjny do `dist/`         |
-| `npm run preview`   | podgląd zbudowanej wersji            |
-| `npm run lint`      | ESLint                               |
-| `npm run typecheck` | sprawdzenie typów (`tsc -b`)         |
-| `npm run i18n:check`| spójność kluczy PL/EN, brakujące i nieużywane klucze (`-- --prune` usuwa nieużywane) |
-| `npm run deploy`    | build + publikacja na GitHub Pages   |
-| `npm run og:render` | renderuje `scripts/og/og-template.html` do `public/og/default.png` (headless Chrome/Edge) |
-| `npm run analyze`   | build z mapą rozmiaru bundla w `stats.html` (rollup-plugin-visualizer) |
+| Komenda                   | Opis                                                                                                                                      |
+| ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| `npm run build`           | build produkcyjny do `dist/`                                                                                                              |
+| `npm run preview`         | podgląd zbudowanej wersji                                                                                                                 |
+| `npm run lint`            | ESLint                                                                                                                                    |
+| `npm run typecheck`       | sprawdzenie typów (`tsc -b`)                                                                                                              |
+| `npm run i18n:check`      | spójność kluczy PL/EN, brakujące i nieużywane klucze (`-- --prune` usuwa nieużywane)                                                      |
+| `npm run deploy`          | build + publikacja na GitHub Pages                                                                                                        |
+| `npm run og:render`       | renderuje `scripts/og/og-template.html` do `public/og/default.png` (headless Chrome/Edge)                                                 |
+| `npm run analyze`         | build z mapą rozmiaru bundla w `stats.html` (rollup-plugin-visualizer)                                                                    |
 | `npm run images:optimize` | konwertuje PNG/JPG z `src/assets/img` do WebP (max 1600 px, < 200 KB); warianty AVIF/WebP i srcset generuje przy buildzie vite-imagetools |
-| `npm run fonts:subset` | generuje odchudzone fonty w `src/assets/fonts` (wagi 400–600, łacina + polskie znaki) |
+| `npm run fonts:subset`    | generuje odchudzone fonty w `src/assets/fonts` (wagi 400–600, łacina + polskie znaki)                                                     |
 
 ## SEO
 
@@ -63,11 +63,11 @@ Pozostałe komendy:
 
 Plik `.env` nie jest w repozytorium. Szablon znajdziesz w `.env.example`:
 
-| Zmienna                     | Opis                         |
-| --------------------------- | ---------------------------- |
-| `VITE_EMAILJS_SERVICE_ID`   | ID usługi w EmailJS          |
-| `VITE_EMAILJS_TEMPLATE_ID`  | ID szablonu wiadomości       |
-| `VITE_EMAILJS_PUBLIC_KEY`   | klucz publiczny EmailJS      |
+| Zmienna                    | Opis                    |
+| -------------------------- | ----------------------- |
+| `VITE_EMAILJS_SERVICE_ID`  | ID usługi w EmailJS     |
+| `VITE_EMAILJS_TEMPLATE_ID` | ID szablonu wiadomości  |
+| `VITE_EMAILJS_PUBLIC_KEY`  | klucz publiczny EmailJS |
 
 Wartości są czytane wyłącznie z `import.meta.env` w `src/lib/env.ts` i trafiają do bundla (prefiks `VITE_`), więc mogą tu być tylko klucze przeznaczone do użycia w przeglądarce.
 Gdy którejś brakuje, w trybie dev konsola i baner nad formularzem pokazują, których zmiennych brakuje; na produkcji wysyłka kończy się stanem błędu z linkiem `mailto` jako fallbackiem.
@@ -81,23 +81,23 @@ Pola, które nie dotyczą wybranego tematu, mają wartość `—`.
 
 W panelu EmailJS (**Email Templates → szablon z `VITE_EMAILJS_TEMPLATE_ID`**) użyj zmiennych:
 
-| Zmienna               | Kiedy wypełniona  | Zawartość                                                              |
-| --------------------- | ----------------- | ---------------------------------------------------------------------- |
-| `{{user_name}}`       | zawsze            | imię i nazwisko                                                        |
-| `{{user_email}}`      | zawsze            | e-mail nadawcy — ustaw też jako **Reply To**                           |
-| `{{user_subject}}`    | zawsze            | nazwa tematu, np. „Kreacja wideo”, „Oferta pracy”                      |
-| `{{topic}}`           | zawsze            | identyfikator tematu: `wideo`, `web`, `praca`, `inne`                  |
-| `{{budget}}`          | wideo / web       | przedział budżetu, np. „5 000 – 10 000 zł”                             |
-| `{{deadline}}`        | wideo / web       | termin, np. „Do miesiąca”                                              |
-| `{{materials_link}}`  | wideo / web       | link do materiałów (opcjonalny)                                        |
-| `{{company}}`         | praca             | nazwa firmy                                                            |
-| `{{position}}`        | praca             | stanowisko                                                             |
-| `{{employment_type}}` | praca             | „Umowa o pracę”, „B2B” albo „Umowa zlecenie”                           |
-| `{{details}}`         | wideo / web / praca | gotowe podsumowanie pól zależnych od tematu (wiele linii)            |
-| `{{message}}`         | zawsze            | treść wiadomości                                                       |
-| `{{consent}}`         | zawsze            | „Tak” — zgoda RODO (formularz nie wyśle się bez niej)                  |
-| `{{language}}`        | zawsze            | język strony nadawcy: `pl` / `en`                                      |
-| `{{page_url}}`        | zawsze            | adres strony, z której wysłano formularz                               |
+| Zmienna               | Kiedy wypełniona    | Zawartość                                                 |
+| --------------------- | ------------------- | --------------------------------------------------------- |
+| `{{user_name}}`       | zawsze              | imię i nazwisko                                           |
+| `{{user_email}}`      | zawsze              | e-mail nadawcy — ustaw też jako **Reply To**              |
+| `{{user_subject}}`    | zawsze              | nazwa tematu, np. „Kreacja wideo”, „Oferta pracy”         |
+| `{{topic}}`           | zawsze              | identyfikator tematu: `wideo`, `web`, `praca`, `inne`     |
+| `{{budget}}`          | wideo / web         | przedział budżetu, np. „5 000 – 10 000 zł”                |
+| `{{deadline}}`        | wideo / web         | termin, np. „Do miesiąca”                                 |
+| `{{materials_link}}`  | wideo / web         | link do materiałów (opcjonalny)                           |
+| `{{company}}`         | praca               | nazwa firmy                                               |
+| `{{position}}`        | praca               | stanowisko                                                |
+| `{{employment_type}}` | praca               | „Umowa o pracę”, „B2B” albo „Umowa zlecenie”              |
+| `{{details}}`         | wideo / web / praca | gotowe podsumowanie pól zależnych od tematu (wiele linii) |
+| `{{message}}`         | zawsze              | treść wiadomości                                          |
+| `{{consent}}`         | zawsze              | „Tak” — zgoda RODO (formularz nie wyśle się bez niej)     |
+| `{{language}}`        | zawsze              | język strony nadawcy: `pl` / `en`                         |
+| `{{page_url}}`        | zawsze              | adres strony, z której wysłano formularz                  |
 
 Poprzednia wersja szablonu używała `user_name`, `user_email`, `user_subject` i `message` — te nazwy zostały, więc stary
 szablon dalej działa; nowe pola trzeba dopisać. Minimalny przykład treści:

@@ -26,9 +26,7 @@ const ProjectCover = ({
     sizes={sizes}
     priority={priority}
     className={`h-full w-full ${project.coverFit === "contain" ? "object-contain p-4" : "object-cover"} ${
-      zoomOnHover
-        ? "transition-transform duration-500 ease-out motion-safe:group-hover:scale-[1.03]"
-        : ""
+      zoomOnHover ? "transition-transform duration-500 ease-out motion-safe:group-hover:scale-[1.03]" : ""
     } ${className}`}
   />
 );

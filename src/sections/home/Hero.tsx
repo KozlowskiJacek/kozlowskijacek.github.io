@@ -13,19 +13,12 @@ const Hero = () => {
   const { t } = useTranslation();
 
   return (
-    <Section
-      id="home"
-      padding="hero"
-      className="flex-col md:flex-row md:justify-between"
-      backdrop={<HeroBackdrop />}
-    >
+    <Section id="home" padding="hero" className="flex-col md:flex-row md:justify-between" backdrop={<HeroBackdrop />}>
       <div className="w-full md:max-w-[38rem]">
         <div className={enter(0)}>
           <Tag dot="accent">{t("home:hero.badge")}</Tag>
         </div>
-        <h1 className={`mt-6 text-balance font-display text-h1 text-fg ${enter(1)}`}>
-          {t("home:hero.title")}
-        </h1>
+        <h1 className={`mt-6 text-balance font-display text-h1 text-fg ${enter(1)}`}>{t("home:hero.title")}</h1>
         <p className={`mt-6 max-w-xl text-body text-fg-secondary md:text-body-lg ${enter(2)}`}>
           {t("home:hero.subtitle")}
         </p>

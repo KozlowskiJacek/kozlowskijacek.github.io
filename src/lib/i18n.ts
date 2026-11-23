@@ -25,24 +25,22 @@ const isBrowser = typeof window !== "undefined";
 
 if (isBrowser) i18n.use(LanguageDetector);
 
-i18n
-  .use(initReactI18next)
-  .init({
-    resources,
-    ...(isBrowser ? {} : { lng: "pl" }),
-    ns: namespaces,
-    defaultNS: "common",
-    fallbackLng: "pl",
-    interpolation: {
-      escapeValue: false,
-    },
-    detection: {
-      // ?lang=en (adresy z hreflang) ma pierwszeństwo przed zapamiętanym wyborem.
-      order: ["querystring", "localStorage", "navigator"],
-      lookupQuerystring: "lang",
-      caches: ["localStorage"],
-    },
-  });
+i18n.use(initReactI18next).init({
+  resources,
+  ...(isBrowser ? {} : { lng: "pl" }),
+  ns: namespaces,
+  defaultNS: "common",
+  fallbackLng: "pl",
+  interpolation: {
+    escapeValue: false,
+  },
+  detection: {
+    // ?lang=en (adresy z hreflang) ma pierwszeństwo przed zapamiętanym wyborem.
+    order: ["querystring", "localStorage", "navigator"],
+    lookupQuerystring: "lang",
+    caches: ["localStorage"],
+  },
+});
 
 // Atrybut lang w <html> podąża za aktywnym językiem (czytniki ekranu, SEO).
 const syncHtmlLang = (lng: string) => {

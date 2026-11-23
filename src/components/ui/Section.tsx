@@ -42,9 +42,7 @@ const Section = ({
     {...props}
   >
     {backdrop}
-    <Container className={`flex items-center justify-center gap-10 md:gap-16 ${className}`}>
-      {children}
-    </Container>
+    <Container className={`flex items-center justify-center gap-10 md:gap-16 ${className}`}>{children}</Container>
   </section>
 );
 

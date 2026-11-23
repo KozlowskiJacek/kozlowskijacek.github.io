@@ -248,9 +248,6 @@ export const publishedProjects = projects.filter((project) => !project.draft);
 /** Maks. liczba realizacji na stronie głównej. */
 export const FEATURED_LIMIT = 6;
 
-export const featuredProjects = publishedProjects
-  .filter((project) => project.featured)
-  .slice(0, FEATURED_LIMIT);
+export const featuredProjects = publishedProjects.filter((project) => project.featured).slice(0, FEATURED_LIMIT);
 
-export const findProject = (slug: string | undefined) =>
-  publishedProjects.find((project) => project.slug === slug);
+export const findProject = (slug: string | undefined) => publishedProjects.find((project) => project.slug === slug);
