@@ -1,5 +1,7 @@
 import { useTranslation } from "react-i18next";
 import Seo from "../components/Seo";
+import { useServiceJsonLd } from "../lib/structuredData";
+import { paths } from "../data/navigation";
 import ServiceHero from "../components/services/ServiceHero";
 import ServiceGrid from "../components/services/ServiceGrid";
 import PackageCards from "../components/services/PackageCards";
@@ -27,10 +29,17 @@ import {
 /** /uslugi/wideo — „Kreacja wideo”. */
 const VideoMarketingPage = () => {
   const { t } = useTranslation();
+  const service = useServiceJsonLd({
+    path: paths.servicesVideo,
+    nameKey: "video.meta.title",
+    descriptionKey: "video.meta.description",
+    serviceType: "Video production",
+    packages: videoPackages,
+  });
 
   return (
     <>
-      <Seo titleKey="video.meta.title" descriptionKey="video.meta.description" />
+      <Seo titleKey="video.meta.title" descriptionKey="video.meta.description" jsonLd={[service]} />
       <ServiceHero
         hero={videoHero}
         tone={videoTone}

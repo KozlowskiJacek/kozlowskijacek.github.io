@@ -25,9 +25,14 @@ type SeoProps = {
   /** Tytuł bez sufiksu z nazwą strony (strona główna). */
   bareTitle?: boolean;
   noindex?: boolean;
+  /** Dane strukturalne schema.org — każdy obiekt trafia do osobnego <script type="application/ld+json">. */
+  jsonLd?: object[];
 };
 
-/** Meta tagi strony: title, description, canonical, Open Graph, Twitter Card i hreflang. */
+/** `<` w JSON-ie wewnątrz <script> mogłoby zamknąć tag — zamiana na sekwencję unicode. */
+const serializeJsonLd = (data: object) => JSON.stringify(data).replace(/</g, "\\u003c");
+
+/** Meta tagi strony: title, description, canonical, Open Graph, Twitter Card, hreflang i JSON-LD. */
 const Seo = ({
   titleKey,
   descriptionKey,
@@ -37,6 +42,7 @@ const Seo = ({
   type = "website",
   bareTitle = false,
   noindex = false,
+  jsonLd = [],
 }: SeoProps) => {
   const { t, i18n } = useTranslation();
   const { pathname } = useLocation();
@@ -78,6 +84,12 @@ const Seo = ({
       <meta name="twitter:title" content={fullTitle} />
       {pageDescription && <meta name="twitter:description" content={pageDescription} />}
       <meta name="twitter:image" content={imageUrl} />
+
+      {jsonLd.map((data, index) => (
+        <script key={index} type="application/ld+json">
+          {serializeJsonLd(data)}
+        </script>
+      ))}
     </Helmet>
   );
 };
