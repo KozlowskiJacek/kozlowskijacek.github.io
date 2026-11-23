@@ -5,7 +5,7 @@ import type { ProjectCategory } from "../projects";
 export type ServiceTone = "video" | "accent";
 
 /** Temat zapytania przekazywany do formularza: /kontakt?temat=… */
-export type ContactTopic = "wideo" | "web" | "praca";
+export type ContactTopic = "wideo" | "web" | "praca" | "inne";
 
 /** Nagłówek sekcji: tytuł + wyróżniony akcent + opcjonalny opis. */
 export type SectionCopy = {

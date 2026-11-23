@@ -1,4 +1,4 @@
-import ContactForm from "../components/ContactForm";
+import ContactForm from "../components/contact/ContactForm";
 import { motion } from "framer-motion";
 import { fadeIn, reveal } from "../lib/animations";
 import { useTranslation } from "react-i18next";

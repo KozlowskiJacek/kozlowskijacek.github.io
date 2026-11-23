@@ -479,15 +479,54 @@
     "write": "Write me an message and I will response within 1️⃣ business day",
     "full_name": "Full name",
     "email": "Email",
-    "subject": "Subject",
-    "message": "Your message...",
+    "message": "Briefly describe what you need…",
     "btn_send": "Send",
     "btn_sending": "Sending...",
     "error": "Your message could not be sent. Please try again in a moment or reach out on LinkedIn.",
     "topics": {
       "wideo": "Video creation",
-      "web": "Website / app",
-      "praca": "Job offer / recruitment"
+      "web": "Website or app",
+      "praca": "Job offer",
+      "inne": "Other"
+    },
+    "form": {
+      "optional": "optional",
+      "topic": "What is your message about?",
+      "topic_hints": {
+        "wideo": "Filming, editing, graphics, animation",
+        "web": "Website, web app, automation",
+        "praca": "Recruitment, full-time, B2B",
+        "inne": "A question or collaboration"
+      },
+      "budget": "Budget",
+      "deadline": "Timeline",
+      "select_placeholder": "Choose…",
+      "budget_options": {
+        "lt2k": "up to 2,000 PLN",
+        "2k-5k": "2,000 – 5,000 PLN",
+        "5k-10k": "5,000 – 10,000 PLN",
+        "10k-20k": "10,000 – 20,000 PLN",
+        "gt20k": "over 20,000 PLN",
+        "unknown": "Not sure yet"
+      },
+      "deadline_options": {
+        "asap": "As soon as possible",
+        "2w": "Within 2 weeks",
+        "1m": "Within a month",
+        "3m": "1–3 months",
+        "flexible": "Flexible"
+      },
+      "materials": "Link to materials",
+      "company": "Company name",
+      "position": "Position",
+      "employment": "Type of contract",
+      "employment_options": {
+        "uop": "Employment contract",
+        "b2b": "B2B",
+        "zlecenie": "Contract of mandate"
+      },
+      "message": "Message",
+      "consent": "I agree to the processing of my data in order to reply to my message. Details in the <policy>privacy policy</policy>."
     }
   },
   "pages": {

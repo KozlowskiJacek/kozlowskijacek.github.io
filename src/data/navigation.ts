@@ -8,6 +8,7 @@ export const paths = {
   employers: "/dla-pracodawcow",
   about: "/o-mnie",
   contact: "/kontakt",
+  privacy: "/polityka-prywatnosci",
 } as const;
 
 /** Prefiks tras usług — aktywny stan przycisku „Usługi”. */
