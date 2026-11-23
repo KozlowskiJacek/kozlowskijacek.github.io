@@ -1,4 +1,3 @@
-import workInProgress from "../assets/img/test.jpg";
 import noEscapeCursor from "../assets/img/NoEscapeCursor.png";
 import pythonCode from "../assets/img/python code.jpg";
 import pythonCode1 from "../assets/img/python code 1.jpg";
@@ -176,33 +175,6 @@ const projects: Project[] = [
       github: "https://github.com/KozlowskiJacek/jacekkozlowski.github.io",
       live: "https://jacekkozlowski.github.io",
     },
-  },
-  // TODO: podać link do repozytorium projektu Cooking.
-  {
-    slug: "cooking",
-    title: "Cooking",
-    category: "webapp",
-    audience: "both",
-    featured: true,
-    cover: workInProgress,
-    summaryKey: "projects.items.cooking.summary",
-    tech: [],
-    roleKey: "projects.roles.fullstack",
-    year: 2026,
-    links: {},
-  },
-  {
-    slug: "cooking-2",
-    title: "Cooking",
-    category: "webapp",
-    audience: "both",
-    featured: true,
-    cover: workInProgress,
-    summaryKey: "projects.items.cooking.summary",
-    tech: [],
-    roleKey: "projects.roles.fullstack",
-    year: 2026,
-    links: {},
   },
 
   // --- Szkice: niewidoczne, dopóki `draft: true` -------------------------------------------

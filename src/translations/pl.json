@@ -497,9 +497,6 @@
         "solution": "Przebudowałem stronę na React, TypeScript i Tailwind: system komponentów UI, dane w typowanych modułach, tłumaczenia PL/EN, podstrony usług i portfolio z case study.",
         "result": "Spójna, dostępna i szybka strona na GitHub Pages, którą łatwo rozwijać — nowe realizacje dodaje się jednym wpisem w danych."
       },
-      "cooking": {
-        "summary": "Tworzę super aplikację daj mi jeszcze trochę czasu 🔥"
-      },
       "draft": {
         "summary": "Opis realizacji w przygotowaniu."
       }

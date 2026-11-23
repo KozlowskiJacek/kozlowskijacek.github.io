@@ -497,9 +497,6 @@
         "solution": "I rebuilt the site with React, TypeScript and Tailwind: a UI component system, data in typed modules, PL/EN translations, service pages and a portfolio with case studies.",
         "result": "A consistent, accessible and fast site on GitHub Pages that's easy to extend — a new project is a single data entry."
       },
-      "cooking": {
-        "summary": "I'm creating an awesome app – just give me a bit more time 🔥"
-      },
       "draft": {
         "summary": "Project description coming soon."
       }
