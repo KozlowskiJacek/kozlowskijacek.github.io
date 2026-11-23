@@ -616,7 +616,8 @@
     "contact": "Kontakt",
     "contact_form": "Formularz kontaktowy",
     "rights": "Wszelkie prawa zastrzeżone.",
-    "back_to_top": "Do góry"
+    "back_to_top": "Do góry",
+    "privacy": "Polityka prywatności"
   },
   "career": {
     "headline": "Full-stack developer (React · Python/Django), który łączy kod z kreacją wideo",
@@ -794,5 +795,63 @@
   },
   "common": {
     "close": "Zamknij"
+  },
+  "privacy": {
+    "eyebrow": "Dane osobowe",
+    "title": "Polityka prywatności",
+    "intro": "Tu opisuję, co dzieje się z danymi, które wysyłasz przez formularz kontaktowy na tej stronie.",
+    "updated": "Ostatnia aktualizacja: {{date}}",
+    "back": "Wróć do formularza",
+    "sections": {
+      "controller": {
+        "title": "Administrator danych",
+        "p1": "Administratorem Twoich danych osobowych jest Jacek Kozłowski. W sprawach dotyczących danych możesz pisać na adres {{email}}."
+      },
+      "data": {
+        "title": "Jakie dane zbieram",
+        "p1": "Przez formularz kontaktowy przekazujesz mi:",
+        "l1": "imię i nazwisko, adres e-mail, temat i treść wiadomości,",
+        "l2": "w zależności od tematu: przedział budżetu, termin i link do materiałów albo nazwę firmy, stanowisko i formę współpracy,",
+        "l3": "informacje techniczne: adres podstrony, z której wysłano formularz, i język strony."
+      },
+      "purpose": {
+        "title": "Cel i podstawa przetwarzania",
+        "p1": "Dane przetwarzam wyłącznie po to, żeby:",
+        "l1": "odpowiedzieć na Twoją wiadomość i prowadzić dalszą korespondencję (art. 6 ust. 1 lit. a i f RODO — zgoda i prawnie uzasadniony interes),",
+        "l2": "przygotować wycenę lub ofertę na Twoją prośbę (art. 6 ust. 1 lit. b RODO — działania przed zawarciem umowy),",
+        "l3": "w przypadku oferty pracy — wziąć udział w procesie rekrutacji, o który pytasz."
+      },
+      "processors": {
+        "title": "Komu przekazuję dane",
+        "p1": "Nie sprzedaję ani nie udostępniam danych w celach marketingowych. Korzystam z usług podmiotów, które przetwarzają dane w moim imieniu:",
+        "l1": "EmailJS (EmailJS Pte. Ltd.) — przekazuje treść formularza na moją skrzynkę e-mail; działa jako podmiot przetwarzający, a dane mogą trafić poza Europejski Obszar Gospodarczy na podstawie standardowych klauzul umownych,",
+        "l2": "dostawca mojej poczty e-mail (Google — Gmail), w której przechowuję korespondencję,",
+        "l3": "GitHub (GitHub Pages) — hosting strony; serwer może zapisywać adres IP w logach technicznych."
+      },
+      "retention": {
+        "title": "Jak długo przechowuję dane",
+        "p1": "Wiadomości przechowuję przez czas prowadzenia korespondencji, a potem nie dłużej niż 12 miesięcy od ostatniego kontaktu. Jeśli dojdzie do współpracy, dane mogą być przechowywane dłużej — tak długo, jak wymagają tego przepisy (np. podatkowe).",
+        "p2": "Historia wysłanych wiadomości w panelu EmailJS jest przechowywana zgodnie z ustawieniami konta EmailJS i usuwana nie później niż po upływie powyższego okresu."
+      },
+      "rights": {
+        "title": "Twoje prawa",
+        "p1": "W każdej chwili możesz:",
+        "l1": "uzyskać dostęp do swoich danych i ich kopię,",
+        "l2": "sprostować nieprawidłowe dane,",
+        "l3": "żądać usunięcia lub ograniczenia przetwarzania,",
+        "l4": "wnieść sprzeciw wobec przetwarzania i przenieść dane,",
+        "l5": "cofnąć zgodę — bez wpływu na zgodność z prawem przetwarzania przed jej cofnięciem,",
+        "l6": "złożyć skargę do Prezesa Urzędu Ochrony Danych Osobowych (uodo.gov.pl)."
+      },
+      "voluntary": {
+        "title": "Dobrowolność",
+        "p1": "Podanie danych jest dobrowolne, ale bez imienia, adresu e-mail i treści wiadomości nie mogę odpowiedzieć. Nie podejmuję decyzji w sposób zautomatyzowany ani nie profiluję."
+      },
+      "storage": {
+        "title": "Pliki cookies i pamięć przeglądarki",
+        "p1": "Strona nie używa cookies analitycznych ani reklamowych. W pamięci przeglądarki (localStorage) zapisuje tylko wybrany język strony.",
+        "p2": "Filmy z YouTube ładują się w trybie rozszerzonej prywatności (youtube-nocookie.com) dopiero po kliknięciu odtwarzania — wtedy obowiązuje polityka prywatności Google."
+      }
+    }
   }
 }

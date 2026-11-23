@@ -15,6 +15,7 @@ const CaseStudyPage = lazy(() => import("./pages/CaseStudyPage"));
 const EmployersPage = lazy(() => import("./pages/EmployersPage"));
 const AboutPage = lazy(() => import("./pages/AboutPage"));
 const ContactPage = lazy(() => import("./pages/ContactPage"));
+const PrivacyPolicyPage = lazy(() => import("./pages/PrivacyPolicyPage"));
 const NotFoundPage = lazy(() => import("./pages/NotFoundPage"));
 
 // Podgląd komponentów tylko w dev — w buildzie produkcyjnym warunek jest stały (false) i moduł znika.
@@ -46,6 +47,7 @@ const App = () => {
             <Route path={paths.employers} element={<EmployersPage />} />
             <Route path={paths.about} element={<AboutPage />} />
             <Route path={paths.contact} element={<ContactPage />} />
+            <Route path={paths.privacy} element={<PrivacyPolicyPage />} />
             {legacyRedirects.map(({ from, to }) => (
               <Route key={from} path={from} element={<LegacyRedirect to={to} />} />
             ))}

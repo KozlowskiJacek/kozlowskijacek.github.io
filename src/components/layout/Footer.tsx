@@ -74,7 +74,13 @@ const Footer = () => {
       <div className="border-t border-border">
         <Container className="flex flex-wrap items-center justify-between gap-4 py-6">
           <p className="text-small text-fg-muted">
-            © {year} Jacek Kozłowski. {t("footer.rights")}
+            © {year} Jacek Kozłowski. {t("footer.rights")}{" "}
+            <Link
+              to={paths.privacy}
+              className={`rounded-sm underline-offset-4 transition-colors hover:text-accent hover:underline ${focusRing}`}
+            >
+              {t("footer.privacy")}
+            </Link>
           </p>
 
           <button

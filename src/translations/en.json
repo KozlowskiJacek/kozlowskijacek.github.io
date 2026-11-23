@@ -616,7 +616,8 @@
     "contact": "Contact",
     "contact_form": "Contact form",
     "rights": "All rights reserved.",
-    "back_to_top": "Back to top"
+    "back_to_top": "Back to top",
+    "privacy": "Privacy policy"
   },
   "career": {
     "headline": "Full-stack developer (React · Python/Django) who blends code with video creation",
@@ -794,5 +795,63 @@
   },
   "common": {
     "close": "Close"
+  },
+  "privacy": {
+    "eyebrow": "Personal data",
+    "title": "Privacy policy",
+    "intro": "This page explains what happens to the data you send through the contact form on this website.",
+    "updated": "Last updated: {{date}}",
+    "back": "Back to the form",
+    "sections": {
+      "controller": {
+        "title": "Data controller",
+        "p1": "Your personal data is controlled by Jacek Kozłowski. For any data-related matters, write to {{email}}."
+      },
+      "data": {
+        "title": "What data I collect",
+        "p1": "Through the contact form you send me:",
+        "l1": "your name, email address, topic and message,",
+        "l2": "depending on the topic: budget range, timeline and a link to materials, or company name, position and type of contract,",
+        "l3": "technical information: the page the form was sent from and the site language."
+      },
+      "purpose": {
+        "title": "Purpose and legal basis",
+        "p1": "I process the data only to:",
+        "l1": "reply to your message and continue the conversation (Art. 6(1)(a) and (f) GDPR — consent and legitimate interest),",
+        "l2": "prepare a quote or proposal at your request (Art. 6(1)(b) GDPR — steps prior to entering into a contract),",
+        "l3": "for job offers — take part in the recruitment process you are asking about."
+      },
+      "processors": {
+        "title": "Who receives the data",
+        "p1": "I don't sell or share data for marketing. I use services that process data on my behalf:",
+        "l1": "EmailJS (EmailJS Pte. Ltd.) — delivers the form content to my inbox; it acts as a processor and data may be transferred outside the European Economic Area under standard contractual clauses,",
+        "l2": "my email provider (Google — Gmail), where the correspondence is stored,",
+        "l3": "GitHub (GitHub Pages) — website hosting; the server may record IP addresses in technical logs."
+      },
+      "retention": {
+        "title": "How long I keep the data",
+        "p1": "I keep messages for as long as the conversation lasts and then no longer than 12 months after the last contact. If we start working together, data may be kept longer — as long as the law requires (e.g. tax regulations).",
+        "p2": "The history of sent messages in the EmailJS dashboard is kept according to the EmailJS account settings and deleted no later than after the period above."
+      },
+      "rights": {
+        "title": "Your rights",
+        "p1": "At any time you can:",
+        "l1": "access your data and get a copy of it,",
+        "l2": "correct inaccurate data,",
+        "l3": "request erasure or restriction of processing,",
+        "l4": "object to processing and port your data,",
+        "l5": "withdraw consent — without affecting the lawfulness of processing before withdrawal,",
+        "l6": "lodge a complaint with the Polish supervisory authority, the President of the Personal Data Protection Office (uodo.gov.pl)."
+      },
+      "voluntary": {
+        "title": "Providing data is voluntary",
+        "p1": "Providing data is voluntary, but without your name, email address and message I can't reply. I don't make automated decisions or use profiling."
+      },
+      "storage": {
+        "title": "Cookies and browser storage",
+        "p1": "This website doesn't use analytics or advertising cookies. It only stores the selected site language in your browser's storage (localStorage).",
+        "p2": "YouTube videos load in privacy-enhanced mode (youtube-nocookie.com) only after you click play — Google's privacy policy applies from that point."
+      }
+    }
   }
 }
