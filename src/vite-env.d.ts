@@ -1,4 +1,4 @@
 /// <reference types="vite/client" />
 
-/** Adres CV z public/cv/ albo null, gdy pliku nie ma (ustawiane w vite.config.ts). */
-declare const __CV_URL__: string | null;
+/** Adresy CV z public/cv/ (PL / EN); null, gdy pliku nie ma (ustawiane w vite.config.ts). */
+declare const __CV_FILES__: { pl: string | null; en: string | null };

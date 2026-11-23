@@ -1,10 +1,11 @@
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
-import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa6";
+import { FaDownload, FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa6";
 import mainPhoto from "../../assets/img/MainPhoto.png";
 import { staggerContainer, staggerItem } from "../../lib/animations";
 import { career, availabilityLabelKeys, workModeLabelKeys, type Availability } from "../../data/career";
 import { contactTopicPath } from "../../data/services/contact";
+import { cvFiles, cvLanguages } from "../../data/cv";
 import Section from "../../components/ui/Section";
 import Button from "../../components/ui/Button";
 import Tag from "../../components/ui/Tag";
@@ -14,6 +15,8 @@ const availabilityDot: Record<Availability, "accent" | "video" | "muted"> = {
   "freelance-only": "video",
   closed: "muted",
 };
+
+const hasCv = cvLanguages.some((lang) => cvFiles[lang]);
 
 /** Nagłówek CV: zdjęcie, imię, headline, dostępność i główne akcje. */
 const EmployerHero = () => {
@@ -61,6 +64,17 @@ const EmployerHero = () => {
         </motion.div>
 
         <motion.div variants={staggerItem} className="mt-8 flex flex-wrap gap-3">
+          {cvLanguages.map((lang) => {
+            const href = cvFiles[lang];
+            return (
+              href && (
+                <Button key={lang} href={href} download>
+                  <FaDownload aria-hidden="true" />
+                  {t("employer.hero.download_cv", { lang: lang.toUpperCase() })}
+                </Button>
+              )
+            );
+          })}
           <Button
             variant="secondary"
             href={career.links.linkedin}
@@ -79,7 +93,7 @@ const EmployerHero = () => {
             <FaGithub aria-hidden="true" />
             GitHub
           </Button>
-          <Button to={contactTopicPath("praca")}>
+          <Button to={contactTopicPath("praca")} variant={hasCv ? "secondary" : "primary"}>
             <FaEnvelope aria-hidden="true" />
             {t("employer.hero.contact")}
           </Button>

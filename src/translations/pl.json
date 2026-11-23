@@ -720,7 +720,8 @@
     "hero": {
       "work_modes": "Preferowane formy pracy",
       "contact": "Kontakt",
-      "photo_alt": "Zdjęcie Jacka Kozłowskiego"
+      "photo_alt": "Zdjęcie Jacka Kozłowskiego",
+      "download_cv": "Pobierz CV {{lang}}"
     },
     "summary": {
       "title": "Krótko",
@@ -757,6 +758,11 @@
       "accent": "do zespołu?",
       "text": "Napisz kilka słów o stanowisku i firmie — odpowiem w ciągu jednego dnia roboczego.",
       "button": "Zaproś mnie na rozmowę"
+    },
+    "certificates": {
+      "title": "Moje",
+      "accent": "certyfikaty",
+      "open": "Otwórz PDF"
     }
   }
 }

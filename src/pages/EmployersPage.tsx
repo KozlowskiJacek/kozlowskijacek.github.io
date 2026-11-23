@@ -3,6 +3,7 @@ import Summary from "../sections/employer/Summary";
 import StackGroups from "../sections/employer/StackGroups";
 import ExperienceTimeline from "../sections/employer/ExperienceTimeline";
 import TechnicalProjects from "../sections/employer/TechnicalProjects";
+import Certificates from "../sections/employer/Certificates";
 import Education from "../sections/employer/Education";
 import WhyMe from "../sections/employer/WhyMe";
 import ServiceCTA from "../components/services/ServiceCTA";
@@ -21,6 +22,7 @@ const EmployersPage = () => (
     <StackGroups />
     <ExperienceTimeline />
     <TechnicalProjects />
+    <Certificates />
     <Education />
     <WhyMe />
     <ServiceCTA cta={employerCta} tone="accent" topic="praca" buttonKey="employer.cta.button" />

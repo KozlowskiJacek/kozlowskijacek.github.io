@@ -4,14 +4,15 @@ import { FaArrowRight, FaDownload } from "react-icons/fa6";
 import { fadeIn, reveal, staggerContainer, staggerItem } from "../../lib/animations";
 import { paths } from "../../data/navigation";
 import { mainStack } from "../../data/stack";
-import { cvUrl } from "../../data/cv";
+import { cvUrlFor } from "../../data/cv";
 import Section from "../../components/ui/Section";
 import SectionHeading from "../../components/ui/SectionHeading";
 import Button from "../../components/ui/Button";
 
 /** Krótki teaser profilu dla pracodawców: opis, główny stack, profil i CV. */
 const RecruiterTeaser = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const cvUrl = cvUrlFor(i18n.resolvedLanguage ?? "pl");
 
   return (
     <Section id="recruiters" className="flex-col lg:flex-row lg:items-center lg:justify-between">

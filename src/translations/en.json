@@ -720,7 +720,8 @@
     "hero": {
       "work_modes": "Preferred ways of working",
       "contact": "Contact",
-      "photo_alt": "Photo of Jacek Kozłowski"
+      "photo_alt": "Photo of Jacek Kozłowski",
+      "download_cv": "Download CV {{lang}}"
     },
     "summary": {
       "title": "About me",
@@ -757,6 +758,11 @@
       "accent": "for your team?",
       "text": "Send a few words about the role and the company — I'll reply within one business day.",
       "button": "Invite me to an interview"
+    },
+    "certificates": {
+      "title": "My",
+      "accent": "certificates",
+      "open": "Open PDF"
     }
   }
 }
