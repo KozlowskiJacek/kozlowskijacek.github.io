@@ -42,7 +42,7 @@ Pozostałe komendy:
 | `npm run preview`   | podgląd zbudowanej wersji            |
 | `npm run lint`      | ESLint                               |
 | `npm run typecheck` | sprawdzenie typów (`tsc -b`)         |
-| `npm run i18n:check`| spójność kluczy PL/EN, klucze użyte w kodzie istnieją |
+| `npm run i18n:check`| spójność kluczy PL/EN, brakujące i nieużywane klucze (`-- --prune` usuwa nieużywane) |
 | `npm run deploy`    | build + publikacja na GitHub Pages   |
 | `npm run og:render` | renderuje `scripts/og/og-template.html` do `public/og/default.png` (headless Chrome/Edge) |
 
