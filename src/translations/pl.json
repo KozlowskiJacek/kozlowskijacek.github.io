@@ -525,7 +525,8 @@
         "zlecenie": "Umowa zlecenie"
       },
       "message": "Wiadomość",
-      "consent": "Wyrażam zgodę na przetwarzanie moich danych w celu odpowiedzi na wiadomość. Szczegóły w <policy>polityce prywatności</policy>."
+      "consent": "Wyrażam zgodę na przetwarzanie moich danych w celu odpowiedzi na wiadomość. Szczegóły w <policy>polityce prywatności</policy>.",
+      "honeypot": "Nie wypełniaj tego pola"
     },
     "validation": {
       "required": "To pole jest wymagane.",
@@ -544,7 +545,8 @@
       "send_another": "Wyślij kolejną wiadomość",
       "error_text": "Nie udało się wysłać wiadomości. Spróbuj ponownie za chwilę albo napisz bezpośrednio — treść wiadomości przeniosę do Twojego programu pocztowego.",
       "mailto": "Napisz e-mail",
-      "mailto_subject": "wiadomość ze strony"
+      "mailto_subject": "wiadomość ze strony",
+      "too_fast": "Formularz został wysłany zbyt szybko. Odczekaj kilka sekund i kliknij „Wyślij” ponownie."
     }
   },
   "pages": {

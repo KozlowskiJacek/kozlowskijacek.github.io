@@ -30,13 +30,14 @@ import {
   MESSAGE_MAX,
   type ContactField,
 } from "../../lib/contactValidation";
+import { checkSpam, HONEYPOT_FIELD } from "../../lib/contactSpam";
 import { emailJsConfig, missingEmailJsMessage } from "../../lib/env";
 import { buttonClasses } from "../ui/buttonStyles";
 import FormField from "./FormField";
 import { errorId, fieldClasses } from "./fieldStyles";
 import TopicPicker from "./TopicPicker";
 
-type Status = "idle" | "sending" | "success" | "error";
+type Status = "idle" | "sending" | "success" | "error" | "too_fast";
 type TextField = "name" | "email" | "materials" | "company" | "position" | "message" | "budget" | "deadline";
 
 /** Id elementu, na który trafia fokus przy błędzie danego pola. */
@@ -66,6 +67,10 @@ const ContactForm = () => {
   const buttonRef = useRef<HTMLButtonElement>(null);
   const [status, setStatus] = useState<Status>("idle");
   const isSending = status === "sending";
+
+  // Antyspam: ukryte pole-pułapka + minimalny czas od załadowania formularza.
+  const [honeypot, setHoneypot] = useState("");
+  const loadedAt = useRef(Date.now());
 
   // /kontakt?temat=wideo|web|praca|inne — temat wybrany z góry (CTA na podstronach usług).
   const [searchParams, setSearchParams] = useSearchParams();
@@ -115,7 +120,7 @@ const ContactForm = () => {
   const handleChange =
     (field: TextField) => (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
       setValues((current) => ({ ...current, [field]: event.target.value }));
-      if (status === "error") setStatus("idle");
+      if (status === "error" || status === "too_fast") setStatus("idle");
     };
 
   const handleEmployment = (event: ChangeEvent<HTMLInputElement>) => {
@@ -153,6 +158,17 @@ const ContactForm = () => {
       return;
     }
 
+    const spam = checkSpam(honeypot, loadedAt.current);
+    if (spam === "honeypot") {
+      // Bot nie dostaje sygnału, że został wykryty — udajemy sukces bez wysyłki.
+      setStatus("success");
+      return;
+    }
+    if (spam === "too_fast") {
+      setStatus("too_fast");
+      return;
+    }
+
     setStatus("sending");
     try {
       if (!emailJsConfig) throw new Error(missingEmailJsMessage);
@@ -170,6 +186,8 @@ const ContactForm = () => {
     setValues(emptyContactForm(values.topic));
     setTouched({});
     setSubmitAttempted(false);
+    setHoneypot("");
+    loadedAt.current = Date.now();
     setStatus("idle");
   };
 
@@ -200,12 +218,26 @@ const ContactForm = () => {
   );
 
   return (
-    <form onSubmit={handleSubmit} noValidate className="flex flex-col gap-5">
+    <form onSubmit={handleSubmit} noValidate className="relative flex flex-col gap-5">
       {import.meta.env.DEV && !emailJsConfig && (
         <p role="alert" className="rounded-xl border border-video/40 bg-video/10 px-4 py-3 text-small text-video">
           [dev] {missingEmailJsMessage}
         </p>
       )}
+
+      {/* Pole-pułapka: poza ekranem, pominięte przez czytniki ekranu i nawigację klawiaturą. */}
+      <div aria-hidden="true" className="absolute -left-[10000px] top-auto h-px w-px overflow-hidden">
+        <label htmlFor="contact-website">{t("contact.form.honeypot")}</label>
+        <input
+          id="contact-website"
+          type="text"
+          name={HONEYPOT_FIELD}
+          tabIndex={-1}
+          autoComplete="off"
+          value={honeypot}
+          onChange={(event) => setHoneypot(event.target.value)}
+        />
+      </div>
 
       {/* disabled na fieldset blokuje wszystkie kontrolki na czas wysyłki. */}
       <fieldset disabled={isSending} className="flex min-w-0 flex-col gap-5">
@@ -440,6 +472,12 @@ const ContactForm = () => {
       {submitAttempted && Object.keys(errors).length > 0 && (
         <p className="sr-only" role="alert">
           {t("contact.validation.summary")}
+        </p>
+      )}
+
+      {status === "too_fast" && (
+        <p role="alert" className="rounded-xl border border-video/40 bg-video/10 px-4 py-3 text-small text-fg">
+          {t("contact.state.too_fast")}
         </p>
       )}
 

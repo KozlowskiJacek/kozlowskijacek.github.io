@@ -525,7 +525,8 @@
         "zlecenie": "Contract of mandate"
       },
       "message": "Message",
-      "consent": "I agree to the processing of my data in order to reply to my message. Details in the <policy>privacy policy</policy>."
+      "consent": "I agree to the processing of my data in order to reply to my message. Details in the <policy>privacy policy</policy>.",
+      "honeypot": "Leave this field empty"
     },
     "validation": {
       "required": "This field is required.",
@@ -544,7 +545,8 @@
       "send_another": "Send another message",
       "error_text": "Your message could not be sent. Try again in a moment or email me directly — your message will be copied into your email app.",
       "mailto": "Send an email",
-      "mailto_subject": "message from the website"
+      "mailto_subject": "message from the website",
+      "too_fast": "The form was sent too quickly. Wait a few seconds and click “Send” again."
     }
   },
   "pages": {
