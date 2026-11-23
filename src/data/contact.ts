@@ -59,3 +59,6 @@ const keysOf = <T extends string>(record: Record<T, string>) => Object.keys(reco
 export const budgetOptions = keysOf(budgetLabelKeys);
 export const deadlineOptions = keysOf(deadlineLabelKeys);
 export const employmentOptions = keysOf(employmentLabelKeys);
+
+/** Adres do bezpośredniego kontaktu i fallbacku mailto, gdy wysyłka formularza się nie uda. */
+export const contactEmail = "jacek.kozlowski2000@gmail.com";

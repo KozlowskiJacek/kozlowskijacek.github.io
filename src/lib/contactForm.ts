@@ -90,3 +90,17 @@ export const toTemplateParams = (values: ContactFormValues): ContactTemplatePara
     page_url: window.location.href,
   };
 };
+
+/** Maks. długość treści w linku mailto (dłuższe adresy bywają ucinane przez klienty poczty). */
+const MAILTO_BODY_MAX = 1500;
+
+/** Link mailto z tematem i treścią formularza — fallback, gdy EmailJS zawiedzie. */
+export const toMailtoHref = (email: string, values: ContactFormValues, subject: string) => {
+  const message = values.message.trim();
+  const body = [
+    message.length > MAILTO_BODY_MAX ? `${message.slice(0, MAILTO_BODY_MAX)}…` : message,
+    "",
+    values.name.trim(),
+  ].join("\n");
+  return `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+};

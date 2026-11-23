@@ -482,7 +482,6 @@
     "message": "Opisz krótko, czego potrzebujesz…",
     "btn_send": "Wyślij",
     "btn_sending": "Wysyłanie...",
-    "error": "Nie udało się wysłać wiadomości. Spróbuj ponownie za chwilę lub napisz do mnie na LinkedIn.",
     "topics": {
       "wideo": "Kreacja wideo",
       "web": "Strona lub aplikacja",
@@ -527,6 +526,25 @@
       },
       "message": "Wiadomość",
       "consent": "Wyrażam zgodę na przetwarzanie moich danych w celu odpowiedzi na wiadomość. Szczegóły w <policy>polityce prywatności</policy>."
+    },
+    "validation": {
+      "required": "To pole jest wymagane.",
+      "too_short": "Za krótko — minimalna liczba znaków: {{min}}.",
+      "too_long": "Za długo — maksymalna liczba znaków: {{max}}.",
+      "email": "Podaj poprawny adres e-mail, np. jan@firma.pl.",
+      "topic": "Wybierz temat wiadomości.",
+      "choose": "Wybierz jedną z opcji.",
+      "url": "Podaj pełny adres zaczynający się od http:// lub https://.",
+      "consent": "Zgoda jest potrzebna, żebym mógł odpowiedzieć na wiadomość.",
+      "summary": "Formularz zawiera błędy. Popraw zaznaczone pola, aby wysłać wiadomość."
+    },
+    "state": {
+      "success_title": "Dzięki, wiadomość dotarła!",
+      "success_text": "Odpowiem najpóźniej w ciągu 1 dnia roboczego na podany adres e-mail.",
+      "send_another": "Wyślij kolejną wiadomość",
+      "error_text": "Nie udało się wysłać wiadomości. Spróbuj ponownie za chwilę albo napisz bezpośrednio — treść wiadomości przeniosę do Twojego programu pocztowego.",
+      "mailto": "Napisz e-mail",
+      "mailto_subject": "wiadomość ze strony"
     }
   },
   "pages": {

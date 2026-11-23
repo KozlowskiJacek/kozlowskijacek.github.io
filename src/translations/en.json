@@ -482,7 +482,6 @@
     "message": "Briefly describe what you need…",
     "btn_send": "Send",
     "btn_sending": "Sending...",
-    "error": "Your message could not be sent. Please try again in a moment or reach out on LinkedIn.",
     "topics": {
       "wideo": "Video creation",
       "web": "Website or app",
@@ -527,6 +526,25 @@
       },
       "message": "Message",
       "consent": "I agree to the processing of my data in order to reply to my message. Details in the <policy>privacy policy</policy>."
+    },
+    "validation": {
+      "required": "This field is required.",
+      "too_short": "Too short — minimum {{min}} characters.",
+      "too_long": "Too long — maximum {{max}} characters.",
+      "email": "Enter a valid email address, e.g. jane@company.com.",
+      "topic": "Choose what your message is about.",
+      "choose": "Choose one of the options.",
+      "url": "Enter a full address starting with http:// or https://.",
+      "consent": "I need your consent to reply to your message.",
+      "summary": "The form has errors. Fix the highlighted fields to send your message."
+    },
+    "state": {
+      "success_title": "Thanks, your message is in!",
+      "success_text": "I'll reply to the email address you provided within 1 business day.",
+      "send_another": "Send another message",
+      "error_text": "Your message could not be sent. Try again in a moment or email me directly — your message will be copied into your email app.",
+      "mailto": "Send an email",
+      "mailto_subject": "message from the website"
     }
   },
   "pages": {

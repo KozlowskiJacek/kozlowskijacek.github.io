@@ -35,6 +35,7 @@ const TopicPicker = ({ value, onChange, error }: TopicPickerProps) => {
               }`}
             >
               <input
+                id={`contact-topic-${id}`}
                 type="radio"
                 name="topic"
                 value={id}
