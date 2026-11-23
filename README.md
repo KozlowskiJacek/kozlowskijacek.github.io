@@ -21,7 +21,7 @@ Strona jest dwujęzyczna (PL / EN) i ma formularz kontaktowy wysyłany przez Ema
 | i18n       | i18next + react-i18next + i18next-browser-languagedetector |
 | Formularz  | @emailjs/browser + canvas-confetti                          |
 | Slider     | Swiper                                                      |
-| Ikony      | boxicons, react-icons                                       |
+| Ikony      | react-icons                                                 |
 | Deploy     | gh-pages → GitHub Pages                                     |
 
 ## Uruchomienie

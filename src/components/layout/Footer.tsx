@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useReducedMotion } from "framer-motion";
 import { FaArrowUp } from "react-icons/fa6";
-import "boxicons/css/boxicons.min.css";
 import { footerColumns, paths } from "../../data/navigation";
 import { socials } from "../../data/socials";
 import Container from "../ui/Container";
@@ -41,7 +40,7 @@ const Footer = () => {
                     aria-label={social.label}
                     className={`grid h-10 w-10 place-items-center rounded-full border border-border-strong text-lg text-fg-secondary transition-colors duration-200 hover:border-accent/50 hover:text-accent ${focusRing}`}
                   >
-                    <i aria-hidden="true" className={`bx ${social.icon}`} />
+                    <social.icon aria-hidden="true" />
                   </a>
                 </li>
               ))}
