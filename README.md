@@ -54,7 +54,68 @@ Plik `.env` nie jest w repozytorium. Szablon znajdziesz w `.env.example`:
 | `VITE_EMAILJS_TEMPLATE_ID`  | ID szablonu wiadomości       |
 | `VITE_EMAILJS_PUBLIC_KEY`   | klucz publiczny EmailJS      |
 
-Wartości są czytane w `src/lib/env.ts` i trafiają do bundla (prefiks `VITE_`), więc mogą tu być tylko klucze przeznaczone do użycia w przeglądarce.
+Wartości są czytane wyłącznie z `import.meta.env` w `src/lib/env.ts` i trafiają do bundla (prefiks `VITE_`), więc mogą tu być tylko klucze przeznaczone do użycia w przeglądarce.
+Gdy którejś brakuje, w trybie dev konsola i baner nad formularzem pokazują, których zmiennych brakuje; na produkcji wysyłka kończy się stanem błędu z linkiem `mailto` jako fallbackiem.
+
+## Formularz kontaktowy i szablon EmailJS
+
+Formularz (`/kontakt`, `src/components/contact/`) wysyła dane przez `emailjs.send()` jako jawne zmienne szablonu
+(`toTemplateParams` w `src/lib/contactForm.ts`). Temat można wybrać z góry linkiem `/kontakt?temat=wideo|web|praca|inne`.
+Etykiety (temat, budżet, termin, forma współpracy) są zawsze po polsku, niezależnie od języka odwiedzającego.
+Pola, które nie dotyczą wybranego tematu, mają wartość `—`.
+
+W panelu EmailJS (**Email Templates → szablon z `VITE_EMAILJS_TEMPLATE_ID`**) użyj zmiennych:
+
+| Zmienna               | Kiedy wypełniona  | Zawartość                                                              |
+| --------------------- | ----------------- | ---------------------------------------------------------------------- |
+| `{{user_name}}`       | zawsze            | imię i nazwisko                                                        |
+| `{{user_email}}`      | zawsze            | e-mail nadawcy — ustaw też jako **Reply To**                           |
+| `{{user_subject}}`    | zawsze            | nazwa tematu, np. „Kreacja wideo”, „Oferta pracy”                      |
+| `{{topic}}`           | zawsze            | identyfikator tematu: `wideo`, `web`, `praca`, `inne`                  |
+| `{{budget}}`          | wideo / web       | przedział budżetu, np. „5 000 – 10 000 zł”                             |
+| `{{deadline}}`        | wideo / web       | termin, np. „Do miesiąca”                                              |
+| `{{materials_link}}`  | wideo / web       | link do materiałów (opcjonalny)                                        |
+| `{{company}}`         | praca             | nazwa firmy                                                            |
+| `{{position}}`        | praca             | stanowisko                                                             |
+| `{{employment_type}}` | praca             | „Umowa o pracę”, „B2B” albo „Umowa zlecenie”                           |
+| `{{details}}`         | wideo / web / praca | gotowe podsumowanie pól zależnych od tematu (wiele linii)            |
+| `{{message}}`         | zawsze            | treść wiadomości                                                       |
+| `{{consent}}`         | zawsze            | „Tak” — zgoda RODO (formularz nie wyśle się bez niej)                  |
+| `{{language}}`        | zawsze            | język strony nadawcy: `pl` / `en`                                      |
+| `{{page_url}}`        | zawsze            | adres strony, z której wysłano formularz                               |
+
+Poprzednia wersja szablonu używała `user_name`, `user_email`, `user_subject` i `message` — te nazwy zostały, więc stary
+szablon dalej działa; nowe pola trzeba dopisać. Minimalny przykład treści:
+
+```text
+Temat: {{user_subject}} — {{user_name}}
+
+Od: {{user_name}} <{{user_email}}>
+Temat: {{user_subject}} ({{topic}})
+
+{{details}}
+
+Budżet: {{budget}}
+Termin: {{deadline}}
+Materiały: {{materials_link}}
+Firma: {{company}} · Stanowisko: {{position}} · Forma: {{employment_type}}
+
+Wiadomość:
+{{message}}
+
+Zgoda RODO: {{consent}} · Język: {{language}} · Wysłano z: {{page_url}}
+```
+
+W ustawieniach szablonu: **Subject** `{{user_subject}} — {{user_name}}`, **Reply To** `{{user_email}}`.
+
+Antyspam działa po stronie przeglądarki: ukryte pole-pułapka `website` (wypełnione = udawany sukces bez wysyłki)
+i minimalny czas 3 s od załadowania formularza (`src/lib/contactSpam.ts`). Warto dodatkowo sprawdzić w ustawieniach konta EmailJS
+ograniczenie wysyłek do własnej domeny i limity, jeśli plan na to pozwala.
+
+Kanały kontaktu obok formularza (e-mail, LinkedIn, GitHub, opcjonalnie Calendly) są w `src/data/contact.ts`;
+link do Calendly pojawi się po wpisaniu adresu w `contactLinks` (`href: null` = ukryty).
+Treść polityki prywatności (`/polityka-prywatnosci`) jest w `privacy.*` w plikach tłumaczeń, a lista sekcji i data
+aktualizacji w `src/data/privacy.ts`.
 
 ## Deploy
 
@@ -78,7 +139,8 @@ Skrypt `predeploy` buduje projekt, a `gh-pages -d dist` publikuje zawartość `d
 │   ├── components/
 │   │   ├── layout/         # Layout, Header, LanguageSwitcher, Footer, ScrollToTop
 │   │   ├── ui/             # Section, Container, SectionHeading, Button, Modal
-│   │   └── *.tsx           # ContactForm, TestimonialsSlider
+│   │   ├── contact/        # ContactForm, TopicPicker, ContactChannels
+│   │   └── *.tsx           # PageIntro
 │   ├── data/               # typowane dane: navigation, projects, career (CV), stack, testimonials, socials
 │   ├── lib/                # animations (framer-motion), i18n, env
 │   ├── hooks/              # useSmoothScroll, useScrollSpy, useNavigateToSection
