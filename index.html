@@ -4,6 +4,21 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0B0F14" />
+    <script>
+      // Motyw przed pierwszym malowaniem (bez mignięcia). Logika jak w src/lib/theme.ts: zapisany wybór,
+      // inaczej motyw systemu.
+      (function () {
+        var theme;
+        try {
+          theme = localStorage.getItem("theme");
+        } catch (e) {}
+        if (theme !== "light" && theme !== "dark")
+          theme = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+        document.documentElement.dataset.theme = theme;
+        if (theme === "light") document.querySelector('meta[name="theme-color"]').content = "#F6F8FA";
+      })();
+    </script>
     <!-- Wartości domyślne; data-rh oddaje je pod zarządzanie komponentowi <Seo /> (react-helmet-async). -->
     <meta
       data-rh="true"

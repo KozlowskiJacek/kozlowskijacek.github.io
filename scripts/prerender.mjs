@@ -30,7 +30,8 @@ const collect = (pipe) =>
 /** Szablon bez domyślnych tagów, które zastąpi <Seo /> (title i opis oznaczony data-rh). */
 const baseTemplate = template
   .replace(/<title>[\s\S]*?<\/title>\s*/, "")
-  .replace(/\s*<!--[\s\S]*?data-rh[\s\S]*?-->/, "")
+  // Tylko komentarz zawierający „data-rh” — (?!-->) nie pozwala zacząć dopasowania we wcześniejszym komentarzu.
+  .replace(/\s*<!--(?:(?!-->)[\s\S])*?data-rh[\s\S]*?-->/, "")
   .replace(/\s*<meta\s+data-rh="true"[\s\S]*?\/>/, "");
 
 const fileFor = (route) => (route === "/" ? "index.html" : `${route.replace(/^\//, "")}.html`);

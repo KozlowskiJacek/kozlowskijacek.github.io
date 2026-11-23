@@ -10,6 +10,8 @@
     "about": "About",
     "contact": "Contact",
     "switch_language": "Switch language to Polish",
+    "theme_to_light": "Switch to light theme",
+    "theme_to_dark": "Switch to dark theme",
     "main_nav": "Main navigation",
     "open_menu": "Open menu",
     "close_menu": "Close menu",

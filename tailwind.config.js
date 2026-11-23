@@ -1,46 +1,47 @@
 import defaultTheme from "tailwindcss/defaultTheme";
 
+/** Kolor z motywu: kanały RGB w zmiennej CSS `--color-<name>` (src/index.css). */
+const token = (name) => `rgb(var(--color-${name}) / <alpha-value>)`;
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
       /*
-       * Semantyczne tokeny kolorów. Kontrast tekstu (WCAG AA, ≥ 4.5:1):
-       *   fg           na background ≈ 16.3:1, na surface-elevated ≈ 14.4:1
-       *   fg-secondary na background ≈ 9.1:1,  na surface-elevated ≈ 8.0:1
-       *   fg-muted     na background ≈ 5.3:1,  na surface-elevated ≈ 4.7:1
-       *   accent / video / danger na surface-elevated ≥ 7.5:1
-       *   background   na accent ≈ 14.9:1, na video ≈ 11.3:1 (tekst na przyciskach)
+       * Semantyczne tokeny kolorów. Wartości (kanały RGB) są zmiennymi CSS w src/index.css —
+       * osobno dla motywu ciemnego i jasnego (`data-theme` na <html>). Format
+       * `rgb(var(--color-x) / <alpha-value>)` zachowuje modyfikatory przezroczystości (`bg-accent/10`).
+       * Kontrasty (WCAG AA) są opisane przy obu paletach w index.css.
        */
       colors: {
-        background: "#0B0F14",
+        background: token("background"),
         surface: {
-          DEFAULT: "#10151C",
-          elevated: "#171D26",
+          DEFAULT: token("surface"),
+          elevated: token("surface-elevated"),
         },
         border: {
-          DEFAULT: "#1F2731",
-          strong: "#2E3845",
+          DEFAULT: token("border"),
+          strong: token("border-strong"),
         },
         fg: {
-          DEFAULT: "#E8EDF2",
-          secondary: "#A9B4C0",
-          muted: "#7D8896",
+          DEFAULT: token("fg"),
+          secondary: token("fg-secondary"),
+          muted: token("fg-muted"),
         },
         accent: {
-          DEFAULT: "#74FAC8",
-          hover: "#A3FBDB",
-          muted: "#3FAF8A",
-          contrast: "#04140E",
+          DEFAULT: token("accent"),
+          hover: token("accent-hover"),
+          muted: token("accent-muted"),
+          contrast: token("accent-contrast"),
         },
         /** Drugi akcent — filar wideo / social media. */
         video: {
-          DEFAULT: "#FFB86B",
-          hover: "#FFCB91",
-          muted: "#C98A45",
+          DEFAULT: token("video"),
+          hover: token("video-hover"),
+          muted: token("video-muted"),
         },
-        danger: "#FF8A9B",
+        danger: token("danger"),
         /** Paleta wydruku (CV na białym papierze). */
         print: {
           ink: "#111827",
@@ -48,11 +49,11 @@ export default {
           line: "#D1D5DB",
           accent: "#0F766E",
         },
-        rating: "#FFD47F",
+        rating: token("rating"),
       },
       boxShadow: {
-        card: "0 1px 2px 0 rgb(0 0 0 / 0.3), 0 8px 24px -12px rgb(0 0 0 / 0.5)",
-        lift: "0 2px 4px 0 rgb(0 0 0 / 0.3), 0 20px 40px -16px rgb(0 0 0 / 0.6)",
+        card: "var(--shadow-card)",
+        lift: "var(--shadow-lift)",
       },
       fontFamily: {
         sans: ["Inter Variable", "Inter", ...defaultTheme.fontFamily.sans],

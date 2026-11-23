@@ -15,7 +15,7 @@ const LanguageSwitcher = () => {
       type="button"
       onClick={toggleLanguage}
       title={t("common:navbar.switch_language")}
-      className="-m-2 rounded-sm p-2 text-small font-semibold tracking-wider focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+      className="-m-2 whitespace-nowrap rounded-sm p-2 text-small font-semibold tracking-wider focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
     >
       {languages.map((lang, i) => (
         <span key={lang}>

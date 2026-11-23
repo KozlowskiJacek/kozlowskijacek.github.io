@@ -617,7 +617,7 @@ Zrób commity:
 
 - [ ] **Analityka** z poszanowaniem prywatności (Plausible / Umami) lub GA4 z banerem zgód — `feat: add privacy-friendly analytics`
 - [ ] **Blog / poradniki** w MDX (np. „Jak przygotować materiał do montażu”, „Ile kosztuje strona wizytówka”) — SEO i ekspertyza — `feat: add MDX blog`
-- [ ] **Przełącznik jasny/ciemny motyw** — `feat: add light and dark theme toggle`
+- [x] **Przełącznik jasny/ciemny motyw** — `feat: add light and dark theme toggle`
 - [ ] **Kalkulator wyceny** (typ usługi + zakres → widełki cenowe) — `feat: add project cost estimator`
 - [ ] **Własna domena** (np. jacekkozlowski.pl) + email w domenie — `chore: configure custom domain`
 - [ ] **Headless CMS** (np. Sanity/Decap) do dodawania realizacji bez kodu — `feat: integrate headless CMS for portfolio`

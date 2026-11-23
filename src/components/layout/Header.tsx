@@ -6,6 +6,7 @@ import { FaBars, FaChevronDown, FaXmark } from "react-icons/fa6";
 import { contactLink, mainLinks, paths, serviceLinks, servicesPrefix } from "../../data/navigation";
 import { buttonClasses } from "../ui/buttonStyles";
 import LanguageSwitcher from "./LanguageSwitcher";
+import ThemeToggle from "./ThemeToggle";
 import Container from "../ui/Container";
 
 const SCROLL_THRESHOLD = 8;
@@ -200,11 +201,11 @@ const Header = () => {
             : "border-transparent bg-transparent"
         }`}
       >
-        <Container className="flex h-16 items-center justify-between gap-6">
+        <Container className="flex h-16 items-center justify-between gap-3 lg:gap-6">
           <Link
             to={paths.home}
             onClick={closeMenu}
-            className={`group inline-flex items-center gap-2.5 rounded-sm font-display text-lg font-semibold tracking-tight text-fg ${focusRing}`}
+            className={`group inline-flex items-center gap-2.5 whitespace-nowrap rounded-sm font-display text-lg font-semibold tracking-tight text-fg ${focusRing}`}
           >
             <span
               aria-hidden="true"
@@ -224,13 +225,17 @@ const Header = () => {
               </NavLink>
             ))}
             <span aria-hidden="true" className="h-5 w-px bg-border-strong" />
-            <LanguageSwitcher />
+            <div className="-mx-2 flex items-center gap-4">
+              <ThemeToggle />
+              <LanguageSwitcher />
+            </div>
             <NavLink to={contactLink.to} className={buttonClasses({ size: "sm" })}>
               {t(contactLink.labelKey)}
             </NavLink>
           </nav>
 
           <div className="flex items-center gap-3 lg:hidden">
+            <ThemeToggle />
             <LanguageSwitcher />
             <button
               ref={toggleRef}
