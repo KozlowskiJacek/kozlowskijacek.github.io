@@ -1,5 +1,14 @@
 import type { IconType } from "react-icons";
-import { FaBriefcase, FaCode, FaComments, FaVideo } from "react-icons/fa6";
+import {
+  FaBriefcase,
+  FaCalendarCheck,
+  FaCode,
+  FaComments,
+  FaGithub,
+  FaLinkedin,
+  FaVideo,
+} from "react-icons/fa6";
+import { career } from "./career";
 import type { ContactTopic } from "./services/types";
 
 /** Kafelek tematu w formularzu kontaktowym. */
@@ -62,3 +71,40 @@ export const employmentOptions = keysOf(employmentLabelKeys);
 
 /** Adres do bezpośredniego kontaktu i fallbacku mailto, gdy wysyłka formularza się nie uda. */
 export const contactEmail = "jacek.kozlowski2000@gmail.com";
+
+/** Link zewnętrzny obok formularza (LinkedIn, GitHub, Calendly). */
+export type ContactLink = {
+  id: string;
+  icon: IconType;
+  /** Klucz etykiety linku. */
+  labelKey: string;
+  /** Widoczny opis pod etykietą (np. nazwa profilu). */
+  detail: string;
+  /** null = link nieustawiony, pozycja nie jest renderowana. */
+  href: string | null;
+};
+
+export const contactLinks: ContactLink[] = [
+  {
+    id: "linkedin",
+    icon: FaLinkedin,
+    labelKey: "contact.channels.linkedin",
+    detail: "Jacek Kozłowski",
+    href: career.links.linkedin,
+  },
+  {
+    id: "github",
+    icon: FaGithub,
+    labelKey: "contact.channels.github",
+    detail: "KozlowskiJacek",
+    href: career.links.github,
+  },
+  // TODO: podać link do Calendly (np. https://calendly.com/…/30min) — do tego czasu pozycja jest ukryta.
+  {
+    id: "calendly",
+    icon: FaCalendarCheck,
+    labelKey: "contact.channels.calendly",
+    detail: "Calendly",
+    href: null,
+  },
+];

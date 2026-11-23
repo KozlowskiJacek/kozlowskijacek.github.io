@@ -476,7 +476,7 @@
   "contact": {
     "lets": "Let's",
     "collaborate": "Collaborate",
-    "write": "Write me an message and I will response within 1️⃣ business day",
+    "write": "Pick a topic and briefly describe what you need. Prefer to skip the form? Reach out directly.",
     "full_name": "Full name",
     "email": "Email",
     "message": "Briefly describe what you need…",
@@ -547,6 +547,19 @@
       "mailto": "Send an email",
       "mailto_subject": "message from the website",
       "too_fast": "The form was sent too quickly. Wait a few seconds and click “Send” again."
+    },
+    "channels": {
+      "title": "Direct contact",
+      "text": "Email, LinkedIn or GitHub — whatever suits you.",
+      "email": "Email",
+      "copy": "Copy email address",
+      "copied": "Email address copied to clipboard.",
+      "copy_failed": "Couldn't copy — please select the address manually.",
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "calendly": "Book a short call",
+      "response_label": "Response time:",
+      "response_time": "within 1 business day"
     }
   },
   "pages": {

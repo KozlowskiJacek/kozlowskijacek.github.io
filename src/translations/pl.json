@@ -476,7 +476,7 @@
   "contact": {
     "lets": "Współpracujmy",
     "collaborate": "Razem",
-    "write": "Napisz do mnie wiadomość, a ja odpowiem w przeciągu 1️⃣ dnia roboczego",
+    "write": "Wybierz temat i opisz krótko, czego potrzebujesz. Wolisz bez formularza? Napisz bezpośrednio.",
     "full_name": "Imię i nazwisko",
     "email": "Email",
     "message": "Opisz krótko, czego potrzebujesz…",
@@ -547,6 +547,19 @@
       "mailto": "Napisz e-mail",
       "mailto_subject": "wiadomość ze strony",
       "too_fast": "Formularz został wysłany zbyt szybko. Odczekaj kilka sekund i kliknij „Wyślij” ponownie."
+    },
+    "channels": {
+      "title": "Kontakt bezpośredni",
+      "text": "Mail, LinkedIn albo GitHub — jak Ci wygodniej.",
+      "email": "E-mail",
+      "copy": "Kopiuj adres e-mail",
+      "copied": "Skopiowano adres do schowka.",
+      "copy_failed": "Nie udało się skopiować — zaznacz adres ręcznie.",
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "calendly": "Umów krótką rozmowę",
+      "response_label": "Czas odpowiedzi:",
+      "response_time": "do 1 dnia roboczego"
     }
   },
   "pages": {
