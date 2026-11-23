@@ -91,7 +91,7 @@ const PortfolioPage = () => {
                 exit={{ opacity: 0, scale: 0.96 }}
                 transition={cardTransition}
               >
-                <ProjectCard project={project} onPlay={setVideoProject} priority={index === 0} />
+                <ProjectCard project={project} onPlay={setVideoProject} priority={index === 0} headingLevel="h2" />
               </motion.li>
             ))}
           </AnimatePresence>

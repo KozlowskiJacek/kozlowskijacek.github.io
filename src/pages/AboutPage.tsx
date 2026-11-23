@@ -27,9 +27,9 @@ const AboutPage = () => {
           variants={slideIn("left")}
           {...revealHalf}
         >
-          <h3 className="mb-3 text-h3 text-fg-secondary">
+          <p className="mb-3 font-display text-h3 text-fg-secondary">
             {t("home:hello")}
-          </h3>
+          </p>
           <h1 className="text-display text-accent">
             Jacek
           </h1>
@@ -69,7 +69,7 @@ const AboutPage = () => {
           {...revealHalf}
         >
           <SectionHeading
-            as="h3"
+            as="h2"
             className="mb-4"
             title={t("career:about.why")}
             accent={t("career:about.full_stack")}
@@ -87,7 +87,7 @@ const AboutPage = () => {
           {...revealHalf}
         >
           <SectionHeading
-            as="h3"
+            as="h2"
             className="mb-4"
             title={t("career:about.how")}
             accent={t("career:about.content_creator")}
@@ -120,7 +120,7 @@ const AboutPage = () => {
           {...revealHalf}
         >
           <SectionHeading
-            as="h3"
+            as="h2"
             className="mb-4"
             title={t("career:about.what_im")}
             accent={t("career:about.guided_by")}
@@ -138,7 +138,7 @@ const AboutPage = () => {
           {...revealHalf}
         >
           <SectionHeading
-            as="h3"
+            as="h2"
             className="mb-4"
             title={t("career:about.after")}
             accent={t("career:about.hour")}
@@ -150,7 +150,7 @@ const AboutPage = () => {
           <Button to={paths.contact} size="lg" className="mt-8">
             {t("career:about.questions")}
           </Button>
-          <h2 className="mt-8 text-h3 text-fg-secondary">{t("career:about.bye")}</h2>
+          <p className="mt-8 font-display text-h3 text-fg-secondary">{t("career:about.bye")}</p>
         </motion.div>
         <motion.div
           className="w-full max-w-sm shrink-0 md:max-w-md"

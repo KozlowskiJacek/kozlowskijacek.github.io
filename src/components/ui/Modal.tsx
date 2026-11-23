@@ -48,6 +48,10 @@ const Modal = ({ open, onClose, children, labelledBy, size = "md" }: ModalProps)
     body.style.overflow = "hidden";
     if (scrollbar > 0) body.style.paddingRight = `${scrollbar}px`;
 
+    // Reszta strony (#root; modal jest w portalu w <body>) nieosiągalna dla Tab i czytnika ekranu.
+    const appRoot = document.getElementById("root");
+    appRoot?.setAttribute("inert", "");
+
     dialogRef.current?.querySelector<HTMLElement>(FOCUSABLE)?.focus();
 
     const onKey = (e: KeyboardEvent) => {
@@ -62,6 +66,7 @@ const Modal = ({ open, onClose, children, labelledBy, size = "md" }: ModalProps)
       window.removeEventListener("keydown", onKey);
       body.style.overflow = previous.overflow;
       body.style.paddingRight = previous.paddingRight;
+      appRoot?.removeAttribute("inert");
       opener?.focus({ preventScroll: true });
     };
   }, [open]);

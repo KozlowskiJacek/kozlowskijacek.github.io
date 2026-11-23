@@ -167,12 +167,17 @@ const Header = () => {
   useEffect(closeMenu, [pathname, closeMenu]);
 
   // Otwarte menu mobilne: blokada scrolla strony, Esc zamyka, przejście na desktop zamyka.
+  // Treść pod menu (main, stopka) dostaje `inert` — Tab i czytnik ekranu nie wychodzą poza menu.
   useEffect(() => {
     if (!menuOpen) return;
 
     const root = document.documentElement;
     const previousOverflow = root.style.overflow;
     root.style.overflow = "hidden";
+    const background = document.querySelectorAll<HTMLElement>("main, footer");
+    background.forEach((element) => {
+      element.inert = true;
+    });
 
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
@@ -186,6 +191,9 @@ const Header = () => {
     desktop.addEventListener("change", closeMenu);
     return () => {
       root.style.overflow = previousOverflow;
+      background.forEach((element) => {
+        element.inert = false;
+      });
       document.removeEventListener("keydown", onKeyDown);
       desktop.removeEventListener("change", closeMenu);
     };

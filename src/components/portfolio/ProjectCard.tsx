@@ -13,10 +13,12 @@ type ProjectCardProps = {
   onPlay?: (project: Project) => void;
   /** Karta nad zgięciem — okładka bez lazy loadingu (LCP). */
   priority?: boolean;
+  /** Poziom nagłówka tytułu — h2, gdy siatka stoi bezpośrednio pod h1 strony. */
+  headingLevel?: "h2" | "h3";
 };
 
 /** Karta realizacji w siatce portfolio: miniatura, kategoria, tytuł, jedno zdanie, technologie. */
-const ProjectCard = ({ project, onPlay, priority = false }: ProjectCardProps) => {
+const ProjectCard = ({ project, onPlay, priority = false, headingLevel: Heading = "h3" }: ProjectCardProps) => {
   const { t } = useTranslation();
   const tone = projectCategoryTone[project.category];
 
@@ -51,7 +53,7 @@ const ProjectCard = ({ project, onPlay, priority = false }: ProjectCardProps) =>
         <Badge tone={tone} className="self-start">
           {t(projectCategoryLabelKeys[project.category])}
         </Badge>
-        <h3 className="text-h3 text-fg">
+        <Heading className="text-h3 text-fg">
           {/* Rozciągnięty link: cała karta prowadzi do case study, czytnik ogłasza tylko tytuł. */}
           <Link
             to={caseStudyPath(project.slug)}
@@ -59,7 +61,7 @@ const ProjectCard = ({ project, onPlay, priority = false }: ProjectCardProps) =>
           >
             {project.title}
           </Link>
-        </h3>
+        </Heading>
         <p className="text-small text-fg-secondary">{t(project.summaryKey)}</p>
 
         {project.tech.length > 0 && (

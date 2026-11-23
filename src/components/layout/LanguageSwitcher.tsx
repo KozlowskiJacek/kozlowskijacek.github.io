@@ -14,8 +14,8 @@ const LanguageSwitcher = () => {
     <button
       type="button"
       onClick={toggleLanguage}
-      aria-label={t("common:navbar.switch_language")}
-      className="rounded-sm text-small font-semibold tracking-wider focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+      title={t("common:navbar.switch_language")}
+      className="-m-2 rounded-sm p-2 text-small font-semibold tracking-wider focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
     >
       {languages.map((lang, i) => (
         <span key={lang}>
@@ -29,6 +29,8 @@ const LanguageSwitcher = () => {
           </span>
         </span>
       ))}
+      {/* Nazwa dostępna = widoczny tekst („PL / EN”) + opis akcji. */}
+      <span className="sr-only"> – {t("common:navbar.switch_language")}</span>
     </button>
   );
 };
