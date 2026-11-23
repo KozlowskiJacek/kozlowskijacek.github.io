@@ -5,6 +5,7 @@ import fullStack from "../assets/img/Pixel full stack.png";
 import development from "../assets/img/Development.png";
 import contentCreator from "../assets/img/Content creator img.png";
 import { paths } from "../data/navigation";
+import Seo from "../components/Seo";
 import Section from "../components/ui/Section";
 import SectionHeading from "../components/ui/SectionHeading";
 import Button from "../components/ui/Button";
@@ -17,6 +18,7 @@ const AboutPage = () => {
 
   return (
     <div>
+      <Seo titleKey="about.meta.title" descriptionKey="about.meta.description" type="profile" />
 
       <Section id="title_hello" padding="hero" bg="primary" className="md:flex-row flex-col">
         <motion.div

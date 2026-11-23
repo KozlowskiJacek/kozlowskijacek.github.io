@@ -5,6 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { EASE_OUT, staggerContainer, staggerItem } from "../lib/animations";
 import { isProjectCategory, projectCategories, publishedProjects, type Project } from "../data/projects";
 import { paths } from "../data/navigation";
+import Seo from "../components/Seo";
 import Section from "../components/ui/Section";
 import SectionHeading from "../components/ui/SectionHeading";
 import Button from "../components/ui/Button";
@@ -52,6 +53,7 @@ const PortfolioPage = () => {
 
   return (
     <Section id="portfolio" padding="page" className="flex-col">
+      <Seo titleKey="pages.portfolio.meta.title" descriptionKey="pages.portfolio.meta.description" />
       <motion.header
         className="flex w-full max-w-3xl flex-col items-center gap-4 text-center"
         variants={staggerContainer(0.08)}

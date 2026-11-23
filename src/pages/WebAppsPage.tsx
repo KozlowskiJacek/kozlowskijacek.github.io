@@ -1,3 +1,4 @@
+import Seo from "../components/Seo";
 import ServiceHero from "../components/services/ServiceHero";
 import ServiceGrid from "../components/services/ServiceGrid";
 import ProcessSteps from "../components/services/ProcessSteps";
@@ -29,6 +30,7 @@ import {
 /** /uslugi/web — „Strony i aplikacje”. */
 const WebAppsPage = () => (
   <>
+    <Seo titleKey="web_app.meta.title" descriptionKey="web_app.meta.description" />
     <ServiceHero hero={webHero} tone={webTone} topic={webTopic} secondaryHref="#packages" />
     <ServiceGrid
       id="services"

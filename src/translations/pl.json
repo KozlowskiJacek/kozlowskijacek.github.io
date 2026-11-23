@@ -107,6 +107,10 @@
       "accent": "Porozmawiajmy",
       "text": "Opisz krótko, czego potrzebujesz — odpowiem z propozycją kolejnych kroków.",
       "button": "Napisz do mnie"
+    },
+    "meta": {
+      "title": "Jacek Kozłowski – Full Stack Developer i twórca wideo",
+      "description": "Strony i aplikacje webowe w React i Pythonie oraz kreacja wideo: nagrywanie, montaż, grafiki i animacje. Jedna osoba od pomysłu po publikację."
     }
   },
   "about": {
@@ -129,7 +133,11 @@
     "hour": "Godzinach",
     "text5": "Poza projektami w IT i marketingu, sporo wolnego czasu poświęcam na własne pomysły. Aktualnie dłubię przy własnej aplikacji, eksperymentując z funkcjami i rozwiązaniami, które mogą ją wyróżnić. Mam pomysł na grę komputerową i chcę sprawdzić swoje siły w gamedev, zamierzam ją kiedyś wydać. Łączę przy tym moją pasję do gier z umiejętnościami technicznymi i kreatywnymi, licząc na to, że powstanie coś naprawdę fajnego.",
     "questions": "📩 Masz pytania? Napisz!",
-    "bye": "Do usłyszenia! 🚀"
+    "bye": "Do usłyszenia! 🚀",
+    "meta": {
+      "title": "O mnie",
+      "description": "Kim jestem i jak pracuję: programista full stack i twórca treści wideo, który łączy kod z kreacją."
+    }
   },
   "services": {
     "cta_button": "Zapytaj o wycenę",
@@ -288,6 +296,10 @@
       "title": "Porozmawiajmy o",
       "accent": "Twoim projekcie",
       "text": "Napisz, czego potrzebujesz — odpowiem w ciągu 1 dnia roboczego i zaproponuję termin krótkiej rozmowy."
+    },
+    "meta": {
+      "title": "Strony i aplikacje webowe",
+      "description": "Projektuję i koduję szybkie strony www, aplikacje webowe w React i Pythonie, UI/UX oraz automatyzacje, które oszczędzają czas."
     }
   },
   "video": {
@@ -405,6 +417,10 @@
       "title": "Masz pomysł na",
       "accent": "film?",
       "text": "Opisz krótko, czego potrzebujesz — odpowiem w ciągu 1 dnia roboczego z propozycją i wyceną."
+    },
+    "meta": {
+      "title": "Kreacja wideo – nagrywanie, montaż i rolki",
+      "description": "Nagrywanie, montaż, rolki, grafiki i animacje do social mediów. Wideo, które przyciąga uwagę i sprzedaje Twoją markę."
     }
   },
   "projects": {
@@ -560,6 +576,10 @@
       "calendly": "Umów krótką rozmowę",
       "response_label": "Czas odpowiedzi:",
       "response_time": "do 1 dnia roboczego"
+    },
+    "meta": {
+      "title": "Kontakt",
+      "description": "Napisz w sprawie wideo, strony, aplikacji albo współpracy — formularzem, e-mailem lub przez LinkedIn."
     }
   },
   "pages": {
@@ -573,7 +593,11 @@
       "all": "Wszystko",
       "results": "Liczba wyświetlanych realizacji: {{count}}",
       "empty": "Realizacje z tej kategorii pojawią się tu wkrótce. Chcesz zobaczyć przykłady wcześniej? Napisz — podeślę je prywatnie.",
-      "show_all": "Pokaż wszystkie"
+      "show_all": "Pokaż wszystkie",
+      "meta": {
+        "title": "Portfolio – wybrane realizacje",
+        "description": "Wideo, grafiki, animacje, strony, aplikacje i automatyzacje. Zobacz case studies: problem, rozwiązanie i efekt."
+      }
     },
     "case_study": {
       "eyebrow": "Case study",
@@ -601,7 +625,10 @@
     "title": "Nie znalazłem tej strony",
     "text": "Adres mógł się zmienić albo strona nigdy nie istniała. Wróć na stronę główną lub napisz do mnie.",
     "back_home": "Wróć na stronę główną",
-    "contact": "Kontakt"
+    "contact": "Kontakt",
+    "meta": {
+      "title": "Nie znaleziono strony"
+    }
   },
   "footer": {
     "tagline": "Developer & Video Creator. Tworzę strony, aplikacje i treści wideo, które pracują na Twój biznes.",
@@ -791,10 +818,17 @@
       "title": "Moje",
       "accent": "certyfikaty",
       "open": "Otwórz PDF"
+    },
+    "meta": {
+      "title": "Dla pracodawców – CV i doświadczenie",
+      "description": "Full-stack developer (React · Python/Django): stack, doświadczenie, projekty techniczne, certyfikaty i CV do pobrania."
     }
   },
   "common": {
-    "close": "Zamknij"
+    "close": "Zamknij",
+    "seo": {
+      "job_title": "Full Stack Developer i twórca wideo"
+    }
   },
   "privacy": {
     "eyebrow": "Dane osobowe",
@@ -852,6 +886,10 @@
         "p1": "Strona nie używa cookies analitycznych ani reklamowych. W pamięci przeglądarki (localStorage) zapisuje tylko wybrany język strony.",
         "p2": "Filmy z YouTube ładują się w trybie rozszerzonej prywatności (youtube-nocookie.com) dopiero po kliknięciu odtwarzania — wtedy obowiązuje polityka prywatności Google."
       }
+    },
+    "meta": {
+      "title": "Polityka prywatności",
+      "description": "Jakie dane zbiera formularz kontaktowy, w jakim celu i jak długo są przechowywane."
     }
   }
 }

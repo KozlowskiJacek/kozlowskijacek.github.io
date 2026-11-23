@@ -1,3 +1,4 @@
+import Seo from "../components/Seo";
 import Hero from "../sections/home/Hero";
 import TrustBar from "../sections/home/TrustBar";
 import ServicesOverview from "../sections/home/ServicesOverview";
@@ -9,6 +10,7 @@ import FinalCta from "../sections/home/FinalCta";
 
 const MainPage = () => (
   <>
+    <Seo titleKey="home.meta.title" descriptionKey="home.meta.description" bareTitle />
     <Hero />
     <TrustBar />
     <ServicesOverview />

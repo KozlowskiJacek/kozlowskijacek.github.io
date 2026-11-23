@@ -107,6 +107,10 @@
       "accent": "Let's talk",
       "text": "Tell me briefly what you need — I'll reply with suggested next steps.",
       "button": "Get in touch"
+    },
+    "meta": {
+      "title": "Jacek Kozłowski – Full Stack Developer & Video Creator",
+      "description": "Websites and web apps in React and Python, plus video creation: filming, editing, graphics and animation. One person from idea to launch."
     }
   },
   "about": {
@@ -129,7 +133,11 @@
     "hour": "Hours",
     "text5": "Outside of IT and marketing projects, I spend a lot of my free time on my own ideas. Currently, I’m tinkering with my own application, experimenting with features and solutions that could make it stand out. I have an idea for a computer game and want to test my skills in game development, and I plan to eventually release it. I combine my passion for games with my technical and creative skills, hoping to create something truly exciting.",
     "questions": "📩 Got questions? Write to me!",
-    "bye": "See you! 🚀"
+    "bye": "See you! 🚀",
+    "meta": {
+      "title": "About me",
+      "description": "Who I am and how I work: a full-stack developer and video creator who blends code with creativity."
+    }
   },
   "web_app": {
     "hero": {
@@ -277,6 +285,10 @@
       "title": "Let's talk about",
       "accent": "your project",
       "text": "Tell me what you need — I'll reply within 1 business day and suggest a time for a short call."
+    },
+    "meta": {
+      "title": "Websites and web apps",
+      "description": "I design and build fast websites, web apps in React and Python, UI/UX and automations that save you time."
     }
   },
   "video": {
@@ -394,6 +406,10 @@
       "title": "Got an idea for a",
       "accent": "video?",
       "text": "Briefly describe what you need — I'll reply within 1 business day with a proposal and a quote."
+    },
+    "meta": {
+      "title": "Video creation – filming, editing and reels",
+      "description": "Filming, editing, reels, graphics and animation for social media. Video that grabs attention and sells your brand."
     }
   },
   "services": {
@@ -560,6 +576,10 @@
       "calendly": "Book a short call",
       "response_label": "Response time:",
       "response_time": "within 1 business day"
+    },
+    "meta": {
+      "title": "Contact",
+      "description": "Get in touch about video, a website, an app or a job — via the form, email or LinkedIn."
     }
   },
   "pages": {
@@ -573,7 +593,11 @@
       "all": "All",
       "results": "Projects shown: {{count}}",
       "empty": "Work from this category is coming soon. Want to see examples sooner? Get in touch and I'll share them privately.",
-      "show_all": "Show all"
+      "show_all": "Show all",
+      "meta": {
+        "title": "Portfolio – selected work",
+        "description": "Video, graphics, animation, websites, apps and automations. Browse case studies: problem, solution and result."
+      }
     },
     "case_study": {
       "eyebrow": "Case study",
@@ -601,7 +625,10 @@
     "title": "This page doesn't exist",
     "text": "The address may have changed, or the page never existed. Head back home or get in touch.",
     "back_home": "Back to home page",
-    "contact": "Contact"
+    "contact": "Contact",
+    "meta": {
+      "title": "Page not found"
+    }
   },
   "footer": {
     "tagline": "Developer & Video Creator. I build websites, apps and video content that work for your business.",
@@ -791,10 +818,17 @@
       "title": "My",
       "accent": "certificates",
       "open": "Open PDF"
+    },
+    "meta": {
+      "title": "For employers – CV and experience",
+      "description": "Full-stack developer (React · Python/Django): stack, experience, technical projects, certificates and a downloadable CV."
     }
   },
   "common": {
-    "close": "Close"
+    "close": "Close",
+    "seo": {
+      "job_title": "Full Stack Developer & Video Creator"
+    }
   },
   "privacy": {
     "eyebrow": "Personal data",
@@ -852,6 +886,10 @@
         "p1": "This website doesn't use analytics or advertising cookies. It only stores the selected site language in your browser's storage (localStorage).",
         "p2": "YouTube videos load in privacy-enhanced mode (youtube-nocookie.com) only after you click play — Google's privacy policy applies from that point."
       }
+    },
+    "meta": {
+      "title": "Privacy policy",
+      "description": "What data the contact form collects, why, and how long it is kept."
     }
   }
 }

@@ -1,3 +1,4 @@
+import Seo from "../components/Seo";
 import EmployerHero from "../sections/employer/EmployerHero";
 import Summary from "../sections/employer/Summary";
 import StackGroups from "../sections/employer/StackGroups";
@@ -17,6 +18,7 @@ const employerCta = {
 /** CV online dla rekruterów i pracodawców (/dla-pracodawcow). */
 const EmployersPage = () => (
   <div data-print-cv>
+    <Seo titleKey="employer.meta.title" descriptionKey="employer.meta.description" type="profile" />
     <EmployerHero />
     <Summary />
     <StackGroups />

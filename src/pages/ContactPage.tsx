@@ -1,5 +1,11 @@
+import Seo from "../components/Seo";
 import Contact from "../sections/Contact";
 
-const ContactPage = () => <Contact asPage />;
+const ContactPage = () => (
+  <>
+    <Seo titleKey="contact.meta.title" descriptionKey="contact.meta.description" />
+    <Contact asPage />
+  </>
+);
 
 export default ContactPage;

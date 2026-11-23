@@ -19,6 +19,7 @@ import Button from "../components/ui/Button";
 import YouTubeEmbed from "../components/ui/YouTubeEmbed";
 import ProjectCover from "../components/portfolio/ProjectCover";
 import ServiceCTA from "../components/services/ServiceCTA";
+import Seo from "../components/Seo";
 import NotFoundPage from "./NotFoundPage";
 
 const storySteps = [
@@ -67,6 +68,7 @@ const CaseStudyPage = () => {
   return (
     // key: przejście poprzedni/następny to nowy montaż — animacje wejścia startują od nowa.
     <article key={project.slug}>
+      <Seo title={project.title} description={t(project.summaryKey)} image={project.cover} type="article" />
       <Section id="case-study" padding="page" className="flex-col !items-stretch !gap-10 md:!gap-12">
         <motion.header
           className="flex flex-col items-start gap-4"

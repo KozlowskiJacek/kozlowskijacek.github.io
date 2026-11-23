@@ -17,7 +17,9 @@ i18n
       escapeValue: false,
     },
     detection: {
-      order: ['localStorage', 'navigator'],
+      // ?lang=en (adresy z hreflang) ma pierwszeństwo przed zapamiętanym wyborem.
+      order: ['querystring', 'localStorage', 'navigator'],
+      lookupQuerystring: 'lang',
       caches: ['localStorage'],
     },
   });

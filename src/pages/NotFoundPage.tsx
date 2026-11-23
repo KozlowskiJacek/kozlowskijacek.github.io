@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { FaArrowLeft } from "react-icons/fa6";
 import { staggerContainer, staggerItem } from "../lib/animations";
 import { paths } from "../data/navigation";
+import Seo from "../components/Seo";
 import Section from "../components/ui/Section";
 import Button from "../components/ui/Button";
 
@@ -11,6 +12,7 @@ const NotFoundPage = () => {
 
   return (
     <Section id="not-found" padding="hero" className="flex-col">
+      <Seo titleKey="notFound.meta.title" noindex />
       <motion.div
         className="max-w-xl text-center"
         variants={staggerContainer(0.08)}

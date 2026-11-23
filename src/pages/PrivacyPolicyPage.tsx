@@ -5,6 +5,7 @@ import { fadeIn, reveal, staggerContainer, staggerItem } from "../lib/animations
 import { contactEmail } from "../data/contact";
 import { paths } from "../data/navigation";
 import { privacySections, privacyUpdatedAt } from "../data/privacy";
+import Seo from "../components/Seo";
 import Section from "../components/ui/Section";
 import Button from "../components/ui/Button";
 
@@ -16,6 +17,7 @@ const PrivacyPolicyPage = () => {
 
   return (
     <Section id="privacy" padding="page" className="flex-col">
+      <Seo titleKey="privacy.meta.title" descriptionKey="privacy.meta.description" />
       <motion.header
         className="mx-auto w-full max-w-3xl"
         variants={staggerContainer(0.08)}

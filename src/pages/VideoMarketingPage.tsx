@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import Seo from "../components/Seo";
 import ServiceHero from "../components/services/ServiceHero";
 import ServiceGrid from "../components/services/ServiceGrid";
 import PackageCards from "../components/services/PackageCards";
@@ -29,6 +30,7 @@ const VideoMarketingPage = () => {
 
   return (
     <>
+      <Seo titleKey="video.meta.title" descriptionKey="video.meta.description" />
       <ServiceHero
         hero={videoHero}
         tone={videoTone}

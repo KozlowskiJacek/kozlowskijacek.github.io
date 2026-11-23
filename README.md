@@ -17,6 +17,7 @@ Strona jest dwujęzyczna (PL / EN) i ma formularz kontaktowy wysyłany przez Ema
 | Stylowanie | Tailwind CSS 3 (własna paleta w `tailwind.config.js`)       |
 | Animacje   | framer-motion, keyframes Tailwind                           |
 | Routing    | react-router-dom 7                                          |
+| SEO        | react-helmet-async (komponent `<Seo />`)                    |
 | i18n       | i18next + react-i18next + i18next-browser-languagedetector |
 | Formularz  | @emailjs/browser + canvas-confetti                          |
 | Slider     | Swiper                                                      |
@@ -43,6 +44,14 @@ Pozostałe komendy:
 | `npm run typecheck` | sprawdzenie typów (`tsc -b`)         |
 | `npm run i18n:check`| klucze `t()` obecne w `pl.json` i `en.json` |
 | `npm run deploy`    | build + publikacja na GitHub Pages   |
+| `npm run og:render` | renderuje `scripts/og/og-template.html` do `public/og/default.png` (headless Chrome/Edge) |
+
+## SEO
+
+- Każda strona renderuje `<Seo />` (`src/components/Seo.tsx`): title, description, canonical, Open Graph, Twitter Card i `hreflang`. Teksty pochodzą z kluczy `*.meta.title` / `*.meta.description` w tłumaczeniach.
+- Adres strony, domyślny obraz OG i lista indeksowanych tras: `src/data/site.ts`.
+- Język jest w parametrze adresu: wersja PL to `/sciezka`, EN to `/sciezka?lang=en` (parametr ma pierwszeństwo przed wyborem zapisanym w `localStorage`).
+- Domyślny obraz OG (1200×630) to `public/og/default.png`. Podmień plik albo zmień szablon `scripts/og/og-template.html` i uruchom `npm run og:render`.
 
 ## Zmienne środowiskowe
 
