@@ -52,6 +52,15 @@ Pozostałe komendy:
 | `npm run images:optimize` | konwertuje PNG/JPG z `src/assets/img` do WebP (max 1600 px, < 200 KB); warianty AVIF/WebP i srcset generuje przy buildzie vite-imagetools |
 | `npm run fonts:subset`    | generuje odchudzone fonty w `src/assets/fonts` (wagi 400–600, łacina + polskie znaki)                                                     |
 
+### Git hooks
+
+`npm i` instaluje hooki [husky](https://typicode.github.io/husky/) (skrypt `prepare`):
+
+- **pre-commit** — `lint-staged` (`lint-staged.config.js`): `eslint --fix` i `prettier --write` tylko na plikach w stage,
+- **commit-msg** — `commitlint` (`commitlint.config.js`) wymusza [Conventional Commits](https://www.conventionalcommits.org/), np. `feat: …`, `fix: …`, `chore: …`.
+
+W wyjątkowej sytuacji hooki można pominąć flagą `git commit --no-verify`; CI i tak sprawdzi lint, formatowanie i testy.
+
 ## SEO
 
 - Każda strona renderuje `<Seo />` (`src/components/Seo.tsx`): title, description, canonical, Open Graph, Twitter Card i `hreflang`. Teksty pochodzą z kluczy `…:meta.title` / `…:meta.description` w tłumaczeniach.
