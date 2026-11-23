@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import { FaArrowRight } from "react-icons/fa6";
+import { FaArrowRight, FaPlay } from "react-icons/fa6";
 import { projectCategoryLabelKeys, projectCategoryTone, type Project } from "../../data/projects";
 import { caseStudyPath } from "../../data/navigation";
 import Card from "../ui/Card";
@@ -9,10 +9,12 @@ import ProjectCover from "./ProjectCover";
 
 type ProjectCardProps = {
   project: Project;
+  /** Otwiera film realizacji (tylko projekty z `videoUrl`). */
+  onPlay?: (project: Project) => void;
 };
 
 /** Karta realizacji w siatce portfolio: miniatura, kategoria, tytuł, jedno zdanie, technologie. */
-const ProjectCard = ({ project }: ProjectCardProps) => {
+const ProjectCard = ({ project, onPlay }: ProjectCardProps) => {
   const { t } = useTranslation();
   const tone = projectCategoryTone[project.category];
 
@@ -24,6 +26,23 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
     >
       <div className="relative aspect-[16/10] overflow-hidden border-b border-border bg-surface">
         <ProjectCover project={project} />
+        {project.videoUrl && onPlay && (
+          // Nad rozciągniętym linkiem (z-10): przycisk otwiera film, reszta karty — case study.
+          <button
+            type="button"
+            onClick={() => onPlay(project)}
+            aria-haspopup="dialog"
+            className="group/play absolute inset-0 z-10 grid place-items-center bg-background/20 transition-colors hover:bg-background/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-video"
+          >
+            <span
+              aria-hidden="true"
+              className="grid h-14 w-14 place-items-center rounded-full bg-video text-lg text-background shadow-lift transition-transform duration-200 motion-safe:group-hover/play:scale-110"
+            >
+              <FaPlay className="translate-x-0.5" />
+            </span>
+            <span className="sr-only">{t("services.play_video", { title: project.title })}</span>
+          </button>
+        )}
       </div>
 
       <div className="flex flex-1 flex-col gap-3 p-5">

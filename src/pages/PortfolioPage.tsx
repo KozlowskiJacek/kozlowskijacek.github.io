@@ -1,15 +1,16 @@
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useSearchParams } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import { EASE_OUT, staggerContainer, staggerItem } from "../lib/animations";
-import { isProjectCategory, projectCategories, publishedProjects } from "../data/projects";
+import { isProjectCategory, projectCategories, publishedProjects, type Project } from "../data/projects";
 import { paths } from "../data/navigation";
 import Section from "../components/ui/Section";
 import SectionHeading from "../components/ui/SectionHeading";
 import Button from "../components/ui/Button";
 import PortfolioFilters, { type PortfolioFilter } from "../components/portfolio/PortfolioFilters";
 import ProjectCard from "../components/portfolio/ProjectCard";
+import VideoModal from "../components/portfolio/VideoModal";
 
 /** Parametr adresu z aktywnym filtrem: /portfolio?kategoria=video */
 const FILTER_PARAM = "kategoria";
@@ -19,6 +20,7 @@ const cardTransition = { duration: 0.3, ease: EASE_OUT };
 const PortfolioPage = () => {
   const { t } = useTranslation();
   const [searchParams, setSearchParams] = useSearchParams();
+  const [videoProject, setVideoProject] = useState<Project | null>(null);
 
   const param = searchParams.get(FILTER_PARAM);
   // Nieznana wartość w adresie → „Wszystko”.
@@ -94,7 +96,7 @@ const PortfolioPage = () => {
                 exit={{ opacity: 0, scale: 0.96 }}
                 transition={cardTransition}
               >
-                <ProjectCard project={project} />
+                <ProjectCard project={project} onPlay={setVideoProject} />
               </motion.li>
             ))}
           </AnimatePresence>
@@ -116,6 +118,8 @@ const PortfolioPage = () => {
           </div>
         </motion.div>
       )}
+
+      <VideoModal project={videoProject} onClose={() => setVideoProject(null)} />
     </Section>
   );
 };

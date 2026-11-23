@@ -9,15 +9,17 @@ type YouTubeEmbedProps = {
   /** Tytuł filmu — etykieta przycisku i `title` iframe. */
   title: string;
   className?: string;
+  /** Od razu ładuje odtwarzacz (np. w modalu otwartym przyciskiem „play”) zamiast miniatury. */
+  autoLoad?: boolean;
 };
 
 /**
  * Lekki embed YouTube: najpierw sama miniatura (jeden obrazek), odtwarzacz
  * (youtube-nocookie.com) ładuje się dopiero po kliknięciu. Niepoprawny URL → nic.
  */
-const YouTubeEmbed = ({ url, title, className = "" }: YouTubeEmbedProps) => {
+const YouTubeEmbed = ({ url, title, className = "", autoLoad = false }: YouTubeEmbedProps) => {
   const { t } = useTranslation();
-  const [active, setActive] = useState(false);
+  const [active, setActive] = useState(autoLoad);
   const id = parseYouTubeId(url);
 
   if (!id) return null;
