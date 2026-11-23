@@ -1,8 +1,7 @@
 import { useTranslation } from "react-i18next";
-import { motion } from "framer-motion";
 import { FaArrowRight } from "react-icons/fa6";
 import mainPhoto from "../../assets/img/main-photo.webp?photo";
-import { fadeIn, staggerContainer, staggerItem } from "../../lib/animations";
+import { enter } from "../../lib/animations";
 import { paths } from "../../data/navigation";
 import { showreelUrl } from "../../data/hero";
 import Section from "../../components/ui/Section";
@@ -20,28 +19,17 @@ const Hero = () => {
       className="flex-col md:flex-row md:justify-between"
       backdrop={<HeroBackdrop />}
     >
-      <motion.div
-        className="w-full md:max-w-[38rem]"
-        variants={staggerContainer(0.08)}
-        initial="hidden"
-        animate="visible"
-      >
-        <motion.div variants={staggerItem}>
+      <div className="w-full md:max-w-[38rem]">
+        <div className={enter(0)}>
           <Tag dot="accent">{t("home:hero.badge")}</Tag>
-        </motion.div>
-        <motion.h1
-          variants={staggerItem}
-          className="mt-6 text-balance font-display text-h1 text-fg"
-        >
+        </div>
+        <h1 className={`mt-6 text-balance font-display text-h1 text-fg ${enter(1)}`}>
           {t("home:hero.title")}
-        </motion.h1>
-        <motion.p
-          variants={staggerItem}
-          className="mt-6 max-w-xl text-body text-fg-secondary md:text-body-lg"
-        >
+        </h1>
+        <p className={`mt-6 max-w-xl text-body text-fg-secondary md:text-body-lg ${enter(2)}`}>
           {t("home:hero.subtitle")}
-        </motion.p>
-        <motion.div variants={staggerItem} className="mt-8 flex flex-wrap items-center gap-3 sm:gap-4">
+        </p>
+        <div className={`mt-8 flex flex-wrap items-center gap-3 sm:gap-4 ${enter(3)}`}>
           <Button size="lg" to={{ hash: "services" }}>
             {t("home:hero.cta_offer")}
           </Button>
@@ -49,16 +37,11 @@ const Hero = () => {
             {t("home:hero.cta_recruiter")}
             <FaArrowRight aria-hidden="true" className="text-small" />
           </Button>
-        </motion.div>
-      </motion.div>
-      <motion.div
-        className="w-full max-w-sm md:max-w-md"
-        variants={fadeIn("bottom", 0.15)}
-        initial="hidden"
-        animate="visible"
-      >
+        </div>
+      </div>
+      <div className={`w-full max-w-sm md:max-w-md ${enter(2)}`}>
         <HeroMedia image={mainPhoto} videoSrc={showreelUrl} />
-      </motion.div>
+      </div>
     </Section>
   );
 };

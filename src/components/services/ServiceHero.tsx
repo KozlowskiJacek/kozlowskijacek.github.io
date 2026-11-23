@@ -1,8 +1,7 @@
 import type { ReactNode } from "react";
 import { useTranslation } from "react-i18next";
-import { motion } from "framer-motion";
 import { FaArrowRight } from "react-icons/fa6";
-import { staggerContainer, staggerItem } from "../../lib/animations";
+import { enter } from "../../lib/animations";
 import { contactTopicPath } from "../../data/services/contact";
 import type { ContactTopic, ServiceHeroData, ServiceTone } from "../../data/services/types";
 import Section from "../ui/Section";
@@ -37,31 +36,19 @@ const ServiceHero = ({ hero, tone, topic, secondaryHref, media }: ServiceHeroPro
         />
       }
     >
-      <motion.div
-        className={`w-full ${centered ? "max-w-3xl text-center" : "lg:max-w-xl"}`}
-        variants={staggerContainer(0.08)}
-        initial="hidden"
-        animate="visible"
-      >
-        <motion.p
-          variants={staggerItem}
-          className={`mb-4 text-small font-semibold uppercase tracking-wider ${classes.text}`}
-        >
+      <div className={`w-full ${centered ? "max-w-3xl text-center" : "lg:max-w-xl"}`}>
+        <p className={`mb-4 text-small font-semibold uppercase tracking-wider ${classes.text} ${enter(0)}`}>
           {t(hero.eyebrowKey)}
-        </motion.p>
-        <motion.h1 variants={staggerItem} className="text-balance font-display text-h1 text-fg">
+        </p>
+        <h1 className={`text-balance font-display text-h1 text-fg ${enter(1)}`}>
           {t(hero.titleKey)} <span className={classes.text}>{t(hero.accentKey)}</span>
-        </motion.h1>
-        <motion.p
-          variants={staggerItem}
-          className={`mt-5 text-body text-fg-secondary md:text-body-lg ${centered ? "mx-auto max-w-2xl" : ""}`}
+        </h1>
+        <p
+          className={`mt-5 text-body text-fg-secondary md:text-body-lg ${centered ? "mx-auto max-w-2xl" : ""} ${enter(2)}`}
         >
           {t(hero.textKey)}
-        </motion.p>
-        <motion.div
-          variants={staggerItem}
-          className={`mt-8 flex flex-wrap items-center gap-4 ${centered ? "justify-center" : ""}`}
-        >
+        </p>
+        <div className={`mt-8 flex flex-wrap items-center gap-4 ${centered ? "justify-center" : ""} ${enter(3)}`}>
           <Button to={contactTopicPath(topic)} variant={classes.button} size="lg">
             {t("services:shared.cta_button")}
             <FaArrowRight aria-hidden="true" className="text-small" />
@@ -71,19 +58,10 @@ const ServiceHero = ({ hero, tone, topic, secondaryHref, media }: ServiceHeroPro
               {t("services:shared.see_packages")}
             </Button>
           )}
-        </motion.div>
-      </motion.div>
+        </div>
+      </div>
 
-      {media && (
-        <motion.div
-          className="w-full lg:max-w-xl"
-          variants={staggerItem}
-          initial="hidden"
-          animate="visible"
-        >
-          {media}
-        </motion.div>
-      )}
+      {media && <div className={`w-full lg:max-w-xl ${enter(2)}`}>{media}</div>}
     </Section>
   );
 };

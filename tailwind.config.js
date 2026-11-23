@@ -73,9 +73,15 @@ export default {
           "0%, 50%": { opacity: 1 },
           "51%, 100%": { opacity: 0 },
         },
+        /** Wejście treści nad zgięciem — w CSS, więc działa w HTML z prerenderingu przed hydratacją. */
+        enter: {
+          from: { opacity: 0, transform: "translateY(16px)" },
+          to: { opacity: 1, transform: "none" },
+        },
       },
       animation: {
         blink: "blink 1s step-end infinite",
+        enter: "enter 0.45s cubic-bezier(0.22, 1, 0.36, 1) both",
       },
     },
   },

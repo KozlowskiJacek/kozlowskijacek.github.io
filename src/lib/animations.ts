@@ -54,3 +54,19 @@ export const revealHalf = {
   whileInView: "visible",
   viewport: { once: true, amount: 0.35 },
 } as const;
+
+/** Opóźnienia kolejnych elementów wejścia CSS (pełne nazwy klas — widoczne dla Tailwinda). */
+const enterDelays = [
+  "",
+  "[animation-delay:80ms]",
+  "[animation-delay:160ms]",
+  "[animation-delay:240ms]",
+  "[animation-delay:320ms]",
+] as const;
+
+/**
+ * Klasy wejścia dla treści nad zgięciem (hero). Animacja CSS zamiast framer-motion: tekst i obraz
+ * z prerenderingu są widoczne bez czekania na JS (krótszy LCP). `step` — kolejność (co 80 ms).
+ */
+export const enter = (step = 0) =>
+  `motion-safe:animate-enter ${enterDelays[Math.min(step, enterDelays.length - 1)]}`.trim();

@@ -1,8 +1,7 @@
 import { useTranslation } from "react-i18next";
-import { motion } from "framer-motion";
 import { FaDownload, FaEnvelope, FaGithub, FaLinkedin, FaPrint } from "react-icons/fa6";
 import mainPhoto from "../../assets/img/main-photo.webp?photo";
-import { staggerContainer, staggerItem } from "../../lib/animations";
+import { enter } from "../../lib/animations";
 import { career, availabilityLabelKeys, workModeLabelKeys, type Availability } from "../../data/career";
 import { contactTopicPath } from "../../data/services/contact";
 import { cvFiles, cvLanguages } from "../../data/cv";
@@ -32,29 +31,18 @@ const EmployerHero = () => {
       padding="page"
       className="flex-col-reverse md:flex-row md:items-center md:justify-between print:!flex-row print:!items-center print:!gap-5 print:!px-0"
     >
-      <motion.div
-        className="w-full md:max-w-[40rem] print:max-w-none print:flex-1"
-        variants={staggerContainer(0.08)}
-        initial="hidden"
-        animate="visible"
-      >
-        <motion.p
-          variants={staggerItem}
-          className="mb-4 text-small font-semibold uppercase tracking-wider text-accent print:hidden"
-        >
+      <div className="w-full md:max-w-[40rem] print:max-w-none print:flex-1">
+        <p className={`mb-4 text-small font-semibold uppercase tracking-wider text-accent print:hidden ${enter(0)}`}>
           {t("common:navbar.employers")}
-        </motion.p>
-        <motion.h1 variants={staggerItem} className="font-display text-h1 text-fg print:!text-[20pt]">
-          {career.name}
-        </motion.h1>
-        <motion.p
-          variants={staggerItem}
-          className="mt-4 text-balance text-body-lg text-fg-secondary print:mt-0.5 print:!text-[10pt]"
+        </p>
+        <h1 className={`font-display text-h1 text-fg print:!text-[20pt] ${enter(1)}`}>{career.name}</h1>
+        <p
+          className={`mt-4 text-balance text-body-lg text-fg-secondary print:mt-0.5 print:!text-[10pt] ${enter(2)}`}
         >
           {t(career.headlineKey)}
-        </motion.p>
+        </p>
 
-        <motion.div variants={staggerItem} className="mt-6 flex flex-wrap items-center gap-2 print:mt-1.5 print:gap-1">
+        <div className={`mt-6 flex flex-wrap items-center gap-2 print:mt-1.5 print:gap-1 ${enter(3)}`}>
           <Tag
             dot={availabilityDot[career.availability]}
             className="font-medium text-fg print:px-1.5 print:py-0 print:!text-[8pt]"
@@ -68,7 +56,7 @@ const EmployerHero = () => {
               </li>
             ))}
           </ul>
-        </motion.div>
+        </div>
 
         {/* Tylko na wydruku: linki zamiast przycisków. */}
         <p className="hidden print:mt-1.5 print:flex print:flex-wrap print:gap-x-3 print:!text-[8.5pt]">
@@ -77,7 +65,7 @@ const EmployerHero = () => {
           <span>WWW: {bareUrl(career.links.website)}</span>
         </p>
 
-        <motion.div variants={staggerItem} className="mt-8 flex flex-wrap gap-3 print:hidden">
+        <div className={`mt-8 flex flex-wrap gap-3 print:hidden ${enter(4)}`}>
           {cvLanguages.map((lang) => {
             const href = cvFiles[lang];
             return (
@@ -115,15 +103,15 @@ const EmployerHero = () => {
             <FaPrint aria-hidden="true" />
             {t("career:employer.hero.print")}
           </Button>
-        </motion.div>
-      </motion.div>
+        </div>
+      </div>
 
       <Img
         picture={mainPhoto}
         alt={t("career:employer.hero.photo_alt")}
         priority
         sizes="(min-width: 768px) 18rem, 12rem"
-        className="aspect-square w-48 shrink-0 rounded-full border border-border-strong bg-surface-elevated object-cover shadow-lift md:w-72 print:w-[26mm] print:border-0"
+        className={`aspect-square w-48 shrink-0 rounded-full border border-border-strong bg-surface-elevated object-cover shadow-lift md:w-72 print:w-[26mm] print:border-0 ${enter(1)}`}
       />
     </Section>
   );

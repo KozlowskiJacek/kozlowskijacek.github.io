@@ -2,7 +2,7 @@ import { useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useSearchParams } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
-import { EASE_OUT, staggerContainer, staggerItem } from "../lib/animations";
+import { EASE_OUT, enter } from "../lib/animations";
 import { isProjectCategory, projectCategories, publishedProjects, type Project } from "../data/projects";
 import { paths } from "../data/navigation";
 import Seo from "../components/Seo";
@@ -54,30 +54,22 @@ const PortfolioPage = () => {
   return (
     <Section id="portfolio" padding="page" className="flex-col">
       <Seo titleKey="portfolio:page.meta.title" descriptionKey="portfolio:page.meta.description" />
-      <motion.header
-        className="flex w-full max-w-3xl flex-col items-center gap-4 text-center"
-        variants={staggerContainer(0.08)}
-        initial="hidden"
-        animate="visible"
-      >
-        <motion.p
-          variants={staggerItem}
-          className="text-small font-semibold uppercase tracking-wider text-accent"
-        >
+      <header className="flex w-full max-w-3xl flex-col items-center gap-4 text-center">
+        <p className={`text-small font-semibold uppercase tracking-wider text-accent ${enter(0)}`}>
           {t("common:navbar.portfolio")}
-        </motion.p>
+        </p>
         <SectionHeading
           as="h1"
           size="h1"
           align="center"
-          variants={staggerItem}
+          className={enter(1)}
           title={t("portfolio:page.title")}
           accent={t("portfolio:page.accent")}
         />
-        <motion.p variants={staggerItem} className="max-w-2xl text-body text-fg-secondary md:text-body-lg">
+        <p className={`max-w-2xl text-body text-fg-secondary md:text-body-lg ${enter(2)}`}>
           {t("portfolio:page.text")}
-        </motion.p>
-      </motion.header>
+        </p>
+      </header>
 
       <PortfolioFilters value={filter} onChange={changeFilter} counts={counts} />
 

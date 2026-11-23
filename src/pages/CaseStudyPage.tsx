@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import { FaArrowLeft, FaArrowRight, FaArrowUpRightFromSquare, FaGithub } from "react-icons/fa6";
-import { fadeIn, reveal, staggerContainer, staggerItem } from "../lib/animations";
+import { enter, fadeIn, reveal, staggerContainer, staggerItem } from "../lib/animations";
 import {
   findProject,
   projectCategoryLabelKeys,
@@ -71,33 +71,26 @@ const CaseStudyPage = () => {
     <article key={project.slug}>
       <Seo title={project.title} description={t(project.summaryKey)} image={project.cover.img.src} type="article" />
       <Section id="case-study" padding="page" className="flex-col !items-stretch !gap-10 md:!gap-12">
-        <motion.header
-          className="flex flex-col items-start gap-4"
-          variants={staggerContainer(0.08)}
-          initial="hidden"
-          animate="visible"
-        >
-          <motion.div variants={staggerItem}>
+        <header className="flex flex-col items-start gap-4">
+          <div className={enter(0)}>
             <Button to={paths.portfolio} variant="ghost" className="text-small">
               <FaArrowLeft aria-hidden="true" />
               {t("portfolio:case_study.back")}
             </Button>
-          </motion.div>
-          <motion.div variants={staggerItem} className="flex flex-wrap items-center gap-3">
+          </div>
+          <div className={`flex flex-wrap items-center gap-3 ${enter(1)}`}>
             <span className={`text-small font-semibold uppercase tracking-wider ${classes.text}`}>
               {t("portfolio:case_study.eyebrow")}
             </span>
             <Badge tone={tone}>{t(projectCategoryLabelKeys[project.category])}</Badge>
-          </motion.div>
-          <motion.h1 variants={staggerItem} className="text-balance font-display text-h1 text-fg">
-            {project.title}
-          </motion.h1>
-          <motion.p variants={staggerItem} className="max-w-3xl text-body text-fg-secondary md:text-body-lg">
+          </div>
+          <h1 className={`text-balance font-display text-h1 text-fg ${enter(2)}`}>{project.title}</h1>
+          <p className={`max-w-3xl text-body text-fg-secondary md:text-body-lg ${enter(3)}`}>
             {t(project.summaryKey)}
-          </motion.p>
-        </motion.header>
+          </p>
+        </header>
 
-        <motion.div variants={fadeIn("bottom", 0.2)} initial="hidden" animate="visible">
+        <div className={enter(3)}>
           {project.videoUrl ? (
             <YouTubeEmbed url={project.videoUrl} title={project.title} />
           ) : (
@@ -105,7 +98,7 @@ const CaseStudyPage = () => {
               <ProjectCover project={project} priority sizes="(min-width: 1280px) 72rem, 100vw" zoomOnHover={false} />
             </div>
           )}
-        </motion.div>
+        </div>
 
         <motion.dl
           aria-label={t("portfolio:case_study.meta_label")}
