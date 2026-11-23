@@ -211,54 +211,121 @@
     "text7": "Nie kończę współpracy w momencie przekazania projektu! Jeśli potrzebujesz pomocy w doborze hostingu, optymalizacji SEO lub masz pytania dotyczące działania strony, zawsze możesz na mnie liczyć. A jeśli w przyszłości będziesz potrzebować nowej strony lub aplikacji – po prostu daj mi znać, na pewno się dogadamy! 😊"
   },
   "video": {
-    "nav_profesional": "Profesjonalne Filmy",
-    "nav_ads": "Reklamy",
-    "nav_vlogs": "Vlogi",
-    "nav_gaming": "Gaming",
-    "nav_reels": "Reels",
-    "nav_how": "Jak to działa",
-    "title1": "Profesjonalne Filmy i Social Media,",
-    "title2": "Które Przyciągają Odbiorców",
-    "text": "Chcesz, aby Twoja marka wyróżniała się w mediach społecznościowych? Tworzę angażujące filmy, które przyciągają uwagę i budują silne relacje z Twoimi odbiorcami.",
-    "ads": "🎥 Reklamy i",
-    "films": "Filmy Promocyjne",
-    "text1": "Krótko, dynamicznie i na temat – reklama powinna przyciągać uwagę w pierwszych sekundach. Tworzę filmy, które skutecznie prezentują Twoją markę, produkt lub usługę. Ty powiedz mi co chcesz przekazać Twoim klientom, a ja dopilnuję, żeby Twój komunikat dotarł do największej liczby potencjalnych klientów",
-    "text1_montage": "✅ Nie montuję przypadkowych ujęć – tworzę przemyślaną historię. Skupiam się na tym, co chcesz przekazać. Każdy film to nie tylko obraz, ale przede wszystkim komunikat, który ma działać na odbiorcę.",
-    "text1_highlights": "✅ Podkreślam to, co wyróżnia Twój produkt, usługę lub markę. Analizuję, czym się zajmujesz, co sprawia, że jesteś najlepszy i jak najlepiej to pokazać w dynamicznym, angażującym materiale.",
-    "text1_one": "✅ Jeden film – wiele możliwości. Tworzę materiały, które sprawdzą się zarówno na stronach internetowych, jak i w social mediach. Dopasowuję je tak, by jeden film mógł być skutecznie promowany w różnych formatach – od szerokiego ekranu po pionowe rolki.",
-    "text1_plan": "✅ Zanim nacisnę 'nagrywaj' – planujemy. Przed rozpoczęciem pracy w pełni rozumiem Twój produkt, markę i przekaz, jaki chcesz oddać. Pomogę Ci stworzyć coś, co nie tylko wygląda dobrze, ale także wyróżnia się i zostaje w pamięci.",
-    "text1_ideal": "Idealne dla osób, które chcą zwiększyć swoją widoczność w sieci i wyróżnić się na tle konkurencji.",
-    "vlogs": "🎬 Vlogi i",
-    "storytelling": "Storytelling",
-    "text_2": "Autentyczność to klucz do budowania zaangażowanej społeczności. Pomogę Ci tworzyć vlogi, które nie tylko dokumentują, ale opowiadają historię w sposób interesujący i angażujący.",
-    "text_2_strategy": "✅ Strategia dostosowana do vloga – Nie mogę spędzić całego dnia z Tobą, dlatego to Ty nagrywasz, a ja zajmuję się resztą. Otrzymuję surowy materiał i dzięki magii montażu tworzę dla Ciebie filmy dopasowane do Twojego stylu i klimatu.",
-    "text_2_story": "✅ Układam historię każdego odcinka – Każdy vlog to nie tylko nagrane momenty, ale przemyślana narracja. Tworzę spójne i angażujące opowieści, które przyciągają widzów.",
-    "text_2_speed": "✅ Regularność i szybkość mają kluczowe znaczenie – W świecie vlogów liczy się stała publikacja. Jeśli dostarczysz mi materiały na ostatnią chwilę, zrobię wszystko, by jak najszybciej dostarczyć gotowy film – oczywiście bez utraty jakości. W ekstremalnych sytuacjach dam Ci znać, jeśli lepiej będzie opóźnić publikację o jeden dzień, zamiast wrzucać coś na siłę.",
-    "text_2_collaboration": "✅ Pełna optymalizacja współpracy – Jeśli chcesz jeszcze bardziej usprawnić proces, mogę zająć się publikacją filmów na Twoim kanale. Najpierw wrzucę je jako niepubliczne do Twojej akceptacji, a potem opublikuję dla Twoich widzów. Prowadzę takie kanały od 2 lat w trzech językach, więc doskonale wiem, jak to działa.",
-    "text_2_ideal": "Sprawdza się świetnie dla twórców internetowych, marek osobistych i firm chcących pokazać kulisy swojej pracy.",
-    "gaming": "🎮 Gaming",
-    "content": "Content",
-    "text_3": "Tworzysz treści gamingowe i chcesz przyciągnąć większą publiczność? Zajmę się montażem Twojego materiału, tak by widzowie wracali po więcej.",
-    "text_3_dynamic": "✅ Dynamiczny montaż highlightów – Szybkie cięcia, najlepsze momenty i płynna narracja, która utrzyma uwagę widzów od początku do końca.",
-    "text_3_effect": "✅ Efekty, animacje i sound design – Dodaję dźwięki, memiczne efekty i kreatywne przejścia, które wzmacniają emocje i humor Twoich materiałów.",
-    "text_3_adaption": "✅ Dopasowanie do gry i społeczności – Każda gra ma swój klimat, a każda społeczność swoje inside joke’i. Tworzę montaż zgodny z Twoim stylem i tym, co bawi Twoich widzów.",
-    "text_3_platforms": "✅ Treści na każdą platformę – Pełne gameplaye, highlighty, a może shorty, które przyciągną nowych widzów? Dostosowuję formaty do YouTube, TikToka, Instagrama i innych platform, by Twoje treści trafiały jak najszerzej.",
-    "text_3_ideal": "Twoja strategia, Twój vibe – Nawiązania popkulturowe, cięty humor, dynamiczny rytm? Zmontuję materiały w taki sposób, by idealnie pasowały do Ciebie i Twojej społeczności. Możemy stworzyć pełne let's playe, wyciągnąć najlepsze momenty ze streama albo przerobić klipy na shorty, które viralowo przyciągną nowych widzów.",
-    "reels": "📱 Reelsy i ",
-    "tiktok": "TikToki",
-    "text_4": "Krótkie formaty rządzą internetem! Jeśli chcesz zdobywać viralowe zasięgi na Instagramie i TikToku, tworzę materiały, które zatrzymują uwagę i angażują użytkowników.",
-    "text_4_dynamic": "✅ Dynamiczny montaż zgodny z trendami – Tworzę materiały, które przyciągają uwagę od pierwszej sekundy, ale nie są jedynie chwilowym viralem – stawiam na jakość, która przetrwa próbę czasu.",
-    "text_4_creative": "✅ Kreatywne przejścia i efekty – Dodaję unikalne efekty wizualne i dźwiękowe, które nie tylko wpisują się w trendy, ale też podkreślają Twój styl i wyróżniają Cię na tle innych twórców.",
-    "text_4_sound": "✅ Muzyka i sound design na najwyższym poziomie – Wykorzystuję odpowiednio dobraną muzykę, efekty dźwiękowe i rytm montażu, by film miał jeszcze większy impact i wciągał widza do samego końca.",
-    "text_4_cringe": "✅ Optymalizacja pod algorytmy i długowieczność treści – Trendy zmieniają się szybko, ale dobre filmy zostają. Dbam o to, by Twoje materiały nie tylko dobrze się klikały, ale też były estetyczne, dopracowane i nie powodowały cringe’u po kilku miesiącach.",
-    "text_4_ideal": "Nie robię pustych virali. Nawet krótkie formy, jak rolki i shorty, mogą być wartościowe. Skupiam się na tym, by każdy materiał miał jakość, która będzie Cię promować nie tylko teraz, ale i w przyszłości.",
-    "how": "🚀 Jak to wygląda w",
-    "practice": "Praktyce",
-    "text_5_create": "🔹 Tworzę od A do Z – od scenariusza, przez nagrania, po finalny montaż.",
-    "text_5_style": "🔹 Dostosowuję styl do Twojej branży i grupy docelowej.",
-    "text_5_support": "🔹 Pomagam w budowaniu strategii contentowej dla Twojego profilu.",
-    "text_5_ideal": "Chcesz wyróżnić się w sieci? Niezależnie od tego, czy budujesz markę osobistą, rozwijasz firmę, czy po prostu nagrywasz dla funu – pomogę Ci stworzyć materiały, które przyciągną uwagę! 🎥✨ Skontaktuj się ze mną, a razem stworzymy coś wyjątkowego. 🚀",
-    "questions": "📩 Masz pytania? Napisz!"
+    "hero": {
+      "eyebrow": "Kreacja wideo",
+      "title": "Filmy i grafiki, które",
+      "accent": "zatrzymują uwagę",
+      "text": "Reklamy, vlogi, gaming i rolki — od scenariusza, przez nagranie, po montaż, grafiki i animacje. Nie sklejam przypadkowych ujęć: każdy materiał to przemyślana historia z jasnym komunikatem.",
+      "showreel": "Showreel — wybrane realizacje wideo"
+    },
+    "services": {
+      "title": "Co dla Ciebie",
+      "accent": "zrobię",
+      "text": "Możesz zamówić cały proces od A do Z albo tylko jeden etap — np. sam montaż Twojego surowego materiału.",
+      "recording": {
+        "title": "Nagrywanie",
+        "text": "Zanim nacisnę „nagrywaj”, planujemy. Poznaję Twój produkt i przekaz, a potem przygotowuję plan i nagrywam.",
+        "script": "Scenariusz i pomysł na film",
+        "shotlist": "Plan zdjęciowy",
+        "light": "Ustawienie światła",
+        "framing": "Kadrowanie i kompozycja"
+      },
+      "editing": {
+        "title": "Montaż",
+        "text": "Dynamiczne cięcia, narracja, muzyka i sound design dopasowane do platformy i Twojej społeczności.",
+        "ads": "Reklamy i filmy promocyjne",
+        "vlogs": "Vlogi i storytelling",
+        "gaming": "Gaming: highlighty i let's playe",
+        "shorts": "Rolki, TikToki i Shorts"
+      },
+      "graphics": {
+        "title": "Grafiki",
+        "text": "Spójna oprawa wizualna, która zachęca do kliknięcia i buduje rozpoznawalność marki.",
+        "thumbnails": "Miniatury na YouTube",
+        "social": "Grafiki do social mediów",
+        "promo": "Materiały promocyjne"
+      },
+      "animation": {
+        "title": "Animacje",
+        "text": "Ruch, który porządkuje przekaz i dodaje filmom charakteru — bez efektów dla samych efektów.",
+        "motion": "Motion design",
+        "captions": "Animowane napisy",
+        "intro": "Intro i outro",
+        "logo": "Animowane logo"
+      }
+    },
+    "audience": {
+      "title": "Dla",
+      "accent": "kogo",
+      "companies": {
+        "title": "Firmy",
+        "text": "Reklamy i filmy promocyjne, które pokazują, co wyróżnia Twój produkt. Jeden materiał w wielu formatach — od strony www po pionowe rolki."
+      },
+      "creators": {
+        "title": "Twórcy internetowi",
+        "text": "Ty nagrywasz, ja zajmuję się resztą. Regularny montaż vlogów i gamingu, a na życzenie także publikacja na kanale — najpierw jako niepubliczny film do akceptacji."
+      },
+      "personal": {
+        "title": "Marki osobiste",
+        "text": "Autentyczne treści, które budują zaangażowaną społeczność i nie wywołują cringe'u po kilku miesiącach."
+      }
+    },
+    "packages": {
+      "title": "Pakiety",
+      "accent": "wideo",
+      "text": "Trzy najczęstsze formy współpracy. Każdy pakiet dopasujemy do Twoich potrzeb.",
+      "reels": {
+        "title": "Rolki",
+        "text": "Krótkie, pionowe formy na Instagram, TikTok i YouTube Shorts.",
+        "f1": "Montaż zgodny z trendami, ale z jakością na dłużej",
+        "f2": "Napisy, przejścia i dobrana muzyka",
+        "f3": "Format 9:16 gotowy do publikacji"
+      },
+      "recurring": {
+        "title": "Montaż cykliczny",
+        "text": "Stała współpraca dla twórców i marek publikujących regularnie.",
+        "f1": "Ustalony rytm publikacji (np. co tydzień)",
+        "f2": "Montaż z Twojego surowego materiału",
+        "f3": "Opcjonalnie miniatury i publikacja na kanale"
+      },
+      "ad": {
+        "title": "Film reklamowy od A do Z",
+        "text": "Kompletna produkcja: od pomysłu do gotowego pliku.",
+        "f1": "Scenariusz i plan zdjęciowy",
+        "f2": "Nagranie, montaż, korekcja kolorów i dźwięk",
+        "f3": "Wersje pod stronę www i social media"
+      }
+    },
+    "portfolio": {
+      "title": "Wybrane",
+      "accent": "realizacje",
+      "text": "Filmy, grafiki i animacje z ostatnich projektów."
+    },
+    "faq": {
+      "title": "Częste",
+      "accent": "pytania",
+      "time": {
+        "q": "Ile trwa realizacja?",
+        "a": "To zależy od formy: rolka czy montaż odcinka to zwykle kilka dni, film reklamowy od A do Z — od tygodnia do kilku tygodni. Termin ustalamy przed startem, a gdy materiał przychodzi na ostatnią chwilę, robię wszystko, żeby zdążyć bez utraty jakości."
+      },
+      "revisions": {
+        "q": "Ile poprawek obejmuje cena?",
+        "a": "Liczbę rund poprawek ustalamy razem z wyceną. Drobne zmiany po prezentacji wprowadzam od razu — zależy mi, żebyś był w pełni zadowolony z efektu."
+      },
+      "formats": {
+        "q": "W jakim formacie dostanę pliki?",
+        "a": "Standardowo MP4 (H.264) w rozdzielczości i proporcjach pod docelową platformę: 16:9 na YouTube i stronę, 9:16 na rolki. Grafiki dostajesz jako PNG lub JPG. Inne formaty — po ustaleniu."
+      },
+      "recording": {
+        "q": "Kto nagrywa materiał?",
+        "a": "Obie opcje są możliwe. Przy filmie reklamowym nagrywam ja. Przy vlogach i gamingu zwykle to Ty nagrywasz, a ja dostaję surowy materiał i zajmuję się montażem."
+      }
+    },
+    "cta": {
+      "title": "Masz pomysł na",
+      "accent": "film?",
+      "text": "Opisz krótko, czego potrzebujesz — odpowiem w ciągu 1 dnia roboczego z propozycją i wyceną."
+    }
   },
   "projects": {
     "my": "Moje",
