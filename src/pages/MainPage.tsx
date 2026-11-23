@@ -4,9 +4,8 @@ import ServicesOverview from "../sections/home/ServicesOverview";
 import FeaturedWork from "../sections/home/FeaturedWork";
 import Process from "../sections/home/Process";
 import Testimonials from "../sections/home/Testimonials";
-import About from "../sections/About";
-import MySkills from "../sections/MySkills";
-import Contact from "../sections/Contact";
+import RecruiterTeaser from "../sections/home/RecruiterTeaser";
+import FinalCta from "../sections/home/FinalCta";
 
 const MainPage = () => (
   <>
@@ -16,9 +15,8 @@ const MainPage = () => (
     <FeaturedWork />
     <Process />
     <Testimonials />
-    <About />
-    <MySkills />
-    <Contact />
+    <RecruiterTeaser />
+    <FinalCta />
   </>
 );
 

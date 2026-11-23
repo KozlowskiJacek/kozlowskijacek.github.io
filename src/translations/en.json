@@ -92,6 +92,21 @@
       "text": "Feedback from people and companies I've worked with.",
       "list_label": "Client testimonials",
       "read_more": "Read more"
+    },
+    "recruiter": {
+      "eyebrow": "For employers",
+      "title": "Looking for a",
+      "accent": "developer?",
+      "text": "A full-stack developer working with React and Django who also understands product and marketing. My profile page covers my stack, certificates and projects with code.",
+      "profile": "View profile",
+      "cv": "Download CV",
+      "stack_label": "Main tech stack"
+    },
+    "cta": {
+      "title": "Have a project?",
+      "accent": "Let's talk",
+      "text": "Tell me briefly what you need — I'll reply with suggested next steps.",
+      "button": "Get in touch"
     }
   },
   "about": {
@@ -100,11 +115,7 @@
     "title_how": "Content Creator",
     "title_what": "What Guides Me",
     "title_after": "After Hours",
-    "about": "About",
-    "me": "Me",
-    "title": "I love creating something from nothing",
     "text": "🚀 The greatest satisfaction comes from the process of turning an idea into a real project – an application, a website, or content that reaches an audience and delivers tangible results. I value the ability to create solutions from scratch and bring them to a point where they generate business value, reach, or engagement. Every project is an opportunity to combine technology, strategy, and creativity into practical results.",
-    "see_more": "Read more...",
     "why": "Why",
     "full_stack": "Full Stack?",
     "text2": "💻 I combine backend and frontend to deliver comprehensive solutions – from intuitive interfaces to efficient systems behind the scenes. I create web applications, websites, and process automations, focusing on functionality, usability, and business value. This allows me to take a project from an idea all the way to a finished product.",

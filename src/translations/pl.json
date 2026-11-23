@@ -92,6 +92,21 @@
       "text": "Opinie osób i firm, z którymi pracowałem.",
       "list_label": "Opinie klientów",
       "read_more": "Czytaj więcej"
+    },
+    "recruiter": {
+      "eyebrow": "Dla pracodawców",
+      "title": "Szukasz",
+      "accent": "developera?",
+      "text": "Full-stack z React i Django, który rozumie też produkt i marketing. Na stronie profilu znajdziesz stack, certyfikaty i projekty z kodem.",
+      "profile": "Zobacz profil",
+      "cv": "Pobierz CV",
+      "stack_label": "Główny stack technologiczny"
+    },
+    "cta": {
+      "title": "Masz projekt?",
+      "accent": "Porozmawiajmy",
+      "text": "Opisz krótko, czego potrzebujesz — odpowiem z propozycją kolejnych kroków.",
+      "button": "Napisz do mnie"
     }
   },
   "about": {
@@ -100,11 +115,7 @@
     "title_how": "Content Creator",
     "title_what": "Czym się kieruję",
     "title_after": "Po Godzinach",
-    "about": "O",
-    "me": "Mnie",
-    "title": "Uwielbiam tworzyć coś z niczego",
     "text": "🚀 Największą satysfakcję daje mi proces, w którym z pomysłu powstaje realny projekt – aplikacja, strona czy treść, która znajduje odbiorców i przynosi konkretne efekty. Cenię możliwość tworzenia rozwiązań od podstaw i doprowadzania ich do momentu, w którym generują wartość biznesową, zasięg lub zaangażowanie. Każdy projekt to dla mnie okazja do łączenia technologii, strategii i kreatywności w praktyczne rezultaty.",
-    "see_more": "Czytaj dalej...",
     "why": "Dlaczego",
     "full_stack": "Full Stack?",
     "text2": "💻 Łączę backend i frontend, aby dostarczać kompleksowe rozwiązania – od intuicyjnych interfejsów po wydajne systemy w tle. Tworzę aplikacje webowe, strony internetowe i automatyzacje procesów, dbając o funkcjonalność, wygodę i wartość biznesową. Dzięki temu mogę prowadzić projekt od pomysłu aż do gotowego produktu.",
