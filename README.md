@@ -45,6 +45,9 @@ Pozostałe komendy:
 | `npm run i18n:check`| spójność kluczy PL/EN, brakujące i nieużywane klucze (`-- --prune` usuwa nieużywane) |
 | `npm run deploy`    | build + publikacja na GitHub Pages   |
 | `npm run og:render` | renderuje `scripts/og/og-template.html` do `public/og/default.png` (headless Chrome/Edge) |
+| `npm run analyze`   | build z mapą rozmiaru bundla w `stats.html` (rollup-plugin-visualizer) |
+| `npm run images:optimize` | konwertuje PNG/JPG z `src/assets/img` do WebP (max 1600 px, < 200 KB); warianty AVIF/WebP i srcset generuje przy buildzie vite-imagetools |
+| `npm run fonts:subset` | generuje odchudzone fonty w `src/assets/fonts` (wagi 400–600, łacina + polskie znaki) |
 
 ## SEO
 

@@ -1,8 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot, hydrateRoot } from 'react-dom/client'
 import { HelmetProvider } from 'react-helmet-async'
-import '@fontsource-variable/inter'
-import '@fontsource-variable/space-grotesk'
 import './index.css'
 import App from './App.tsx'
 import i18n from "./lib/i18n.ts";
