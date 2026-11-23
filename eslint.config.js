@@ -29,6 +29,11 @@ export default tseslint.config(
     },
   },
   {
+    // Testy i helpery testowe nie są modułami odświeżanymi przez Fast Refresh.
+    files: ["src/**/*.test.{ts,tsx}", "src/test/**"],
+    rules: { "react-refresh/only-export-components": "off" },
+  },
+  {
     // Skrypty Node (build, prerender, i18n:check) — bez typów, z globalami Node.
     files: ["**/*.{js,mjs}"],
     extends: [js.configs.recommended],

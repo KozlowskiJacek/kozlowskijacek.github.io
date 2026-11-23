@@ -32,10 +32,12 @@ const dicts = Object.fromEntries(
 );
 const namespaces = new Set([...dicts[locales[0]]].map((key) => key.split(":")[0]));
 
+/** Pliki źródłowe aplikacji — bez testów, żeby klucze użyte tylko w asercjach nie liczyły się jako „użyte”. */
 const walk = (dir) =>
   readdirSync(dir).flatMap((name) => {
     const p = join(dir, name);
-    return statSync(p).isDirectory() ? walk(p) : /\.(tsx?|jsx?)$/.test(name) ? [p] : [];
+    if (statSync(p).isDirectory()) return name === "test" ? [] : walk(p);
+    return /\.(tsx?|jsx?)$/.test(name) && !/\.test\.\w+$/.test(name) ? [p] : [];
   });
 
 /** Klucze użyte w kodzie: każdy literał "ns:ścieżka" ze znanym namespace'em. */

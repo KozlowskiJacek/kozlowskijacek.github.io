@@ -29,3 +29,6 @@ dist-ssr
 
 # Raport rozmiaru bundla (npm run analyze)
 stats.html
+
+# Raporty testów (vitest --coverage)
+coverage
