@@ -25,7 +25,7 @@ const isBrowser = typeof window !== "undefined";
 
 if (isBrowser) i18n.use(LanguageDetector);
 
-i18n.use(initReactI18next).init({
+void i18n.use(initReactI18next).init({
   resources,
   ...(isBrowser ? {} : { lng: "pl" }),
   ns: namespaces,

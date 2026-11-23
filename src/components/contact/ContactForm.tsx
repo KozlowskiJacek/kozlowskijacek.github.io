@@ -121,7 +121,7 @@ const ContactForm = () => {
     if (!buttonRef.current) return;
     const rect = buttonRef.current.getBoundingClientRect();
     const { default: confetti } = await import("canvas-confetti");
-    confetti({
+    void confetti({
       particleCount: 80,
       spread: 55,
       startVelocity: 30,
@@ -214,7 +214,7 @@ const ContactForm = () => {
   );
 
   return (
-    <form onSubmit={handleSubmit} noValidate className="relative flex flex-col gap-5">
+    <form onSubmit={(event) => void handleSubmit(event)} noValidate className="relative flex flex-col gap-5">
       {import.meta.env.DEV && !emailJsConfig && (
         <p role="alert" className="rounded-xl border border-video/40 bg-video/10 px-4 py-3 text-small text-video">
           [dev] {missingEmailJsMessage}

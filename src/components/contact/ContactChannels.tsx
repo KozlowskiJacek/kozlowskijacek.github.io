@@ -73,7 +73,7 @@ const ContactChannels = () => {
           </a>
           <button
             type="button"
-            onClick={handleCopy}
+            onClick={() => void handleCopy()}
             aria-label={t("contact:channels.copy")}
             title={t("contact:channels.copy")}
             className={`grid h-12 w-12 shrink-0 place-items-center rounded-xl border border-border bg-background text-fg-secondary transition-colors hover:border-accent/50 hover:text-accent ${focusRing}`}

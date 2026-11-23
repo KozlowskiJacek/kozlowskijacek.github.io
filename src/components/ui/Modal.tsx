@@ -79,18 +79,27 @@ const Modal = ({ open, onClose, children, labelledBy, size = "md" }: ModalProps)
   };
 
   const sentinel = (edge: "first" | "last") =>
-    open && <span tabIndex={0} aria-hidden="true" className="sr-only" onFocus={wrapFocus(edge)} />;
+    open && (
+      // Niewidoczny strażnik fokusu — celowo fokusowalny, nie jest kontrolką dla użytkownika.
+      // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
+      <span tabIndex={0} aria-hidden="true" className="sr-only" onFocus={wrapFocus(edge)} />
+    );
 
   if (!mounted) return null;
 
   // Portal: modal nie dziedziczy stacking contextu ani transformacji sekcji (animacje framer-motion).
   return createPortal(
+    // Kliknięcie w tło zamyka modal; z klawiatury zamyka go Escape (listener na window powyżej).
+    // eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions
     <div
       className={`fixed inset-0 z-[60] flex items-center justify-center px-4 transition-[background-color,backdrop-filter] duration-300 ease-out ${
         open ? "visible bg-background/70 backdrop-blur-sm" : "invisible bg-transparent"
       }`}
       aria-hidden={!open}
-      onClick={onClose}
+      onClick={(e) => {
+        // Tylko kliknięcie w samo tło, nie w treść dialogu.
+        if (e.target === e.currentTarget) onClose();
+      }}
     >
       {sentinel("last")}
       <div
@@ -101,7 +110,6 @@ const Modal = ({ open, onClose, children, labelledBy, size = "md" }: ModalProps)
         className={`relative w-full ${sizes[size]} rounded-2xl border border-border bg-surface-elevated text-left text-fg shadow-lift transition-[opacity,transform] duration-300 ease-out motion-reduce:transition-none ${
           open ? "scale-100 opacity-100" : "scale-95 opacity-0"
         }`}
-        onClick={(e) => e.stopPropagation()}
       >
         <button
           type="button"

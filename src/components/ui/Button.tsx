@@ -18,16 +18,20 @@ export type ButtonProps = AnchorButtonProps | LinkButtonProps | NativeButtonProp
  */
 const Button = (props: ButtonProps) => {
   if (typeof props.href === "string") {
-    const { variant, size, className, ...rest } = props as AnchorButtonProps;
-    return <a className={buttonClasses({ variant, size, className })} {...rest} />;
+    const { variant, size, className, children, ...rest } = props;
+    return (
+      <a className={buttonClasses({ variant, size, className })} {...rest}>
+        {children}
+      </a>
+    );
   }
 
   if ("to" in props && props.to !== undefined) {
-    const { variant, size, className, ...rest } = props as LinkButtonProps;
-    return <Link className={buttonClasses({ variant, size, className: className as string | undefined })} {...rest} />;
+    const { variant, size, className, ...rest } = props;
+    return <Link className={buttonClasses({ variant, size, className })} {...rest} />;
   }
 
-  const { variant, size, className, type = "button", ...rest } = props as NativeButtonProps;
+  const { variant, size, className, type = "button", ...rest } = props;
   return <button type={type} className={buttonClasses({ variant, size, className })} {...rest} />;
 };
 

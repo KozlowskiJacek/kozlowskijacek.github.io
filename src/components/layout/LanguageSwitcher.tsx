@@ -7,7 +7,7 @@ const LanguageSwitcher = () => {
   const current = i18n.resolvedLanguage === "en" ? "en" : "pl";
 
   const toggleLanguage = () => {
-    i18n.changeLanguage(current === "pl" ? "en" : "pl");
+    void i18n.changeLanguage(current === "pl" ? "en" : "pl");
   };
 
   return (

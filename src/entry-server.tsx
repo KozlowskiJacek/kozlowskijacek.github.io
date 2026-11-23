@@ -38,7 +38,8 @@ export const render = (url: string) =>
       </StrictMode>,
       {
         onAllReady() {
-          if (failed) reject(failed);
+          if (failed)
+            reject(failed instanceof Error ? failed : new Error(`Prerender failed: ${JSON.stringify(failed)}`));
           else resolve({ pipe: stream.pipe, helmet: () => helmetContext.helmet });
         },
         onShellError: reject,
