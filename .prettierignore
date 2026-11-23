@@ -1,0 +1,10 @@
+dist
+dist-ssr
+node_modules
+.vite
+coverage
+stats.html
+package-lock.json
+public
+src/assets
+.claude
