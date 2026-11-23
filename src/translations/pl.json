@@ -549,7 +549,24 @@
     },
     "case_study": {
       "eyebrow": "Case study",
-      "back": "Wróć do portfolio"
+      "back": "Wróć do portfolio",
+      "meta_label": "Szczegóły projektu",
+      "role": "Rola",
+      "year": "Rok",
+      "tech": "Technologie",
+      "links": "Linki",
+      "live": "Zobacz na żywo",
+      "new_tab": "(otwiera się w nowej karcie)",
+      "problem": "Problem",
+      "solution": "Rozwiązanie",
+      "result": "Efekt",
+      "gallery": "Galeria",
+      "nav_label": "Inne realizacje",
+      "prev": "Poprzedni projekt",
+      "next": "Następny projekt",
+      "cta_title": "Masz podobny",
+      "cta_accent": "projekt?",
+      "cta_text": "Opisz krótko, czego potrzebujesz — odpowiem z propozycją rozwiązania i wyceną."
     },
     "employers": {
       "title": "Profil dla pracodawców",

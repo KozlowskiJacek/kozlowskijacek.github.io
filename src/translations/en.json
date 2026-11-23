@@ -549,7 +549,24 @@
     },
     "case_study": {
       "eyebrow": "Case study",
-      "back": "Back to portfolio"
+      "back": "Back to portfolio",
+      "meta_label": "Project details",
+      "role": "Role",
+      "year": "Year",
+      "tech": "Technologies",
+      "links": "Links",
+      "live": "View live",
+      "new_tab": "(opens in a new tab)",
+      "problem": "Problem",
+      "solution": "Solution",
+      "result": "Result",
+      "gallery": "Gallery",
+      "nav_label": "More work",
+      "prev": "Previous project",
+      "next": "Next project",
+      "cta_title": "Have a similar",
+      "cta_accent": "project?",
+      "cta_text": "Tell me briefly what you need — I'll reply with a proposed solution and a quote."
     },
     "employers": {
       "title": "Profile for employers",
