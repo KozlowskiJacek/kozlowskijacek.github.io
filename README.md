@@ -71,14 +71,6 @@ W wyjątkowej sytuacji hooki można pominąć flagą `git commit --no-verify`; C
 - Kod renderowany w komponentach musi działać w Node: `window`, `document`, `localStorage` tylko w `useEffect`/handlerach, a pierwszy render na kliencie musi dać to samo co prerendering (np. portal w `Modal` pojawia się dopiero po zamontowaniu).
 - Domyślny obraz OG (1200×630) to `public/og/default.png`. Podmień plik albo zmień szablon `scripts/og/og-template.html` i uruchom `npm run og:render`.
 
-## Motyw jasny/ciemny
-
-- Przełącznik w nagłówku (`src/components/layout/ThemeToggle.tsx`) bez dodatkowych bibliotek. Domyślnie strona podąża za ustawieniem systemu (`prefers-color-scheme`), a ręczny wybór zapisuje się w `localStorage` pod kluczem `theme`.
-- Kolory w `tailwind.config.js` to tokeny `rgb(var(--color-…) / <alpha-value>)`. Ich wartości (kanały RGB) są w `src/index.css`: `:root, [data-theme="dark"]` i `[data-theme="light"]`. Komponenty używają zwykłych klas (`bg-background`, `text-accent`, `bg-accent/10`) bez wariantów `dark:`.
-- **Nowy kolor**: dodaj token w `tailwind.config.js` i zmienną w **obu** paletach w `index.css`, sprawdzając kontrast (WCAG AA ≥ 4.5:1 dla tekstu, tabela w komentarzu).
-- Skrypt inline w `index.html` ustawia `data-theme` na `<html>` przed pierwszym malowaniem, więc strona nie miga. HTML z prerenderingu nie zależy od motywu. Logika skryptu musi zgadzać się z `src/lib/theme.ts` (pilnuje tego `ThemeToggle.test.tsx`).
-- Wydruk CV (`/dla-pracodawcow`) zawsze używa palety `print` na białym tle, niezależnie od motywu.
-
 ## Zmienne środowiskowe
 
 Plik `.env` nie jest w repozytorium. Szablon znajdziesz w `.env.example`:
@@ -192,12 +184,12 @@ Skrypt `postbuild` generuje prerenderowane strony i `dist/404.html`, dzięki cze
 │   ├── pages/              # strony: MainPage, AboutPage, WebAppsPage, VideoMarketingPage
 │   ├── sections/           # sekcje stron: home/ (strona główna), employer/ (/dla-pracodawcow), …
 │   ├── components/
-│   │   ├── layout/         # Layout, Header, LanguageSwitcher, ThemeToggle, Footer, ScrollToTop
+│   │   ├── layout/         # Layout, Header, LanguageSwitcher, Footer, ScrollToTop
 │   │   ├── ui/             # Section, Container, SectionHeading, Button, Modal
 │   │   ├── contact/        # ContactForm, TopicPicker, ContactChannels
 │   │   └── *.tsx           # PageIntro
 │   ├── data/               # typowane dane: navigation, projects, career (CV), stack, testimonials, socials
-│   ├── lib/                # animations (framer-motion), i18n, theme, env
+│   ├── lib/                # animations (framer-motion), i18n, env
 │   ├── hooks/              # useSmoothScroll, useScrollSpy, useNavigateToSection
 │   ├── translations/       # {pl,en}/<namespace>.json: common, home, services, portfolio, career, contact
 │   └── assets/img/         # obrazy importowane w komponentach
