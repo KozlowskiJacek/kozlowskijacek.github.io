@@ -590,5 +590,129 @@
     "contact_form": "Formularz kontaktowy",
     "rights": "Wszelkie prawa zastrzeżone.",
     "back_to_top": "Do góry"
+  },
+  "career": {
+    "headline": "Full-stack developer (React · Python/Django), który łączy kod z kreacją wideo",
+    "summary": {
+      "p1": "Tworzę aplikacje webowe od interfejsu po backend — na co dzień pracuję z React, TypeScript i Tailwind CSS, a po stronie serwera z Pythonem (Django, Flask) oraz bazami SQL i MongoDB. Ukończyłem kursy Web Front-end, Python Back-end i Full Stack Python Developer, a pracę inżynierską napisałem jako aplikację AureliaHR do zarządzania zespołami.",
+      "p2": "Moje skrypty w Pythonie zostały wdrożone w firmie, w której pracuję — jeden skrócił cykliczne zadanie z 4–5 dni do dwóch kliknięć. Równolegle nagrywam i montuję wideo, więc rozumiem produkt i marketing, a nie tylko kod. Większość projektów prowadzę samodzielnie: od rozpoznania problemu, przez dokumentację, po wdrożenie."
+    },
+    "availability": {
+      "open": "Otwarty na oferty pracy",
+      "freelance_only": "Dostępny tylko na zlecenia",
+      "closed": "Obecnie niedostępny"
+    },
+    "work_modes": {
+      "remote": "Zdalnie",
+      "hybrid": "Hybrydowo",
+      "onsite": "Stacjonarnie",
+      "employment": "Umowa o pracę",
+      "b2b": "B2B",
+      "freelance": "Zlecenia"
+    },
+    "experience": {
+      "company_job": {
+        "company_fallback": "Obecny pracodawca",
+        "position": "Automatyzacja procesów w Pythonie",
+        "a1": "Napisałem skrypt w Pythonie (pandas) przetwarzający pliki CSV z danymi GPS aut służbowych — zadanie, które zajmowało 4–5 dni, zajmuje teraz dwa kliknięcia.",
+        "a2": "Przygotowałem skrypt do web scrapingu (BeautifulSoup) do analizy ofert konkurencji na zewnętrznych serwisach.",
+        "a3": "Oba narzędzia zostały wdrożone i są używane w codziennej pracy działu."
+      },
+      "freelance": {
+        "position": "Web developer i twórca wideo",
+        "a1": "Projektuję i koduję strony oraz aplikacje webowe dla małych firm — od makiety w Figmie po wdrożenie.",
+        "a2": "Nagrywam i montuję materiały reklamowe, rolki i treści do social mediów.",
+        "a3": "Samodzielnie prowadzę kontakt z klientem, wycenę i harmonogram projektu."
+      }
+    },
+    "education": {
+      "engineer": {
+        "degree": "Studia inżynierskie",
+        "note": "Praca inżynierska: AureliaHR — aplikacja do zarządzania zespołami (React, MongoDB)."
+      },
+      "courses": {
+        "degree": "Kursy Web Front-end Developer, Python Back-end Developer, Full Stack Python Developer",
+        "note": "React, TypeScript, Tailwind CSS, Python, Flask, Django, bazy danych SQL i NoSQL, Git, Figma, Unix."
+      }
+    },
+    "skills": {
+      "frontend": {
+        "title": "Frontend",
+        "text": "Ukończyłem kursy Reacta, na których poznałem m.in. React Router, React Query, Tailwind CSS i TypeScript. Projekty — mniejsze i większe — realizuję samodzielnie, co nauczyło mnie szukać odpowiedzi w dokumentacji i dopasowywać rozwiązania do potrzeb projektu. Tailwinda używam we wszystkich projektach i znam zarówno jego zalety, jak i ograniczenia.",
+        "highlight_title": "W praktyce: AureliaHR",
+        "highlight_text": "Aplikacja pomaga firmom zarządzać zespołami i ogranicza chaos komunikacyjny: pracownicy komunikują się w ramach swojego zespołu, a między zespołami — kierownicy. Menedżerowie przydzielają zadania i widzą postępy zespołu."
+      },
+      "backend": {
+        "title": "Backend",
+        "text": "Zaczynałem jako samouk, a po opanowaniu podstaw ukończyłem kursy Python Back-end Developer i Full Stack Python Developer. Poznałem na nich frameworki Flask i Django oraz pracę z Gitem, bazami danych i systemem Unix.",
+        "highlight_title": "W praktyce: skrypty wdrożone w firmie",
+        "highlight_text": "Samodzielnie napisałem dwa skrypty używane w firmie: web scraping ofert konkurencji (BeautifulSoup) oraz przetwarzanie danych GPS aut służbowych (pandas), które skróciło pracę z 4–5 dni do dwóch kliknięć."
+      },
+      "databases": {
+        "title": "Bazy danych",
+        "text": "Na studiach i kursie Full Stack poznałem bazy relacyjne (SQL) i dokumentowe (MongoDB). Wiem, kiedy wybrać które rozwiązanie i jak projektować strukturę danych pod wydajność aplikacji.",
+        "highlight_title": "W praktyce: MongoDB w AureliaHR",
+        "highlight_text": "Aplikacja przechowuje w MongoDB dane użytkowników oraz zadania przypisane do poszczególnych zespołów."
+      },
+      "tools": {
+        "title": "Narzędzia / DevOps",
+        "ci": "CI/CD (podstawy)",
+        "text": "Na co dzień pracuję z Gitem — w projektach własnych i zespołowych na studiach. Pracuję na branchach, dbam o czytelne commity i pull requesty, rozwiązuję konflikty i biorę udział w code review.",
+        "highlight_title": "W praktyce: GitHub i wdrożenia",
+        "highlight_text": "Korzystam z GitHuba i GitLaba oraz podstawowych funkcji CI/CD do automatyzacji testów i wdrożeń. Ta strona jest publikowana na GitHub Pages."
+      },
+      "design": {
+        "title": "Design",
+        "rwd": "Projektowanie responsywne",
+        "prototyping": "Makiety i prototypy"
+      },
+      "video": {
+        "title": "Wideo i grafika",
+        "color": "Color grading",
+        "script": "Scenariusz i plan zdjęciowy",
+        "text": "Łączę pracę kreatywną z analitycznym myśleniem — montaż i programowanie. Dzięki temu przy stronach i aplikacjach dbam jednocześnie o estetykę i funkcjonalność.",
+        "highlight_title": "W praktyce: montaż i produkcja",
+        "highlight_text": "Jako montażysta nauczyłem się timingu, doboru muzyki, pisania tekstów i wykorzystania AI do usprawniania pracy. Znam zasady scenariusza, planowania ujęć, światła, kadrowania, color gradingu i kompozycji."
+      },
+      "languages": {
+        "title": "Języki obce",
+        "polish": "Polski",
+        "english": "Angielski",
+        "native": "ojczysty"
+      },
+      "soft": {
+        "title": "Soft skills",
+        "independence": "Samodzielność",
+        "self_learning": "Szybka nauka z dokumentacji",
+        "client_communication": "Komunikacja z klientem",
+        "analytical_creative": "Myślenie analityczne + kreatywne",
+        "ownership": "Odpowiedzialność za efekt"
+      },
+      "links": {
+        "cert_frontend": "Certyfikat Web Front-end Developer",
+        "cert_full_stack": "Certyfikat Full Stack Python Developer",
+        "cert_backend": "Certyfikat Python Back-end Developer",
+        "github": "Mój GitHub",
+        "video_sample": "Przykładowa realizacja wideo"
+      }
+    },
+    "why_me": {
+      "dev_creative": {
+        "title": "Łączę development z kreacją",
+        "text": "Programuję i montuję wideo, więc patrzę na produkt oczami użytkownika i marketingu — nie tylko przez pryzmat kodu."
+      },
+      "independence": {
+        "title": "Pracuję samodzielnie",
+        "text": "Większość projektów prowadzę od zera do wdrożenia. Odpowiedzi szukam w dokumentacji, a nie czekam na gotowe rozwiązania."
+      },
+      "shipped": {
+        "title": "Moje rozwiązania działają w firmie",
+        "text": "Skrypty w Pythonie, które napisałem, są używane na co dzień — jeden skrócił zadanie z 4–5 dni do dwóch kliknięć."
+      },
+      "product": {
+        "title": "Rozumiem cel biznesowy",
+        "text": "Współpraca z klientami nauczyła mnie pytać „po co?”, zanim zacznę pisać kod — i dowozić to, co realnie pomaga."
+      }
+    }
   }
 }
