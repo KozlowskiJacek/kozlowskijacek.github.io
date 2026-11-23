@@ -26,3 +26,6 @@ dist-ssr
 
 # Vite cache
 .vite
+
+# Raport rozmiaru bundla (npm run analyze)
+stats.html

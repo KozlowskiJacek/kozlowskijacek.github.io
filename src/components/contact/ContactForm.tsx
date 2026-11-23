@@ -1,6 +1,4 @@
 import { useEffect, useMemo, useRef, useState, type ChangeEvent, type FormEvent } from "react";
-import emailjs from "@emailjs/browser";
-import confetti from "canvas-confetti";
 import { AnimatePresence, motion } from "framer-motion";
 import { Link, useSearchParams } from "react-router-dom";
 import { Trans, useTranslation } from "react-i18next";
@@ -128,9 +126,11 @@ const ContactForm = () => {
     setTouched((current) => ({ ...current, employment: true }));
   };
 
-  const fireConfetti = () => {
+  // canvas-confetti ładowany dopiero po udanej wysyłce — nie obciąża wejścia na /kontakt.
+  const fireConfetti = async () => {
     if (!buttonRef.current) return;
     const rect = buttonRef.current.getBoundingClientRect();
+    const { default: confetti } = await import("canvas-confetti");
     confetti({
       particleCount: 80,
       spread: 55,
@@ -173,8 +173,10 @@ const ContactForm = () => {
     try {
       if (!emailJsConfig) throw new Error(missingEmailJsMessage);
       const { serviceId, templateId, publicKey } = emailJsConfig;
+      // SDK EmailJS pobierany przy pierwszej wysyłce (osobny chunk).
+      const { default: emailjs } = await import("@emailjs/browser");
       await emailjs.send(serviceId, templateId, toTemplateParams(values), { publicKey });
-      fireConfetti();
+      void fireConfetti().catch(() => {});
       setStatus("success");
     } catch (error) {
       if (import.meta.env.DEV) console.error("[EmailJS] Wysyłka nie powiodła się:", error);

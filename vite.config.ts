@@ -2,6 +2,7 @@ import { existsSync } from 'node:fs'
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react-swc'
 import { imagetools } from 'vite-imagetools'
+import { visualizer } from 'rollup-plugin-visualizer'
 
 /** Oczekiwane pliki CV w public/cv/ (nazwy bez spacji i polskich znaków). */
 const CV_FILES = {
@@ -46,15 +47,44 @@ const imageDirectives = (url: URL) => {
   return new URLSearchParams({ ...imagePresets[preset], format: 'avif;webp', as: 'picture' })
 }
 
+/**
+ * Vendor chunki ładowane na każdej stronie. Pozostałe zależności (react-icons, canvas-confetti,
+ * @emailjs/browser) trafiają do chunków stron / dynamicznych importów, które ich używają.
+ */
+const vendorChunks: Record<string, string[]> = {
+  react: ['react', 'react-dom', 'scheduler', 'react-router', 'react-router-dom', 'react-helmet-async', 'react-fast-compare', 'shallowequal', 'invariant', 'cookie', 'set-cookie-parser'],
+  motion: ['framer-motion', 'motion-dom', 'motion-utils'],
+  i18n: ['i18next', 'react-i18next', 'i18next-browser-languagedetector', 'html-parse-stringify', 'void-elements'],
+}
+
 // https://vite.dev/config/
-export default defineConfig(({ isSsrBuild }) => ({
+export default defineConfig(({ isSsrBuild, mode }) => ({
   // Strona użytkownika GitHub Pages serwowana z katalogu głównego domeny.
   // Ścieżka względna ('./') psuła ładowanie zasobów na zagnieżdżonych trasach.
   base: '/',
-  plugins: [react(), imagetools({ defaultDirectives: imageDirectives })],
+  plugins: [
+    react(),
+    imagetools({ defaultDirectives: imageDirectives }),
+    // `npm run analyze` — mapa rozmiaru bundla w stats.html (gzip/brotli).
+    mode === 'analyze' &&
+      visualizer({ filename: 'stats.html', template: 'treemap', gzipSize: true, brotliSize: true, open: false }),
+  ],
   build: {
     // Build SSR (dist-ssr/, tylko do prerenderingu w scripts/prerender.mjs) nie potrzebuje kopii public/.
     copyPublicDir: !isSsrBuild,
+    rollupOptions: isSsrBuild
+      ? undefined
+      : {
+          output: {
+            // Biblioteki rzadko się zmieniają — osobne chunki zostają w cache przeglądarki między deployami.
+            manualChunks: (id: string) => {
+              if (!id.includes('node_modules')) return undefined
+              return Object.entries(vendorChunks).find(([, packages]) =>
+                packages.some((pkg) => id.includes(`/node_modules/${pkg}/`)),
+              )?.[0]
+            },
+          },
+        },
   },
   define: {
     __CV_FILES__: JSON.stringify(findCvFiles()),
