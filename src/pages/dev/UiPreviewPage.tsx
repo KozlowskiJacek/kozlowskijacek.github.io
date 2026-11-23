@@ -11,6 +11,7 @@ import Tag from "../../components/ui/Tag";
 import Container from "../../components/ui/Container";
 import Modal from "../../components/ui/Modal";
 import SectionHeading from "../../components/ui/SectionHeading";
+import YouTubeEmbed from "../../components/ui/YouTubeEmbed";
 
 const swatches = [
   ["background", "bg-background"],
@@ -128,6 +129,13 @@ const UiPreviewPage = () => {
                 <Badge>Vite</Badge>
               </div>
             </Card>
+          </div>
+        </Block>
+
+        <Block title="YouTube embed">
+          {/* Miniatura → iframe dopiero po kliknięciu. */}
+          <div className="max-w-xl">
+            <YouTubeEmbed url="https://www.youtube.com/watch?v=aqz-KE-bpKQ" title="Big Buck Bunny" />
           </div>
         </Block>
       </Container>

@@ -257,7 +257,8 @@
     "price_from": "from",
     "price_custom": "Custom quote",
     "price_note": "Prices are indicative. You get an exact quote after a short call — and that price doesn't change.",
-    "portfolio_empty": "Work from this category is on its way to the portfolio. Check back soon or get in touch — I'll share examples privately."
+    "portfolio_empty": "Work from this category is on its way to the portfolio. Check back soon or get in touch — I'll share examples privately.",
+    "play_video": "Play video: {{title}}"
   },
   "projects": {
     "my": "My",

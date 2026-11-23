@@ -181,7 +181,8 @@
     "price_from": "od",
     "price_custom": "Wycena indywidualna",
     "price_note": "Ceny są orientacyjne. Dokładną wycenę dostajesz po krótkiej rozmowie — i ta kwota już się nie zmienia.",
-    "portfolio_empty": "Realizacje z tej kategorii właśnie trafiają do portfolio. Zajrzyj wkrótce albo napisz — pokażę przykłady prywatnie."
+    "portfolio_empty": "Realizacje z tej kategorii właśnie trafiają do portfolio. Zajrzyj wkrótce albo napisz — pokażę przykłady prywatnie.",
+    "play_video": "Odtwórz film: {{title}}"
   },
   "web_app": {
     "nav_modern": "Nowoczesne Strony",
