@@ -174,30 +174,152 @@
     "close_btn": "Close"
   },
   "web_app": {
-    "nav_modern": "Modern Website",
-    "nav_discussion": "Discussion",
-    "nav_visual": "Visual Design",
-    "nav_development": "Development",
-    "nav_presentation": "Presentation",
-    "nav_support": "Support",
-    "title1": "Modern Websites and Web Applications",
-    "title2": "Functionality That Sells",
-    "title_text": "I design and create websites and web applications tailored to your needs. I listen to your expectations, but I always remember that users come first. Check out how working with me looks and how the project realization process unfolds.",
-    "talk": "Discussion and",
-    "analysis": "needs analysis",
-    "text3": "The first step is an informal meeting where we discuss your expectations. I want to learn about your business or personal brand, the values it represents, the colors and style that best reflect it, and the purpose of the website or application. This is the moment when we outline the initial project sketch – what should be on the site, how the application should function, and how it should interact with users. We also determine who will be responsible for the website content – whether I should create it, whether it's already prepared, or if we’ll collaborate with another person. The same applies to graphics and photos – we will discuss whether you already have materials or need them to be prepared.",
-    "project": "Visual design and",
-    "concept": "functional concept",
-    "text4": "Based on our discussion, I prepare an initial visual design of the website or application along with its functional structure. You don’t have to approve it right away – this is the stage where making changes is encouraged. I won’t always agree with you, as my goal is to create a functional and intuitive solution for your users, but I always take your vision into account. During the visual design presentation, I will also provide a cost estimate for the entire project. The price will not change from this point unless critical situations arise, such as a massive change in the final project phase.",
-    "coding": "Development and",
-    "implementation": "implementation",
-    "text5": "After the visual design is approved, I move on to working on the website or application. At this stage, we have slightly less contact, but I am always available if new ideas arise or changes need to be made. If the project is more complex, we can schedule another meeting to discuss progress.",
-    "presentation": "Presentation of",
-    "ready": "the finished project",
-    "text6": "This is the moment when I show you the results of our work – your website or application! If something doesn’t meet your expectations, minor adjustments can be made immediately. I want you to be fully satisfied with the project, so I appreciate your honest feedback.",
-    "support": "Support",
-    "after": "after launch",
-    "text7": "My collaboration with you doesn’t end when I hand over the project! If you need help choosing hosting, SEO optimization, or have any questions about how the site works, you can always count on me. And if you ever need a new website or application – just let me know, we’ll surely work something out! 😊"
+    "hero": {
+      "eyebrow": "Websites & apps",
+      "title": "Websites and web apps —",
+      "accent": "functionality that sells",
+      "text": "I design and build websites, applications and automations tailored to your business. I listen to your expectations, but I always remember that users come first."
+    },
+    "services": {
+      "title": "How I can",
+      "accent": "help",
+      "text": "From a simple business card site, through an app for your team, to a script that takes boring, repetitive work off your plate.",
+      "websites": {
+        "title": "Websites",
+        "text": "Fast, responsive sites that clearly say what you do and lead visitors to get in touch.",
+        "p1": "Business card websites",
+        "p2": "Landing pages for campaigns"
+      },
+      "webapps": {
+        "title": "Web applications",
+        "text": "Tailor-made tools: dashboards, booking systems, team management apps.",
+        "p1": "Frontend in React + TypeScript",
+        "p2": "Backend in Django / Python"
+      },
+      "uiux": {
+        "title": "UI/UX design",
+        "text": "A design we test on a clickable prototype before writing code — when changes are cheapest.",
+        "p1": "Wireframes and designs in Figma",
+        "p2": "Clickable prototypes"
+      },
+      "automation": {
+        "title": "Automation",
+        "text": "Less clicking, more results. If a process eats hours of your team's time, I'll turn it into a script.",
+        "p1": "Python scripts",
+        "p2": "Integrations and data processing",
+        "example_label": "Example: GPSMaker",
+        "example": "Processing GPS data files: 4–5 days of work → 2 clicks."
+      }
+    },
+    "process": {
+      "title": "How we",
+      "accent": "work together",
+      "text": "Five steps from the first call to post-launch support.",
+      "talk": {
+        "title": "Discussion",
+        "text": "I learn about your business, the site's goal and your brand style. We agree on scope and who prepares copy and photos."
+      },
+      "design": {
+        "title": "Design and quote",
+        "text": "I prepare a visual design and a functional outline. Together with it you get a quote that won't change."
+      },
+      "build": {
+        "title": "Development",
+        "text": "Once the design is approved, I code. I'm available whenever new ideas or changes come up."
+      },
+      "review": {
+        "title": "Presentation",
+        "text": "I show you the finished site or app. Minor tweaks are made right away."
+      },
+      "support": {
+        "title": "Support",
+        "text": "I help with hosting, SEO and questions after launch. Our work doesn't end at handover."
+      }
+    },
+    "tech": {
+      "title": "My",
+      "accent": "stack",
+      "frontend": "Frontend",
+      "backend": "Backend & data",
+      "automation": "Automation",
+      "design": "Design & tools"
+    },
+    "packages": {
+      "title": "Web",
+      "accent": "packages",
+      "text": "A starting point for our conversation — we'll tailor the scope of each package to your needs.",
+      "card": {
+        "title": "Business card website",
+        "text": "A few pages that present you and your offer.",
+        "f1": "Up to 5 pages and a contact form",
+        "f2": "Design matched to your brand",
+        "f3": "Basic SEO and deployment"
+      },
+      "landing": {
+        "title": "Landing page",
+        "text": "A single page focused on one goal — sign-ups, sales or enquiries.",
+        "f1": "Structure that leads to one goal",
+        "f2": "Sections ready for campaigns and ads",
+        "f3": "Form or analytics integration"
+      },
+      "app": {
+        "title": "Custom application",
+        "text": "A web app or automation that solves a specific problem in your company.",
+        "f1": "Process analysis and UI prototype",
+        "f2": "React + Django / Python",
+        "f3": "Deployment and post-launch support"
+      }
+    },
+    "benefits": {
+      "title": "What you",
+      "accent": "get",
+      "responsive": {
+        "title": "Responsive design",
+        "text": "Your site works and looks good on phones, tablets and desktops."
+      },
+      "seo": {
+        "title": "Basic SEO",
+        "text": "Proper heading structure, metadata and clean page URLs."
+      },
+      "speed": {
+        "title": "Speed",
+        "text": "Lean code and optimised images — pages load without the wait."
+      },
+      "support": {
+        "title": "Post-launch support",
+        "text": "I'll help with hosting, updates and questions after launch too."
+      }
+    },
+    "portfolio": {
+      "title": "Selected",
+      "accent": "work",
+      "text": "Websites, apps and automations — with source code to look at."
+    },
+    "faq": {
+      "title": "Frequently asked",
+      "accent": "questions",
+      "hosting": {
+        "q": "Will you take care of hosting?",
+        "a": "Yes. I'll help you choose hosting for the project and set it up. A simple site can often be hosted very cheaply, while an app with a backend needs a server — I'll recommend the most sensible option."
+      },
+      "domain": {
+        "q": "What about the domain?",
+        "a": "If you already have a domain, I'll connect it to the new site. If not, I'll help you choose and register one in your name, so it always belongs to you."
+      },
+      "content": {
+        "q": "Who prepares the copy and photos?",
+        "a": "We settle this in the first call: you can provide ready materials, I can prepare them, or we work with someone else. Graphics and photos are handled the same way."
+      },
+      "time": {
+        "q": "How long does it take?",
+        "a": "It depends on the scope: a landing page or business card site usually takes a few weeks, an application longer. I give you a specific deadline together with the design and quote."
+      }
+    },
+    "cta": {
+      "title": "Let's talk about",
+      "accent": "your project",
+      "text": "Tell me what you need — I'll reply within 1 business day and suggest a time for a short call."
+    }
   },
   "video": {
     "hero": {

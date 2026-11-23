@@ -185,30 +185,152 @@
     "play_video": "Odtwórz film: {{title}}"
   },
   "web_app": {
-    "nav_modern": "Nowoczesne Strony",
-    "nav_discussion": "Rozmowa",
-    "nav_visual": "Projekt wizualny",
-    "nav_development": "Kodowanie ",
-    "nav_presentation": "Prezentacja",
-    "nav_support": "Wsparcie ",
-    "title1": "Nowoczesne strony i aplikacje webowe",
-    "title2": "Funkcjonalność, która sprzedaje",
-    "title_text": "Projektuję i tworzę strony oraz aplikacje webowe dopasowane do Twoich potrzeb. Wsłuchuję się w Twoje oczekiwania, ale zawsze pamiętam, że to użytkownicy są najważniejsi. Sprawdź, jak wygląda współpraca ze mną i jak przebiega proces realizacji Twojego projektu.",
-    "talk": "Rozmowa i",
-    "analysis": "analiza potrzeb",
-    "text3": "Pierwszy krok to luźne spotkanie, na którym omawiamy Twoje oczekiwania. Chcę dowiedzieć się, czym zajmuje się Twoja firma lub marka osobista, jakie wartości reprezentuje, jakie kolory i styl najlepiej ją oddają oraz jaki jest cel strony lub aplikacji. To moment, w którym wspólnie ustalamy wstępny szkic projektu – co ma się znaleźć na stronie, jak ma działać aplikacja i jak powinna komunikować się z użytkownikami. Ustalamy również, kto będzie odpowiedzialny za treści na stronę – czy to ja mam je stworzyć, czy są już gotowe, a może będziemy współpracować z inną osobą. To samo dotyczy grafik i zdjęć – omówimy, czy masz już materiały, czy potrzebujesz ich przygotowania.",
-    "project": "Projekt wizualny i",
-    "concept": "koncepcja działania",
-    "text4": "Na podstawie naszej rozmowy przygotowuję wstępny projekt wizualny strony lub aplikacji oraz jej schemat działania. Nie musisz go akceptować od razu – to etap, w którym wprowadzanie zmian jest wskazane. Nie zawsze się z Tobą zgodzę, bo moim celem jest stworzenie rozwiązania funkcjonalnego i intuicyjnego dla Twoich użytkowników, ale zawsze biorę pod uwagę Twoją wizję. Przy prezentacji projektu wizualnego od razu wycenię również koszt całej realizacji. Cena nie zmieni się od tego momentu, chyba że nastąpią krytyczne sytuacje, takie jak ogromna zmiana w końcowej fazie projektu.",
-    "coding": "Kodowanie i",
-    "implementation": "realizacja",
-    "text5": "Po zaakceptowaniu projektu wizualnego przechodzę do pracy nad stroną lub aplikacją. Na tym etapie mamy nieco mniej kontaktu, ale zawsze jestem dostępny, jeśli pojawią się nowe pomysły lub potrzeba wprowadzenia zmian. Jeśli projekt jest bardziej złożony, możemy umówić się na kolejne spotkanie w celu omówienia postępów.",
-    "presentation": "Prezentacja",
-    "ready": "Gotowego projektu",
-    "text6": "To moment, w którym pokazuję Ci efekt naszej pracy – Twoją stronę lub aplikację! Jeżeli coś Ci się nie podoba, drobne poprawki można wprowadzić od razu. Chcę, żebyś był w pełni zadowolony z projektu, dlatego liczę na Twoją szczerą opinię.",
-    "support": "Wsparcie",
-    "after": "po wdrożeniu",
-    "text7": "Nie kończę współpracy w momencie przekazania projektu! Jeśli potrzebujesz pomocy w doborze hostingu, optymalizacji SEO lub masz pytania dotyczące działania strony, zawsze możesz na mnie liczyć. A jeśli w przyszłości będziesz potrzebować nowej strony lub aplikacji – po prostu daj mi znać, na pewno się dogadamy! 😊"
+    "hero": {
+      "eyebrow": "Strony i aplikacje",
+      "title": "Strony i aplikacje webowe —",
+      "accent": "funkcjonalność, która sprzedaje",
+      "text": "Projektuję i koduję strony, aplikacje oraz automatyzacje dopasowane do Twojego biznesu. Słucham Twoich oczekiwań, ale zawsze pamiętam, że najważniejsi są użytkownicy."
+    },
+    "services": {
+      "title": "W czym",
+      "accent": "pomogę",
+      "text": "Od prostej wizytówki, przez aplikację dla zespołu, po skrypt, który zdejmie z Ciebie nudną, powtarzalną pracę.",
+      "websites": {
+        "title": "Strony www",
+        "text": "Szybkie, responsywne strony, które jasno mówią, czym się zajmujesz, i prowadzą klienta do kontaktu.",
+        "p1": "Strony wizytówki",
+        "p2": "Landing page pod kampanie"
+      },
+      "webapps": {
+        "title": "Aplikacje webowe",
+        "text": "Narzędzia szyte na miarę: panele, systemy rezerwacji, aplikacje do zarządzania zespołem.",
+        "p1": "Frontend w React + TypeScript",
+        "p2": "Backend w Django / Pythonie"
+      },
+      "uiux": {
+        "title": "Projektowanie UI/UX",
+        "text": "Projekt, który przed napisaniem kodu sprawdzamy na klikalnym prototypie — zmiany są wtedy najtańsze.",
+        "p1": "Makiety i projekty w Figmie",
+        "p2": "Klikalne prototypy"
+      },
+      "automation": {
+        "title": "Automatyzacje",
+        "text": "Mniej klikania, więcej efektów. Jeśli proces zabiera Twojemu zespołowi godziny, zamienię go w skrypt.",
+        "p1": "Skrypty w Pythonie",
+        "p2": "Integracje i przetwarzanie danych",
+        "example_label": "Przykład: GPSMaker",
+        "example": "Obróbka plików z danymi GPS: 4–5 dni pracy → 2 kliknięcia."
+      }
+    },
+    "process": {
+      "title": "Jak wygląda",
+      "accent": "współpraca",
+      "text": "Pięć kroków od pierwszej rozmowy do wsparcia po wdrożeniu.",
+      "talk": {
+        "title": "Rozmowa i analiza",
+        "text": "Poznaję Twoją firmę, cel strony i styl marki. Ustalamy zakres oraz kto przygotuje teksty i zdjęcia."
+      },
+      "design": {
+        "title": "Projekt i wycena",
+        "text": "Przygotowuję projekt wizualny i schemat działania. Razem z nim dostajesz wycenę, która już się nie zmienia."
+      },
+      "build": {
+        "title": "Kodowanie",
+        "text": "Po akceptacji projektu koduję. Jestem dostępny, gdy pojawią się nowe pomysły lub zmiany."
+      },
+      "review": {
+        "title": "Prezentacja",
+        "text": "Pokazuję gotową stronę lub aplikację. Drobne poprawki wprowadzam od razu."
+      },
+      "support": {
+        "title": "Wsparcie",
+        "text": "Pomagam z hostingiem, SEO i pytaniami po wdrożeniu. Współpraca nie kończy się na przekazaniu."
+      }
+    },
+    "tech": {
+      "title": "Mój",
+      "accent": "stack",
+      "frontend": "Frontend",
+      "backend": "Backend i dane",
+      "automation": "Automatyzacje",
+      "design": "Projekt i narzędzia"
+    },
+    "packages": {
+      "title": "Pakiety",
+      "accent": "web",
+      "text": "Punkt wyjścia do rozmowy — zakres każdego pakietu dopasujemy do Twoich potrzeb.",
+      "card": {
+        "title": "Strona wizytówka",
+        "text": "Kilka podstron, które przedstawiają Ciebie i Twoją ofertę.",
+        "f1": "Do 5 podstron i formularz kontaktowy",
+        "f2": "Projekt dopasowany do marki",
+        "f3": "Podstawowe SEO i wdrożenie"
+      },
+      "landing": {
+        "title": "Landing page",
+        "text": "Jedna strona nastawiona na konkretny cel — zapis, sprzedaż, kontakt.",
+        "f1": "Struktura prowadząca do jednego celu",
+        "f2": "Sekcje pod kampanie i reklamy",
+        "f3": "Integracja formularza lub analityki"
+      },
+      "app": {
+        "title": "Aplikacja na zamówienie",
+        "text": "Aplikacja webowa lub automatyzacja rozwiązująca konkretny problem w firmie.",
+        "f1": "Analiza procesu i prototyp UI",
+        "f2": "React + Django / Python",
+        "f3": "Wdrożenie i wsparcie po starcie"
+      }
+    },
+    "benefits": {
+      "title": "Co",
+      "accent": "dostajesz",
+      "responsive": {
+        "title": "Responsywność",
+        "text": "Strona działa i wygląda dobrze na telefonie, tablecie i komputerze."
+      },
+      "seo": {
+        "title": "Podstawowe SEO",
+        "text": "Poprawna struktura nagłówków, metadane i czytelne adresy podstron."
+      },
+      "speed": {
+        "title": "Szybkość",
+        "text": "Lekki kod i zoptymalizowane obrazy — strona ładuje się bez czekania."
+      },
+      "support": {
+        "title": "Wsparcie po wdrożeniu",
+        "text": "Pomogę z hostingiem, aktualizacjami i pytaniami także po starcie."
+      }
+    },
+    "portfolio": {
+      "title": "Wybrane",
+      "accent": "realizacje",
+      "text": "Strony, aplikacje i automatyzacje — z kodem do wglądu."
+    },
+    "faq": {
+      "title": "Częste",
+      "accent": "pytania",
+      "hosting": {
+        "q": "Czy zajmiesz się hostingiem?",
+        "a": "Tak. Pomogę dobrać hosting do projektu i skonfiguruję go. Prostą stronę można często utrzymać bardzo tanio, aplikacja z backendem potrzebuje serwera — doradzę najrozsądniejszą opcję."
+      },
+      "domain": {
+        "q": "Co z domeną?",
+        "a": "Jeśli masz domenę, podepnę ją pod nową stronę. Jeśli nie — pomogę wybrać i zarejestrować ją na Ciebie, tak żeby zawsze należała do Ciebie."
+      },
+      "content": {
+        "q": "Kto przygotuje teksty i zdjęcia?",
+        "a": "Ustalamy to na pierwszej rozmowie: możesz dostarczyć gotowe materiały, mogę je przygotować sam albo współpracujemy z inną osobą. Grafiki i zdjęcia omawiamy tak samo."
+      },
+      "time": {
+        "q": "Ile trwa realizacja?",
+        "a": "Zależy od zakresu: landing page czy wizytówka to zwykle kilka tygodni, aplikacja — więcej. Konkretny termin podaję razem z projektem i wyceną."
+      }
+    },
+    "cta": {
+      "title": "Porozmawiajmy o",
+      "accent": "Twoim projekcie",
+      "text": "Napisz, czego potrzebujesz — odpowiem w ciągu 1 dnia roboczego i zaproponuję termin krótkiej rozmowy."
+    }
   },
   "video": {
     "hero": {

@@ -72,3 +72,10 @@ export type ServiceCtaData = {
 export type ServicePortfolioData = SectionCopy & {
   categories: ProjectCategory[];
 };
+
+/** Grupa technologii (np. frontend) — nazwy własne bez tłumaczenia. */
+export type TechGroup = {
+  id: string;
+  labelKey: string;
+  items: string[];
+};
