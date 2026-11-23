@@ -721,7 +721,8 @@
       "work_modes": "Preferred ways of working",
       "contact": "Contact",
       "photo_alt": "Photo of Jacek Kozłowski",
-      "download_cv": "Download CV {{lang}}"
+      "download_cv": "Download CV {{lang}}",
+      "print": "Print / PDF"
     },
     "summary": {
       "title": "About me",

@@ -6,7 +6,7 @@ import PageLoader from "./PageLoader";
 
 /** Wspólny układ podstron: header, treść trasy (ładowana leniwie) i stopka. */
 const Layout = () => (
-  <div className="flex min-h-screen flex-col bg-background font-sans text-fg">
+  <div className="flex min-h-screen flex-col bg-background font-sans text-fg print:min-h-0 print:bg-white">
     <Header />
     <main id="main" className="flex-1">
       <Suspense fallback={<PageLoader />}>

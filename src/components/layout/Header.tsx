@@ -196,7 +196,7 @@ const Header = () => {
   return (
     <>
       <header
-        className={`fixed inset-x-0 top-0 z-50 border-b transition-[background-color,border-color,backdrop-filter] duration-300 ease-out ${
+        className={`fixed inset-x-0 top-0 z-50 border-b print:hidden transition-[background-color,border-color,backdrop-filter] duration-300 ease-out ${
           solid
             ? "border-border bg-background/80 backdrop-blur-md supports-[backdrop-filter]:bg-background/70"
             : "border-transparent bg-transparent"
@@ -255,7 +255,7 @@ const Header = () => {
           <motion.nav
             id="mobile-menu"
             aria-label={t("navbar.main_nav")}
-            className="fixed inset-x-0 bottom-0 top-16 z-40 overflow-y-auto overscroll-contain bg-background lg:hidden"
+            className="fixed inset-x-0 bottom-0 top-16 z-40 overflow-y-auto overscroll-contain bg-background lg:hidden print:hidden"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}

@@ -14,7 +14,7 @@ const Summary = () => {
       accent={t("employer.summary.accent")}
     >
       <motion.div
-        className="flex max-w-3xl flex-col gap-4 text-body text-fg-secondary md:text-body-lg"
+        className="flex max-w-3xl flex-col gap-4 text-body text-fg-secondary md:text-body-lg print:max-w-none print:gap-1 print:!text-[9pt] print:leading-snug"
         variants={fadeIn("bottom")}
         {...reveal}
       >

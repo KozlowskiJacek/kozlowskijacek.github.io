@@ -31,20 +31,22 @@ const TechnicalProjects = () => {
       text={t("employer.projects.text")}
     >
       <motion.ul
-        className="grid gap-4 md:grid-cols-2"
+        className="grid gap-4 md:grid-cols-2 print:grid-cols-2 print:gap-x-6 print:gap-y-1.5"
         variants={staggerContainer(0.06)}
         {...reveal}
       >
         {technicalProjects.map((project) => (
           <motion.li key={project.slug} variants={staggerItem}>
-            <Card as="article" className="flex h-full flex-col p-5 sm:p-6">
-              <p className="text-small text-fg-muted">
+            <Card as="article" className="flex h-full flex-col p-5 sm:p-6 print:rounded-none print:border-0 print:p-0">
+              <p className="text-small text-fg-muted print:hidden">
                 {t(projectCategoryLabelKeys[project.category])} · {project.year}
               </p>
-              <h3 className="mt-1 text-h3 text-fg">{project.title}</h3>
-              <p className="mt-2 text-body text-fg-secondary">{t(project.summaryKey)}</p>
+              <h3 className="mt-1 text-h3 text-fg print:mt-0 print:!text-[9.5pt]">{project.title}</h3>
+              <p className="mt-2 text-body text-fg-secondary print:mt-0 print:!text-[8.5pt] print:leading-snug">
+                {t(project.summaryKey)}
+              </p>
               {project.tech.length > 0 && (
-                <ul aria-label={t("pages.case_study.tech")} className="mt-4 flex flex-wrap gap-2">
+                <ul aria-label={t("pages.case_study.tech")} className="mt-4 flex flex-wrap gap-2 print:hidden">
                   {project.tech.map((tech) => (
                     <li key={tech}>
                       <Badge tone="accent">{tech}</Badge>
@@ -52,7 +54,7 @@ const TechnicalProjects = () => {
                   ))}
                 </ul>
               )}
-              <div className="mt-auto flex flex-wrap gap-x-5 gap-y-2 pt-5">
+              <div className="mt-auto flex flex-wrap gap-x-5 gap-y-2 pt-5 print:hidden">
                 <a
                   href={project.links.github}
                   target="_blank"

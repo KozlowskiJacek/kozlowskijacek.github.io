@@ -66,3 +66,71 @@ textarea:-webkit-autofill:focus {
   box-shadow: 0 0 0px 1000px theme("colors.background") inset !important;
 }
 
+
+/*
+ * Wydruk / „Zapisz jako PDF” strony /dla-pracodawcow (kontener [data-print-cv]).
+ * Układ jednostronicowego CV robią klasy `print:` w komponentach; tutaj tylko reguły globalne:
+ * format strony, białe tło, ciemny tekst i wyłączenie animacji framer-motion
+ * (elementy jeszcze nieodsłonięte przez whileInView mają inline opacity: 0).
+ */
+@media print {
+  @page {
+    size: A4;
+    margin: 10mm 12mm;
+  }
+
+  html {
+    /* Skaluje całą typografię opartą na rem. */
+    font-size: 11px;
+    color-scheme: light;
+  }
+
+  html,
+  body {
+    background: #fff !important;
+    color: theme("colors.print.ink");
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  [data-print-cv] * {
+    opacity: 1 !important;
+    transform: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  /* :where() — zerowa specyficzność, więc klasy `print:!text-…` w komponentach wygrywają. */
+  :where([data-print-cv]) * {
+    background: transparent !important;
+    color: theme("colors.print.ink") !important;
+    border-color: theme("colors.print.line") !important;
+  }
+
+  [data-print-cv] section {
+    min-height: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    break-inside: avoid;
+  }
+
+  [data-print-cv] section + section {
+    margin-top: 9pt;
+  }
+
+  [data-print-cv] h2 span {
+    color: theme("colors.print.accent") !important;
+  }
+
+  [data-print-cv] li,
+  [data-print-cv] article {
+    break-inside: avoid;
+  }
+}

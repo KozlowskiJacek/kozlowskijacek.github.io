@@ -16,10 +16,14 @@ type EmployerSectionProps = {
 
 /** Sekcja CV: nagłówek wyrównany do lewej + treść na pełną szerokość kontenera. */
 const EmployerSection = ({ id, title, accent, text, bg, children }: EmployerSectionProps) => (
-  <Section id={id} bg={bg} padding="compact" className="flex-col items-stretch !gap-8 md:!gap-10">
+  <Section id={id} bg={bg} padding="compact" className="flex-col items-stretch !gap-8 md:!gap-10 print:!gap-1.5 print:!px-0">
     <motion.div variants={fadeIn("bottom")} {...reveal}>
-      <SectionHeading title={title} accent={accent} />
-      {text && <p className="mt-3 max-w-2xl text-body text-fg-secondary">{text}</p>}
+      <SectionHeading
+        title={title}
+        accent={accent}
+        className="print:border-b print:pb-0.5 print:!text-[12pt]"
+      />
+      {text && <p className="mt-3 max-w-2xl text-body text-fg-secondary print:hidden">{text}</p>}
     </motion.div>
     {children}
   </Section>

@@ -721,7 +721,8 @@
       "work_modes": "Preferowane formy pracy",
       "contact": "Kontakt",
       "photo_alt": "Zdjęcie Jacka Kozłowskiego",
-      "download_cv": "Pobierz CV {{lang}}"
+      "download_cv": "Pobierz CV {{lang}}",
+      "print": "Drukuj / PDF"
     },
     "summary": {
       "title": "Krótko",

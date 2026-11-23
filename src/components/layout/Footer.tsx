@@ -17,7 +17,7 @@ const Footer = () => {
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: reduceMotion ? "auto" : "smooth" });
 
   return (
-    <footer className="border-t border-border bg-surface">
+    <footer className="border-t border-border bg-surface print:hidden">
       <Container className="grid grid-cols-2 gap-x-6 gap-y-10 py-14 sm:grid-cols-4 md:grid-cols-[1.4fr_repeat(4,1fr)] md:gap-8">
         <div className="col-span-2 max-w-xs sm:col-span-4 md:col-span-1">
           <Link

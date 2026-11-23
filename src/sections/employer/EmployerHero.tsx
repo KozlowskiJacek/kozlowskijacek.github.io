@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
-import { FaDownload, FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa6";
+import { FaDownload, FaEnvelope, FaGithub, FaLinkedin, FaPrint } from "react-icons/fa6";
 import mainPhoto from "../../assets/img/MainPhoto.png";
 import { staggerContainer, staggerItem } from "../../lib/animations";
 import { career, availabilityLabelKeys, workModeLabelKeys, type Availability } from "../../data/career";
@@ -18,6 +18,9 @@ const availabilityDot: Record<Availability, "accent" | "video" | "muted"> = {
 
 const hasCv = cvLanguages.some((lang) => cvFiles[lang]);
 
+/** Adres bez protokołu — do wersji drukowanej. */
+const bareUrl = (url: string) => url.replace(/^https?:\/\//, "");
+
 /** Nagłówek CV: zdjęcie, imię, headline, dostępność i główne akcje. */
 const EmployerHero = () => {
   const { t } = useTranslation();
@@ -26,44 +29,54 @@ const EmployerHero = () => {
     <Section
       id="employer"
       padding="page"
-      className="flex-col-reverse md:flex-row md:items-center md:justify-between"
+      className="flex-col-reverse md:flex-row md:items-center md:justify-between print:!flex-row print:!items-center print:!gap-5 print:!px-0"
     >
       <motion.div
-        className="w-full md:max-w-[40rem]"
+        className="w-full md:max-w-[40rem] print:max-w-none print:flex-1"
         variants={staggerContainer(0.08)}
         initial="hidden"
         animate="visible"
       >
         <motion.p
           variants={staggerItem}
-          className="mb-4 text-small font-semibold uppercase tracking-wider text-accent"
+          className="mb-4 text-small font-semibold uppercase tracking-wider text-accent print:hidden"
         >
           {t("navbar.employers")}
         </motion.p>
-        <motion.h1 variants={staggerItem} className="font-display text-h1 text-fg">
+        <motion.h1 variants={staggerItem} className="font-display text-h1 text-fg print:!text-[20pt]">
           {career.name}
         </motion.h1>
         <motion.p
           variants={staggerItem}
-          className="mt-4 text-balance text-body-lg text-fg-secondary"
+          className="mt-4 text-balance text-body-lg text-fg-secondary print:mt-0.5 print:!text-[10pt]"
         >
           {t(career.headlineKey)}
         </motion.p>
 
-        <motion.div variants={staggerItem} className="mt-6 flex flex-wrap items-center gap-2">
-          <Tag dot={availabilityDot[career.availability]} className="font-medium text-fg">
+        <motion.div variants={staggerItem} className="mt-6 flex flex-wrap items-center gap-2 print:mt-1.5 print:gap-1">
+          <Tag
+            dot={availabilityDot[career.availability]}
+            className="font-medium text-fg print:px-1.5 print:py-0 print:!text-[8pt]"
+          >
             {t(availabilityLabelKeys[career.availability])}
           </Tag>
-          <ul aria-label={t("employer.hero.work_modes")} className="flex flex-wrap gap-2">
+          <ul aria-label={t("employer.hero.work_modes")} className="flex flex-wrap gap-2 print:gap-1">
             {career.workModes.map((mode) => (
               <li key={mode}>
-                <Tag>{t(workModeLabelKeys[mode])}</Tag>
+                <Tag className="print:px-1.5 print:py-0 print:!text-[8pt]">{t(workModeLabelKeys[mode])}</Tag>
               </li>
             ))}
           </ul>
         </motion.div>
 
-        <motion.div variants={staggerItem} className="mt-8 flex flex-wrap gap-3">
+        {/* Tylko na wydruku: linki zamiast przycisków. */}
+        <p className="hidden print:mt-1.5 print:flex print:flex-wrap print:gap-x-3 print:!text-[8.5pt]">
+          <span>LinkedIn: {bareUrl(career.links.linkedin)}</span>
+          <span>GitHub: {bareUrl(career.links.github)}</span>
+          <span>WWW: {bareUrl(career.links.website)}</span>
+        </p>
+
+        <motion.div variants={staggerItem} className="mt-8 flex flex-wrap gap-3 print:hidden">
           {cvLanguages.map((lang) => {
             const href = cvFiles[lang];
             return (
@@ -97,6 +110,10 @@ const EmployerHero = () => {
             <FaEnvelope aria-hidden="true" />
             {t("employer.hero.contact")}
           </Button>
+          <Button variant="secondary" onClick={() => window.print()}>
+            <FaPrint aria-hidden="true" />
+            {t("employer.hero.print")}
+          </Button>
         </motion.div>
       </motion.div>
 
@@ -105,7 +122,7 @@ const EmployerHero = () => {
         alt={t("employer.hero.photo_alt")}
         width={320}
         height={320}
-        className="aspect-square w-48 shrink-0 rounded-full border border-border-strong bg-surface-elevated object-cover shadow-lift md:w-72"
+        className="aspect-square w-48 shrink-0 rounded-full border border-border-strong bg-surface-elevated object-cover shadow-lift md:w-72 print:w-[26mm] print:border-0"
         initial={{ opacity: 0, scale: 0.96 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5 }}

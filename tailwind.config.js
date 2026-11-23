@@ -41,6 +41,13 @@ export default {
           muted: "#C98A45",
         },
         danger: "#FF8A9B",
+        /** Paleta wydruku (CV na białym papierze). */
+        print: {
+          ink: "#111827",
+          muted: "#4B5563",
+          line: "#D1D5DB",
+          accent: "#0F766E",
+        },
         rating: "#FFD47F",
       },
       boxShadow: {

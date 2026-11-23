@@ -13,7 +13,7 @@ const SkillBadge = ({ item }: { item: SkillItem }) => {
   const label = "labelKey" in item ? t(item.labelKey) : item.label;
 
   return (
-    <Badge className="px-2.5 py-1 text-small">
+    <Badge className="px-2.5 py-1 text-small print:rounded-none print:border-0 print:p-0 print:!text-[8.5pt] print:font-normal">
       {label}
       {item.levelKey && <span className="ml-1 text-fg-muted">· {t(item.levelKey)}</span>}
     </Badge>
@@ -29,24 +29,27 @@ const StackGroupCard = ({ group }: { group: SkillGroup }) => {
   const { details } = group;
 
   return (
-    <Card className="flex h-full flex-col p-5 sm:p-6">
-      <div className="flex items-center gap-3">
-        <span className="grid h-10 w-10 shrink-0 place-items-center rounded-lg border border-accent/20 bg-accent/10 text-lg text-accent">
+    <Card className="flex h-full flex-col p-5 sm:p-6 print:flex-row print:items-baseline print:gap-2 print:rounded-none print:border-0 print:p-0">
+      <div className="flex items-center gap-3 print:w-[30mm] print:shrink-0">
+        <span className="grid h-10 w-10 shrink-0 place-items-center rounded-lg border border-accent/20 bg-accent/10 text-lg text-accent print:hidden">
           <Icon aria-hidden="true" />
         </span>
-        <h3 className="text-h3 text-fg">{t(group.titleKey)}</h3>
+        <h3 className="text-h3 text-fg print:!text-[8.5pt] print:font-semibold print:leading-snug">{t(group.titleKey)}</h3>
       </div>
 
-      <ul className="mt-4 flex flex-wrap gap-2">
+      <ul className="mt-4 flex flex-wrap gap-2 print:mt-0 print:gap-x-1 print:gap-y-0">
         {group.items.map((item) => (
-          <li key={"labelKey" in item ? item.labelKey : item.label}>
+          <li
+            key={"labelKey" in item ? item.labelKey : item.label}
+            className="print:after:content-[','] print:last:after:content-none"
+          >
             <SkillBadge item={item} />
           </li>
         ))}
       </ul>
 
       {details && (
-        <div className="mt-auto pt-4">
+        <div className="mt-auto pt-4 print:hidden">
           <button
             type="button"
             aria-expanded={open}
@@ -120,7 +123,7 @@ const StackGroups = () => {
       text={t("employer.stack.text")}
     >
       <motion.ul
-        className="grid items-start gap-4 md:grid-cols-2 xl:grid-cols-3"
+        className="grid items-start gap-4 md:grid-cols-2 xl:grid-cols-3 print:grid-cols-1 print:gap-y-0.5"
         variants={staggerContainer(0.05)}
         {...reveal}
       >
