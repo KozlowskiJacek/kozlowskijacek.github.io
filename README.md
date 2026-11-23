@@ -11,22 +11,24 @@ Strona jest dwujęzyczna (PL / EN) i ma formularz kontaktowy wysyłany przez Ema
 
 ## Stack
 
-| Obszar     | Technologia                                                |
-| ---------- | ---------------------------------------------------------- |
-| Framework  | React 18 + TypeScript + Vite (SWC)                         |
-| Stylowanie | Tailwind CSS 3 (własna paleta w `tailwind.config.js`)      |
-| Animacje   | framer-motion, keyframes Tailwind                          |
-| Routing    | react-router-dom 7                                         |
-| SEO        | react-helmet-async (komponent `<Seo />`)                   |
-| i18n       | i18next + react-i18next + i18next-browser-languagedetector |
-| Formularz  | @emailjs/browser + canvas-confetti                         |
-| Slider     | Swiper                                                     |
-| Ikony      | react-icons                                                |
-| Deploy     | gh-pages → GitHub Pages                                    |
+| Obszar     | Technologia                                                 |
+| ---------- | ----------------------------------------------------------- |
+| Framework  | React 18 + TypeScript + Vite (SWC)                          |
+| Stylowanie | Tailwind CSS 3 (własna paleta w `tailwind.config.js`)       |
+| Animacje   | framer-motion, keyframes Tailwind                           |
+| Routing    | react-router-dom 7                                          |
+| SEO        | react-helmet-async (komponent `<Seo />`)                    |
+| i18n       | i18next + react-i18next + i18next-browser-languagedetector  |
+| Formularz  | @emailjs/browser + canvas-confetti                          |
+| Slider     | Swiper                                                      |
+| Ikony      | react-icons                                                 |
+| Testy      | Vitest + Testing Library (jsdom)                            |
+| Jakość     | ESLint (typescript-eslint type-checked, jsx-a11y), Prettier |
+| Deploy     | GitHub Actions → GitHub Pages                               |
 
 ## Uruchomienie
 
-Wymagany Node.js 20+.
+Wymagany Node.js 22+ (tak jak w CI).
 
 ```bash
 npm i
@@ -43,7 +45,8 @@ Pozostałe komendy:
 | `npm run lint`            | ESLint                                                                                                                                    |
 | `npm run typecheck`       | sprawdzenie typów (`tsc -b`)                                                                                                              |
 | `npm run i18n:check`      | spójność kluczy PL/EN, brakujące i nieużywane klucze (`-- --prune` usuwa nieużywane)                                                      |
-| `npm run deploy`          | build + publikacja na GitHub Pages                                                                                                        |
+| `npm test`                | testy Vitest (jednorazowo); `npm run test:watch` — tryb obserwowania                                                                      |
+| `npm run format`          | formatuje cały projekt Prettierem (z sortowaniem klas Tailwind); `npm run format:check` tylko sprawdza                                    |
 | `npm run og:render`       | renderuje `scripts/og/og-template.html` do `public/og/default.png` (headless Chrome/Edge)                                                 |
 | `npm run analyze`         | build z mapą rozmiaru bundla w `stats.html` (rollup-plugin-visualizer)                                                                    |
 | `npm run images:optimize` | konwertuje PNG/JPG z `src/assets/img` do WebP (max 1600 px, < 200 KB); warianty AVIF/WebP i srcset generuje przy buildzie vite-imagetools |
@@ -132,13 +135,33 @@ link do Calendly pojawi się po wpisaniu adresu w `contactLinks` (`href: null` =
 Treść polityki prywatności (`/polityka-prywatnosci`) jest w `contact:privacy.*` (`src/translations/{pl,en}/contact.json`), a lista sekcji i data
 aktualizacji w `src/data/privacy.ts`.
 
-## Deploy
+## CI i deploy
 
-```bash
-npm run deploy
-```
+Dwa workflowy w `.github/workflows/`:
 
-Skrypt `predeploy` buduje projekt, a `gh-pages -d dist` publikuje zawartość `dist/` na gałąź `gh-pages`, z której serwowany jest GitHub Pages. Katalog `dist/` nie jest commitowany. Skrypt `postbuild` kopiuje `dist/index.html` do `dist/404.html`, dzięki czemu GitHub Pages serwuje aplikację także przy bezpośrednim wejściu lub odświeżeniu podstron (`/about`, `/web-apps`, `/social-video`).
+| Workflow     | Kiedy                                         | Co robi                                                                                        |
+| ------------ | --------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `ci.yml`     | każdy push i pull request                     | `npm ci` → lint → `format:check` → typecheck → testy → build (bez sekretów)                    |
+| `deploy.yml` | push na `main` lub ręcznie (**Run workflow**) | `npm ci` → testy → build z sekretami EmailJS → publikacja `dist/` przez `actions/deploy-pages` |
+
+Ręczny `npm run deploy` (pakiet `gh-pages`) został usunięty — stronę publikuje tylko `deploy.yml`. Katalog `dist/` nie jest commitowany.
+Skrypt `postbuild` generuje prerenderowane strony i `dist/404.html`, dzięki czemu GitHub Pages serwuje aplikację także przy bezpośrednim wejściu lub odświeżeniu podstron.
+
+### Jednorazowa konfiguracja repozytorium
+
+1. **Sekrety EmailJS** — _Settings → Secrets and variables → Actions → New repository secret_. Dodaj trzy sekrety o tych samych nazwach co w `.env`:
+
+   | Secret                     | Skąd wziąć wartość (panel EmailJS) |
+   | -------------------------- | ---------------------------------- |
+   | `VITE_EMAILJS_SERVICE_ID`  | _Email Services_ → Service ID      |
+   | `VITE_EMAILJS_TEMPLATE_ID` | _Email Templates_ → Template ID    |
+   | `VITE_EMAILJS_PUBLIC_KEY`  | _Account → General_ → Public Key   |
+
+   To klucze publiczne (trafiają do bundla), ale trzymanie ich w sekretach pozwala je zmieniać bez commitów. Bez sekretów build przejdzie, a formularz po wysłaniu pokaże błąd z linkiem `mailto`.
+
+2. **Źródło GitHub Pages** — _Settings → Pages → Build and deployment → Source_ przełącz z **Deploy from a branch** na **GitHub Actions**. Bez tego `actions/deploy-pages` zakończy się błędem.
+3. Po pierwszym udanym deployu gałąź `gh-pages` nie jest już potrzebna — można ją usunąć (`git push origin --delete gh-pages`).
+4. Opcjonalnie: _Settings → Branches_ → reguła dla `main` z wymaganym statusem **CI / Lint, typecheck, test, build** przed merge.
 
 ## Struktura katalogów
 
