@@ -528,7 +528,8 @@
     "error": "Your message could not be sent. Please try again in a moment or reach out on LinkedIn.",
     "topics": {
       "wideo": "Video creation",
-      "web": "Website / app"
+      "web": "Website / app",
+      "praca": "Job offer / recruitment"
     }
   },
   "pages": {
@@ -713,6 +714,49 @@
         "title": "I understand the business goal",
         "text": "Working with clients taught me to ask “why?” before writing code — and to deliver what actually helps."
       }
+    }
+  },
+  "employer": {
+    "hero": {
+      "work_modes": "Preferred ways of working",
+      "contact": "Contact",
+      "photo_alt": "Photo of Jacek Kozłowski"
+    },
+    "summary": {
+      "title": "About me",
+      "accent": "in short"
+    },
+    "stack": {
+      "title": "Tech",
+      "accent": "stack",
+      "text": "Technologies I use in my projects. Expand a group to see real-world examples and certificates.",
+      "show_details": "Show details",
+      "hide_details": "Hide details"
+    },
+    "experience": {
+      "title": "Work",
+      "accent": "experience",
+      "present": "present"
+    },
+    "projects": {
+      "title": "Selected technical",
+      "accent": "projects",
+      "text": "Projects with public code — you can jump straight into the repository.",
+      "code": "Code on GitHub"
+    },
+    "education": {
+      "title": "Education",
+      "accent": "and courses"
+    },
+    "why_me": {
+      "title": "Why",
+      "accent": "me?"
+    },
+    "cta": {
+      "title": "Looking for someone like me",
+      "accent": "for your team?",
+      "text": "Send a few words about the role and the company — I'll reply within one business day.",
+      "button": "Invite me to an interview"
     }
   }
 }

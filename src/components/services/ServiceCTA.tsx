@@ -12,10 +12,12 @@ type ServiceCTAProps = {
   cta: ServiceCtaData;
   tone: ServiceTone;
   topic: ContactTopic;
+  /** Klucz tłumaczenia tekstu przycisku (domyślnie „Zapytaj o wycenę”). */
+  buttonKey?: string;
 };
 
 /** Końcowe wezwanie do kontaktu z tematem podstrony (/kontakt?temat=…). */
-const ServiceCTA = ({ cta, tone, topic }: ServiceCTAProps) => {
+const ServiceCTA = ({ cta, tone, topic, buttonKey = "services.cta_button" }: ServiceCTAProps) => {
   const { t } = useTranslation();
   const classes = toneClasses[tone];
 
@@ -37,7 +39,7 @@ const ServiceCTA = ({ cta, tone, topic }: ServiceCTAProps) => {
           {t(cta.textKey)}
         </p>
         <Button to={contactTopicPath(topic)} variant={classes.button} size="lg" className="mt-8">
-          {t("services.cta_button")}
+          {t(buttonKey)}
           <FaArrowRight aria-hidden="true" className="text-small" />
         </Button>
       </motion.div>

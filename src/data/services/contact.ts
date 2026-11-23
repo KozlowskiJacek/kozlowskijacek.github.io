@@ -8,6 +8,7 @@ export const CONTACT_TOPIC_PARAM = "temat";
 export const contactTopicKeys: Record<ContactTopic, string> = {
   wideo: "contact.topics.wideo",
   web: "contact.topics.web",
+  praca: "contact.topics.praca",
 };
 
 export const isContactTopic = (value: string | null): value is ContactTopic =>

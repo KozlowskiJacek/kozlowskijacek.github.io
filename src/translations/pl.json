@@ -528,7 +528,8 @@
     "error": "Nie udało się wysłać wiadomości. Spróbuj ponownie za chwilę lub napisz do mnie na LinkedIn.",
     "topics": {
       "wideo": "Kreacja wideo",
-      "web": "Strona / aplikacja"
+      "web": "Strona / aplikacja",
+      "praca": "Oferta pracy / rekrutacja"
     }
   },
   "pages": {
@@ -713,6 +714,49 @@
         "title": "Rozumiem cel biznesowy",
         "text": "Współpraca z klientami nauczyła mnie pytać „po co?”, zanim zacznę pisać kod — i dowozić to, co realnie pomaga."
       }
+    }
+  },
+  "employer": {
+    "hero": {
+      "work_modes": "Preferowane formy pracy",
+      "contact": "Kontakt",
+      "photo_alt": "Zdjęcie Jacka Kozłowskiego"
+    },
+    "summary": {
+      "title": "Krótko",
+      "accent": "o mnie"
+    },
+    "stack": {
+      "title": "Stack",
+      "accent": "technologiczny",
+      "text": "Technologie, z których korzystam w projektach. Rozwiń grupę, żeby zobaczyć przykłady z praktyki i certyfikaty.",
+      "show_details": "Pokaż szczegóły",
+      "hide_details": "Ukryj szczegóły"
+    },
+    "experience": {
+      "title": "Doświadczenie",
+      "accent": "zawodowe",
+      "present": "obecnie"
+    },
+    "projects": {
+      "title": "Wybrane projekty",
+      "accent": "techniczne",
+      "text": "Projekty z publicznym kodem — możesz od razu zajrzeć do repozytorium.",
+      "code": "Kod na GitHubie"
+    },
+    "education": {
+      "title": "Edukacja",
+      "accent": "i kursy"
+    },
+    "why_me": {
+      "title": "Dlaczego",
+      "accent": "ja?"
+    },
+    "cta": {
+      "title": "Szukasz kogoś takiego",
+      "accent": "do zespołu?",
+      "text": "Napisz kilka słów o stanowisku i firmie — odpowiem w ciągu jednego dnia roboczego.",
+      "button": "Zaproś mnie na rozmowę"
     }
   }
 }

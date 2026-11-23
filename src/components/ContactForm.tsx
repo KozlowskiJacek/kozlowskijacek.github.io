@@ -13,7 +13,7 @@ const ContactForm = () => {
   const {t} = useTranslation()
   const [status, setStatus] = useState<'idle' | 'sending' | 'error'>('idle');
   const isSending = status === 'sending';
-  // /kontakt?temat=wideo|web — wstępnie wypełnione pole „Temat”.
+  // /kontakt?temat=wideo|web|praca — wstępnie wypełnione pole „Temat”.
   const [searchParams] = useSearchParams();
   const topic = searchParams.get(CONTACT_TOPIC_PARAM);
   const defaultSubject = isContactTopic(topic) ? t(contactTopicKeys[topic]) : undefined;
