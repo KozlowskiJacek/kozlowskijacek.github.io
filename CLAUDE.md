@@ -17,7 +17,7 @@ npm test           # Vitest (testy komponentów i skryptów)
 npm run format     # Prettier (+ sortowanie klas Tailwind)
 ```
 
-Po każdej zmianie kodu uruchom `npm run build`, `npm run lint` i `npm test`. Deploy robi GitHub Actions (`.github/workflows/deploy.yml`) po pushu na `main` — nie ma ręcznego `npm run deploy`.
+Po każdej zmianie kodu uruchom `npm run build`, `npm run lint` i `npm test`. Deploy robi GitHub Actions (`.github/workflows/deploy.yml`) po pushu na `master` — nie ma ręcznego `npm run deploy`.
 
 ## Zasady
 

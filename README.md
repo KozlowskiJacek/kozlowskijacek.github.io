@@ -148,10 +148,10 @@ aktualizacji w `src/data/privacy.ts`.
 
 Dwa workflowy w `.github/workflows/`:
 
-| Workflow     | Kiedy                                         | Co robi                                                                                        |
-| ------------ | --------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `ci.yml`     | każdy push i pull request                     | `npm ci` → lint → `format:check` → typecheck → testy → build (bez sekretów)                    |
-| `deploy.yml` | push na `main` lub ręcznie (**Run workflow**) | `npm ci` → testy → build z sekretami EmailJS → publikacja `dist/` przez `actions/deploy-pages` |
+| Workflow     | Kiedy                                           | Co robi                                                                                        |
+| ------------ | ----------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `ci.yml`     | każdy push i pull request                       | `npm ci` → lint → `format:check` → typecheck → testy → build (bez sekretów)                    |
+| `deploy.yml` | push na `master` lub ręcznie (**Run workflow**) | `npm ci` → testy → build z sekretami EmailJS → publikacja `dist/` przez `actions/deploy-pages` |
 
 Ręczny `npm run deploy` (pakiet `gh-pages`) został usunięty — stronę publikuje tylko `deploy.yml`. Katalog `dist/` nie jest commitowany.
 Skrypt `postbuild` generuje prerenderowane strony i `dist/404.html`, dzięki czemu GitHub Pages serwuje aplikację także przy bezpośrednim wejściu lub odświeżeniu podstron.
@@ -170,7 +170,7 @@ Skrypt `postbuild` generuje prerenderowane strony i `dist/404.html`, dzięki cze
 
 2. **Źródło GitHub Pages** — _Settings → Pages → Build and deployment → Source_ przełącz z **Deploy from a branch** na **GitHub Actions**. Bez tego `actions/deploy-pages` zakończy się błędem.
 3. Po pierwszym udanym deployu gałąź `gh-pages` nie jest już potrzebna — można ją usunąć (`git push origin --delete gh-pages`).
-4. Opcjonalnie: _Settings → Branches_ → reguła dla `main` z wymaganym statusem **CI / Lint, typecheck, test, build** przed merge.
+4. Opcjonalnie: _Settings → Branches_ → reguła dla `master` z wymaganym statusem **CI / Lint, typecheck, test, build** przed merge.
 
 ## Struktura katalogów
 
