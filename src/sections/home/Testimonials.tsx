@@ -57,7 +57,7 @@ const Testimonials = () => {
               <p>{t(selected.textKey)}</p>
             </blockquote>
             <Button variant="secondary" className="mt-6" onClick={() => setSelected(null)}>
-              {t("skills.close_btn")}
+              {t("common.close")}
             </Button>
           </figure>
         )}

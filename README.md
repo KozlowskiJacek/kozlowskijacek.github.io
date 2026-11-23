@@ -69,17 +69,17 @@ Skrypt `predeploy` buduje projekt, a `gh-pages -d dist` publikuje zawartość `d
 ```
 .
 ├── index.html              # punkt wejścia Vite
-├── public/                 # pliki statyczne kopiowane 1:1 (certyfikaty PDF, favicon)
+├── public/                 # pliki statyczne kopiowane 1:1 (Certyfikaty/*.pdf, cv/*.pdf, favicon)
 ├── src/
 │   ├── main.tsx            # bootstrap React + i18n
 │   ├── App.tsx             # routing: /, /about, /web-apps, /social-video (każda trasa w Layout)
 │   ├── pages/              # strony: MainPage, AboutPage, WebAppsPage, VideoMarketingPage
-│   ├── sections/           # sekcje strony głównej (Home, About, MySkills, Projects, …)
+│   ├── sections/           # sekcje stron: home/ (strona główna), employer/ (/dla-pracodawcow), …
 │   ├── components/
 │   │   ├── layout/         # Layout, Header, LanguageSwitcher, Footer, ScrollToTop
 │   │   ├── ui/             # Section, Container, SectionHeading, Button, Modal
 │   │   └── *.tsx           # ContactForm, TestimonialsSlider
-│   ├── data/               # typowane dane: navigation, projects, skills, testimonials, socials
+│   ├── data/               # typowane dane: navigation, projects, career (CV), stack, testimonials, socials
 │   ├── lib/                # animations (framer-motion), i18n, env
 │   ├── hooks/              # useSmoothScroll, useScrollSpy, useNavigateToSection
 │   ├── translations/       # pl.json, en.json (jedyne źródło tłumaczeń)
@@ -87,6 +87,13 @@ Skrypt `predeploy` buduje projekt, a `gh-pages -d dist` publikuje zawartość `d
 ├── tailwind.config.js
 └── vite.config.ts
 ```
+
+## CV do pobrania
+
+Strona `/dla-pracodawcow` pokazuje przyciski „Pobierz CV PL / EN”, jeśli istnieją pliki
+`public/cv/Jacek-Kozlowski-CV-PL.pdf` i `public/cv/Jacek-Kozlowski-CV-EN.pdf`. Ich obecność
+sprawdza `vite.config.ts` przy starcie serwera i buildzie — po dodaniu pliku zrestartuj `npm run dev`.
+Treść CV online (doświadczenie, edukacja, certyfikaty, stack) jest w `src/data/career.ts`.
 
 ## Plan rozwoju
 

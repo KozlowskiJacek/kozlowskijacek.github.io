@@ -95,7 +95,7 @@ const Modal = ({ open, onClose, children, labelledBy, size = "md" }: ModalProps)
         <button
           type="button"
           onClick={onClose}
-          aria-label={t("skills.close_btn")}
+          aria-label={t("common.close")}
           className="absolute right-3 top-3 z-10 grid h-9 w-9 place-items-center rounded-full text-fg-secondary transition-colors hover:bg-surface hover:text-fg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
         >
           <FaXmark aria-hidden="true" />
