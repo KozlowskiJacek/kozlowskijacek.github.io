@@ -34,7 +34,7 @@ const TrustBar = () => {
               {/* Logotypy mają białe tło i szeroki margines — mix-blend-multiply wtapia je w jasny kafel, scale przycina margines. */}
               <div className="group grid h-24 w-24 place-items-center overflow-hidden rounded-xl bg-fg opacity-70 transition-opacity duration-300 hover:opacity-100">
                 <img
-                  src={client.logo}
+                  src={client.image}
                   alt={client.name}
                   title={client.name}
                   loading="lazy"
