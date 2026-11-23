@@ -51,6 +51,7 @@ Pozostałe komendy:
 - Każda strona renderuje `<Seo />` (`src/components/Seo.tsx`): title, description, canonical, Open Graph, Twitter Card i `hreflang`. Teksty pochodzą z kluczy `*.meta.title` / `*.meta.description` w tłumaczeniach.
 - Adres strony, domyślny obraz OG i lista indeksowanych tras: `src/data/site.ts`.
 - Język jest w parametrze adresu: wersja PL to `/sciezka`, EN to `/sciezka?lang=en` (parametr ma pierwszeństwo przed wyborem zapisanym w `localStorage`).
+- `public/robots.txt` wskazuje na `sitemap.xml`, którą po buildzie generuje `scripts/generate-sitemap.mjs` (krok `postbuild`) z `indexableRoutes` w `src/data/site.ts` i slugów opublikowanych projektów. Nowa podstrona = dopisz trasę do `indexableRoutes`.
 - Domyślny obraz OG (1200×630) to `public/og/default.png`. Podmień plik albo zmień szablon `scripts/og/og-template.html` i uruchom `npm run og:render`.
 
 ## Zmienne środowiskowe
