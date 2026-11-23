@@ -1,4 +1,4 @@
-import { useEffect, useRef, type ReactNode } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 import { createPortal } from "react-dom";
 import { useTranslation } from "react-i18next";
 import { FaXmark } from "react-icons/fa6";
@@ -31,6 +31,10 @@ const Modal = ({ open, onClose, children, labelledBy, size = "md" }: ModalProps)
   // Aktualny onClose bez restartu efektu (rodzice często podają funkcję inline).
   const onCloseRef = useRef(onClose);
   onCloseRef.current = onClose;
+  // Portal dopiero po zamontowaniu: HTML z prerenderingu nie ma modala, więc pierwszy render
+  // na kliencie też musi zwrócić null — inaczej hydratacja się nie zgadza.
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
 
   useEffect(() => {
     if (!open) return;
@@ -71,6 +75,8 @@ const Modal = ({ open, onClose, children, labelledBy, size = "md" }: ModalProps)
 
   const sentinel = (edge: "first" | "last") =>
     open && <span tabIndex={0} aria-hidden="true" className="sr-only" onFocus={wrapFocus(edge)} />;
+
+  if (!mounted) return null;
 
   // Portal: modal nie dziedziczy stacking contextu ani transformacji sekcji (animacje framer-motion).
   return createPortal(

@@ -20,11 +20,16 @@ for (const [file, content] of Object.entries(files)) {
   if (lang && ns) (resources[lang] ??= {})[ns] = content;
 }
 
+/** false przy prerenderingu w Node (scripts/prerender.mjs) — tam zawsze język domyślny. */
+const isBrowser = typeof window !== "undefined";
+
+if (isBrowser) i18n.use(LanguageDetector);
+
 i18n
-  .use(LanguageDetector)
   .use(initReactI18next)
   .init({
     resources,
+    ...(isBrowser ? {} : { lng: "pl" }),
     ns: namespaces,
     defaultNS: "common",
     fallbackLng: "pl",
@@ -43,7 +48,9 @@ i18n
 const syncHtmlLang = (lng: string) => {
   document.documentElement.lang = lng.split("-")[0];
 };
-syncHtmlLang(i18n.resolvedLanguage ?? i18n.language ?? "pl");
-i18n.on("languageChanged", syncHtmlLang);
+if (isBrowser) {
+  syncHtmlLang(i18n.resolvedLanguage ?? i18n.language ?? "pl");
+  i18n.on("languageChanged", syncHtmlLang);
+}
 
 export default i18n;

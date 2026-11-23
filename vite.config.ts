@@ -22,15 +22,19 @@ const findCvFiles = (dir = 'public/cv') =>
   )
 
 // https://vite.dev/config/
-export default defineConfig({
+export default defineConfig(({ isSsrBuild }) => ({
   // Strona użytkownika GitHub Pages serwowana z katalogu głównego domeny.
   // Ścieżka względna ('./') psuła ładowanie zasobów na zagnieżdżonych trasach.
   base: '/',
   plugins: [react()],
+  build: {
+    // Build SSR (dist-ssr/, tylko do prerenderingu w scripts/prerender.mjs) nie potrzebuje kopii public/.
+    copyPublicDir: !isSsrBuild,
+  },
   define: {
     __CV_FILES__: JSON.stringify(findCvFiles()),
   },
   json: {
     stringify: false,
   },
-});
+}));

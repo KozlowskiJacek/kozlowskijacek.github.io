@@ -25,4 +25,5 @@ Po każdej zmianie kodu uruchom `npm run build` i `npm run lint`.
 - **Style**: Tailwind (klasy utility i paleta z `tailwind.config.js`) zamiast inline `style={{}}` i nowych plików CSS. Nowe kolory i animacje dodawaj do `tailwind.config.js`.
 - **Dane**: treści o strukturze listowej (projekty, usługi, opinie, umiejętności) trzymaj w `src/data/` jako typowane moduły TS, a nie zaszyte w JSX.
 - **Pliki statyczne**: certyfikaty i inne pliki do pobrania trzymaj w `public/`, a obrazy importowane w komponentach w `src/assets/img/`. Nie commituj `dist/`, `.vite/` ani `node_modules/`.
+- **Prerendering**: strony są renderowane do HTML przy buildzie (`scripts/prerender.mjs`). W renderze komponentów nie używaj `window`/`document`/`localStorage` — tylko w `useEffect` i handlerach — i nie renderuj na kliencie przy pierwszym renderze czegoś innego niż na serwerze. Nowa podstrona do indeksowania → dopisz ją do `indexableRoutes` w `src/data/site.ts`.
 - **Sekrety**: `.env` nie trafia do gita. Nową zmienną dopisz do `.env.example` (bez wartości) i do README.

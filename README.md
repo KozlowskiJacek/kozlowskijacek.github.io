@@ -52,6 +52,8 @@ Pozostałe komendy:
 - Adres strony, domyślny obraz OG i lista indeksowanych tras: `src/data/site.ts`.
 - Język jest w parametrze adresu: wersja PL to `/sciezka`, EN to `/sciezka?lang=en` (parametr ma pierwszeństwo przed wyborem zapisanym w `localStorage`).
 - `public/robots.txt` wskazuje na `sitemap.xml`, którą po buildzie generuje `scripts/generate-sitemap.mjs` (krok `postbuild`) z `indexableRoutes` w `src/data/site.ts` i slugów opublikowanych projektów. Nowa podstrona = dopisz trasę do `indexableRoutes`.
+- **Prerendering**: `npm run build` buduje też wersję SSR (`dist-ssr/`, z `src/entry-server.tsx`), a `scripts/prerender.mjs` renderuje każdą trasę z `indexableRoutes` i każde case study do statycznego HTML z gotowymi meta tagami (`dist/uslugi/web.html` itd.). GitHub Pages serwuje te pliki pod adresami bez `.html` i bez ukośnika. W przeglądarce React hydratuje HTML, gdy zgadza się trasa i język (PL); przy `?lang=en` renderuje stronę od zera. `dist/404.html` to czysty szablon SPA dla nieznanych i starych adresów.
+- Kod renderowany w komponentach musi działać w Node: `window`, `document`, `localStorage` tylko w `useEffect`/handlerach, a pierwszy render na kliencie musi dać to samo co prerendering (np. portal w `Modal` pojawia się dopiero po zamontowaniu).
 - Domyślny obraz OG (1200×630) to `public/og/default.png`. Podmień plik albo zmień szablon `scripts/og/og-template.html` i uruchom `npm run og:render`.
 
 ## Zmienne środowiskowe
