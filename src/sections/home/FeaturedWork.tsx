@@ -11,10 +11,13 @@ import Card from "../../components/ui/Card";
 import Badge from "../../components/ui/Badge";
 import Button from "../../components/ui/Button";
 
-const categoryTone: Record<ProjectCategory, "accent" | "neutral"> = {
+const categoryTone: Record<ProjectCategory, "accent" | "video" | "neutral"> = {
   web: "accent",
   python: "neutral",
   desktop: "neutral",
+  video: "video",
+  graphics: "video",
+  animation: "video",
 };
 
 /** Wybrane realizacje (flaga `featured` w projects.ts) z linkiem do case study. */

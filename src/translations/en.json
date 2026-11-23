@@ -250,16 +250,14 @@
     "questions": "📩 Have questions? Message me!"
   },
   "services": {
-    "my": "My",
-    "services": "Services",
-    "title": "Code. Creation. Automation.",
-    "web_app": "Modern websites and web apps – functionality that sells.",
-    "web_app_text": "I design and create websites and web applications tailored to your needs. I listen to your expectations, but always remember that ✨users✨ are the most important!",
-    "video_editor": "Ads, vlogs, gaming, reels – I create videos that engage, and I’ll take care of your social media too!",
-    "video_editor_text": "I create content from A to Z – I write scripts, create scenes, shoot footage, adjust colors, and add ✨editing magic✨ to craft a content tailored specifically for your audience! 🎬🚀",
-    "automate": "Less clicking, more results – automation that saves your time and money.",
-    "automate_text": "If a process takes too much time for your employee, time they could spend on more productive tasks like working with data instead of clicking through tables, I’ll create automation that will save you time and money! 💡💸",
-    "btn_learn_more": "Learn more!"
+    "cta_button": "Ask for a quote",
+    "see_packages": "See packages",
+    "package_cta": "Ask about this package",
+    "popular": "Most popular",
+    "price_from": "from",
+    "price_custom": "Custom quote",
+    "price_note": "Prices are indicative. You get an exact quote after a short call — and that price doesn't change.",
+    "portfolio_empty": "Work from this category is on its way to the portfolio. Check back soon or get in touch — I'll share examples privately."
   },
   "projects": {
     "my": "My",
@@ -272,7 +270,10 @@
     "categories": {
       "web": "Web",
       "python": "Python",
-      "desktop": "Desktop"
+      "desktop": "Desktop",
+      "video": "Video",
+      "graphics": "Graphics",
+      "animation": "Animation"
     }
   },
   "feedback": {
@@ -297,7 +298,11 @@
     "message": "Your message...",
     "btn_send": "Send",
     "btn_sending": "Sending...",
-    "error": "Your message could not be sent. Please try again in a moment or reach out on LinkedIn."
+    "error": "Your message could not be sent. Please try again in a moment or reach out on LinkedIn.",
+    "topics": {
+      "wideo": "Video creation",
+      "web": "Website / app"
+    }
   },
   "pages": {
     "loading": "Loading page…",

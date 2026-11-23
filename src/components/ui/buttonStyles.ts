@@ -1,4 +1,4 @@
-export type ButtonVariant = "primary" | "secondary" | "ghost";
+export type ButtonVariant = "primary" | "video" | "secondary" | "ghost";
 export type ButtonSize = "sm" | "md" | "lg";
 
 const base =
@@ -10,6 +10,9 @@ const base =
 const variants: Record<ButtonVariant, string> = {
   primary:
     "rounded-full bg-accent text-accent-contrast shadow-card hover:bg-accent-hover hover:shadow-lift motion-safe:hover:-translate-y-0.5",
+  /** Główny przycisk na podstronie wideo (drugi akcent). */
+  video:
+    "rounded-full bg-video text-background shadow-card hover:bg-video-hover hover:shadow-lift motion-safe:hover:-translate-y-0.5",
   secondary:
     "rounded-full border border-border-strong bg-surface/60 text-fg hover:border-accent/50 hover:bg-surface-elevated",
   ghost:

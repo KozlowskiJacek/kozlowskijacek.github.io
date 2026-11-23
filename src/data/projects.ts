@@ -4,13 +4,16 @@ import pythonCode from "../assets/img/python code.jpg";
 import pythonCode1 from "../assets/img/python code 1.jpg";
 import aureliaHR from "../assets/img/AureliaHR.jpg";
 
-export type ProjectCategory = "web" | "python" | "desktop";
+export type ProjectCategory = "web" | "python" | "desktop" | "video" | "graphics" | "animation";
 
 /** Klucze tłumaczeń etykiet kategorii. */
 export const projectCategoryLabelKeys: Record<ProjectCategory, string> = {
   web: "projects.categories.web",
   python: "projects.categories.python",
   desktop: "projects.categories.desktop",
+  video: "projects.categories.video",
+  graphics: "projects.categories.graphics",
+  animation: "projects.categories.animation",
 };
 
 export type ProjectLinks = {

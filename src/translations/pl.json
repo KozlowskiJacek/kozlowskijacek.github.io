@@ -174,16 +174,14 @@
     "close_btn": "Zamknij"
   },
   "services": {
-    "my": "Moje",
-    "services": "Usługi",
-    "title": "Kod. Kreacja. Automatyzacja.",
-    "web_app": "Nowoczesne strony i aplikacje webowe   Funkcjonalność, która sprzedaje.",
-    "web_app_text": "Projektuję i tworzę strony oraz aplikacje webowe dopasowane do Twoich potrzeb. Wsłuchuję się w Twoje oczekiwania, ale zawsze pamiętam, że to ✨użytkownicy✨ są najważniejsi!",
-    "video_editor": "Reklamy, vlogi, gaming, rolki – tworzę filmy, które angażują, a do tego zaopiekuję się Twoimi social media!",
-    "video_editor_text": "Tworzę materiały od A do Z – piszę scenariusze, kreuję sceny, nagrywam ujęcia, dopracowuję kolory i dodaję ✨magię montażu✨, aby stworzyć materiały skrojoną specjalnie dla Twoich odbiorców! 🎬🚀",
-    "automate": "Mniej klikania, więcej efektów – automatyzacja, która oszczędza Twój czas i pieniądze.",
-    "automate_text": "Jeśli jakiś proces zajmuje Twojemu pracownikowi zbyt wiele czasu, który mógłby przeznaczyć na bardziej produktywne zadania niż np. klikanie w tabelki, stworzę automatyzację, która zaoszczędzi Ci czas i pieniądze! 💡💸",
-    "btn_learn_more": "Dowiedz się więcej!"
+    "cta_button": "Zapytaj o wycenę",
+    "see_packages": "Zobacz pakiety",
+    "package_cta": "Zapytaj o pakiet",
+    "popular": "Najczęściej wybierany",
+    "price_from": "od",
+    "price_custom": "Wycena indywidualna",
+    "price_note": "Ceny są orientacyjne. Dokładną wycenę dostajesz po krótkiej rozmowie — i ta kwota już się nie zmienia.",
+    "portfolio_empty": "Realizacje z tej kategorii właśnie trafiają do portfolio. Zajrzyj wkrótce albo napisz — pokażę przykłady prywatnie."
   },
   "web_app": {
     "nav_modern": "Nowoczesne Strony",
@@ -272,7 +270,10 @@
     "categories": {
       "web": "Web",
       "python": "Python",
-      "desktop": "Desktop"
+      "desktop": "Desktop",
+      "video": "Wideo",
+      "graphics": "Grafika",
+      "animation": "Animacja"
     }
   },
   "feedback": {
@@ -297,7 +298,11 @@
     "message": "Twoja wiadomość...",
     "btn_send": "Wyślij",
     "btn_sending": "Wysyłanie...",
-    "error": "Nie udało się wysłać wiadomości. Spróbuj ponownie za chwilę lub napisz do mnie na LinkedIn."
+    "error": "Nie udało się wysłać wiadomości. Spróbuj ponownie za chwilę lub napisz do mnie na LinkedIn.",
+    "topics": {
+      "wideo": "Kreacja wideo",
+      "web": "Strona / aplikacja"
+    }
   },
   "pages": {
     "loading": "Ładowanie strony…",

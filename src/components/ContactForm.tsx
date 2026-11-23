@@ -2,6 +2,8 @@ import React, { useEffect, useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import confetti from 'canvas-confetti';
 import { useTranslation } from 'react-i18next';
+import { useSearchParams } from 'react-router-dom';
+import { CONTACT_TOPIC_PARAM, contactTopicKeys, isContactTopic } from '../data/services/contact';
 import { serviceId, templateId, publicKey } from '../lib/env';
 import { buttonClasses } from './ui/buttonStyles';
 
@@ -11,6 +13,10 @@ const ContactForm = () => {
   const {t} = useTranslation()
   const [status, setStatus] = useState<'idle' | 'sending' | 'error'>('idle');
   const isSending = status === 'sending';
+  // /kontakt?temat=wideo|web — wstępnie wypełnione pole „Temat”.
+  const [searchParams] = useSearchParams();
+  const topic = searchParams.get(CONTACT_TOPIC_PARAM);
+  const defaultSubject = isContactTopic(topic) ? t(contactTopicKeys[topic]) : undefined;
   
   // Zmieniamy kolor tekstu na biały po załadowaniu formularza (autofill)
   useEffect(() => {
@@ -75,7 +81,7 @@ const ContactForm = () => {
         <input type="text" name="user_name" placeholder={t("contact.full_name")} aria-label={t("contact.full_name")} required className={fieldClass} />
         <input type="email" name="user_email" placeholder={t("contact.email")} aria-label={t("contact.email")} required className={fieldClass} />
       </div>
-      <input type="text" name="user_subject" placeholder={t("contact.subject")} aria-label={t("contact.subject")} required className={fieldClass} />
+      <input key={defaultSubject} type="text" name="user_subject" defaultValue={defaultSubject} placeholder={t("contact.subject")} aria-label={t("contact.subject")} required className={fieldClass} />
       <textarea
         cols={30}
         rows={7}
