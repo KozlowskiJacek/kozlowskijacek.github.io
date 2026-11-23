@@ -450,8 +450,6 @@
     }
   },
   "projects": {
-    "my": "Moje",
-    "projects": "Projekty",
     "categories": {
       "video": "Wideo",
       "graphics": "Grafika",
@@ -505,7 +503,8 @@
       "draft": {
         "summary": "Opis realizacji w przygotowaniu."
       }
-    }
+    },
+    "tech_label": "Technologie"
   },
   "feedback": {
     "text1": "Pełen profesjonalizm, ale na luzie – dokładnie tak, jak lubię. Strona działa, wygląda super, a całość przebiegła bez stresu. Polecam każdemu!",
@@ -539,8 +538,14 @@
     "loading": "Ładowanie strony…",
     "cta": "Porozmawiajmy",
     "portfolio": {
-      "title": "Wybrane realizacje",
-      "text": "Projekty wideo, grafiki, strony i aplikacje w jednym miejscu. Wkrótce dodam filtry i szczegółowe case study."
+      "title": "Wybrane",
+      "text": "Wideo, grafiki, animacje, strony, aplikacje i automatyzacje w jednym miejscu. Wybierz kategorię albo otwórz case study, żeby zobaczyć problem, rozwiązanie i efekt.",
+      "accent": "realizacje",
+      "filters_label": "Filtruj realizacje według kategorii",
+      "all": "Wszystko",
+      "results": "Liczba wyświetlanych realizacji: {{count}}",
+      "empty": "Realizacje z tej kategorii pojawią się tu wkrótce. Chcesz zobaczyć przykłady wcześniej? Napisz — podeślę je prywatnie.",
+      "show_all": "Pokaż wszystkie"
     },
     "case_study": {
       "eyebrow": "Case study",

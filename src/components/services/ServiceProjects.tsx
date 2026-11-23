@@ -10,6 +10,7 @@ import Section from "../ui/Section";
 import Card from "../ui/Card";
 import Badge from "../ui/Badge";
 import Button from "../ui/Button";
+import ProjectCover from "../portfolio/ProjectCover";
 import ServiceSectionHeader from "./ServiceSectionHeader";
 import { toneClasses } from "./tone";
 
@@ -49,12 +50,7 @@ const ServiceProjects = ({ id, portfolio, tone, bg = "primary" }: ServiceProject
                 className="group relative flex h-full flex-col overflow-hidden has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-accent has-[:focus-visible]:ring-offset-2 has-[:focus-visible]:ring-offset-background"
               >
                 <div className="aspect-[16/10] overflow-hidden border-b border-border bg-surface">
-                  <img
-                    className="h-full w-full object-cover transition-transform duration-500 ease-out motion-safe:group-hover:scale-[1.03]"
-                    src={project.cover}
-                    alt=""
-                    loading="lazy"
-                  />
+                  <ProjectCover project={project} />
                 </div>
                 <div className="flex flex-1 flex-col gap-3 p-5">
                   <Badge tone={tone} className="self-start">

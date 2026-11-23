@@ -450,8 +450,6 @@
     "play_video": "Play video: {{title}}"
   },
   "projects": {
-    "my": "My",
-    "projects": "Projects",
     "categories": {
       "video": "Video",
       "graphics": "Graphics",
@@ -505,7 +503,8 @@
       "draft": {
         "summary": "Project description coming soon."
       }
-    }
+    },
+    "tech_label": "Technologies"
   },
   "feedback": {
     "text1": "Full professionalism, but with a relaxed vibe – just the way I like it. The website works great, looks awesome, and the whole process was stress-free. Highly recommend!",
@@ -539,8 +538,14 @@
     "loading": "Loading page…",
     "cta": "Let's talk",
     "portfolio": {
-      "title": "Selected work",
-      "text": "Video, graphics, websites and apps in one place. Filters and detailed case studies are coming soon."
+      "title": "Selected",
+      "text": "Video, graphics, animation, websites, apps and automation in one place. Pick a category or open a case study to see the problem, solution and result.",
+      "accent": "work",
+      "filters_label": "Filter work by category",
+      "all": "All",
+      "results": "Projects shown: {{count}}",
+      "empty": "Work from this category is coming soon. Want to see examples sooner? Get in touch and I'll share them privately.",
+      "show_all": "Show all"
     },
     "case_study": {
       "eyebrow": "Case study",

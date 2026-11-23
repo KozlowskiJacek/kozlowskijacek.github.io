@@ -10,6 +10,7 @@ import SectionHeading from "../../components/ui/SectionHeading";
 import Card from "../../components/ui/Card";
 import Badge from "../../components/ui/Badge";
 import Button from "../../components/ui/Button";
+import ProjectCover from "../../components/portfolio/ProjectCover";
 
 
 /** Wybrane realizacje (flaga `featured` w projects.ts) z linkiem do case study. */
@@ -40,12 +41,7 @@ const FeaturedWork = () => {
               className="group relative flex h-full flex-col overflow-hidden has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-accent has-[:focus-visible]:ring-offset-2 has-[:focus-visible]:ring-offset-background"
             >
               <div className="aspect-[16/10] overflow-hidden border-b border-border bg-surface">
-                <img
-                  className="h-full w-full object-cover transition-transform duration-500 ease-out motion-safe:group-hover:scale-[1.03]"
-                  src={project.cover}
-                  alt=""
-                  loading="lazy"
-                />
+                <ProjectCover project={project} />
               </div>
               <div className="flex flex-1 flex-col gap-3 p-5">
                 <Badge tone={projectCategoryTone[project.category]} className="self-start">

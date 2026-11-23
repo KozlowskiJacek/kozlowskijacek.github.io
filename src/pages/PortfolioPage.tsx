@@ -1,20 +1,122 @@
+import { useMemo } from "react";
 import { useTranslation } from "react-i18next";
-import PageIntro from "../components/PageIntro";
-import Projects from "../sections/Projects";
+import { useSearchParams } from "react-router-dom";
+import { AnimatePresence, motion } from "framer-motion";
+import { EASE_OUT, staggerContainer, staggerItem } from "../lib/animations";
+import { isProjectCategory, projectCategories, publishedProjects } from "../data/projects";
+import { paths } from "../data/navigation";
+import Section from "../components/ui/Section";
+import SectionHeading from "../components/ui/SectionHeading";
+import Button from "../components/ui/Button";
+import PortfolioFilters, { type PortfolioFilter } from "../components/portfolio/PortfolioFilters";
+import ProjectCard from "../components/portfolio/ProjectCard";
+
+/** Parametr adresu z aktywnym filtrem: /portfolio?kategoria=video */
+const FILTER_PARAM = "kategoria";
+
+const cardTransition = { duration: 0.3, ease: EASE_OUT };
 
 const PortfolioPage = () => {
   const { t } = useTranslation();
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  const param = searchParams.get(FILTER_PARAM);
+  // Nieznana wartość w adresie → „Wszystko”.
+  const filter: PortfolioFilter = isProjectCategory(param) ? param : "all";
+
+  const items =
+    filter === "all" ? publishedProjects : publishedProjects.filter((project) => project.category === filter);
+
+  const counts = useMemo(() => {
+    const result = { all: publishedProjects.length } as Record<PortfolioFilter, number>;
+    for (const category of projectCategories) {
+      result[category] = publishedProjects.filter((project) => project.category === category).length;
+    }
+    return result;
+  }, []);
+
+  const changeFilter = (next: PortfolioFilter) => {
+    setSearchParams(
+      (prev) => {
+        const params = new URLSearchParams(prev);
+        if (next === "all") params.delete(FILTER_PARAM);
+        else params.set(FILTER_PARAM, next);
+        return params;
+      },
+      // replace: przełączanie filtrów nie zaśmieca historii przycisku „Wstecz”.
+      { replace: true, preventScrollReset: true },
+    );
+  };
 
   return (
-    <>
-      <PageIntro
-        id="portfolio"
-        eyebrow={t("navbar.portfolio")}
-        title={t("pages.portfolio.title")}
-        text={t("pages.portfolio.text")}
-      />
-      <Projects />
-    </>
+    <Section id="portfolio" padding="page" className="flex-col">
+      <motion.header
+        className="flex w-full max-w-3xl flex-col items-center gap-4 text-center"
+        variants={staggerContainer(0.08)}
+        initial="hidden"
+        animate="visible"
+      >
+        <motion.p
+          variants={staggerItem}
+          className="text-small font-semibold uppercase tracking-wider text-accent"
+        >
+          {t("navbar.portfolio")}
+        </motion.p>
+        <SectionHeading
+          as="h1"
+          size="h1"
+          align="center"
+          variants={staggerItem}
+          title={t("pages.portfolio.title")}
+          accent={t("pages.portfolio.accent")}
+        />
+        <motion.p variants={staggerItem} className="max-w-2xl text-body text-fg-secondary md:text-body-lg">
+          {t("pages.portfolio.text")}
+        </motion.p>
+      </motion.header>
+
+      <PortfolioFilters value={filter} onChange={changeFilter} counts={counts} />
+
+      {/* Ogłoszenie liczby wyników po zmianie filtra. */}
+      <p aria-live="polite" className="sr-only">
+        {t("pages.portfolio.results", { count: items.length })}
+      </p>
+
+      {items.length > 0 ? (
+        <motion.ul layout className="grid w-full gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <AnimatePresence mode="popLayout">
+            {items.map((project) => (
+              <motion.li
+                key={project.slug}
+                layout
+                initial={{ opacity: 0, scale: 0.96 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.96 }}
+                transition={cardTransition}
+              >
+                <ProjectCard project={project} />
+              </motion.li>
+            ))}
+          </AnimatePresence>
+        </motion.ul>
+      ) : (
+        <motion.div
+          key={filter}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={cardTransition}
+          className="flex w-full max-w-xl flex-col items-center gap-5 rounded-2xl border border-dashed border-border-strong px-6 py-10 text-center"
+        >
+          <p className="text-body text-fg-secondary">{t("pages.portfolio.empty")}</p>
+          <div className="flex flex-wrap justify-center gap-3">
+            <Button variant="secondary" onClick={() => changeFilter("all")}>
+              {t("pages.portfolio.show_all")}
+            </Button>
+            <Button to={paths.contact}>{t("pages.cta")}</Button>
+          </div>
+        </motion.div>
+      )}
+    </Section>
   );
 };
 

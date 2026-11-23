@@ -13,6 +13,8 @@ const paddings = {
   compact: "py-16 md:py-20",
   /** Pierwsza sekcja pod przezroczystym headerem. */
   hero: "min-h-[100svh] pt-28 pb-16 md:pt-36 md:pb-24",
+  /** Pierwsza sekcja podstrony z treścią o zmiennej wysokości (bez min-height). */
+  page: "pt-28 pb-20 md:pt-36 md:pb-28",
 } as const;
 
 type SectionProps = Omit<ComponentPropsWithoutRef<"section">, "className"> & {

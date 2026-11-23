@@ -12,13 +12,19 @@ const ANCHOR_TIMEOUT_MS = 1500;
  *   (płynnie w obrębie tej samej strony, od razu po zmianie strony).
  */
 const ScrollManager = () => {
-  const { pathname, hash, key } = useLocation();
+  const { pathname, search, hash, key } = useLocation();
   const reduceMotion = useReducedMotion();
   const previousPathname = useRef(pathname);
+  const previousSearch = useRef(search);
 
   useEffect(() => {
     const samePage = previousPathname.current === pathname;
+    const searchChanged = previousSearch.current !== search;
     previousPathname.current = pathname;
+    previousSearch.current = search;
+
+    // Zmiana samego query stringu na tej samej stronie (np. filtr portfolio) — bez przewijania.
+    if (!hash && samePage && searchChanged) return;
 
     if (!hash) {
       window.scrollTo({ top: 0, behavior: "auto" });
@@ -42,7 +48,7 @@ const ScrollManager = () => {
     tryScroll();
     return () => cancelAnimationFrame(frame);
     // `key` — ponowne kliknięcie tej samej kotwicy też przewija.
-  }, [pathname, hash, key, reduceMotion]);
+  }, [pathname, search, hash, key, reduceMotion]);
 
   return null;
 };
