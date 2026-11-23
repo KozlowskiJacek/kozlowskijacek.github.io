@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import { FaQuoteLeft } from "react-icons/fa6";
 import { testimonialMeta, type Testimonial } from "../../data/testimonials";
 import Card from "../../components/ui/Card";
+import Img from "../../components/ui/Img";
 
 /** Powyżej tej długości cytat jest przycinany (3 linie) i pojawia się „Czytaj więcej”. */
 const LONG_QUOTE = 110;
@@ -24,10 +25,10 @@ export const TestimonialAvatar = ({
   if (testimonial.kind === "company") {
     return (
       <span className={`grid shrink-0 place-items-center overflow-hidden rounded-xl bg-fg ${box}`}>
-        <img
-          src={testimonial.image}
+        <Img
+          picture={testimonial.image}
           alt=""
-          loading="lazy"
+          sizes={size === "lg" ? "5rem" : "3.5rem"}
           className="h-full w-full scale-[1.3] object-contain mix-blend-multiply"
         />
       </span>
@@ -35,10 +36,10 @@ export const TestimonialAvatar = ({
   }
 
   return (
-    <img
-      src={testimonial.image}
+    <Img
+      picture={testimonial.image}
       alt=""
-      loading="lazy"
+      sizes={size === "lg" ? "5rem" : "3.5rem"}
       className={`shrink-0 rounded-full border border-border-strong bg-surface object-cover ${box}`}
     />
   );

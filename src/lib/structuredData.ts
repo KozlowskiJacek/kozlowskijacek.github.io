@@ -1,6 +1,6 @@
 import type { TFunction } from "i18next";
 import { useTranslation } from "react-i18next";
-import mainPhoto from "../assets/img/MainPhoto.png";
+import mainPhoto from "../assets/img/main-photo.webp?photo";
 import { career } from "../data/career";
 import { socials } from "../data/socials";
 import { absoluteAsset, absoluteUrl, siteUrl, type SiteLanguage } from "../data/site";
@@ -24,7 +24,7 @@ export const personJsonLd = (t: TFunction) => ({
   "@id": personId,
   name: career.name,
   url: `${siteUrl}/`,
-  image: absoluteAsset(mainPhoto),
+  image: absoluteAsset(mainPhoto.img.src),
   jobTitle: t("common:seo.job_title"),
   description: t("career:headline"),
   sameAs,

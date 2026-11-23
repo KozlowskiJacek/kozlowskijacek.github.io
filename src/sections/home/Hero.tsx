@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import { FaArrowRight } from "react-icons/fa6";
-import mainPhoto from "../../assets/img/MainPhoto.png";
+import mainPhoto from "../../assets/img/main-photo.webp?photo";
 import { fadeIn, staggerContainer, staggerItem } from "../../lib/animations";
 import { paths } from "../../data/navigation";
 import { showreelUrl } from "../../data/hero";

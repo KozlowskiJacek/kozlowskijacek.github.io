@@ -1,14 +1,15 @@
 import { useTranslation } from "react-i18next";
 import PixelAvatarWEB_animacja from "../assets/img/Pixel_Avatar.gif";
-import cat from "../assets/img/Cat 1.png";
-import fullStack from "../assets/img/Pixel full stack.png";
-import development from "../assets/img/Development.png";
-import contentCreator from "../assets/img/Content creator img.png";
+import cat from "../assets/img/cat-1.webp?photo";
+import fullStack from "../assets/img/pixel-full-stack.webp?pixel";
+import development from "../assets/img/development.webp?photo";
+import contentCreator from "../assets/img/content-creator-img.webp?photo";
 import { paths } from "../data/navigation";
 import Seo from "../components/Seo";
 import Section from "../components/ui/Section";
 import SectionHeading from "../components/ui/SectionHeading";
 import Button from "../components/ui/Button";
+import Img from "../components/ui/Img";
 import { motion } from "framer-motion";
 import { slideIn, revealHalf } from "../lib/animations";
 
@@ -42,10 +43,14 @@ const AboutPage = () => {
           variants={slideIn("bottom")}
           {...revealHalf}
         >
+          {/* Animowany GIF (pixel art) — nad zgięciem, więc bez lazy loadingu. */}
           <img
-            className="h-auto w-full"
+            className="h-auto w-full [image-rendering:pixelated]"
             src={PixelAvatarWEB_animacja}
+            width={520}
+            height={568}
             alt=""
+            decoding="async"
           />
         </motion.div>
       </Section>
@@ -56,11 +61,7 @@ const AboutPage = () => {
           variants={slideIn("bottom")}
           {...revealHalf}
         >
-          <img
-            src={fullStack}
-            alt=""
-            className="h-auto w-full"
-          />
+          <Img picture={fullStack} alt="" sizes="(min-width: 768px) 28rem, 24rem" className="h-auto w-full [image-rendering:pixelated]" />
         </motion.div>
         <motion.div
           className="w-full md:max-w-[36rem]"
@@ -101,11 +102,7 @@ const AboutPage = () => {
           variants={slideIn("bottom")}
           {...revealHalf}
         >
-          <img
-            className="h-auto w-full"
-            src={contentCreator}
-            alt=""
-          />
+          <Img picture={contentCreator} alt="" sizes="(min-width: 768px) 28rem, 24rem" className="h-auto w-full" />
         </motion.div>
       </Section>
 
@@ -115,11 +112,7 @@ const AboutPage = () => {
           variants={slideIn("bottom")}
           {...revealHalf}
         >
-          <img
-            src={development}
-            alt=""
-            className="h-auto w-full"
-          />
+          <Img picture={development} alt="" sizes="(min-width: 768px) 28rem, 24rem" className="h-auto w-full" />
         </motion.div>
         <motion.div
           className="w-full md:max-w-[36rem]"
@@ -164,11 +157,7 @@ const AboutPage = () => {
           variants={slideIn("bottom")}
           {...revealHalf}
         >
-          <img
-            className="h-auto w-full"
-            src={cat}
-            alt=""
-          />
+          <Img picture={cat} alt="" sizes="(min-width: 768px) 28rem, 24rem" className="h-auto w-full" />
         </motion.div>
       </Section>
     </div>

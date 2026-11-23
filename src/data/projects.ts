@@ -1,9 +1,9 @@
-import noEscapeCursor from "../assets/img/NoEscapeCursor.png";
-import pythonCode from "../assets/img/python code.jpg";
-import pythonCode1 from "../assets/img/python code 1.jpg";
-import aureliaHR from "../assets/img/AureliaHR.jpg";
-import pixelFullStack from "../assets/img/Pixel full stack.png";
-import contentCreator from "../assets/img/Content creator img.png";
+import noEscapeCursor from "../assets/img/no-escape-cursor.webp?cover";
+import pythonCode from "../assets/img/python-code.webp?cover";
+import pythonCode1 from "../assets/img/python-code-1.webp?cover";
+import aureliaHR from "../assets/img/aurelia-hr.webp?cover";
+import pixelFullStack from "../assets/img/pixel-full-stack.webp?pixel";
+import contentCreator from "../assets/img/content-creator-img.webp?cover";
 
 export type ProjectCategory = "video" | "graphics" | "animation" | "website" | "webapp" | "automation";
 
@@ -49,7 +49,8 @@ export type ProjectLinks = {
 };
 
 export type ProjectImage = {
-  src: string;
+  /** Obraz z presetem vite-imagetools, np. `…/zrzut.webp?cover`. */
+  src: ResponsivePicture;
   /** Klucz tłumaczenia tekstu alternatywnego. */
   altKey: string;
 };
@@ -62,7 +63,7 @@ export type Project = {
   /** Projekt pokazywany w „Wybranych realizacjach” na stronie głównej. */
   featured: boolean;
   /** Okładka: miniatura karty i hero case study. */
-  cover: string;
+  cover: ResponsivePicture;
   /** `contain` dla grafik, których nie wolno przycinać (np. pixel art). Domyślnie `cover`. */
   coverFit?: "cover" | "contain";
   gallery?: ProjectImage[];

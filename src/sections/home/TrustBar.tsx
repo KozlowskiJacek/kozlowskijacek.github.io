@@ -4,6 +4,7 @@ import { reveal, staggerContainer, staggerItem } from "../../lib/animations";
 import { clientLogos } from "../../data/testimonials";
 import { stats } from "../../data/stats";
 import Section from "../../components/ui/Section";
+import Img from "../../components/ui/Img";
 
 /** Pasek zaufania pod hero: logotypy klientów + kilka liczb. */
 const TrustBar = () => {
@@ -33,11 +34,11 @@ const TrustBar = () => {
             <motion.li key={client.id} variants={staggerItem}>
               {/* Logotypy mają białe tło i szeroki margines — mix-blend-multiply wtapia je w jasny kafel, scale przycina margines. */}
               <div className="group grid h-24 w-24 place-items-center overflow-hidden rounded-xl bg-fg opacity-70 transition-opacity duration-300 hover:opacity-100">
-                <img
-                  src={client.image}
+                <Img
+                  picture={client.image}
                   alt={client.name}
                   title={client.name}
-                  loading="lazy"
+                  sizes="6rem"
                   className="h-full w-full scale-[1.3] object-contain mix-blend-multiply grayscale transition-[filter] duration-300 group-hover:grayscale-0"
                 />
               </div>

@@ -11,10 +11,12 @@ type ProjectCardProps = {
   project: Project;
   /** Otwiera film realizacji (tylko projekty z `videoUrl`). */
   onPlay?: (project: Project) => void;
+  /** Karta nad zgięciem — okładka bez lazy loadingu (LCP). */
+  priority?: boolean;
 };
 
 /** Karta realizacji w siatce portfolio: miniatura, kategoria, tytuł, jedno zdanie, technologie. */
-const ProjectCard = ({ project, onPlay }: ProjectCardProps) => {
+const ProjectCard = ({ project, onPlay, priority = false }: ProjectCardProps) => {
   const { t } = useTranslation();
   const tone = projectCategoryTone[project.category];
 
@@ -25,7 +27,7 @@ const ProjectCard = ({ project, onPlay }: ProjectCardProps) => {
       className="group relative flex h-full flex-col overflow-hidden has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-accent has-[:focus-visible]:ring-offset-2 has-[:focus-visible]:ring-offset-background"
     >
       <div className="relative aspect-[16/10] overflow-hidden border-b border-border bg-surface">
-        <ProjectCover project={project} />
+        <ProjectCover project={project} priority={priority} />
         {project.videoUrl && onPlay && (
           // Nad rozciągniętym linkiem (z-10): przycisk otwiera film, reszta karty — case study.
           <button

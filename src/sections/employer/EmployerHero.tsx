@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import { FaDownload, FaEnvelope, FaGithub, FaLinkedin, FaPrint } from "react-icons/fa6";
-import mainPhoto from "../../assets/img/MainPhoto.png";
+import mainPhoto from "../../assets/img/main-photo.webp?photo";
 import { staggerContainer, staggerItem } from "../../lib/animations";
 import { career, availabilityLabelKeys, workModeLabelKeys, type Availability } from "../../data/career";
 import { contactTopicPath } from "../../data/services/contact";
@@ -9,6 +9,7 @@ import { cvFiles, cvLanguages } from "../../data/cv";
 import Section from "../../components/ui/Section";
 import Button from "../../components/ui/Button";
 import Tag from "../../components/ui/Tag";
+import Img from "../../components/ui/Img";
 
 const availabilityDot: Record<Availability, "accent" | "video" | "muted"> = {
   open: "accent",
@@ -117,15 +118,12 @@ const EmployerHero = () => {
         </motion.div>
       </motion.div>
 
-      <motion.img
-        src={mainPhoto}
+      <Img
+        picture={mainPhoto}
         alt={t("career:employer.hero.photo_alt")}
-        width={320}
-        height={320}
+        priority
+        sizes="(min-width: 768px) 18rem, 12rem"
         className="aspect-square w-48 shrink-0 rounded-full border border-border-strong bg-surface-elevated object-cover shadow-lift md:w-72 print:w-[26mm] print:border-0"
-        initial={{ opacity: 0, scale: 0.96 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.5 }}
       />
     </Section>
   );

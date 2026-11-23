@@ -1,15 +1,15 @@
-import serwisGasiorek from "../assets/img/Serwis Gąsiorek Logo_20250519_093746_0000.png";
-import grupaDeGie from "../assets/img/Grupa DeGie Logo_20250519_093717_0000.png";
-import agataImage from "../assets/img/Agata.png";
-import dawidImage from "../assets/img/Dawid.jfif";
-import julkaImage from "../assets/img/Julka.png";
+import serwisGasiorek from "../assets/img/serwis-gasiorek-logo.webp?logo";
+import grupaDeGie from "../assets/img/grupa-de-gie-logo.webp?logo";
+import agataImage from "../assets/img/agata.webp?avatar";
+import dawidImage from "../assets/img/dawid.webp?avatar";
+import julkaImage from "../assets/img/julka.webp?avatar";
 
 export type Testimonial = {
   id: string;
   /** Imię i nazwisko albo nazwa firmy. */
   name: string;
   /** Logo firmy (`kind: "company"`) albo zdjęcie osoby (`kind: "person"`). */
-  image: string;
+  image: ResponsivePicture;
   /** `company` — logo trafia też do paska zaufania na stronie głównej. */
   kind: "company" | "person";
   /** Firma, w której pracuje autor opinii (nazwa własna — bez tłumaczenia). */

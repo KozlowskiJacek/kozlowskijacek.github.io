@@ -88,8 +88,9 @@ const PortfolioPage = () => {
 
       {items.length > 0 ? (
         <motion.ul layout className="grid w-full gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          <AnimatePresence mode="popLayout">
-            {items.map((project) => (
+          {/* initial={false}: karty z prerenderingu widoczne od razu (bez czekania na JS), animacja tylko przy filtrowaniu. */}
+          <AnimatePresence mode="popLayout" initial={false}>
+            {items.map((project, index) => (
               <motion.li
                 key={project.slug}
                 layout
@@ -98,7 +99,7 @@ const PortfolioPage = () => {
                 exit={{ opacity: 0, scale: 0.96 }}
                 transition={cardTransition}
               >
-                <ProjectCard project={project} onPlay={setVideoProject} />
+                <ProjectCard project={project} onPlay={setVideoProject} priority={index === 0} />
               </motion.li>
             ))}
           </AnimatePresence>

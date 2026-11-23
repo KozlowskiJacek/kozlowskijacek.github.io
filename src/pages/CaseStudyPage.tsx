@@ -18,6 +18,7 @@ import Badge from "../components/ui/Badge";
 import Button from "../components/ui/Button";
 import YouTubeEmbed from "../components/ui/YouTubeEmbed";
 import ProjectCover from "../components/portfolio/ProjectCover";
+import Img from "../components/ui/Img";
 import ServiceCTA from "../components/services/ServiceCTA";
 import Seo from "../components/Seo";
 import NotFoundPage from "./NotFoundPage";
@@ -68,7 +69,7 @@ const CaseStudyPage = () => {
   return (
     // key: przejście poprzedni/następny to nowy montaż — animacje wejścia startują od nowa.
     <article key={project.slug}>
-      <Seo title={project.title} description={t(project.summaryKey)} image={project.cover} type="article" />
+      <Seo title={project.title} description={t(project.summaryKey)} image={project.cover.img.src} type="article" />
       <Section id="case-study" padding="page" className="flex-col !items-stretch !gap-10 md:!gap-12">
         <motion.header
           className="flex flex-col items-start gap-4"
@@ -101,7 +102,7 @@ const CaseStudyPage = () => {
             <YouTubeEmbed url={project.videoUrl} title={project.title} />
           ) : (
             <div className="aspect-[16/9] overflow-hidden rounded-2xl border border-border bg-surface shadow-lift">
-              <ProjectCover project={project} loading="eager" zoomOnHover={false} />
+              <ProjectCover project={project} priority sizes="(min-width: 1280px) 72rem, 100vw" zoomOnHover={false} />
             </div>
           )}
         </motion.div>
@@ -185,15 +186,14 @@ const CaseStudyPage = () => {
           >
             {project.gallery.map((image) => (
               <motion.li
-                key={image.src}
+                key={image.src.img.src}
                 variants={staggerItem}
                 className="overflow-hidden rounded-2xl border border-border bg-surface shadow-card"
               >
-                <img
-                  src={image.src}
+                <Img
+                  picture={image.src}
                   alt={t(image.altKey)}
-                  loading="lazy"
-                  decoding="async"
+                  sizes="(min-width: 640px) 36rem, 100vw"
                   className="h-full w-full object-cover"
                 />
               </motion.li>
