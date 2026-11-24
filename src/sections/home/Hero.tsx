@@ -6,7 +6,6 @@ import { paths } from "../../data/navigation";
 import { showreelUrl } from "../../data/hero";
 import Section from "../../components/ui/Section";
 import Button from "../../components/ui/Button";
-import Tag from "../../components/ui/Tag";
 import HeroMedia from "./HeroMedia";
 
 const Hero = () => {
@@ -15,10 +14,8 @@ const Hero = () => {
   return (
     <Section id="home" padding="hero" className="flex-col md:flex-row md:justify-between" backdrop={<HeroBackdrop />}>
       <div className="w-full md:max-w-[38rem]">
-        <div className={enter(0)}>
-          <Tag dot="accent">{t("home:hero.badge")}</Tag>
-        </div>
-        <h1 className={`mt-6 text-balance font-display text-h1 text-fg ${enter(1)}`}>{t("home:hero.title")}</h1>
+        <p className={`text-body font-medium text-fg-secondary ${enter(0)}`}>{t("home:hero.badge")}</p>
+        <h1 className={`mt-4 text-balance font-display text-h1 text-fg ${enter(1)}`}>{t("home:hero.title")}</h1>
         <p className={`mt-6 max-w-xl text-body text-fg-secondary md:text-body-lg ${enter(2)}`}>
           {t("home:hero.subtitle")}
         </p>
@@ -26,8 +23,8 @@ const Hero = () => {
           <Button size="lg" to={{ hash: "services" }}>
             {t("home:hero.cta_offer")}
           </Button>
-          <Button size="lg" variant="secondary" to={paths.employers}>
-            {t("home:hero.cta_recruiter")}
+          <Button size="lg" variant="secondary" to={paths.portfolio}>
+            {t("home:hero.cta_portfolio")}
             <FaArrowRight aria-hidden="true" className="text-small" />
           </Button>
         </div>

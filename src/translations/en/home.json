@@ -1,11 +1,11 @@
 {
   "hello": "Hi, it's me!",
   "hero": {
-    "badge": "Developer · Video Creator",
+    "badge": "Hi, I’m Jacek — I write code and edit video",
     "title": "Websites, apps and video that work for your business",
     "subtitle": "I combine code with creative work. I design and build websites and web apps, and I shoot and edit video — one person from idea to launch.",
     "cta_offer": "See services",
-    "cta_recruiter": "I'm a recruiter"
+    "cta_portfolio": "See my work"
   },
   "trust": {
     "label": "Clients and numbers",
@@ -78,11 +78,11 @@
     "read_more": "Read more"
   },
   "recruiter": {
-    "eyebrow": "For employers",
-    "title": "Looking for a",
-    "accent": "developer?",
-    "text": "A full-stack developer working with React and Django who also understands product and marketing. My profile page covers my stack, certificates and projects with code.",
-    "profile": "View profile",
+    "eyebrow": "Experience",
+    "title": "Under",
+    "accent": "the hood",
+    "text": "Day to day I work with React, TypeScript and Python (Django). My professional profile covers the full stack, experience, certificates and projects with public code.",
+    "profile": "View experience",
     "cv": "Download CV",
     "stack_label": "Main tech stack"
   },

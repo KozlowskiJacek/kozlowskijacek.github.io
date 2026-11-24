@@ -41,8 +41,8 @@
       "result": "The cursor stays where it should, and the program runs in the background with no extra setup."
     },
     "portfolio": {
-      "summary": "This website — a bilingual showcase combining a client offer with a profile for recruiters.",
-      "problem": "The previous version mixed roles and styles, had no offer or path for recruiters, and the code was full of duplication.",
+      "summary": "This website — a bilingual showcase combining a client offer with a professional profile.",
+      "problem": "The previous version mixed roles and styles, had no clear offer or professional profile, and the code was full of duplication.",
       "solution": "I rebuilt the site with React, TypeScript and Tailwind: a UI component system, data in typed modules, PL/EN translations, service pages and a portfolio with case studies.",
       "result": "A consistent, accessible and fast site on GitHub Pages that's easy to extend — a new project is a single data entry."
     },

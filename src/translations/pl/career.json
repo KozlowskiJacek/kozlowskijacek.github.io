@@ -26,7 +26,7 @@
     "p2": "Moje skrypty w Pythonie zostały wdrożone w firmie, w której pracuję — jeden skrócił cykliczne zadanie z 4–5 dni do dwóch kliknięć. Równolegle nagrywam i montuję wideo, więc rozumiem produkt i marketing, a nie tylko kod. Większość projektów prowadzę samodzielnie: od rozpoznania problemu, przez dokumentację, po wdrożenie."
   },
   "availability": {
-    "open": "Otwarty na oferty pracy",
+    "open": "Otwarty na współpracę",
     "freelance_only": "Dostępny tylko na zlecenia",
     "closed": "Obecnie niedostępny"
   },
@@ -40,11 +40,15 @@
   },
   "experience": {
     "company_job": {
-      "company_fallback": "Obecny pracodawca",
-      "position": "Automatyzacja procesów w Pythonie",
+      "position": "Specjalista IT",
       "a1": "Napisałem skrypt w Pythonie (pandas) przetwarzający pliki CSV z danymi GPS aut służbowych — zadanie, które zajmowało 4–5 dni, zajmuje teraz dwa kliknięcia.",
       "a2": "Przygotowałem skrypt do web scrapingu (BeautifulSoup) do analizy ofert konkurencji na zewnętrznych serwisach.",
       "a3": "Oba narzędzia zostały wdrożone i są używane w codziennej pracy działu."
+    },
+    "otinus": {
+      "position": "Video Content Creator",
+      "a1": "Montuję filmy publikowane na kanałach YouTube marki Otinus.",
+      "a2": "Opiekuję się kanałami YouTube w czterech wersjach: PL, DE, EN i USA."
     },
     "freelance": {
       "position": "Web developer i twórca wideo",
@@ -144,7 +148,7 @@
   },
   "employer": {
     "hero": {
-      "work_modes": "Preferowane formy pracy",
+      "work_modes": "Formy współpracy",
       "contact": "Kontakt",
       "photo_alt": "Zdjęcie Jacka Kozłowskiego",
       "download_cv": "Pobierz CV {{lang}}",
@@ -177,14 +181,14 @@
       "accent": "i kursy"
     },
     "why_me": {
-      "title": "Dlaczego",
-      "accent": "ja?"
+      "title": "Jak",
+      "accent": "pracuję"
     },
     "cta": {
-      "title": "Szukasz kogoś takiego",
-      "accent": "do zespołu?",
-      "text": "Napisz kilka słów o stanowisku i firmie — odpowiem w ciągu jednego dnia roboczego.",
-      "button": "Zaproś mnie na rozmowę"
+      "title": "Masz pomysł na",
+      "accent": "współpracę?",
+      "text": "Projekt, zlecenie albo coś na dłużej — napisz kilka słów, odpowiem w ciągu jednego dnia roboczego.",
+      "button": "Napisz do mnie"
     },
     "certificates": {
       "title": "Moje",
@@ -192,7 +196,7 @@
       "open": "Otwórz PDF"
     },
     "meta": {
-      "title": "Dla pracodawców – CV i doświadczenie",
+      "title": "Doświadczenie i CV",
       "description": "Full-stack developer (React · Python/Django): stack, doświadczenie, projekty techniczne, certyfikaty i CV do pobrania."
     }
   }

@@ -97,7 +97,7 @@ W panelu EmailJS (**Email Templates → szablon z `VITE_EMAILJS_TEMPLATE_ID`**) 
 | --------------------- | ------------------- | --------------------------------------------------------- |
 | `{{user_name}}`       | zawsze              | imię i nazwisko                                           |
 | `{{user_email}}`      | zawsze              | e-mail nadawcy — ustaw też jako **Reply To**              |
-| `{{user_subject}}`    | zawsze              | nazwa tematu, np. „Kreacja wideo”, „Oferta pracy”         |
+| `{{user_subject}}`    | zawsze              | nazwa tematu, np. „Kreacja wideo”, „Współpraca na dłużej” |
 | `{{topic}}`           | zawsze              | identyfikator tematu: `wideo`, `web`, `praca`, `inne`     |
 | `{{budget}}`          | wideo / web         | przedział budżetu, np. „5 000 – 10 000 zł”                |
 | `{{deadline}}`        | wideo / web         | termin, np. „Do miesiąca”                                 |
@@ -182,7 +182,7 @@ Skrypt `postbuild` generuje prerenderowane strony i `dist/404.html`, dzięki cze
 │   ├── main.tsx            # bootstrap React + i18n
 │   ├── App.tsx             # routing: /, /about, /web-apps, /social-video (każda trasa w Layout)
 │   ├── pages/              # strony: MainPage, AboutPage, WebAppsPage, VideoMarketingPage
-│   ├── sections/           # sekcje stron: home/ (strona główna), employer/ (/dla-pracodawcow), …
+│   ├── sections/           # sekcje stron: home/ (strona główna), employer/ (/doswiadczenie), …
 │   ├── components/
 │   │   ├── layout/         # Layout, Header, LanguageSwitcher, Footer, ScrollToTop
 │   │   ├── ui/             # Section, Container, SectionHeading, Button, Modal
@@ -199,7 +199,7 @@ Skrypt `postbuild` generuje prerenderowane strony i `dist/404.html`, dzięki cze
 
 ## CV do pobrania
 
-Strona `/dla-pracodawcow` pokazuje przyciski „Pobierz CV PL / EN”, jeśli istnieją pliki
+Strona `/doswiadczenie` pokazuje przyciski „Pobierz CV PL / EN”, jeśli istnieją pliki
 `public/cv/Jacek-Kozlowski-CV-PL.pdf` i `public/cv/Jacek-Kozlowski-CV-EN.pdf`. Ich obecność
 sprawdza `vite.config.ts` przy starcie serwera i buildzie — po dodaniu pliku zrestartuj `npm run dev`.
 Treść CV online (doświadczenie, edukacja, certyfikaty, stack) jest w `src/data/career.ts`.

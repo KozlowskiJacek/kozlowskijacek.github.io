@@ -10,7 +10,7 @@
   "topics": {
     "wideo": "Kreacja wideo",
     "web": "Strona lub aplikacja",
-    "praca": "Oferta pracy",
+    "praca": "Współpraca na dłużej",
     "inne": "Inne"
   },
   "form": {
@@ -19,7 +19,7 @@
     "topic_hints": {
       "wideo": "Nagranie, montaż, grafiki, animacje",
       "web": "Strona www, aplikacja, automatyzacja",
-      "praca": "Rekrutacja, etat, B2B",
+      "praca": "Dłuższy projekt, B2B, praca w zespole",
       "inne": "Pytanie lub współpraca"
     },
     "budget": "Budżet",
@@ -113,7 +113,7 @@
         "p1": "Dane przetwarzam wyłącznie po to, żeby:",
         "l1": "odpowiedzieć na Twoją wiadomość i prowadzić dalszą korespondencję (art. 6 ust. 1 lit. a i f RODO — zgoda i prawnie uzasadniony interes),",
         "l2": "przygotować wycenę lub ofertę na Twoją prośbę (art. 6 ust. 1 lit. b RODO — działania przed zawarciem umowy),",
-        "l3": "w przypadku oferty pracy — wziąć udział w procesie rekrutacji, o który pytasz."
+        "l3": "w przypadku propozycji współpracy długoterminowej — odpowiedzieć na nią i ją omówić."
       },
       "processors": {
         "title": "Komu przekazuję dane",

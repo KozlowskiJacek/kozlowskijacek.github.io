@@ -6,9 +6,8 @@ export type Stat = {
   labelKey: string;
 };
 
-// TODO: wartości są placeholderami — podmienić na prawdziwe liczby przed publikacją.
 export const stats: Stat[] = [
-  { id: "projects", value: "20+", labelKey: "home:trust.stats.projects" },
+  { id: "projects", value: "10+", labelKey: "home:trust.stats.projects" },
   { id: "videos", value: "100+", labelKey: "home:trust.stats.videos" },
-  { id: "years", value: "3", labelKey: "home:trust.stats.years" },
+  { id: "years", value: "5", labelKey: "home:trust.stats.years" },
 ];

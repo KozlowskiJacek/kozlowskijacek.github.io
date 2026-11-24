@@ -5,7 +5,7 @@ export const paths = {
   servicesWeb: "/uslugi/web",
   portfolio: "/portfolio",
   caseStudy: "/portfolio/:slug",
-  employers: "/dla-pracodawcow",
+  employers: "/doswiadczenie",
   about: "/o-mnie",
   contact: "/kontakt",
   privacy: "/polityka-prywatnosci",
@@ -21,6 +21,7 @@ export const legacyRedirects: { from: string; to: string }[] = [
   { from: "/about", to: paths.about },
   { from: "/web-apps", to: paths.servicesWeb },
   { from: "/social-video", to: paths.servicesVideo },
+  { from: "/dla-pracodawcow", to: paths.employers },
 ];
 
 export type NavItem = {

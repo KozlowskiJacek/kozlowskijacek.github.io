@@ -10,7 +10,7 @@
   "topics": {
     "wideo": "Video creation",
     "web": "Website or app",
-    "praca": "Job offer",
+    "praca": "Long-term collaboration",
     "inne": "Other"
   },
   "form": {
@@ -19,7 +19,7 @@
     "topic_hints": {
       "wideo": "Filming, editing, graphics, animation",
       "web": "Website, web app, automation",
-      "praca": "Recruitment, full-time, B2B",
+      "praca": "Longer project, B2B, working in a team",
       "inne": "A question or collaboration"
     },
     "budget": "Budget",
@@ -88,7 +88,7 @@
   },
   "meta": {
     "title": "Contact",
-    "description": "Get in touch about video, a website, an app or a job — via the form, email or LinkedIn."
+    "description": "Get in touch about video, a website, an app or working together — via the form, email or LinkedIn."
   },
   "privacy": {
     "eyebrow": "Personal data",
@@ -113,7 +113,7 @@
         "p1": "I process the data only to:",
         "l1": "reply to your message and continue the conversation (Art. 6(1)(a) and (f) GDPR — consent and legitimate interest),",
         "l2": "prepare a quote or proposal at your request (Art. 6(1)(b) GDPR — steps prior to entering into a contract),",
-        "l3": "for job offers — take part in the recruitment process you are asking about."
+        "l3": "for long-term collaboration proposals — reply and discuss the details."
       },
       "processors": {
         "title": "Who receives the data",

@@ -16,7 +16,7 @@ const employerCta = {
   textKey: "career:employer.cta.text",
 };
 
-/** CV online dla rekruterów i pracodawców (/dla-pracodawcow). */
+/** Profil zawodowy i CV online (/doswiadczenie). */
 const EmployersPage = () => {
   const person = usePersonJsonLd();
 

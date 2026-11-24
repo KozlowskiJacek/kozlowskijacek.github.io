@@ -14,7 +14,7 @@ import {
 } from "react-icons/fa6";
 
 /*
- * Dane strony /dla-pracodawcow (CV online).
+ * Dane strony /doswiadczenie (CV online).
  * Teksty to klucze tłumaczeń (`career.*` w pl.json i en.json); nazwy własne (firmy, szkoły,
  * technologie, certyfikaty) są stałymi stringami. `null` = informacja jeszcze nieznana —
  * UI pomija takie pole. Miejsca do uzupełnienia są oznaczone `TODO`.
@@ -164,7 +164,7 @@ export const career: CareerProfile = {
   summaryKeys: ["career:summary.p1", "career:summary.p2"],
   // TODO: potwierdzić status i preferowane formy współpracy.
   availability: "open",
-  workModes: ["remote", "hybrid", "employment", "b2b"],
+  workModes: ["remote", "hybrid", "b2b", "freelance"],
   // TODO: podać miasto, jeśli ma być widoczne w CV.
   locationKey: null,
   links: {
@@ -175,20 +175,12 @@ export const career: CareerProfile = {
 
   experience: [
     {
-      id: "company-automation",
-      // TODO: nazwa firmy, w której wdrożono skrypty (albo zostaw null — pokaże się opis zastępczy).
-      company: null,
-      companyFallbackKey: "career:experience.company_job.company_fallback",
-      // TODO: dokładna nazwa stanowiska.
-      positionKey: "career:experience.company_job.position",
-      // TODO: potwierdzić datę rozpoczęcia (najstarszy wdrożony skrypt — 2022).
-      period: { from: "2022", to: null },
-      achievementKeys: [
-        "career:experience.company_job.a1",
-        "career:experience.company_job.a2",
-        "career:experience.company_job.a3",
-      ],
-      tech: ["Python", "pandas", "BeautifulSoup"],
+      id: "otinus",
+      company: "Otinus",
+      positionKey: "career:experience.otinus.position",
+      period: { from: "2023", to: null },
+      achievementKeys: ["career:experience.otinus.a1", "career:experience.otinus.a2"],
+      tech: ["YouTube"],
     },
     {
       id: "freelance",
@@ -202,6 +194,18 @@ export const career: CareerProfile = {
         "career:experience.freelance.a3",
       ],
       tech: ["React", "TypeScript", "Tailwind CSS", "DaVinci Resolve", "After Effects"],
+    },
+    {
+      id: "company-automation",
+      company: "Otinus",
+      positionKey: "career:experience.company_job.position",
+      period: { from: "2022", to: "2023" },
+      achievementKeys: [
+        "career:experience.company_job.a1",
+        "career:experience.company_job.a2",
+        "career:experience.company_job.a3",
+      ],
+      tech: ["Python", "pandas", "BeautifulSoup"],
     },
   ],
 

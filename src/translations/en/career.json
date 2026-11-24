@@ -26,7 +26,7 @@
     "p2": "My Python scripts were deployed at the company I work for — one of them cut a recurring task from 4–5 days down to two clicks. I also shoot and edit video, so I understand product and marketing, not just code. I run most projects on my own: from understanding the problem, through the docs, to deployment."
   },
   "availability": {
-    "open": "Open to job offers",
+    "open": "Open to collaboration",
     "freelance_only": "Available for freelance only",
     "closed": "Currently unavailable"
   },
@@ -40,11 +40,15 @@
   },
   "experience": {
     "company_job": {
-      "company_fallback": "Current employer",
-      "position": "Process automation with Python",
+      "position": "IT Specialist",
       "a1": "Wrote a Python (pandas) script that processes CSV files with company-car GPS data — a task that took 4–5 days now takes two clicks.",
       "a2": "Built a web scraping script (BeautifulSoup) to analyse competitors' listings on external websites.",
       "a3": "Both tools were deployed and are used in the team's daily work."
+    },
+    "otinus": {
+      "position": "Video Content Creator",
+      "a1": "I edit videos published on Otinus's YouTube channels.",
+      "a2": "I manage the YouTube channels in four versions: PL, DE, EN and USA."
     },
     "freelance": {
       "position": "Web developer and video creator",
@@ -144,7 +148,7 @@
   },
   "employer": {
     "hero": {
-      "work_modes": "Preferred ways of working",
+      "work_modes": "Ways of working",
       "contact": "Contact",
       "photo_alt": "Photo of Jacek Kozłowski",
       "download_cv": "Download CV {{lang}}",
@@ -177,14 +181,14 @@
       "accent": "and courses"
     },
     "why_me": {
-      "title": "Why",
-      "accent": "me?"
+      "title": "How",
+      "accent": "I work"
     },
     "cta": {
-      "title": "Looking for someone like me",
-      "accent": "for your team?",
-      "text": "Send a few words about the role and the company — I'll reply within one business day.",
-      "button": "Invite me to an interview"
+      "title": "Have an idea for",
+      "accent": "working together?",
+      "text": "A project, a commission or something longer-term — send a few words and I'll reply within one business day.",
+      "button": "Get in touch"
     },
     "certificates": {
       "title": "My",
@@ -192,7 +196,7 @@
       "open": "Open PDF"
     },
     "meta": {
-      "title": "For employers – CV and experience",
+      "title": "Experience & CV",
       "description": "Full-stack developer (React · Python/Django): stack, experience, technical projects, certificates and a downloadable CV."
     }
   }

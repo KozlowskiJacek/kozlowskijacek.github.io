@@ -1,11 +1,11 @@
 {
   "hello": "Cześć, to ja!",
   "hero": {
-    "badge": "Developer · Video Creator",
+    "badge": "Cześć, jestem Jacek — programuję i montuję wideo",
     "title": "Strony, aplikacje i wideo, które pracują na Twój biznes",
     "subtitle": "Łączę programowanie z kreacją. Projektuję i koduję strony oraz aplikacje webowe, a do tego nagrywam i montuję wideo — jedna osoba od pomysłu po publikację.",
     "cta_offer": "Zobacz ofertę",
-    "cta_recruiter": "Jestem rekruterem"
+    "cta_portfolio": "Zobacz realizacje"
   },
   "trust": {
     "label": "Klienci i liczby",
@@ -13,7 +13,7 @@
     "stats": {
       "projects": "zrealizowanych projektów",
       "videos": "zmontowanych filmów",
-      "years": "lata doświadczenia"
+      "years": "lat doświadczenia"
     }
   },
   "services": {
@@ -78,11 +78,11 @@
     "read_more": "Czytaj więcej"
   },
   "recruiter": {
-    "eyebrow": "Dla pracodawców",
-    "title": "Szukasz",
-    "accent": "developera?",
-    "text": "Full-stack z React i Django, który rozumie też produkt i marketing. Na stronie profilu znajdziesz stack, certyfikaty i projekty z kodem.",
-    "profile": "Zobacz profil",
+    "eyebrow": "Doświadczenie",
+    "title": "Technologia",
+    "accent": "pod maską",
+    "text": "Na co dzień pracuję z React, TypeScript i Pythonem (Django). W profilu zawodowym znajdziesz pełny stack, doświadczenie, certyfikaty i projekty z publicznym kodem.",
+    "profile": "Zobacz doświadczenie",
     "cv": "Pobierz CV",
     "stack_label": "Główny stack technologiczny"
   },

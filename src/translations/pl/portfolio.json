@@ -41,8 +41,8 @@
       "result": "Kursor zostaje tam, gdzie powinien, a program działa w tle bez dodatkowej konfiguracji."
     },
     "portfolio": {
-      "summary": "Ta strona — dwujęzyczna wizytówka łącząca ofertę dla klientów z profilem dla rekruterów.",
-      "problem": "Poprzednia wersja strony mieszała role i style, nie miała oferty ani ścieżki dla rekrutera, a kod był pełen duplikatów.",
+      "summary": "Ta strona — dwujęzyczna wizytówka łącząca ofertę dla klientów z profilem zawodowym.",
+      "problem": "Poprzednia wersja strony mieszała role i style, nie miała jasnej oferty ani profilu zawodowego, a kod był pełen duplikatów.",
       "solution": "Przebudowałem stronę na React, TypeScript i Tailwind: system komponentów UI, dane w typowanych modułach, tłumaczenia PL/EN, podstrony usług i portfolio z case study.",
       "result": "Spójna, dostępna i szybka strona na GitHub Pages, którą łatwo rozwijać — nowe realizacje dodaje się jednym wpisem w danych."
     },

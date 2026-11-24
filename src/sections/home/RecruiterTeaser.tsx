@@ -9,13 +9,13 @@ import Section from "../../components/ui/Section";
 import SectionHeading from "../../components/ui/SectionHeading";
 import Button from "../../components/ui/Button";
 
-/** Krótki teaser profilu dla pracodawców: opis, główny stack, profil i CV. */
+/** Teaser profilu zawodowego: opis, główny stack, doświadczenie i CV. */
 const RecruiterTeaser = () => {
   const { t, i18n } = useTranslation();
   const cvUrl = cvUrlFor(i18n.resolvedLanguage ?? "pl");
 
   return (
-    <Section id="recruiters" className="flex-col lg:flex-row lg:items-center lg:justify-between">
+    <Section id="experience" className="flex-col lg:flex-row lg:items-center lg:justify-between">
       <motion.div className="w-full lg:max-w-md" variants={fadeIn("bottom")} {...reveal}>
         <p className="mb-4 text-small font-semibold uppercase tracking-wider text-accent">
           {t("home:recruiter.eyebrow")}
