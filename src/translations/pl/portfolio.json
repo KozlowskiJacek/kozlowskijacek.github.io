@@ -46,6 +46,11 @@
       "solution": "Przebudowałem stronę na React, TypeScript i Tailwind: system komponentów UI, dane w typowanych modułach, tłumaczenia PL/EN, podstrony usług i portfolio z case study.",
       "result": "Spójna, dostępna i szybka strona na GitHub Pages, którą łatwo rozwijać — nowe realizacje dodaje się jednym wpisem w danych."
     },
+    "rafclean": {
+      "summary": "Strona internetowa firmy RafClean z Nowej Wsi Wielkiej, która zajmuje się myciem ciśnieniowym i udrażnianiem kanalizacji.",
+      "problem": "Firma potrzebowała strony, która przedstawi jej usługi i ułatwi klientom z okolicy kontakt i zamówienie.",
+      "solution": "Zaprojektowałem i zbudowałem stronę wizytówkę z przejrzystą ofertą usług i szybkim kontaktem, dopasowaną do telefonów."
+    },
     "draft": {
       "summary": "Opis realizacji w przygotowaniu."
     }

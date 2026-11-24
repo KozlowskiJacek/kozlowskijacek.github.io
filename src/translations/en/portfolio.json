@@ -46,6 +46,11 @@
       "solution": "I rebuilt the site with React, TypeScript and Tailwind: a UI component system, data in typed modules, PL/EN translations, service pages and a portfolio with case studies.",
       "result": "A consistent, accessible and fast site on GitHub Pages that's easy to extend — a new project is a single data entry."
     },
+    "rafclean": {
+      "summary": "A website for RafClean from Nowa Wieś Wielka, a company offering pressure washing and drain cleaning.",
+      "problem": "The company needed a website that presents its services and makes it easy for local customers to get in touch and place an order.",
+      "solution": "I designed and built a business website with a clear service offer and quick contact, optimised for phones."
+    },
     "draft": {
       "summary": "Project description coming soon."
     }

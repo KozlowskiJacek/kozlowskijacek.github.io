@@ -4,6 +4,7 @@ import pythonCode1 from "../assets/img/python-code-1.webp?cover";
 import aureliaHR from "../assets/img/aurelia-hr.webp?cover";
 import pixelFullStack from "../assets/img/pixel-full-stack.webp?pixel";
 import contentCreator from "../assets/img/content-creator-img.webp?cover";
+import rafcleanLogo from "../assets/img/rafclean-logo.png?cover";
 
 export type ProjectCategory = "video" | "graphics" | "animation" | "website" | "webapp" | "automation";
 
@@ -177,6 +178,24 @@ const projects: Project[] = [
       live: "https://jacekkozlowski.github.io",
     },
   },
+  {
+    slug: "rafclean",
+    title: "RafClean",
+    category: "website",
+    audience: "client",
+    featured: true,
+    cover: rafcleanLogo,
+    coverFit: "contain",
+    summaryKey: "portfolio:items.rafclean.summary",
+    problemKey: "portfolio:items.rafclean.problem",
+    solutionKey: "portfolio:items.rafclean.solution",
+    // TODO: uzupełnić stack strony RafClean.
+    tech: [],
+    roleKey: "portfolio:roles.design_dev",
+    // TODO: potwierdzić rok realizacji.
+    year: 2026,
+    links: { live: "https://rafclean.net.pl/" },
+  },
 
   // --- Szkice: niewidoczne, dopóki `draft: true` -------------------------------------------
   // TODO: realizacja wideo — okładka, link do YouTube, opis klienta, rola, rok.
@@ -221,21 +240,6 @@ const projects: Project[] = [
     summaryKey: "portfolio:items.draft.summary",
     tech: [],
     roleKey: "portfolio:roles.animation",
-    year: 2026,
-    links: {},
-    draft: true,
-  },
-  // TODO: strona klienta — okładka, link live, problem / rozwiązanie / efekt.
-  {
-    slug: "client-website-placeholder",
-    title: "TODO: strona klienta",
-    category: "website",
-    audience: "client",
-    featured: false,
-    cover: contentCreator,
-    summaryKey: "portfolio:items.draft.summary",
-    tech: [],
-    roleKey: "portfolio:roles.design_dev",
     year: 2026,
     links: {},
     draft: true,
