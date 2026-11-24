@@ -75,7 +75,7 @@ const ContactForm = () => {
   const errorFor = (field: ContactField) => {
     const error = errors[field];
     if (!error || !(submitAttempted || touched[field])) return undefined;
-    return t(error.key, error.params);
+    return t(error.key, error.params ?? {});
   };
 
   /** Atrybuty dostępności kontrolki z ewentualnym błędem. */
