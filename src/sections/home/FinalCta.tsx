@@ -13,14 +13,10 @@ const FinalCta = () => {
   return (
     <Section id="cta" padding="compact" className="flex-col">
       <motion.div
-        className="relative isolate w-full overflow-hidden rounded-3xl border border-accent/20 bg-surface-elevated px-6 py-14 text-center shadow-card sm:px-12 md:py-20"
+        className="w-full rounded-3xl border border-border bg-surface-elevated px-6 py-14 text-center shadow-card sm:px-12 md:py-20"
         variants={fadeIn("bottom")}
         {...reveal}
       >
-        <div
-          aria-hidden="true"
-          className="absolute inset-0 -z-10 bg-gradient-to-b from-accent/10 via-transparent to-transparent"
-        />
         <h2 className="text-balance font-display text-h2 text-fg">
           {t("home:cta.title")} <span className="text-accent">{t("home:cta.accent")}</span>
         </h2>

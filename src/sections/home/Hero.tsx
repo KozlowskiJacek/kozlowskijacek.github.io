@@ -39,13 +39,10 @@ const Hero = () => {
   );
 };
 
-/** Delikatna poświata i siatka punktów pod hero. */
+/** Spokojne tło hero: bez poświat i gradientów, tylko cienka linia oddzielająca od kolejnej sekcji. */
 const HeroBackdrop = () => (
   <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10">
-    <div className="absolute -top-48 left-1/2 h-[36rem] w-[56rem] -translate-x-1/2 rounded-full bg-accent/[0.07] blur-3xl" />
-    <div className="absolute -right-40 bottom-0 h-[24rem] w-[32rem] rounded-full bg-video/[0.05] blur-3xl" />
-    <div className="absolute inset-0 bg-[radial-gradient(rgb(255_255_255/0.05)_1px,transparent_1px)] [background-size:28px_28px] [mask-image:radial-gradient(ellipse_at_top,black_20%,transparent_70%)]" />
-    <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-b from-transparent to-background" />
+    <div className="absolute inset-x-0 bottom-0 h-px bg-border" />
   </div>
 );
 
