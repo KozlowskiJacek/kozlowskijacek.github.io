@@ -1,7 +1,7 @@
 import { paths } from "./navigation";
 
 /** Adres produkcyjny strony (bez końcowego ukośnika) — canonical, og:url, sitemap. */
-export const siteUrl = "https://jacekkozlowski.github.io";
+export const siteUrl = "https://kozlowskijacek.github.io";
 
 export const siteName = "Jacek Kozłowski";
 

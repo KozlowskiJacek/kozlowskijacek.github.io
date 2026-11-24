@@ -170,7 +170,7 @@ export const career: CareerProfile = {
   links: {
     linkedin: "https://www.linkedin.com/in/jacek-kozłowski-a43b21265/",
     github: "https://github.com/KozlowskiJacek",
-    website: "https://jacekkozlowski.github.io",
+    website: "https://kozlowskijacek.github.io",
   },
 
   experience: [

@@ -1,6 +1,6 @@
 # Portfolio-web
 
-Osobista strona-wizytówka Jacka Kozłowskiego: **https://jacekkozlowski.github.io**
+Osobista strona-wizytówka Jacka Kozłowskiego: **https://kozlowskijacek.github.io**
 
 Strona ma dwa cele:
 

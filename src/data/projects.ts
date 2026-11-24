@@ -174,8 +174,8 @@ const projects: Project[] = [
     roleKey: "portfolio:roles.design_dev",
     year: 2025,
     links: {
-      github: "https://github.com/KozlowskiJacek/jacekkozlowski.github.io",
-      live: "https://jacekkozlowski.github.io",
+      github: "https://github.com/KozlowskiJacek/kozlowskijacek.github.io",
+      live: "https://kozlowskijacek.github.io",
     },
   },
   {
