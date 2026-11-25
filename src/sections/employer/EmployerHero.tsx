@@ -63,12 +63,13 @@ const EmployerHero = () => {
           <span>WWW: {bareUrl(career.links.website)}</span>
         </p>
 
-        <div className={`mt-8 flex flex-wrap gap-3 print:hidden ${enter(4)}`}>
+        {/* Telefon: siatka 2 kolumn (CV i kontakt na całą szerokość), od `sm` zwykły rząd przycisków. */}
+        <div className={`mt-8 grid grid-cols-2 gap-3 sm:flex sm:flex-wrap print:hidden ${enter(4)}`}>
           {cvLanguages.map((lang) => {
             const href = cvFiles[lang];
             return (
               href && (
-                <Button key={lang} href={href} download>
+                <Button key={lang} href={href} download className="col-span-2">
                   <FaDownload aria-hidden="true" />
                   {t("career:employer.hero.download_cv", { lang: lang.toUpperCase() })}
                 </Button>
@@ -83,11 +84,12 @@ const EmployerHero = () => {
             <FaGithub aria-hidden="true" />
             GitHub
           </Button>
-          <Button to={contactTopicPath("praca")} variant={hasCv ? "secondary" : "primary"}>
+          <Button to={contactTopicPath("praca")} variant={hasCv ? "secondary" : "primary"} className="col-span-2">
             <FaEnvelope aria-hidden="true" />
             {t("career:employer.hero.contact")}
           </Button>
-          <Button variant="secondary" onClick={() => window.print()}>
+          {/* Drukowanie CV z telefonu to rzadki przypadek — przycisk dopiero od `sm`. */}
+          <Button variant="secondary" onClick={() => window.print()} className="hidden sm:inline-flex">
             <FaPrint aria-hidden="true" />
             {t("career:employer.hero.print")}
           </Button>

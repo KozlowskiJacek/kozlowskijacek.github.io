@@ -48,7 +48,9 @@ const ServiceHero = ({ hero, tone, topic, secondaryHref, media }: ServiceHeroPro
         >
           {t(hero.textKey)}
         </p>
-        <div className={`mt-8 flex flex-wrap items-center gap-4 ${centered ? "justify-center" : ""} ${enter(3)}`}>
+        <div
+          className={`mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4 ${centered ? "sm:justify-center" : ""} ${enter(3)}`}
+        >
           <Button to={contactTopicPath(topic)} variant={classes.button} size="lg">
             {t("services:shared.cta_button")}
             <FaArrowRight aria-hidden="true" className="text-small" />

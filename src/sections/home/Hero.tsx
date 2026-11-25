@@ -19,7 +19,7 @@ const Hero = () => {
         <p className={`mt-6 max-w-xl text-body text-fg-secondary md:text-body-lg ${enter(2)}`}>
           {t("home:hero.subtitle")}
         </p>
-        <div className={`mt-8 flex flex-wrap items-center gap-3 sm:gap-4 ${enter(3)}`}>
+        <div className={`mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4 ${enter(3)}`}>
           <Button size="lg" to={{ hash: "services" }}>
             {t("home:hero.cta_offer")}
           </Button>
@@ -29,7 +29,7 @@ const Hero = () => {
           </Button>
         </div>
       </div>
-      <div className={`w-full max-w-sm md:max-w-md ${enter(2)}`}>
+      <div className={`w-full max-w-[18rem] sm:max-w-sm md:max-w-md ${enter(2)}`}>
         <HeroMedia image={mainPhoto} videoSrc={showreelUrl} />
       </div>
     </Section>

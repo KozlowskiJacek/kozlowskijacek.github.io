@@ -22,7 +22,7 @@ const RecruiterTeaser = () => {
         </p>
         <SectionHeading title={t("home:recruiter.title")} accent={t("home:recruiter.accent")} />
         <p className="mt-4 text-body text-fg-secondary md:text-body-lg">{t("home:recruiter.text")}</p>
-        <div className="mt-8 flex flex-wrap gap-3 sm:gap-4">
+        <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
           <Button to={paths.employers} size="lg">
             {t("home:recruiter.profile")}
             <FaArrowRight aria-hidden="true" className="text-small" />

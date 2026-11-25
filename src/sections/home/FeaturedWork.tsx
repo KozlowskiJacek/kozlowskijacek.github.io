@@ -12,6 +12,9 @@ import Badge from "../../components/ui/Badge";
 import Button from "../../components/ui/Button";
 import ProjectCover from "../../components/portfolio/ProjectCover";
 
+/** Liczba realizacji widocznych na telefonie (poniżej `sm`). */
+const MOBILE_LIMIT = 3;
+
 /** Wybrane realizacje (flaga `featured` w projects.ts) z linkiem do case study. */
 const FeaturedWork = () => {
   const { t } = useTranslation();
@@ -28,8 +31,13 @@ const FeaturedWork = () => {
       </motion.div>
 
       <motion.ul className="grid w-full gap-6 sm:grid-cols-2 lg:grid-cols-3" variants={staggerContainer()} {...reveal}>
-        {featuredProjects.map((project) => (
-          <motion.li key={project.slug} variants={staggerItem}>
+        {featuredProjects.map((project, index) => (
+          // Na telefonie 3 realizacje (reszta pod „Zobacz wszystkie”) — bez tego sekcja zajmuje kilka ekranów.
+          <motion.li
+            key={project.slug}
+            variants={staggerItem}
+            className={index >= MOBILE_LIMIT ? "hidden sm:block" : undefined}
+          >
             <Card
               as="article"
               interactive
@@ -64,7 +72,7 @@ const FeaturedWork = () => {
         ))}
       </motion.ul>
 
-      <Button to={paths.portfolio} variant="secondary" size="lg">
+      <Button to={paths.portfolio} variant="secondary" size="lg" className="w-full sm:w-auto">
         {t("home:work.all")}
         <FaArrowRight aria-hidden="true" className="text-small" />
       </Button>

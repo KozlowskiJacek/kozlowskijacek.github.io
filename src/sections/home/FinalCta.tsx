@@ -21,7 +21,7 @@ const FinalCta = () => {
           {t("home:cta.title")} <span className="text-accent">{t("home:cta.accent")}</span>
         </h2>
         <p className="mx-auto mt-4 max-w-xl text-body text-fg-secondary md:text-body-lg">{t("home:cta.text")}</p>
-        <Button to={paths.contact} size="lg" className="mt-8">
+        <Button to={paths.contact} size="lg" className="mt-8 w-full sm:w-auto">
           {t("home:cta.button")}
           <FaArrowRight aria-hidden="true" className="text-small" />
         </Button>
