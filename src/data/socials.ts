@@ -16,7 +16,7 @@ export const socials: Social[] = [
     id: "instagram",
     label: "Instagram",
     icon: FaInstagram,
-    href: "https://www.instagram.com/life_of_jaca/",
+    href: "https://www.instagram.com/life_of_jack_k/",
   },
   // TODO: podać adres kanału YouTube.
   { id: "youtube", label: "YouTube", icon: FaYoutube, href: null },
