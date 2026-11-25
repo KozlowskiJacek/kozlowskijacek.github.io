@@ -34,6 +34,8 @@ const imagePresets: Record<string, Record<string, string>> = {
   photo: { w: "400;640;960" },
   /** Okładki realizacji: karty (~400 px) i hero case study (do ~1100 px). */
   cover: { w: "480;800;1200" },
+  /** Pionowe miniatury rolek z Instagrama (9:16, kafel ~200–280 px). */
+  reel: { w: "300;600" },
   /** Pixel art — skalowanie bez wygładzania i bez strat. */
   pixel: { w: "404;808", kernel: "nearest", lossless: "true" },
 };

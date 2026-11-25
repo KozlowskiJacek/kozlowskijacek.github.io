@@ -70,6 +70,28 @@
       "description": "Wideo, grafiki, animacje, strony, aplikacje i automatyzacje. Zobacz case studies: problem, rozwiązanie i efekt."
     }
   },
+  "reels": {
+    "eyebrow": "Instagram",
+    "title": "Rolki",
+    "accent": "z Instagrama",
+    "text": "Krótkie formy, które nagrywam i montuję sam — o moich projektach i o tym, nad czym właśnie pracuję.",
+    "watch": "— obejrzyj rolkę na Instagramie",
+    "profile": "Zobacz wszystkie rolki na Instagramie",
+    "items": {
+      "first_avatars": {
+        "title": "Pierwsze awatary",
+        "summary": "Rolka o moich pierwszych awatarach."
+      },
+      "nextturn": {
+        "title": "NextTurn, dziś Taverno",
+        "summary": "Pierwsza rolka o tym, że tworzę NextTurn — projekt, który dziś nazywa się Taverno."
+      },
+      "noescapecursor": {
+        "title": "NoEscapeCursor",
+        "summary": "Rolka o moim programie, który nie pozwala kursorowi uciec z gry na drugi monitor."
+      }
+    }
+  },
   "case_study": {
     "eyebrow": "Case study",
     "back": "Wróć do portfolio",

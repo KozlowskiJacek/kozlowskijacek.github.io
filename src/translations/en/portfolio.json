@@ -70,6 +70,28 @@
       "description": "Video, graphics, animation, websites, apps and automations. Browse case studies: problem, solution and result."
     }
   },
+  "reels": {
+    "eyebrow": "Instagram",
+    "title": "Instagram",
+    "accent": "reels",
+    "text": "Short-form videos I shoot and edit myself — about my projects and what I'm working on right now.",
+    "watch": "— watch the reel on Instagram",
+    "profile": "See all reels on Instagram",
+    "items": {
+      "first_avatars": {
+        "title": "First avatars",
+        "summary": "A reel about my first avatars."
+      },
+      "nextturn": {
+        "title": "NextTurn, now Taverno",
+        "summary": "My first reel about building NextTurn — the project now called Taverno."
+      },
+      "noescapecursor": {
+        "title": "NoEscapeCursor",
+        "summary": "A reel about my app that stops the cursor from escaping a game onto the second monitor."
+      }
+    }
+  },
   "case_study": {
     "eyebrow": "Case study",
     "back": "Back to portfolio",

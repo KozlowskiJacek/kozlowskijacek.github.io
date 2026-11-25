@@ -12,6 +12,7 @@ import Button from "../components/ui/Button";
 import PortfolioFilters, { type PortfolioFilter } from "../components/portfolio/PortfolioFilters";
 import ProjectCard from "../components/portfolio/ProjectCard";
 import VideoModal from "../components/portfolio/VideoModal";
+import ReelsSection from "../components/portfolio/ReelsSection";
 
 /** Parametr adresu z aktywnym filtrem: /portfolio?kategoria=video */
 const FILTER_PARAM = "kategoria";
@@ -113,6 +114,8 @@ const PortfolioPage = () => {
           </div>
         </motion.div>
       )}
+
+      <ReelsSection />
 
       <VideoModal project={videoProject} onClose={() => setVideoProject(null)} />
     </Section>

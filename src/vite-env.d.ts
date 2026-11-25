@@ -34,6 +34,10 @@ declare module "*?cover" {
   const picture: ResponsivePicture;
   export default picture;
 }
+declare module "*?reel" {
+  const picture: ResponsivePicture;
+  export default picture;
+}
 declare module "*?pixel" {
   const picture: ResponsivePicture;
   export default picture;
