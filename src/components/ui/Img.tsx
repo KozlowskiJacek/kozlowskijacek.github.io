@@ -39,7 +39,15 @@ const Img = ({
   return (
     <picture className={pictureClassName}>
       {Object.entries(picture.sources).map(([format, srcSet]) => (
-        <source key={format} type={mimeTypes[format] ?? `image/${format}`} srcSet={srcSet} sizes={sizes} />
+        // `hidden`: przy <picture class="contents"> <source> (domyślnie display: block) staje się elementem
+        // flex/grid rodzica i dokłada puste odstępy `gap`. display: none nie wpływa na wybór źródła.
+        <source
+          key={format}
+          className="hidden"
+          type={mimeTypes[format] ?? `image/${format}`}
+          srcSet={srcSet}
+          sizes={sizes}
+        />
       ))}
       <img
         src={picture.img.src}
